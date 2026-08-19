@@ -5,6 +5,7 @@
     "@hytime/dsh-thinking-effort": "^0.1.4",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-archived-list": "github:Yiklek/dsh-archived-list",
+    "dsh-at-file": "github:omdsh-dev/dsh-at-file",
     "dsh-better-sidebar": "^0.12.3",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dshmarket": "^1.8.0"
@@ -19,7 +20,8 @@
         "dsh-llm-retry-settings",
         "dsh-archived-list",
         "dsh-anchored-standard",
-        "@hytime/dsh-thinking-effort"
+        "@hytime/dsh-thinking-effort",
+        "dsh-at-file"
       ]
     }
   }

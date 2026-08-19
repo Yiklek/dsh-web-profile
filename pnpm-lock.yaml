@@ -17,6 +17,9 @@ importers:
       dsh-archived-list:
         specifier: github:Yiklek/dsh-archived-list
         version: https://codeload.github.com/Yiklek/dsh-archived-list/tar.gz/aa18f726e3c5eea86b0287a4652a3be7bed1d15f
+      dsh-at-file:
+        specifier: github:omdsh-dev/dsh-at-file
+        version: https://codeload.github.com/omdsh-dev/dsh-at-file/tar.gz/289f19bb83f80a95df49f567eeef42462d4da92f
       dsh-better-sidebar:
         specifier: ^0.12.3
         version: 0.12.3
@@ -177,6 +180,57 @@ packages:
     peerDependencies:
       '@deepseek-ai/dsh-typert-protocol': '>=0.1.0-rc.6'
 
+  dsh-at-file@https://codeload.github.com/omdsh-dev/dsh-at-file/tar.gz/289f19bb83f80a95df49f567eeef42462d4da92f:
+    resolution: {gitHosted: true, integrity: sha512-mYqLWd3jj3GYGImcZz8Q9GErOQV+hTwt+mi9IMSPLlKVbm2wPlrUDP2d8XBe5urD+Ap3a86Zl6xO4OPx0B5GTQ==, tarball: https://codeload.github.com/omdsh-dev/dsh-at-file/tar.gz/289f19bb83f80a95df49f567eeef42462d4da92f}
+    version: 0.6.5
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1-rc.1
+      '@deepseek-ai/dsh-agent': '*'
+      '@deepseek-ai/dsh-api-remotes': '*'
+      '@deepseek-ai/dsh-client-connection': '*'
+      '@deepseek-ai/dsh-client-locale': '*'
+      '@deepseek-ai/dsh-client-runtime': '*'
+      '@deepseek-ai/dsh-client-ui-conversation': '*'
+      '@deepseek-ai/dsh-client-ui-input-trigger': '*'
+      '@deepseek-ai/dsh-client-ui-settings': '*'
+      '@deepseek-ai/dsh-client-ui-slots': '*'
+      '@deepseek-ai/dsh-llm': '*'
+      '@deepseek-ai/dsh-settings': '*'
+      '@deepseek-ai/dsh-typert-protocol': '*'
+      '@deepseek-ai/dsh-typert-registry': '*'
+      react: ^18.2.0
+    peerDependenciesMeta:
+      '@deepseek-ai/cordis':
+        optional: true
+      '@deepseek-ai/dsh-agent':
+        optional: true
+      '@deepseek-ai/dsh-api-remotes':
+        optional: true
+      '@deepseek-ai/dsh-client-connection':
+        optional: true
+      '@deepseek-ai/dsh-client-locale':
+        optional: true
+      '@deepseek-ai/dsh-client-runtime':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-conversation':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-input-trigger':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-settings':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-slots':
+        optional: true
+      '@deepseek-ai/dsh-llm':
+        optional: true
+      '@deepseek-ai/dsh-settings':
+        optional: true
+      '@deepseek-ai/dsh-typert-protocol':
+        optional: true
+      '@deepseek-ai/dsh-typert-registry':
+        optional: true
+      react:
+        optional: true
+
   dsh-better-sidebar@0.12.3:
     resolution: {integrity: sha512-ui+ouxw81TOZxZOZI41EuGcqXSzmkmT0bQmzt5hQl9lRqnKN5nIKJ/Qtm8h3nbBL7wU+c3tR1N57Vm4C+zN/LQ==}
     engines: {node: '>=20'}
@@ -245,6 +299,9 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
+
+  zod@4.4.3:
+    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
 
 snapshots:
 
@@ -513,6 +570,10 @@ snapshots:
 
   dsh-archived-list@https://codeload.github.com/Yiklek/dsh-archived-list/tar.gz/aa18f726e3c5eea86b0287a4652a3be7bed1d15f: {}
 
+  dsh-at-file@https://codeload.github.com/omdsh-dev/dsh-at-file/tar.gz/289f19bb83f80a95df49f567eeef42462d4da92f:
+    dependencies:
+      zod: 4.4.3
+
   dsh-better-sidebar@0.12.3:
     dependencies:
       '@codemirror/commands': 6.10.4
@@ -571,3 +632,5 @@ snapshots:
   w3c-keyname@2.2.8: {}
 
   ws@8.21.3: {}
+
+  zod@4.4.3: {}
