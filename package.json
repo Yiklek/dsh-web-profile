@@ -2,6 +2,7 @@
   "name": "dsh-profile-web",
   "private": true,
   "dependencies": {
+    "@hytime/dsh-thinking-effort": "^0.1.4",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-archived-list": "github:Yiklek/dsh-archived-list",
     "dsh-better-sidebar": "^0.12.3",
@@ -17,7 +18,8 @@
         "dsh-better-sidebar",
         "dsh-llm-retry-settings",
         "dsh-archived-list",
-        "dsh-anchored-standard"
+        "dsh-anchored-standard",
+        "@hytime/dsh-thinking-effort"
       ]
     }
   }
