@@ -1,0 +1,22 @@
+{
+  "name": "dsh-profile-web",
+  "private": true,
+  "dependencies": {
+    "dsh-archived-list": "github:Yiklek/dsh-archived-list",
+    "dsh-better-sidebar": "^0.12.3",
+    "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
+    "dshmarket": "^1.8.0"
+  },
+  "dsh": {
+    "profile": {
+      "bundles": [
+        "@deepseek-ai/dsh-base",
+        "@deepseek-ai/dsh-web-app",
+        "dshmarket",
+        "dsh-better-sidebar",
+        "dsh-llm-retry-settings",
+        "dsh-archived-list"
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# generated/composed config
+cordis.yml
+
+# runtime/market data
+.dsh-market/
+
+# secrets / local overrides
+.env
+.env.*
+*.local
+
+# OS files
+.DS_Store
