@@ -1,0 +1,91 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    name: Lint & format check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install shellcheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: shellcheck install.sh
+        run: shellcheck install.sh
+
+      - name: Prettier check (JSON / YAML)
+        run: npx --yes prettier --check "package.json" "*.yml"
+
+      - name: bash syntax check
+        run: bash -n install.sh
+
+  test-dsh:
+    name: Test dsh profile boots
+    runs-on: ubuntu-latest
+    env:
+      DSH_HOME: /tmp/dsh-home
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Enable corepack / pnpm
+        run: |
+          corepack enable
+          pnpm --version
+
+      - name: Install profile via install.sh (worktree)
+        run: ./install.sh web --mode worktree --branch ci-web --force
+
+      - name: Verify dsh can compose the profile
+        run: npx --yes @deepseek-ai/dsh --profile web --dump-config > /tmp/dump.yml
+
+      - name: Show composed profile (head)
+        run: head -80 /tmp/dump.yml
+
+      - name: Boot web server and probe it
+        working-directory: ${{ env.DSH_HOME }}/profiles/web
+        env:
+          DSH_PORT: "3099"
+        run: |
+          npx --yes @deepseek-ai/dsh --profile web --host 127.0.0.1 --port "$DSH_PORT" > /tmp/dsh-boot.log 2>&1 &
+          BOOT_PID=$!
+          trap 'kill "$BOOT_PID" 2>/dev/null || true' EXIT
+
+          code=""
+          for i in $(seq 1 60); do
+            code="$(curl -s -o /dev/null -w '%{http_code}' "http://127.0.0.1:$DSH_PORT" || true)"
+            if [ "$code" = "200" ]; then
+              echo "Server responded 200 after ${i}s"
+              break
+            fi
+            # Fail fast if the process died
+            if ! kill -0 "$BOOT_PID" 2>/dev/null; then
+              echo "Server process exited early" >&2
+              break
+            fi
+            sleep 1
+          done
+
+          echo "--- boot log ---"
+          cat /tmp/dsh-boot.log
+
+          if [ "$code" != "200" ]; then
+            echo "::error::web server did not respond with 200 (last code: $code)"
+            exit 1
+          fi
+
+          if grep -nE '(^|[][[:space:]('"'"'])[Ee]rror(s)?([\]:.,[:space:]]|$)|\[[Ee][Rr][Rr][Oo][Rr]\]|FATAL|Traceback' /tmp/dsh-boot.log; then
+            echo "::error::errors found in boot log"
+            exit 1
+          fi
+
+          kill "$BOOT_PID"
+          wait "$BOOT_PID" 2>/dev/null || true

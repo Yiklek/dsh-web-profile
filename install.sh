@@ -268,7 +268,14 @@ else
     echo "error: $SOURCE_REPO is not a git repository" >&2
     exit 1
   fi
-  DEFAULT_BRANCH="main"
+  if git -C "$SOURCE_REPO" show-ref --verify --quiet "refs/heads/main"; then
+    DEFAULT_BRANCH="main"
+  elif git -C "$SOURCE_REPO" show-ref --verify --quiet "refs/heads/master"; then
+    DEFAULT_BRANCH="master"
+  else
+    # Detached HEAD (e.g. CI checkouts): base the branch on the current commit
+    DEFAULT_BRANCH="HEAD"
+  fi
 fi
 
 if ! git -C "$SOURCE_REPO" show-ref --verify --quiet "refs/heads/$BRANCH"; then
