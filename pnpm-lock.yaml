@@ -13,7 +13,7 @@ importers:
         version: 0.1.4
       dsh-anchored-standard:
         specifier: github:Yiklek/dsh-anchored-standard
-        version: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/c90ee9dc0859bac32fb439c82af5fe3bf7625f0b
+        version: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/3ec333c6a3c66feaae484ccc324e643cc711a469
       dsh-archived-list:
         specifier: github:Yiklek/dsh-archived-list
         version: https://codeload.github.com/Yiklek/dsh-archived-list/tar.gz/aa18f726e3c5eea86b0287a4652a3be7bed1d15f
@@ -25,7 +25,7 @@ importers:
         version: 0.12.3
       dsh-llm-retry-settings:
         specifier: github:Yiklek/dsh-llm-retry-settings
-        version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/5eebcadbeb4534cc8bd4f2837435a96499019e85
+        version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/f21f37a8dfa52dd720847b30e065ff43c0cbf112
       dshmarket:
         specifier: ^1.8.0
         version: 1.8.0
@@ -167,8 +167,8 @@ packages:
   crelt@1.0.7:
     resolution: {integrity: sha512-aK6BbWfhf4U/wCcLHKPJl/xa6VkVstRaPywWtMKGwuOLc/wZTyQYuoxgvZnNsBvv7Kg3YTBQYYBCggcviQczuA==}
 
-  dsh-anchored-standard@https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/c90ee9dc0859bac32fb439c82af5fe3bf7625f0b:
-    resolution: {gitHosted: true, integrity: sha512-opZ66+QPdRN4+/BowQBAsQkDLDNuAydgtMLVwk9bGLztMCDonAuAickRP32RtZr6zKO0BDjzJ6Sec84peAqAJw==, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/c90ee9dc0859bac32fb439c82af5fe3bf7625f0b}
+  dsh-anchored-standard@https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/3ec333c6a3c66feaae484ccc324e643cc711a469:
+    resolution: {gitHosted: true, integrity: sha512-Ml8tWwdzfZMZfWc+jAG7pSQnPMBg1Fa0rxHK2WNQBFKGJrTdw8BSgAPk6WoTIbWBZ2mV5ORD6JkrRf4TLEbdDg==, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/3ec333c6a3c66feaae484ccc324e643cc711a469}
     version: 0.1.0
     engines: {node: '>=22.19.0'}
     peerDependencies:
@@ -258,8 +258,8 @@ packages:
       cordis:
         optional: true
 
-  dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/5eebcadbeb4534cc8bd4f2837435a96499019e85:
-    resolution: {gitHosted: true, integrity: sha512-Zs3IzfbNryHy1TP3RAkNWAbI/dTCihCKEzcqiVFxR70CHFO2FPg5uH4M3ss6Nlew5+G6vluWPdcqD14joxRSIA==, tarball: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/5eebcadbeb4534cc8bd4f2837435a96499019e85}
+  dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/f21f37a8dfa52dd720847b30e065ff43c0cbf112:
+    resolution: {gitHosted: true, integrity: sha512-LX3RM7riT7XaeHzIs/MdU/W0k8ShFBaOhXBuJMT1tMvqhT2LBAttbsZqeCWqs5bMMhr8rIZsTDJciRUjPOeSVg==, tarball: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/f21f37a8dfa52dd720847b30e065ff43c0cbf112}
     version: 0.1.0
 
   dshmarket@1.8.0:
@@ -566,7 +566,7 @@ snapshots:
 
   crelt@1.0.7: {}
 
-  dsh-anchored-standard@https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/c90ee9dc0859bac32fb439c82af5fe3bf7625f0b: {}
+  dsh-anchored-standard@https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/3ec333c6a3c66feaae484ccc324e643cc711a469: {}
 
   dsh-archived-list@https://codeload.github.com/Yiklek/dsh-archived-list/tar.gz/aa18f726e3c5eea86b0287a4652a3be7bed1d15f: {}
 
@@ -606,7 +606,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/5eebcadbeb4534cc8bd4f2837435a96499019e85: {}
+  dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/f21f37a8dfa52dd720847b30e065ff43c0cbf112: {}
 
   dshmarket@1.8.0: {}
 
