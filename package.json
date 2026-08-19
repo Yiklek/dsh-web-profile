@@ -2,6 +2,7 @@
   "name": "dsh-profile-web",
   "private": true,
   "dependencies": {
+    "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-archived-list": "github:Yiklek/dsh-archived-list",
     "dsh-better-sidebar": "^0.12.3",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
@@ -15,7 +16,8 @@
         "dshmarket",
         "dsh-better-sidebar",
         "dsh-llm-retry-settings",
-        "dsh-archived-list"
+        "dsh-archived-list",
+        "dsh-anchored-standard"
       ]
     }
   }
