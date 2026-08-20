@@ -5,7 +5,6 @@
     "@hytime/dsh-thinking-effort": "^0.1.7",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-archived-list": "github:Yiklek/dsh-archived-list",
-    "dsh-at-file": "github:omdsh-dev/dsh-at-file",
     "dsh-better-sidebar": "^0.14.0",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-mcp-manager-ui": "github:Imzl-zl/dsh-mcp-manager-ui",
@@ -22,7 +21,6 @@
         "dsh-archived-list",
         "dsh-anchored-standard",
         "@hytime/dsh-thinking-effort",
-        "dsh-at-file",
         "dsh-mcp-manager-ui"
       ]
     }
