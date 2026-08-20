@@ -12,6 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.22.0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: pnpm
+
       - name: Install shellcheck
         run: sudo apt-get update && sudo apt-get install -y shellcheck
 
@@ -19,7 +28,7 @@ jobs:
         run: shellcheck install.sh
 
       - name: Prettier check (JSON / YAML)
-        run: npx --yes prettier --check "package.json" "*.yml"
+        run: pnpm dlx prettier --check "package.json" "*.yml"
 
       - name: bash syntax check
         run: bash -n install.sh
@@ -120,8 +129,8 @@ jobs:
       - name: Install Playwright
         working-directory: tests/e2e
         run: |
-          npm install
-          npx playwright install --with-deps chromium
+          pnpm install
+          pnpm exec playwright install --with-deps chromium
 
       - name: Start dsh web server
         working-directory: ${{ env.DSH_HOME }}/profiles/web
@@ -144,7 +153,7 @@ jobs:
 
       - name: Run Playwright smoke tests
         working-directory: tests/e2e
-        run: npx playwright test
+        run: pnpm exec playwright test
 
       - name: Stop dsh web server
         if: always()
