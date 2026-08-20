@@ -25,7 +25,7 @@ importers:
         version: 0.12.3
       dsh-llm-retry-settings:
         specifier: github:Yiklek/dsh-llm-retry-settings
-        version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/f21f37a8dfa52dd720847b30e065ff43c0cbf112
+        version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/e34dea57ea80c8cdba0f3fbfe0002ea3a8cf30ab
       dsh-mcp-manager-ui:
         specifier: github:Imzl-zl/dsh-mcp-manager-ui#v1.1.3
         version: https://codeload.github.com/Imzl-zl/dsh-mcp-manager-ui/tar.gz/c69d5ddbb68122e175a9003c3801efabf02e2f17
@@ -261,8 +261,8 @@ packages:
       cordis:
         optional: true
 
-  dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/f21f37a8dfa52dd720847b30e065ff43c0cbf112:
-    resolution: {gitHosted: true, integrity: sha512-LX3RM7riT7XaeHzIs/MdU/W0k8ShFBaOhXBuJMT1tMvqhT2LBAttbsZqeCWqs5bMMhr8rIZsTDJciRUjPOeSVg==, tarball: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/f21f37a8dfa52dd720847b30e065ff43c0cbf112}
+  dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/e34dea57ea80c8cdba0f3fbfe0002ea3a8cf30ab:
+    resolution: {gitHosted: true, integrity: sha512-vO680jtbcgMWjVwcptR2NIJC5iz+RhLtBIdQHaomQBbQuy3S+blMw8I0pBdeEwUc77fhc0YJL5e4ZDk4hm9kWg==, tarball: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/e34dea57ea80c8cdba0f3fbfe0002ea3a8cf30ab}
     version: 0.1.0
 
   dsh-mcp-manager-ui@https://codeload.github.com/Imzl-zl/dsh-mcp-manager-ui/tar.gz/c69d5ddbb68122e175a9003c3801efabf02e2f17:
@@ -621,7 +621,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/f21f37a8dfa52dd720847b30e065ff43c0cbf112: {}
+  dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/e34dea57ea80c8cdba0f3fbfe0002ea3a8cf30ab: {}
 
   dsh-mcp-manager-ui@https://codeload.github.com/Imzl-zl/dsh-mcp-manager-ui/tar.gz/c69d5ddbb68122e175a9003c3801efabf02e2f17:
     dependencies:
