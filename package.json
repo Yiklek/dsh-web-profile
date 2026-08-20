@@ -8,7 +8,8 @@
     "dsh-better-sidebar": "^0.14.0",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-mcp-manager-ui": "github:Imzl-zl/dsh-mcp-manager-ui",
-    "dshmarket": "^1.16.0"
+    "dshmarket": "^1.16.0",
+    "@linxin666/dsh-web-ui-all": "^0.2.5"
   },
   "dsh": {
     "profile": {
@@ -16,6 +17,7 @@
         "@deepseek-ai/dsh-base",
         "@deepseek-ai/dsh-web-app",
         "dshmarket",
+        "@linxin666/dsh-web-ui-all",
         "dsh-better-sidebar",
         "dsh-llm-retry-settings",
         "dsh-archived-list",

@@ -4,5 +4,8 @@ packages:
 nodeLinker: hoisted
 autoInstallPeers: false
 allowBuilds:
+  cloudflared: true
+  cpu-features: true
   node-pty: true
+  ssh2: true
 minimumReleaseAge: 0
