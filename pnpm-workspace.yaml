@@ -5,3 +5,4 @@ nodeLinker: hoisted
 autoInstallPeers: false
 allowBuilds:
   node-pty: true
+minimumReleaseAge: 0
