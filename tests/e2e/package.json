@@ -1,0 +1,12 @@
+{
+  "name": "dsh-web-profile-e2e",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:edge": "PLAYWRIGHT_CHANNEL=msedge playwright test",
+    "test:chromium": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0"
+  }
+}

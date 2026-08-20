@@ -89,3 +89,63 @@ jobs:
 
           kill "$BOOT_PID"
           wait "$BOOT_PID" 2>/dev/null || true
+
+  e2e:
+    name: Playwright functional test
+    runs-on: ubuntu-latest
+    env:
+      DSH_HOME: /tmp/dsh-home-e2e
+      DSH_PORT: "3100"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Enable corepack / pnpm
+        run: |
+          corepack enable
+          pnpm --version
+
+      - name: Install profile via install.sh (worktree)
+        run: ./install.sh web --mode worktree --branch ci-e2e --force
+
+      - name: Install Playwright
+        working-directory: tests/e2e
+        run: |
+          npm install
+          npx playwright install --with-deps chromium
+
+      - name: Start dsh web server
+        working-directory: ${{ env.DSH_HOME }}/profiles/web
+        run: |
+          npx --yes @deepseek-ai/dsh --profile web --host 127.0.0.1 --port "$DSH_PORT" > /tmp/dsh-e2e.log 2>&1 &
+          echo "PID=$!" >> "$GITHUB_ENV"
+          for i in $(seq 1 60); do
+            code="$(curl -s -o /dev/null -w '%{http_code}' "http://127.0.0.1:$DSH_PORT" || true)"
+            if [ "$code" = "200" ]; then
+              echo "Server responded 200 after ${i}s"
+              break
+            fi
+            sleep 1
+          done
+          if [ "$code" != "200" ]; then
+            echo "::error::dsh web server did not respond with 200 (last code: $code)"
+            cat /tmp/dsh-e2e.log
+            exit 1
+          fi
+
+      - name: Run Playwright smoke tests
+        working-directory: tests/e2e
+        run: npx playwright test
+
+      - name: Stop dsh web server
+        if: always()
+        run: |
+          kill "$PID" 2>/dev/null || true
+          pkill -f "dsh --profile web --host 127.0.0.1 --port $DSH_PORT" 2>/dev/null || true
+
+      - name: Show dsh boot log on failure
+        if: failure()
+        run: cat /tmp/dsh-e2e.log
