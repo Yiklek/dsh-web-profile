@@ -1,8 +1,8 @@
 # dependencies
 node_modules/
 
-# generated/composed config
-cordis.yml
+# local MCP / patch layer (managed by dsh-mcp-manager-ui on this machine)
+cordis.patch.yml
 
 # runtime/market data
 .dsh-market/
