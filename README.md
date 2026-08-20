@@ -4,14 +4,14 @@
 
 ## 为什么用这个仓库
 
-dsh 的 profile 位于 `~/.dsh/profiles/<name>`，其中既包含需要版本管理的配置文件，也包含不应提交的 `node_modules`、生成的 `cordis.yml` 等。
+dsh 的 profile 位于 `~/.dsh/profiles/<name>`，其中既包含需要版本管理的配置文件，也包含不应提交的 `node_modules`、本机生成的 `cordis.patch.yml` 等。
 
 本仓库只保存需要管理的配置文件：
 
 ```text
 package.json
 pnpm-lock.yaml
-cordis.patch.yml
+cordis.yml
 pnpm-workspace.yaml
 ```
 
@@ -26,7 +26,7 @@ dsh-web-profile/
 ├── .gitignore
 ├── package.json
 ├── pnpm-lock.yaml
-├── cordis.patch.yml
+├── cordis.yml
 └── pnpm-workspace.yaml
 ```
 
@@ -284,14 +284,14 @@ mv ~/.dsh/profiles/<name>.bak.<YYYYMMDD-HHMMSS> ~/.dsh/profiles/<name>
 
 ## 为什么用这个仓库
 
-dsh 的 profile 位于 `~/.dsh/profiles/<name>`，其中既包含需要版本管理的配置文件，也包含不应提交的 `node_modules`、生成的 `cordis.yml` 等。
+dsh 的 profile 位于 `~/.dsh/profiles/<name>`，其中既包含需要版本管理的配置文件，也包含不应提交的 `node_modules`、本机生成的 `cordis.patch.yml` 等。
 
 本仓库只保存需要管理的配置文件：
 
 ```text
 package.json
 pnpm-lock.yaml
-cordis.patch.yml
+cordis.yml
 pnpm-workspace.yaml
 ```
 
@@ -306,7 +306,7 @@ dsh-web-profile/
 ├── .gitignore
 ├── package.json
 ├── pnpm-lock.yaml
-├── cordis.patch.yml
+├── cordis.yml
 └── pnpm-workspace.yaml
 ```
 
@@ -560,7 +560,7 @@ mv ~/.dsh/profiles/<name>.bak.<YYYYMMDD-HHMMSS> ~/.dsh/profiles/<name>
 
 ```gitignore
 node_modules/
-cordis.yml
+cordis.patch.yml
 .dsh-market/
 .env
 .env.*
@@ -571,12 +571,12 @@ cordis.yml
 请勿提交：
 
 - `node_modules/`
-- 生成的 `cordis.yml`
+- 本机生成的 `cordis.patch.yml`（由 `dsh-mcp-manager-ui` 等写本机 MCP/patch 配置）
 - `.dsh-market/`
 - 任何包含凭据的 `.env` / 本地文件
 ```gitignore
 node_modules/
-cordis.yml
+cordis.patch.yml
 .dsh-market/
 .env
 .env.*
@@ -587,6 +587,6 @@ cordis.yml
 请勿提交：
 
 - `node_modules/`
-- 生成的 `cordis.yml`
+- 本机生成的 `cordis.patch.yml`（由 `dsh-mcp-manager-ui` 等写本机 MCP/patch 配置）
 - `.dsh-market/`
 - 任何包含凭据的 `.env` / 本地文件
