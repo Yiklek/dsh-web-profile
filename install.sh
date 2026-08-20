@@ -205,6 +205,10 @@ fi
 install_deps() {
   if command -v dsh >/dev/null 2>&1; then
     dsh plugin --profile "$PROFILE_NAME" install
+  elif command -v pnpm >/dev/null 2>&1; then
+    # Use pnpm's store (cached in CI) so the dsh CLI itself is not re-downloaded
+    # through npx on every fresh runner.
+    pnpm dlx @deepseek-ai/dsh@next plugin --profile "$PROFILE_NAME" install
   else
     npx --yes @deepseek-ai/dsh@next plugin --profile "$PROFILE_NAME" install
   fi
