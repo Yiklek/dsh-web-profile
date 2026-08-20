@@ -25,11 +25,18 @@ test("web profile loads and settings show plugin sections", async ({
     timeout: 30_000,
   });
 
-  // dsh@next shows a blocking first-run onboarding dialog on fresh environments
-  // ("添加一个 API Key 开始使用"). Dismiss it when present before opening settings.
-  const configureLater = page.getByRole("button", { name: "稍后配置" });
-  if ((await configureLater.count()) > 0) {
-    await configureLater.click();
+  // dsh@next shows blocking first-run dialogs on fresh environments:
+  // 1) the preview disclaimer ("继续"), and 2) possibly the API-key
+  // onboarding ("稍后配置"). Dismiss whichever is present before opening
+  // settings.
+  for (const name of ["继续", "稍后配置"]) {
+    const dismiss = page.getByRole("button", { name, exact: true });
+    if ((await dismiss.count()) > 0) {
+      await dismiss.click();
+      await expect(dismiss)
+        .not.toBeVisible({ timeout: 5_000 })
+        .catch(() => {});
+    }
   }
 
   // Open settings; this exercises the core settings UI and mounts every
