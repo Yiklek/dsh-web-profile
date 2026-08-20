@@ -206,7 +206,7 @@ install_deps() {
   if command -v dsh >/dev/null 2>&1; then
     dsh plugin --profile "$PROFILE_NAME" install
   else
-    npx --yes @deepseek-ai/dsh plugin --profile "$PROFILE_NAME" install
+    npx --yes @deepseek-ai/dsh@next plugin --profile "$PROFILE_NAME" install
   fi
 }
 

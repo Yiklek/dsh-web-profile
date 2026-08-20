@@ -32,30 +32,33 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.22.0
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: pnpm
 
-      - name: Enable corepack / pnpm
-        run: |
-          corepack enable
-          pnpm --version
+      - name: Show pnpm version
+        run: pnpm --version
 
       - name: Install profile via install.sh (worktree)
         run: ./install.sh web --mode worktree --branch ci-web --force
 
       - name: Verify dsh can compose the profile
-        run: npx --yes @deepseek-ai/dsh --profile web --dump-config > /tmp/dump.yml
+        run: npx --yes @deepseek-ai/dsh@next --profile web --dump-config > /tmp/dump.yml
 
-      - name: Show composed profile (head)
-        run: head -80 /tmp/dump.yml
+      - name: Show composed profile
+        run: cat /tmp/dump.yml
 
       - name: Boot web server and probe it
         working-directory: ${{ env.DSH_HOME }}/profiles/web
         env:
           DSH_PORT: "3099"
         run: |
-          npx --yes @deepseek-ai/dsh --profile web --host 127.0.0.1 --port "$DSH_PORT" > /tmp/dsh-boot.log 2>&1 &
+          npx --yes @deepseek-ai/dsh@next --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-boot.log 2>&1 &
           BOOT_PID=$!
           trap 'kill "$BOOT_PID" 2>/dev/null || true' EXIT
 
@@ -99,14 +102,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.22.0
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: pnpm
 
-      - name: Enable corepack / pnpm
-        run: |
-          corepack enable
-          pnpm --version
+      - name: Show pnpm version
+        run: pnpm --version
 
       - name: Install profile via install.sh (worktree)
         run: ./install.sh web --mode worktree --branch ci-e2e --force
@@ -120,7 +126,7 @@ jobs:
       - name: Start dsh web server
         working-directory: ${{ env.DSH_HOME }}/profiles/web
         run: |
-          npx --yes @deepseek-ai/dsh --profile web --host 127.0.0.1 --port "$DSH_PORT" > /tmp/dsh-e2e.log 2>&1 &
+          npx --yes @deepseek-ai/dsh@next --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-e2e.log 2>&1 &
           echo "PID=$!" >> "$GITHUB_ENV"
           for i in $(seq 1 60); do
             code="$(curl -s -o /dev/null -w '%{http_code}' "http://127.0.0.1:$DSH_PORT" || true)"

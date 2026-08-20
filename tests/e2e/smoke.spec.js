@@ -25,6 +25,13 @@ test("web profile loads and settings show plugin sections", async ({
     timeout: 30_000,
   });
 
+  // dsh@next shows a blocking first-run onboarding dialog on fresh environments
+  // ("添加一个 API Key 开始使用"). Dismiss it when present before opening settings.
+  const configureLater = page.getByRole("button", { name: "稍后配置" });
+  if ((await configureLater.count()) > 0) {
+    await configureLater.click();
+  }
+
   // Open settings; this exercises the core settings UI and mounts every
   // plugin's settings section. These are the sections owned by this profile
   // (our own plugins), not a third-party plugin.

@@ -128,7 +128,7 @@ dsh plugin --profile <name> install
 如果 `dsh` 不在 PATH，会回退到：
 
 ```bash
-npx --yes @deepseek-ai/dsh plugin --profile <name> install
+npx --yes @deepseek-ai/dsh@next plugin --profile <name> install
 ```
 
 ### 为什么用 git worktree
@@ -408,7 +408,7 @@ dsh plugin --profile <name> install
 如果 `dsh` 不在 PATH，会回退到：
 
 ```bash
-npx --yes @deepseek-ai/dsh plugin --profile <name> install
+npx --yes @deepseek-ai/dsh@next plugin --profile <name> install
 ```
 
 ### 为什么用 git worktree
