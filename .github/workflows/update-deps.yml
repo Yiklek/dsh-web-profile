@@ -29,7 +29,7 @@ jobs:
             }
             const { owner, repo } = context.repo;
             const after = github.event.after || context.sha;
-            console.log(`check: event=${github.event_name} after=${after}`);
+            core.info(`check: event=${github.event_name} after=${after}`);
             const pulls = await github.paginate(github.rest.pulls.list, {
               owner,
               repo,
@@ -43,27 +43,27 @@ jobs:
               (pr) => pr.merged_at && pr.merge_commit_sha === after && pr.head.ref.startsWith('bot/dependency-updates-')
             );
             if (merged) {
-              console.log(`check: merged automation PR #${merged.number} ${merged.head.ref}`);
+              core.info(`check: merged automation PR #${merged.number} ${merged.head.ref}`);
             }
             // Clean up closed automation PR branches (merged or not).
             for (const pr of pulls) {
-              if (pr.head.repo?.full_name === `${owner}/${repo}` && pr.head.ref.startsWith('bot/dependency-updates-')) {
+              if (pr.head.ref.startsWith('bot/dependency-updates-')) {
                 try {
                   await github.rest.git.deleteRef({
                     owner,
                     repo,
                     ref: `heads/${pr.head.ref}`,
                   });
-                  console.log(`cleanup: deleted closed branch ${pr.head.ref}`);
+                  core.info(`cleanup: deleted closed branch ${pr.head.ref}`);
                 } catch (error) {
                   if (error.status !== 422) throw error;
-                  console.log(`cleanup: branch already deleted ${pr.head.ref}`);
+                  core.info(`cleanup: branch already deleted ${pr.head.ref}`);
                 }
               }
             }
 
             const shouldRun = merged ? 'false' : 'true';
-            console.log(`check: should_run=${shouldRun}`);
+            core.info(`check: should_run=${shouldRun}`);
             return shouldRun;
 
   update:
@@ -134,24 +134,24 @@ jobs:
               per_page: 100,
             });
             for (const pr of openPulls) {
-              if (pr.head.repo?.full_name === `${owner}/${repo}` && pr.head.ref.startsWith('bot/dependency-updates-')) {
+              if (pr.head.ref.startsWith('bot/dependency-updates-')) {
                 await github.rest.pulls.update({
                   owner,
                   repo,
                   pull_number: pr.number,
                   state: 'closed',
                 });
-                console.log(`Closed old PR #${pr.number}`);
+                core.info(`Closed old PR #${pr.number}`);
                 try {
                   await github.rest.git.deleteRef({
                     owner,
                     repo,
                     ref: `heads/${pr.head.ref}`,
                   });
-                  console.log(`Deleted old branch ${pr.head.ref}`);
+                  core.info(`Deleted old branch ${pr.head.ref}`);
                 } catch (error) {
                   if (error.status !== 422) throw error;
-                  console.log(`Old branch already deleted ${pr.head.ref}`);
+                  core.info(`Old branch already deleted ${pr.head.ref}`);
                 }
               }
             }
@@ -171,4 +171,4 @@ jobs:
                 'CI will validate the changes.',
               ].join('\n'),
             });
-            console.log(`Created PR #${pr.number}`);
+            core.info(`Created PR #${pr.number}`);
