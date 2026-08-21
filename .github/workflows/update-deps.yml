@@ -16,7 +16,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     outputs:
-      should_run: ${{ steps.check.outputs.should_run }}
+      should_run: ${{ steps.check.outputs.result }}
     steps:
       - uses: actions/github-script@v9
         id: check
@@ -29,7 +29,7 @@ jobs:
             }
             const { owner, repo } = context.repo;
             const after = github.event.after || context.sha;
-            console.log(`check: event=${github.event_name} after=${after} contextSha=${context.sha}`);
+            console.log(`check: event=${github.event_name} after=${after}`);
             const { data: pulls } = await github.rest.pulls.list({
               owner,
               repo,
@@ -43,9 +43,11 @@ jobs:
               (pr) => pr.merged_at && pr.merge_commit_sha === after && pr.head.ref.startsWith('bot/dependency-updates-')
             );
             if (merged) {
-              console.log(`check: matched PR #${merged.number} ${merged.head.ref} mergeCommit=${merged.merge_commit_sha}`);
+              console.log(`check: merged automation PR #${merged.number} ${merged.head.ref}`);
             }
-            return merged ? 'false' : 'true';
+            const shouldRun = merged ? 'false' : 'true';
+            console.log(`check: should_run=${shouldRun}`);
+            return shouldRun;
 
   update:
     needs: check
@@ -76,10 +78,12 @@ jobs:
         id: changes
         run: |
           if git diff --quiet; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
+            CHANGED=false
           else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
+            CHANGED=true
           fi
+          echo "changed=$CHANGED" >> "$GITHUB_OUTPUT"
+          echo "changes: changed=$CHANGED"
 
       - name: Commit and push dependency updates
         id: commit
@@ -87,6 +91,7 @@ jobs:
         run: |
           BRANCH="bot/dependency-updates-$(date +%Y%m%d-%H%M%S)"
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+          echo "commit: branch=$BRANCH"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B "$BRANCH"

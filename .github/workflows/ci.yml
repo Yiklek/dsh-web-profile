@@ -54,7 +54,9 @@ jobs:
         run: pnpm --version
 
       - name: Install profile via install.sh (worktree)
-        run: ./install.sh web --mode worktree --branch ci-web --force
+        run: |
+          ./install.sh web --mode worktree --branch ci-web --force
+          echo "install: profile ready (branch ci-web)"
 
       - name: Verify dsh can compose the profile
         run: pnpm dlx @deepseek-ai/dsh@next --profile web --dump-config > /tmp/dump.yml
@@ -124,7 +126,9 @@ jobs:
         run: pnpm --version
 
       - name: Install profile via install.sh (worktree)
-        run: ./install.sh web --mode worktree --branch ci-e2e --force
+        run: |
+          ./install.sh web --mode worktree --branch ci-e2e --force
+          echo "install: profile ready (branch ci-e2e)"
 
       - name: Install Playwright
         working-directory: tests/e2e
@@ -137,6 +141,7 @@ jobs:
         run: |
           pnpm dlx @deepseek-ai/dsh@next --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-e2e.log 2>&1 &
           echo "PID=$!" >> "$GITHUB_ENV"
+          echo "e2e: server PID=$! port=$DSH_PORT"
           for i in $(seq 1 60); do
             code="$(curl -s -o /dev/null -w '%{http_code}' "http://127.0.0.1:$DSH_PORT" || true)"
             if [ "$code" = "200" ]; then
@@ -153,7 +158,9 @@ jobs:
 
       - name: Run Playwright smoke tests
         working-directory: tests/e2e
-        run: pnpm exec playwright test
+        run: |
+          echo "e2e: running Playwright tests"
+          pnpm exec playwright test
 
       - name: Stop dsh web server
         if: always()
