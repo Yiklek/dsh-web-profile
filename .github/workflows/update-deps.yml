@@ -53,7 +53,7 @@ jobs:
             core.info(`check: should_run=${shouldRun}`);
             return shouldRun;
 
-      - name: Collect closed bot branches
+      - name: Collect open bot branches
         uses: actions/github-script@v9
         with:
           script: |
@@ -61,30 +61,28 @@ jobs:
             const pulls = await github.paginate(github.rest.pulls.list, {
               owner,
               repo,
-              state: 'closed',
-              base: 'main',
+              state: 'open',
               per_page: 100,
-              sort: 'updated',
-              direction: 'desc',
             });
             const branches = pulls
               .filter((pr) => pr.head.ref.startsWith('bot/dependency-updates-'))
               .map((pr) => pr.head.ref);
             const { writeFileSync } = await import('fs');
-            writeFileSync(`${process.env.RUNNER_TEMP}/closed-bot-branches.txt`, branches.join('\n'));
-            core.info(`collected ${branches.length} closed bot branch(es)`);
+            writeFileSync(`${process.env.RUNNER_TEMP}/open-bot-branches.txt`, branches.join('\n'));
+            core.info(`found ${branches.length} open bot branch(es)`);
 
-      - name: Delete closed bot branches
+      - name: Delete stale bot dependency-update branches
         run: |
-          if [ ! -s "$RUNNER_TEMP/closed-bot-branches.txt" ]; then
-            echo "no closed bot branches to delete"
-            exit 0
-          fi
+          touch "$RUNNER_TEMP/open-bot-branches.txt"
           while IFS= read -r branch; do
             [ -z "$branch" ] && continue
-            echo "deleting $branch"
-            git push origin --delete "$branch" || echo "failed to delete $branch"
-          done < "$RUNNER_TEMP/closed-bot-branches.txt"
+            if grep -qxF "$branch" "$RUNNER_TEMP/open-bot-branches.txt"; then
+              echo "keeping open $branch"
+            else
+              echo "deleting $branch"
+              git push origin --delete "$branch" || echo "failed to delete $branch"
+            fi
+          done < <(git ls-remote --heads origin 'refs/heads/bot/dependency-updates-*' | awk '{print $2}' | sed 's#refs/heads/##')
 
   update:
     needs: check
