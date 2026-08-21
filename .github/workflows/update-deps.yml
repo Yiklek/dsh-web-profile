@@ -27,6 +27,7 @@ jobs:
         with:
           result-encoding: string
           script: |
+            core.setOutput('debug_event', github.event_name);
             // Non-push triggers (schedule/manual) always run.
             if (github.event_name !== 'push') {
               return 'true';
@@ -43,24 +44,28 @@ jobs:
               sort: 'updated',
               direction: 'desc',
             });
+            core.setOutput('debug_count', String(pulls.length));
+            const branches = pulls
+              .filter((pr) => pr.head.ref.startsWith('bot/dependency-updates-'))
+              .map((pr) => pr.head.ref);
+            core.setOutput('branches', branches.join(','));
             const merged = pulls.find(
               (pr) => pr.merged_at && pr.merge_commit_sha === after && pr.head.ref.startsWith('bot/dependency-updates-')
             );
             if (merged) {
               core.info(`check: merged automation PR #${merged.number} ${merged.head.ref}`);
             }
-            // Collect closed automation PR branches to delete via git push.
-            const branches = pulls
-              .filter((pr) => pr.head.ref.startsWith('bot/dependency-updates-'))
-              .map((pr) => pr.head.ref);
-            core.setOutput('branches', branches.join(','));
-            core.info(`cleanup: found ${branches.length} closed bot branch(es)`);
-
             const shouldRun = merged ? 'false' : 'true';
             core.info(`check: should_run=${shouldRun}`);
             return shouldRun;
 
-      - name: Delete closed bot branches
+      - name: Debug check outputs
+        run: |
+          echo "debug_event=${{ steps.check.outputs.debug_event }}"
+          echo "debug_count=${{ steps.check.outputs.debug_count }}"
+          echo "branches=${{ steps.check.outputs.branches }}"
+
+      - name: Delete bot dependency-update branches
         if: steps.check.outputs.branches != ''
         env:
           BRANCHES: ${{ steps.check.outputs.branches }}
