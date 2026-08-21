@@ -45,20 +45,61 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Commit and push dependency updates
+        id: commit
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          BRANCH="bot/dependency-updates-$(date +%Y%m%d-%H%M%S)"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add -A
+          git commit -m "chore(deps): update dependencies"
+          git push --force origin "$BRANCH"
+
       - name: Create pull request
         if: steps.changes.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v6
+        uses: actions/github-script@v7
+        env:
+          BRANCH: ${{ steps.commit.outputs.branch }}
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ci/dependency-updates
-          title: "chore(deps): update dependencies"
-          commit-message: "chore(deps): update dependencies"
-          body: |
-            Automated dependency update by GitHub Actions.
+          script: |
+            const { owner, repo } = context.repo;
+            const head = process.env.BRANCH;
 
-            - `pnpm update` at repo root
-            - `pnpm update` in `tests/e2e`
+            // Close older automation PRs from previous runs so only one stays open.
+            const { data: openPulls } = await github.rest.pulls.list({
+              owner,
+              repo,
+              state: 'open',
+              per_page: 100,
+            });
+            for (const pr of openPulls) {
+              if (pr.head.repo?.full_name === `${owner}/${repo}` && pr.head.ref.startsWith('bot/dependency-updates-')) {
+                await github.rest.pulls.update({
+                  owner,
+                  repo,
+                  pull_number: pr.number,
+                  state: 'closed',
+                });
+                console.log(`Closed old PR #${pr.number}`);
+              }
+            }
 
-            CI will validate the changes.
-          base: main
-          delete-branch: true
+            const { data: pr } = await github.rest.pulls.create({
+              owner,
+              repo,
+              title: 'chore(deps): update dependencies',
+              head,
+              base: 'main',
+              body: [
+                'Automated dependency update by GitHub Actions.',
+                '',
+                '- `pnpm update` at repo root',
+                '- `pnpm update` in `tests/e2e`',
+                '',
+                'CI will validate the changes.',
+              ].join('\n'),
+            });
+            console.log(`Created PR #${pr.number}`);
