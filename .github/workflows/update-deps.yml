@@ -18,6 +18,10 @@ jobs:
     outputs:
       should_run: ${{ steps.check.outputs.result }}
     steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+
       - uses: actions/github-script@v9
         id: check
         with:
@@ -45,26 +49,28 @@ jobs:
             if (merged) {
               core.info(`check: merged automation PR #${merged.number} ${merged.head.ref}`);
             }
-            // Clean up closed automation PR branches (merged or not).
-            for (const pr of pulls) {
-              if (pr.head.ref.startsWith('bot/dependency-updates-')) {
-                try {
-                  await github.rest.git.deleteRef({
-                    owner,
-                    repo,
-                    ref: `heads/${pr.head.ref}`,
-                  });
-                  core.info(`cleanup: deleted closed branch ${pr.head.ref}`);
-                } catch (error) {
-                  if (error.status !== 422) throw error;
-                  core.info(`cleanup: branch already deleted ${pr.head.ref}`);
-                }
-              }
-            }
+            // Collect closed automation PR branches to delete via git push.
+            const branches = pulls
+              .filter((pr) => pr.head.ref.startsWith('bot/dependency-updates-'))
+              .map((pr) => pr.head.ref);
+            core.setOutput('branches', branches.join(','));
+            core.info(`cleanup: found ${branches.length} closed bot branch(es)`);
 
             const shouldRun = merged ? 'false' : 'true';
             core.info(`check: should_run=${shouldRun}`);
             return shouldRun;
+
+      - name: Delete closed bot branches
+        if: steps.check.outputs.branches != ''
+        env:
+          BRANCHES: ${{ steps.check.outputs.branches }}
+        run: |
+          IFS=',' read -ra arr <<< "$BRANCHES"
+          for branch in "${arr[@]}"; do
+            [ -z "$branch" ] && continue
+            echo "deleting $branch"
+            git push origin --delete "$branch" || echo "failed to delete $branch"
+          done
 
   update:
     needs: check
@@ -150,8 +156,8 @@ jobs:
                   });
                   core.info(`Deleted old branch ${pr.head.ref}`);
                 } catch (error) {
+                  core.info(`delete old branch failed for ${pr.head.ref}: ${error.status} ${error.message}`);
                   if (error.status !== 422) throw error;
-                  core.info(`Old branch already deleted ${pr.head.ref}`);
                 }
               }
             }
