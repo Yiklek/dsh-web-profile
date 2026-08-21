@@ -30,7 +30,7 @@ jobs:
             const { owner, repo } = context.repo;
             const after = github.event.after || context.sha;
             console.log(`check: event=${github.event_name} after=${after}`);
-            const { data: pulls } = await github.rest.pulls.list({
+            const pulls = await github.paginate(github.rest.pulls.list, {
               owner,
               repo,
               state: 'closed',
@@ -45,6 +45,23 @@ jobs:
             if (merged) {
               console.log(`check: merged automation PR #${merged.number} ${merged.head.ref}`);
             }
+            // Clean up closed automation PR branches (merged or not).
+            for (const pr of pulls) {
+              if (pr.head.repo?.full_name === `${owner}/${repo}` && pr.head.ref.startsWith('bot/dependency-updates-')) {
+                try {
+                  await github.rest.git.deleteRef({
+                    owner,
+                    repo,
+                    ref: `heads/${pr.head.ref}`,
+                  });
+                  console.log(`cleanup: deleted closed branch ${pr.head.ref}`);
+                } catch (error) {
+                  if (error.status !== 422) throw error;
+                  console.log(`cleanup: branch already deleted ${pr.head.ref}`);
+                }
+              }
+            }
+
             const shouldRun = merged ? 'false' : 'true';
             console.log(`check: should_run=${shouldRun}`);
             return shouldRun;
@@ -110,7 +127,7 @@ jobs:
             const head = process.env.BRANCH;
 
             // Close older automation PRs from previous runs so only one stays open.
-            const { data: openPulls } = await github.rest.pulls.list({
+            const openPulls = await github.paginate(github.rest.pulls.list, {
               owner,
               repo,
               state: 'open',
@@ -125,6 +142,17 @@ jobs:
                   state: 'closed',
                 });
                 console.log(`Closed old PR #${pr.number}`);
+                try {
+                  await github.rest.git.deleteRef({
+                    owner,
+                    repo,
+                    ref: `heads/${pr.head.ref}`,
+                  });
+                  console.log(`Deleted old branch ${pr.head.ref}`);
+                } catch (error) {
+                  if (error.status !== 422) throw error;
+                  console.log(`Old branch already deleted ${pr.head.ref}`);
+                }
               }
             }
 
