@@ -53,36 +53,50 @@ jobs:
             core.info(`check: should_run=${shouldRun}`);
             return shouldRun;
 
-      - name: Collect open bot branches
+      - name: Clean stale bot dependency-update branches
         uses: actions/github-script@v9
         with:
           script: |
             const { owner, repo } = context.repo;
-            const pulls = await github.paginate(github.rest.pulls.list, {
+
+            // Branches attached to open PRs must be preserved.
+            const openPulls = await github.paginate(github.rest.pulls.list, {
               owner,
               repo,
               state: 'open',
               per_page: 100,
             });
-            const branches = pulls
-              .filter((pr) => pr.head.ref.startsWith('bot/dependency-updates-'))
-              .map((pr) => pr.head.ref);
-            const { writeFileSync } = await import('fs');
-            writeFileSync(`${process.env.RUNNER_TEMP}/open-bot-branches.txt`, branches.join('\n'));
-            core.info(`found ${branches.length} open bot branch(es)`);
+            const openBranches = new Set(
+              openPulls
+                .filter((pr) => pr.head.ref.startsWith('bot/dependency-updates-'))
+                .map((pr) => pr.head.ref)
+            );
+            core.info(`open bot branch(es): ${openBranches.size}`);
 
-      - name: Delete stale bot dependency-update branches
-        run: |
-          touch "$RUNNER_TEMP/open-bot-branches.txt"
-          while IFS= read -r branch; do
-            [ -z "$branch" ] && continue
-            if grep -qxF "$branch" "$RUNNER_TEMP/open-bot-branches.txt"; then
-              echo "keeping open $branch"
-            else
-              echo "deleting $branch"
-              git push origin --delete "$branch" || echo "failed to delete $branch"
-            fi
-          done < <(git ls-remote --heads origin 'refs/heads/bot/dependency-updates-*' | awk '{print $2}' | sed 's#refs/heads/##')
+            // All remote bot/dependency-updates refs.
+            const refs = await github.paginate(github.rest.git.listMatchingRefs, {
+              owner,
+              repo,
+              ref: 'heads/bot/dependency-updates-',
+            });
+            for (const item of refs) {
+              const branch = item.ref.replace('refs/heads/', '');
+              if (openBranches.has(branch)) {
+                core.info(`keeping open ${branch}`);
+                continue;
+              }
+              try {
+                await github.rest.git.deleteRef({
+                  owner,
+                  repo,
+                  ref: `heads/${branch}`,
+                });
+                core.info(`deleted ${branch}`);
+              } catch (error) {
+                core.info(`failed to delete ${branch}: ${error.status} ${error.message}`);
+                if (error.status !== 422) throw error;
+              }
+            }
 
   update:
     needs: check
