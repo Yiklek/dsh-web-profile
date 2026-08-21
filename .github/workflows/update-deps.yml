@@ -27,7 +27,6 @@ jobs:
         with:
           result-encoding: string
           script: |
-            core.setOutput('debug_event', github.event_name);
             // Non-push triggers (schedule/manual) always run.
             if (github.event_name !== 'push') {
               return 'true';
@@ -44,11 +43,6 @@ jobs:
               sort: 'updated',
               direction: 'desc',
             });
-            core.setOutput('debug_count', String(pulls.length));
-            const branches = pulls
-              .filter((pr) => pr.head.ref.startsWith('bot/dependency-updates-'))
-              .map((pr) => pr.head.ref);
-            core.setOutput('branches', branches.join(','));
             const merged = pulls.find(
               (pr) => pr.merged_at && pr.merge_commit_sha === after && pr.head.ref.startsWith('bot/dependency-updates-')
             );
@@ -59,23 +53,38 @@ jobs:
             core.info(`check: should_run=${shouldRun}`);
             return shouldRun;
 
-      - name: Debug check outputs
-        run: |
-          echo "debug_event=${{ steps.check.outputs.debug_event }}"
-          echo "debug_count=${{ steps.check.outputs.debug_count }}"
-          echo "branches=${{ steps.check.outputs.branches }}"
+      - name: Collect closed bot branches
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const pulls = await github.paginate(github.rest.pulls.list, {
+              owner,
+              repo,
+              state: 'closed',
+              base: 'main',
+              per_page: 100,
+              sort: 'updated',
+              direction: 'desc',
+            });
+            const branches = pulls
+              .filter((pr) => pr.head.ref.startsWith('bot/dependency-updates-'))
+              .map((pr) => pr.head.ref);
+            const { writeFileSync } = await import('fs');
+            writeFileSync(`${process.env.RUNNER_TEMP}/closed-bot-branches.txt`, branches.join('\n'));
+            core.info(`collected ${branches.length} closed bot branch(es)`);
 
-      - name: Delete bot dependency-update branches
-        if: steps.check.outputs.branches != ''
-        env:
-          BRANCHES: ${{ steps.check.outputs.branches }}
+      - name: Delete closed bot branches
         run: |
-          IFS=',' read -ra arr <<< "$BRANCHES"
-          for branch in "${arr[@]}"; do
+          if [ ! -s "$RUNNER_TEMP/closed-bot-branches.txt" ]; then
+            echo "no closed bot branches to delete"
+            exit 0
+          fi
+          while IFS= read -r branch; do
             [ -z "$branch" ] && continue
             echo "deleting $branch"
             git push origin --delete "$branch" || echo "failed to delete $branch"
-          done
+          done < "$RUNNER_TEMP/closed-bot-branches.txt"
 
   update:
     needs: check
