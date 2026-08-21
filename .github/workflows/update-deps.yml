@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
   schedule:
-    # 03:00 Beijing time (19:00 UTC previous day)
-    - cron: "0 19 * * *"
+    # Every 6 hours (UTC)
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 permissions:
