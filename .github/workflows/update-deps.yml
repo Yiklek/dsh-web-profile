@@ -28,7 +28,8 @@ jobs:
               return 'true';
             }
             const { owner, repo } = context.repo;
-            const after = context.sha;
+            const after = github.event.after || context.sha;
+            console.log(`check: event=${github.event_name} after=${after} contextSha=${context.sha}`);
             const { data: pulls } = await github.rest.pulls.list({
               owner,
               repo,
@@ -41,6 +42,9 @@ jobs:
             const merged = pulls.find(
               (pr) => pr.merged_at && pr.merge_commit_sha === after && pr.head.ref.startsWith('bot/dependency-updates-')
             );
+            if (merged) {
+              console.log(`check: matched PR #${merged.number} ${merged.head.ref} mergeCommit=${merged.merge_commit_sha}`);
+            }
             return merged ? 'false' : 'true';
 
   update:
