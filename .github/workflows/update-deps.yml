@@ -1,0 +1,62 @@
+name: Update dependencies
+
+on:
+  schedule:
+    # 03:00 Beijing time (19:00 UTC previous day)
+    - cron: "0 19 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11.22.0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Update profile dependencies
+        run: pnpm update
+
+      - name: Update e2e dependencies
+        working-directory: tests/e2e
+        run: pnpm update
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create pull request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ci/dependency-updates
+          title: "chore(deps): update dependencies"
+          commit-message: "chore(deps): update dependencies"
+          body: |
+            Automated dependency update by GitHub Actions.
+
+            - `pnpm update` at repo root
+            - `pnpm update` in `tests/e2e`
+
+            CI will validate the changes.
+          base: main
+          delete-branch: true
