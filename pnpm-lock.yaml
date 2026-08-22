@@ -15,8 +15,8 @@ importers:
         specifier: ^0.2.9
         version: 0.2.9
       '@nanmicoder/dsh-agent-teams':
-        specifier: ^0.1.12
-        version: 0.1.12
+        specifier: ^0.1.13
+        version: 0.1.13
       '@opendsh/dsh-plugin-setting-mcp':
         specifier: ^0.1.2
         version: 0.1.2(zod@4.4.3)
@@ -294,8 +294,8 @@ packages:
     peerDependencies:
       react: ^18.2.0
 
-  '@nanmicoder/dsh-agent-teams@0.1.12':
-    resolution: {integrity: sha512-8tSqWn1MiGlWnczEe4oeJ/lyW5Y0lJKA8EaoEjNRtEyB92YSuf+JcO5W5aSHGru400K2rbIM2fSNnDxPOcUC2g==}
+  '@nanmicoder/dsh-agent-teams@0.1.13':
+    resolution: {integrity: sha512-1r762+78NCwomc8t6cSx847AmEuAORKdIkIcdtgxB0Gk1qgjDUsJcwZ8O2oGFBICt+72pAwtj1n0yYGU1DLJTg==}
     engines: {node: ^22.19.0 || >=24}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1-rc.1
@@ -1436,7 +1436,7 @@ snapshots:
 
   '@mlgbnb/dsh-archive-manager@1.0.7': {}
 
-  '@nanmicoder/dsh-agent-teams@0.1.12': {}
+  '@nanmicoder/dsh-agent-teams@0.1.13': {}
 
   '@opendsh/dsh-plugin-setting-mcp@0.1.2(zod@4.4.3)':
     dependencies:
