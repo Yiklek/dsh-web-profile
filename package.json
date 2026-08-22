@@ -5,11 +5,12 @@
     "@hytime/dsh-thinking-effort": "^0.1.7",
     "@linxin666/dsh-web-ui-all": "^0.2.9",
     "@nanmicoder/dsh-agent-teams": "^0.1.12",
+    "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
+    "@wingsky-1/dsh-mcp-manager": "^0.1.11",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-better-sidebar": "^0.15.2",
     "dsh-context": "^0.24.1",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
-    "dsh-mcp-manager-ui": "github:Imzl-zl/dsh-mcp-manager-ui",
     "dshmarket": "^1.18.1"
   },
   "dsh": {
@@ -23,9 +24,10 @@
         "dsh-llm-retry-settings",
         "dsh-anchored-standard",
         "@hytime/dsh-thinking-effort",
-        "dsh-mcp-manager-ui",
         "dsh-context",
-        "@nanmicoder/dsh-agent-teams"
+        "@nanmicoder/dsh-agent-teams",
+        "@opendsh/dsh-plugin-setting-mcp",
+        "@wingsky-1/dsh-mcp-manager"
       ]
     }
   }
