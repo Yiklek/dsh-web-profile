@@ -32,8 +32,7 @@ jobs:
               return 'true';
             }
             const { owner, repo } = context.repo;
-            const after = github.event.after || context.sha;
-            core.info(`check: event=${github.event_name} after=${after}`);
+            core.info(`check: event=${github.event_name} sha=${context.sha}`);
             const pulls = await github.paginate(github.rest.pulls.list, {
               owner,
               repo,
@@ -44,7 +43,7 @@ jobs:
               direction: 'desc',
             });
             const merged = pulls.find(
-              (pr) => pr.merged_at && pr.merge_commit_sha === after && pr.head.ref.startsWith('bot/dependency-updates-')
+              (pr) => pr.merged_at && pr.merge_commit_sha === context.sha && pr.head.ref.startsWith('bot/dependency-updates-')
             );
             if (merged) {
               core.info(`check: merged automation PR #${merged.number} ${merged.head.ref}`);
