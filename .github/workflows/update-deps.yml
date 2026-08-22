@@ -133,6 +133,48 @@ jobs:
           echo "changed=$CHANGED" >> "$GITHUB_OUTPUT"
           echo "changes: changed=$CHANGED"
 
+      - name: Generate bump message
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          node <<'NODE' > "$RUNNER_TEMP/bump-summary.txt"
+          const fs = require('fs');
+          const { execSync } = require('child_process');
+
+          function allDeps(pkg) {
+            return {
+              ...(pkg.dependencies || {}),
+              ...(pkg.devDependencies || {}),
+              ...(pkg.optionalDependencies || {}),
+              ...(pkg.peerDependencies || {}),
+            };
+          }
+
+          function clean(v) {
+            return v == null ? v : String(v).replace(/^[~^>=]+/, '');
+          }
+
+          const files = [
+            { prefix: '', path: 'package.json' },
+            { prefix: 'tests/e2e ', path: 'tests/e2e/package.json' },
+          ];
+          const lines = [];
+          for (const { prefix, path } of files) {
+            const oldPkg = JSON.parse(execSync(`git show HEAD:${path}`, { encoding: 'utf8' }));
+            const newPkg = JSON.parse(fs.readFileSync(path, 'utf8'));
+            const oldDeps = allDeps(oldPkg);
+            const newDeps = allDeps(newPkg);
+            for (const name of [...new Set([...Object.keys(oldDeps), ...Object.keys(newDeps)])].sort()) {
+              const oldV = oldDeps[name];
+              const newV = newDeps[name];
+              if (oldV !== newV) {
+                lines.push(`- bump ${prefix}${name} from ${clean(oldV)} to ${clean(newV)}`);
+              }
+            }
+          }
+          console.log(lines.join('\n'));
+          NODE
+          cat "$RUNNER_TEMP/bump-summary.txt"
+
       - name: Commit and push dependency updates
         id: commit
         if: steps.changes.outputs.changed == 'true'
@@ -144,7 +186,16 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B "$BRANCH"
           git add -A
-          git commit -m "chore(deps): update dependencies"
+          if [ -s "$RUNNER_TEMP/bump-summary.txt" ]; then
+            if [ "$(wc -l < "$RUNNER_TEMP/bump-summary.txt")" -eq 1 ]; then
+              SUBJECT="chore(deps): $(sed 's/^- //' "$RUNNER_TEMP/bump-summary.txt")"
+            else
+              SUBJECT="chore(deps): update dependencies"
+            fi
+            git commit -m "$SUBJECT" -m "$(cat "$RUNNER_TEMP/bump-summary.txt")"
+          else
+            git commit -m "chore(deps): update dependencies"
+          fi
           git push --force origin "$BRANCH"
 
       - name: Create pull request
@@ -187,17 +238,28 @@ jobs:
               }
             }
 
+            const { readFileSync } = await import('fs');
+            let summary = '';
+            try {
+              summary = readFileSync(`${process.env.RUNNER_TEMP}/bump-summary.txt`, 'utf8');
+            } catch {}
+            const bumpLines = summary.split('\n').filter((line) => line.trim() !== '');
+
+            let title = 'chore(deps): update dependencies';
+            if (bumpLines.length === 1) {
+              title = `chore(deps): ${bumpLines[0].replace(/^- /, '')}`;
+            }
+
             const { data: pr } = await github.rest.pulls.create({
               owner,
               repo,
-              title: 'chore(deps): update dependencies',
+              title,
               head,
               base: 'main',
               body: [
                 'Automated dependency update by GitHub Actions.',
                 '',
-                '- `pnpm update` at repo root',
-                '- `pnpm update` in `tests/e2e`',
+                ...(bumpLines.length > 0 ? bumpLines : ['No dependency version changes detected.']),
                 '',
                 'CI will validate the changes.',
               ].join('\n'),
