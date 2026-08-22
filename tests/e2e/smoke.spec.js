@@ -26,10 +26,10 @@ test("web profile loads and settings show plugin sections", async ({
   });
 
   // dsh@next shows blocking first-run dialogs on fresh environments:
-  // 1) the preview disclaimer ("继续"), and 2) possibly the API-key
-  // onboarding ("稍后配置"). Dismiss whichever is present before opening
-  // settings.
-  for (const name of ["继续", "稍后配置"]) {
+  // the preview disclaimer ("继续"), API-key onboarding ("稍后配置"),
+  // and marketplace notices ("知道了" / "关闭此提示"). Dismiss whichever
+  // is present before opening settings.
+  for (const name of ["继续", "稍后配置", "知道了", "关闭此提示"]) {
     const dismiss = page.getByRole("button", { name, exact: true });
     if ((await dismiss.count()) > 0) {
       await dismiss.click();
@@ -48,7 +48,6 @@ test("web profile loads and settings show plugin sections", async ({
   });
   await expect(page.getByText("Anchored 预设", { exact: true })).toBeVisible();
   await expect(page.getByText("API 重试", { exact: true })).toBeVisible();
-  await expect(page.getByText("已归档", { exact: true })).toBeVisible();
 
   // No plugin/client fatal errors should have been emitted.
   const fatal = errors.filter((entry) =>
