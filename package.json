@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "@hytime/dsh-thinking-effort": "^0.1.7",
-    "@linxin666/dsh-web-ui-all": "^0.2.8",
+    "@linxin666/dsh-web-ui-all": "^0.2.9",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-archived-list": "github:Yiklek/dsh-archived-list",
     "dsh-better-sidebar": "^0.14.0",
