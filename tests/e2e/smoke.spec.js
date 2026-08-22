@@ -39,6 +39,15 @@ test("web profile loads and settings show plugin sections", async ({
     }
   }
 
+  // Some plugins open modal overlays on first launch (doctor / remote / launcher).
+  // If one is present, click its mask to dismiss it so it cannot intercept the
+  // built-in Settings button below.
+  const modalMask = page.locator('[role="presentation"] [aria-hidden="true"]').first();
+  if ((await modalMask.count()) > 0) {
+    await modalMask.click({ position: { x: 5, y: 5 } }).catch(() => {});
+    await page.waitForTimeout(250);
+  }
+
   // Open settings; this exercises the core settings UI and mounts every
   // plugin's settings section. These are the sections owned by this profile
   // (our own plugins), not a third-party plugin.
