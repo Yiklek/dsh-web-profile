@@ -28,11 +28,11 @@ jobs:
           result-encoding: json
           script: |
             // Non-push triggers (schedule/manual) always run.
-            if (github.event_name !== 'push') {
+            if (context.eventName !== 'push') {
               return 'true';
             }
             const { owner, repo } = context.repo;
-            core.info(`check: event=${github.event_name} sha=${context.sha}`);
+            core.info(`check: event=${context.eventName} sha=${context.sha}`);
             const pulls = await github.paginate(github.rest.pulls.list, {
               owner,
               repo,
