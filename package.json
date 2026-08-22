@@ -4,6 +4,7 @@
   "dependencies": {
     "@hytime/dsh-thinking-effort": "^0.1.7",
     "@linxin666/dsh-web-ui-all": "^0.2.9",
+    "@nanmicoder/dsh-agent-teams": "^0.1.12",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-better-sidebar": "^0.14.0",
     "dsh-context": "^0.24.1",
@@ -23,7 +24,8 @@
         "dsh-anchored-standard",
         "@hytime/dsh-thinking-effort",
         "dsh-mcp-manager-ui",
-        "dsh-context"
+        "dsh-context",
+        "@nanmicoder/dsh-agent-teams"
       ]
     }
   }
