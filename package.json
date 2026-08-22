@@ -6,11 +6,11 @@
     "@linxin666/dsh-web-ui-all": "^0.2.9",
     "@nanmicoder/dsh-agent-teams": "^0.1.12",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
-    "dsh-better-sidebar": "^0.15.1",
+    "dsh-better-sidebar": "^0.15.2",
     "dsh-context": "^0.24.1",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-mcp-manager-ui": "github:Imzl-zl/dsh-mcp-manager-ui",
-    "dshmarket": "^1.18.0"
+    "dshmarket": "^1.18.1"
   },
   "dsh": {
     "profile": {
