@@ -5,8 +5,8 @@
     "@hytime/dsh-thinking-effort": "^0.1.7",
     "@linxin666/dsh-web-ui-all": "^0.2.9",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
-    "dsh-archived-list": "github:Yiklek/dsh-archived-list",
     "dsh-better-sidebar": "^0.14.0",
+    "dsh-context": "^0.24.1",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-mcp-manager-ui": "github:Imzl-zl/dsh-mcp-manager-ui",
     "dshmarket": "^1.18.0"
@@ -20,10 +20,10 @@
         "@linxin666/dsh-web-ui-all",
         "dsh-better-sidebar",
         "dsh-llm-retry-settings",
-        "dsh-archived-list",
         "dsh-anchored-standard",
         "@hytime/dsh-thinking-effort",
-        "dsh-mcp-manager-ui"
+        "dsh-mcp-manager-ui",
+        "dsh-context"
       ]
     }
   }

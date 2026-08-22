@@ -17,12 +17,12 @@ importers:
       dsh-anchored-standard:
         specifier: github:Yiklek/dsh-anchored-standard
         version: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2
-      dsh-archived-list:
-        specifier: github:Yiklek/dsh-archived-list
-        version: https://codeload.github.com/Yiklek/dsh-archived-list/tar.gz/1d5c0c1531a3f9236773d79dbe13cff81b0331f5
       dsh-better-sidebar:
         specifier: ^0.14.0
         version: 0.14.0
+      dsh-context:
+        specifier: ^0.24.1
+        version: 0.24.1(zod@4.4.3)
       dsh-llm-retry-settings:
         specifier: github:Yiklek/dsh-llm-retry-settings
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5
@@ -620,12 +620,6 @@ packages:
     peerDependencies:
       '@deepseek-ai/dsh-typert-protocol': '>=0.1.0-rc.6'
 
-  dsh-archived-list@https://codeload.github.com/Yiklek/dsh-archived-list/tar.gz/1d5c0c1531a3f9236773d79dbe13cff81b0331f5:
-    resolution: {gitHosted: true, integrity: sha512-iezlWc1kyhGaKiptUun45u8Ho6PgqAxcOftFpAHBM78j+eaPjGXLl7frdQiL3nuANV2x1SqdL8cDAB3tBPb4WA==, tarball: https://codeload.github.com/Yiklek/dsh-archived-list/tar.gz/1d5c0c1531a3f9236773d79dbe13cff81b0331f5}
-    version: 0.1.0
-    peerDependencies:
-      '@deepseek-ai/dsh-typert-protocol': '>=0.1.0-rc.6'
-
   dsh-better-sidebar@0.14.0:
     resolution: {integrity: sha512-bEjHvHnlNnKXkud+/A/kZ4VJvPt79ggHy/mKqEKfODPqLFpvdz7ZcoMCI3K4naPOw/0Wlqp6J3UDR9h2Wm6w4w==}
     engines: {node: '>=20'}
@@ -649,6 +643,20 @@ packages:
       react-dom: ^18.2.0
     peerDependenciesMeta:
       cordis:
+        optional: true
+
+  dsh-context@0.24.1:
+    resolution: {integrity: sha512-7C9MCX3g/mAtT3WO/w4CiA9sAh795+S4+zGoRyTubAkOEskrcVsSS4nfKqnUInJo3tOQuCdzUJQaBWS/6/iMPw==}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      '@deepseek-ai/dsh-client-ui-primitives': ^0.1.0-rc.7
+      '@deepseek-ai/dsh-session': ^0.1.0-rc.7
+      react: ^18.3.1
+      zod: ^4.4.3
+    peerDependenciesMeta:
+      '@deepseek-ai/dsh-client-ui-primitives':
+        optional: true
+      react:
         optional: true
 
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5:
@@ -1671,8 +1679,6 @@ snapshots:
 
   dsh-anchored-standard@https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2: {}
 
-  dsh-archived-list@https://codeload.github.com/Yiklek/dsh-archived-list/tar.gz/1d5c0c1531a3f9236773d79dbe13cff81b0331f5: {}
-
   dsh-better-sidebar@0.14.0:
     dependencies:
       '@codemirror/commands': 6.11.0
@@ -1705,6 +1711,10 @@ snapshots:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
+
+  dsh-context@0.24.1(zod@4.4.3):
+    dependencies:
+      zod: 4.4.3
 
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5: {}
 
