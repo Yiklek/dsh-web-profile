@@ -40,7 +40,7 @@ importers:
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5
       dsh-settings-manager:
         specifier: github:Yiklek/dsh-settings-manager
-        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/03263909dcbdafc5474bc1eb6d722834c2e49ac6
+        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/a123584321e35947025aa7e0c419a50480259ff0
       dshmarket:
         specifier: ^1.20.2
         version: 1.20.2
@@ -804,11 +804,11 @@ packages:
     resolution: {gitHosted: true, integrity: sha512-Jy3evqwCYAExruOONNG9yslju/1qxXZGWjVkXiF+mqSIgZIOJnXfM8vSSC9ml4oqJCwIZl0lCTQL9XPALHwpuQ==, tarball: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5}
     version: 0.1.0
 
-  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/03263909dcbdafc5474bc1eb6d722834c2e49ac6:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/03263909dcbdafc5474bc1eb6d722834c2e49ac6}
+  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/a123584321e35947025aa7e0c419a50480259ff0:
+    resolution: {gitHosted: true, integrity: sha512-wELwkYdPzSzbI9VGjK3StBofhllFlj5t2eRXCNJe0P8tnu6vfUcEj8Q3qLBZS6KU3Lv6mi7KYInbBCNUqKqp+A==, tarball: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/a123584321e35947025aa7e0c419a50480259ff0}
     version: 0.1.0
     peerDependencies:
-      react: ^18.2.0
+      react: '*'
     peerDependenciesMeta:
       react:
         optional: true
@@ -1911,7 +1911,7 @@ snapshots:
 
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5: {}
 
-  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/03263909dcbdafc5474bc1eb6d722834c2e49ac6: {}
+  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/a123584321e35947025aa7e0c419a50480259ff0: {}
 
   dshmarket@1.20.2:
     dependencies:
