@@ -29,6 +29,9 @@ importers:
       dsh-better-sidebar:
         specifier: ^0.15.2
         version: 0.15.2
+      dsh-complete-notify:
+        specifier: ^0.6.2
+        version: 0.6.2
       dsh-context:
         specifier: ^0.24.1
         version: 0.24.1(zod@4.4.3)
@@ -773,6 +776,12 @@ packages:
     peerDependenciesMeta:
       cordis:
         optional: true
+
+  dsh-complete-notify@0.6.2:
+    resolution: {integrity: sha512-rmv0qqWG9OOAR2CY74k1a+HXyRLVWBIq2NMatc2pvzFYx5/yJQ4cI2SxVgSWIY6X+LJqlLnTYzvaqKWmRMhv+A==}
+    engines: {dsh: '>=0.1.0-rc.6', node: '>=22.19.0'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
 
   dsh-context@0.24.1:
     resolution: {integrity: sha512-7C9MCX3g/mAtT3WO/w4CiA9sAh795+S4+zGoRyTubAkOEskrcVsSS4nfKqnUInJo3tOQuCdzUJQaBWS/6/iMPw==}
@@ -1881,6 +1890,8 @@ snapshots:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
+
+  dsh-complete-notify@0.6.2: {}
 
   dsh-context@0.24.1(zod@4.4.3):
     dependencies:

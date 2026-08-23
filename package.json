@@ -9,6 +9,7 @@
     "@wingsky-1/dsh-mcp-manager": "^0.1.11",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-better-sidebar": "^0.15.2",
+    "dsh-complete-notify": "^0.6.2",
     "dsh-context": "^0.24.1",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dshmarket": "^1.19.0"
@@ -27,7 +28,8 @@
         "dsh-context",
         "@nanmicoder/dsh-agent-teams",
         "@opendsh/dsh-plugin-setting-mcp",
-        "@wingsky-1/dsh-mcp-manager"
+        "@wingsky-1/dsh-mcp-manager",
+        "dsh-complete-notify"
       ]
     }
   }
