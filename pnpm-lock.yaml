@@ -36,8 +36,8 @@ importers:
         specifier: github:Yiklek/dsh-llm-retry-settings
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5
       dshmarket:
-        specifier: ^1.18.1
-        version: 1.18.1
+        specifier: ^1.19.0
+        version: 1.19.0
 
 packages:
 
@@ -792,8 +792,8 @@ packages:
     resolution: {gitHosted: true, integrity: sha512-Jy3evqwCYAExruOONNG9yslju/1qxXZGWjVkXiF+mqSIgZIOJnXfM8vSSC9ml4oqJCwIZl0lCTQL9XPALHwpuQ==, tarball: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5}
     version: 0.1.0
 
-  dshmarket@1.18.1:
-    resolution: {integrity: sha512-N7Z9Ylevf7zRJBkwuoapA/Hw5Ps7MYuQ9dDSRM9EiSo3vIU9GQluPyP5NrHiVEdJYy6sh28ATjAmriMCLgesqg==}
+  dshmarket@1.19.0:
+    resolution: {integrity: sha512-R6S6zT5PXTiY3HjqDXQglcTJ/hLJhuDlEERBK6+j9gIJCEECnz2hJKtCqvJi5uBAl4kBrwffKRAMqFGd2z56xQ==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
       '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2
@@ -1888,7 +1888,7 @@ snapshots:
 
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5: {}
 
-  dshmarket@1.18.1:
+  dshmarket@1.19.0:
     dependencies:
       js-yaml: 4.3.1
       undici: 7.29.0
