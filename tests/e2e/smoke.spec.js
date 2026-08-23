@@ -25,6 +25,10 @@ test("web profile loads and settings show plugin sections", async ({
     timeout: 30_000,
   });
 
+  // First-run dialogs can appear a beat after the shell settles. Give them a
+  // moment to mount, then dismiss every known button.
+  await page.waitForTimeout(1_000);
+
   // dsh@next shows blocking first-run dialogs on fresh environments:
   // the preview disclaimer ("继续"), API-key onboarding ("稍后配置"),
   // and marketplace notices ("知道了" / "关闭此提示"). Dismiss whichever
@@ -41,10 +45,14 @@ test("web profile loads and settings show plugin sections", async ({
 
   // Some plugins open modal overlays on first launch (doctor / remote / launcher).
   // If one is present, click its mask to dismiss it so it cannot intercept the
-  // built-in Settings button below.
-  const modalMask = page.locator('[role="presentation"] [aria-hidden="true"]').first();
-  if ((await modalMask.count()) > 0) {
-    await modalMask.click({ position: { x: 5, y: 5 } }).catch(() => {});
+  // built-in Settings button below. Repeat a few times for late-mounting modals.
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const modal = page.locator('[role="presentation"]').first();
+    if ((await modal.count()) === 0) break;
+    const mask = modal.locator('[aria-hidden="true"]').first();
+    if ((await mask.count()) > 0) {
+      await mask.click({ position: { x: 5, y: 5 } }).catch(() => {});
+    }
     await page.waitForTimeout(250);
   }
 
