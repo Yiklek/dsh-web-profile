@@ -25,41 +25,43 @@ test("web profile loads and settings show plugin sections", async ({
     timeout: 30_000,
   });
 
-  // First-run dialogs can appear a beat after the shell settles. Give them a
-  // moment to mount, then dismiss every known button.
-  await page.waitForTimeout(1_000);
-
-  // dsh@next shows blocking first-run dialogs on fresh environments:
-  // the preview disclaimer ("继续"), API-key onboarding ("稍后配置"),
-  // and marketplace notices ("知道了" / "关闭此提示"). Dismiss whichever
-  // is present before opening settings.
-  for (const name of ["继续", "稍后配置", "知道了", "关闭此提示"]) {
-    const dismiss = page.getByRole("button", { name, exact: true });
-    if ((await dismiss.count()) > 0) {
-      await dismiss.click();
-      await expect(dismiss)
-        .not.toBeVisible({ timeout: 5_000 })
-        .catch(() => {});
-    }
-  }
-
-  // Some plugins open modal overlays on first launch (doctor / remote / launcher).
-  // If one is present, click its mask to dismiss it so it cannot intercept the
-  // built-in Settings button below. Repeat a few times for late-mounting modals.
-  for (let attempt = 0; attempt < 3; attempt++) {
+  // First-run dialogs can appear a beat after the shell settles. Repeatedly
+  // dismiss whatever modal is currently present, then try to open settings.
+  // If a modal mounts late and blocks the first attempt, the loop sees it on
+  // the next iteration and dismisses it before retrying.
+  let settingsOpened = false;
+  for (let attempt = 0; attempt < 5 && !settingsOpened; attempt++) {
     const modal = page.locator('[role="presentation"]').first();
-    if ((await modal.count()) === 0) break;
-    const mask = modal.locator('[aria-hidden="true"]').first();
-    if ((await mask.count()) > 0) {
-      await mask.click({ position: { x: 5, y: 5 } }).catch(() => {});
+    if ((await modal.count()) > 0) {
+      const mask = modal.locator('[aria-hidden="true"]').first();
+      if ((await mask.count()) > 0) {
+        await mask.click({ position: { x: 5, y: 5 } }).catch(() => {});
+      }
+      await page.waitForTimeout(250);
     }
-    await page.waitForTimeout(250);
-  }
 
-  // Open settings; this exercises the core settings UI and mounts every
-  // plugin's settings section. These are the sections owned by this profile
-  // (our own plugins), not a third-party plugin.
-  await page.getByText("设置", { exact: true }).first().click();
+    for (const name of ["继续", "稍后配置", "知道了", "关闭此提示"]) {
+      const dismiss = page.getByRole("button", { name, exact: true });
+      if ((await dismiss.count()) > 0) {
+        await dismiss.click().catch(() => {});
+        await expect(dismiss).not.toBeVisible({ timeout: 2_000 }).catch(() => {});
+      }
+    }
+
+    try {
+      await page.getByText("设置", { exact: true }).first().click({
+        timeout: 3_000,
+      });
+      settingsOpened = true;
+    } catch {
+      // The modal probably mounted just in time; loop and dismiss it again.
+    }
+  }
+  expect(settingsOpened, "settings should open after dismissing first-run dialogs").toBe(true);
+
+  // The built-in Settings UI should now be open with our plugin sections
+  // mounted. These are the sections owned by this profile (our own plugins),
+  // not a third-party plugin.
   await expect(page.getByText("通用设置", { exact: true })).toBeVisible({
     timeout: 10_000,
   });
