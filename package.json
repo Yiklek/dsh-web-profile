@@ -11,7 +11,7 @@
     "dsh-better-sidebar": "^0.15.2",
     "dsh-context": "^0.24.1",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
-    "dshmarket": "^1.18.1"
+    "dshmarket": "^1.19.0"
   },
   "dsh": {
     "profile": {
