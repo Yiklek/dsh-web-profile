@@ -99,7 +99,10 @@ jobs:
 
   update:
     needs: check
-    if: fromJSON(needs.check.outputs.should_run) == 'true'
+    # Manual dispatch must always run the dependency update; push/schedule runs
+    # are gated by the check job's result. `always()` keeps the manual guarantee
+    # even if the check job fails (e.g. stale-branch cleanup error).
+    if: always() && (github.event_name == 'workflow_dispatch' || fromJSON(needs.check.outputs.should_run) == 'true')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
