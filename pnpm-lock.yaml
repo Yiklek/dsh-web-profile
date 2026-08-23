@@ -42,8 +42,8 @@ importers:
         specifier: github:Yiklek/dsh-settings-manager
         version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/a123584321e35947025aa7e0c419a50480259ff0
       dshmarket:
-        specifier: ^1.20.2
-        version: 1.20.2
+        specifier: ^1.21.0
+        version: 1.21.0
 
 packages:
 
@@ -813,8 +813,8 @@ packages:
       react:
         optional: true
 
-  dshmarket@1.20.2:
-    resolution: {integrity: sha512-7Y1rRSCKVOQMH/pbIJPuxhXjfSrLjDqKjwOuCoPIpDkprRdn9abEy+vcXxGBlTuCIUGKdT6o4r16CbqOPJUqeA==}
+  dshmarket@1.21.0:
+    resolution: {integrity: sha512-ogQyh8r6hgUWKqkOpb7t+baENFYGDKI2/o8Mxmv+KpTQP7ih7MEb9Dc9qQ5boLGR6hSXTsOyJHDkAlZGSSzUOw==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
       '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2
@@ -1913,7 +1913,7 @@ snapshots:
 
   dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/a123584321e35947025aa7e0c419a50480259ff0: {}
 
-  dshmarket@1.20.2:
+  dshmarket@1.21.0:
     dependencies:
       js-yaml: 4.3.1
       undici: 7.29.0
