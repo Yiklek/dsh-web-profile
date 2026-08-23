@@ -38,6 +38,9 @@ importers:
       dsh-llm-retry-settings:
         specifier: github:Yiklek/dsh-llm-retry-settings
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5
+      dsh-settings-manager:
+        specifier: github:Yiklek/dsh-settings-manager
+        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/03263909dcbdafc5474bc1eb6d722834c2e49ac6
       dshmarket:
         specifier: ^1.20.2
         version: 1.20.2
@@ -800,6 +803,15 @@ packages:
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5:
     resolution: {gitHosted: true, integrity: sha512-Jy3evqwCYAExruOONNG9yslju/1qxXZGWjVkXiF+mqSIgZIOJnXfM8vSSC9ml4oqJCwIZl0lCTQL9XPALHwpuQ==, tarball: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5}
     version: 0.1.0
+
+  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/03263909dcbdafc5474bc1eb6d722834c2e49ac6:
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/03263909dcbdafc5474bc1eb6d722834c2e49ac6}
+    version: 0.1.0
+    peerDependencies:
+      react: ^18.2.0
+    peerDependenciesMeta:
+      react:
+        optional: true
 
   dshmarket@1.20.2:
     resolution: {integrity: sha512-7Y1rRSCKVOQMH/pbIJPuxhXjfSrLjDqKjwOuCoPIpDkprRdn9abEy+vcXxGBlTuCIUGKdT6o4r16CbqOPJUqeA==}
@@ -1898,6 +1910,8 @@ snapshots:
       zod: 4.4.3
 
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5: {}
+
+  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/03263909dcbdafc5474bc1eb6d722834c2e49ac6: {}
 
   dshmarket@1.20.2:
     dependencies:

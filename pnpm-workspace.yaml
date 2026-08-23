@@ -8,4 +8,9 @@ allowBuilds:
   cpu-features: true
   node-pty: true
   ssh2: true
+  esbuild: true
+  # build-on-install for the git-hosted plugin (prepare runs esbuild to emit lib/).
+  # The key is bound to a commit URL; after pushing a new commit, run
+  # `pnpm approve-builds` to refresh it to the new hash.
+  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/03263909dcbdafc5474bc1eb6d722834c2e49ac6: true
 minimumReleaseAge: 0

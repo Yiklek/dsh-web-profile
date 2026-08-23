@@ -21,3 +21,4 @@ thinking-effort-loaded.json
 # e2e
 tests/e2e/test-results/
 tests/e2e/playwright-report/
+.npmrc
