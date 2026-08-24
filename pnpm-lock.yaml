@@ -40,7 +40,7 @@ importers:
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5
       dsh-settings-manager:
         specifier: github:Yiklek/dsh-settings-manager#pkg
-        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/4c246da4a3294fe9d3b5149c1b3e82774560683d
+        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/df7c3f2d5bace679712078453814c5a637b380a2
       dshmarket:
         specifier: ^1.21.2
         version: 1.21.2
@@ -804,12 +804,18 @@ packages:
     resolution: {gitHosted: true, integrity: sha512-Jy3evqwCYAExruOONNG9yslju/1qxXZGWjVkXiF+mqSIgZIOJnXfM8vSSC9ml4oqJCwIZl0lCTQL9XPALHwpuQ==, tarball: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5}
     version: 0.1.0
 
-  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/4c246da4a3294fe9d3b5149c1b3e82774560683d:
-    resolution: {gitHosted: true, integrity: sha512-uEuPLXeUWUwV7DKPajEUQTioLz/kiGDgz7DzN3OqsjYu5RNI4JGmRsjDsYpYIVhsN/AeH3if1m48ZqeHb70F3Q==, tarball: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/4c246da4a3294fe9d3b5149c1b3e82774560683d}
+  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/df7c3f2d5bace679712078453814c5a637b380a2:
+    resolution: {gitHosted: true, integrity: sha512-ghqoMwRgob+qb5wfpbdaDfjlkJr/BlhQb0elYyASyQ0k56NkuGlGi2dterlqSqKvr9OATvgMpUANEK/pfJYnkg==, tarball: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/df7c3f2d5bace679712078453814c5a637b380a2}
     version: 0.1.0
     peerDependencies:
+      '@deepseek-ai/dsh-settings': '*'
+      '@deepseek-ai/schemastery': '*'
       react: '*'
     peerDependenciesMeta:
+      '@deepseek-ai/dsh-settings':
+        optional: true
+      '@deepseek-ai/schemastery':
+        optional: true
       react:
         optional: true
 
@@ -1911,7 +1917,7 @@ snapshots:
 
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5: {}
 
-  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/4c246da4a3294fe9d3b5149c1b3e82774560683d: {}
+  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/df7c3f2d5bace679712078453814c5a637b380a2: {}
 
   dshmarket@1.21.2:
     dependencies:
