@@ -39,11 +39,11 @@ importers:
         specifier: github:Yiklek/dsh-llm-retry-settings
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5
       dsh-settings-manager:
-        specifier: github:Yiklek/dsh-settings-manager
-        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/a123584321e35947025aa7e0c419a50480259ff0
+        specifier: github:Yiklek/dsh-settings-manager#pkg
+        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/4c246da4a3294fe9d3b5149c1b3e82774560683d
       dshmarket:
-        specifier: ^1.20.2
-        version: 1.20.2
+        specifier: ^1.21.2
+        version: 1.21.2
 
 packages:
 
@@ -804,8 +804,8 @@ packages:
     resolution: {gitHosted: true, integrity: sha512-Jy3evqwCYAExruOONNG9yslju/1qxXZGWjVkXiF+mqSIgZIOJnXfM8vSSC9ml4oqJCwIZl0lCTQL9XPALHwpuQ==, tarball: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5}
     version: 0.1.0
 
-  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/a123584321e35947025aa7e0c419a50480259ff0:
-    resolution: {gitHosted: true, integrity: sha512-wELwkYdPzSzbI9VGjK3StBofhllFlj5t2eRXCNJe0P8tnu6vfUcEj8Q3qLBZS6KU3Lv6mi7KYInbBCNUqKqp+A==, tarball: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/a123584321e35947025aa7e0c419a50480259ff0}
+  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/4c246da4a3294fe9d3b5149c1b3e82774560683d:
+    resolution: {gitHosted: true, integrity: sha512-uEuPLXeUWUwV7DKPajEUQTioLz/kiGDgz7DzN3OqsjYu5RNI4JGmRsjDsYpYIVhsN/AeH3if1m48ZqeHb70F3Q==, tarball: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/4c246da4a3294fe9d3b5149c1b3e82774560683d}
     version: 0.1.0
     peerDependencies:
       react: '*'
@@ -813,8 +813,8 @@ packages:
       react:
         optional: true
 
-  dshmarket@1.20.2:
-    resolution: {integrity: sha512-7Y1rRSCKVOQMH/pbIJPuxhXjfSrLjDqKjwOuCoPIpDkprRdn9abEy+vcXxGBlTuCIUGKdT6o4r16CbqOPJUqeA==}
+  dshmarket@1.21.2:
+    resolution: {integrity: sha512-Q+5i9eHvD2R/vm422Qn0fImpkD74VfP7D4ltab0YlQ6cwAvE93ONcVuxz3Iej630PP6FjojUt6G1w4/3LY/kAQ==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
       '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2
@@ -1911,9 +1911,9 @@ snapshots:
 
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5: {}
 
-  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/a123584321e35947025aa7e0c419a50480259ff0: {}
+  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/4c246da4a3294fe9d3b5149c1b3e82774560683d: {}
 
-  dshmarket@1.20.2:
+  dshmarket@1.21.2:
     dependencies:
       js-yaml: 4.3.1
       undici: 7.29.0
