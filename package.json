@@ -12,7 +12,7 @@
     "dsh-complete-notify": "^0.6.2",
     "dsh-context": "^0.24.1",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
-    "dsh-settings-manager": "github:Yiklek/dsh-settings-manager",
+    "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
     "dshmarket": "^1.20.2"
   },
   "dsh": {
