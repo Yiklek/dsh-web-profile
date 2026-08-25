@@ -42,8 +42,8 @@ importers:
         specifier: github:Yiklek/dsh-settings-manager#pkg
         version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/df7c3f2d5bace679712078453814c5a637b380a2
       dshmarket:
-        specifier: ^1.21.2
-        version: 1.21.2
+        specifier: ^1.26.0
+        version: 1.26.0
 
 packages:
 
@@ -819,13 +819,16 @@ packages:
       react:
         optional: true
 
-  dshmarket@1.21.2:
-    resolution: {integrity: sha512-Q+5i9eHvD2R/vm422Qn0fImpkD74VfP7D4ltab0YlQ6cwAvE93ONcVuxz3Iej630PP6FjojUt6G1w4/3LY/kAQ==}
+  dshmarket@1.26.0:
+    resolution: {integrity: sha512-vl3SrlMmMQCFy4Glsij20OfkpLYVsocrBcL6j8n53NwqOCnGXFOFoF1Bu8mcSfU/sfSsSFXT8MojI51Ka4pT5A==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
       '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2
+      '@deepseek-ai/schemastery': ^3.18.1
     peerDependenciesMeta:
       '@deepseek-ai/dsh-settings':
+        optional: true
+      '@deepseek-ai/schemastery':
         optional: true
 
   es-toolkit@1.51.0:
@@ -953,8 +956,8 @@ packages:
     engines: {node: '>= 20'}
     hasBin: true
 
-  mermaid@11.17.0:
-    resolution: {integrity: sha512-Jo9N377Wb4MSnHFPTbLi2SxFpsQl4eVHoxnW5U1Md9EazvgMp3s+4ohDxr81YNTgbn5Kj7HJ3yslrSJ52kwpbA==}
+  mermaid@11.17.1:
+    resolution: {integrity: sha512-G1BP6qU4BRwEGk2SdsxgDk1cSuApimT32Nkb52YRSv+856FrmB8qo28BaNk9Ee8Fvuon3OxpXDJ4L6cD5AykXg==}
 
   nan@2.28.0:
     resolution: {integrity: sha512-fTsDz99OTq2sVePhGdp4qQhggZFtKr64ZNVyVajRKtMOkJxYekplBh577PiJB12v/D3s2E5cGtOI45LWp6rnLQ==}
@@ -1866,7 +1869,7 @@ snapshots:
       '@codemirror/view': 6.43.9
       '@lezer/highlight': 1.2.3
       clsx: 2.1.1
-      mermaid: 11.17.0
+      mermaid: 11.17.1
       node-pty: 1.1.0
       rxjs: 7.8.2
       schemastery: 3.18.0
@@ -1899,7 +1902,7 @@ snapshots:
       '@codemirror/view': 6.43.9
       '@lezer/highlight': 1.2.3
       clsx: 2.1.1
-      mermaid: 11.17.0
+      mermaid: 11.17.1
       node-pty: 1.1.0
       react-icons: 5.7.0
       rxjs: 7.8.2
@@ -1919,7 +1922,7 @@ snapshots:
 
   dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/df7c3f2d5bace679712078453814c5a637b380a2: {}
 
-  dshmarket@1.21.2:
+  dshmarket@1.26.0:
     dependencies:
       js-yaml: 4.3.1
       undici: 7.29.0
@@ -2011,7 +2014,7 @@ snapshots:
 
   marked@16.4.2: {}
 
-  mermaid@11.17.0:
+  mermaid@11.17.1:
     dependencies:
       '@braintree/sanitize-url': 7.1.2
       '@iconify/utils': 3.1.4
