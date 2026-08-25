@@ -2,7 +2,7 @@
   "name": "dsh-profile-web",
   "private": true,
   "dependencies": {
-    "@hytime/dsh-thinking-effort": "^0.1.7",
+    "@hytime/dsh-thinking-effort": "^0.1.8",
     "@linxin666/dsh-web-ui-all": "^0.2.9",
     "@nanmicoder/dsh-agent-teams": "^0.1.13",
     "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
