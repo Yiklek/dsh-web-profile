@@ -10,7 +10,7 @@
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-better-sidebar": "^0.15.2",
     "dsh-complete-notify": "^0.6.2",
-    "dsh-context": "^0.24.1",
+    "dsh-context": "^0.27.0",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
     "dshmarket": "^1.31.1"
