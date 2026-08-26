@@ -2,11 +2,11 @@
   "name": "dsh-profile-web",
   "private": true,
   "dependencies": {
-    "@hytime/dsh-thinking-effort": "^0.1.7",
+    "@hytime/dsh-thinking-effort": "^0.1.8",
     "@linxin666/dsh-web-ui-all": "^0.2.9",
     "@nanmicoder/dsh-agent-teams": "^0.1.13",
     "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
-    "@wingsky-1/dsh-mcp-manager": "^0.1.12",
+    "@wingsky-1/dsh-mcp-manager": "^0.1.13",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-better-sidebar": "^0.15.2",
     "dsh-complete-notify": "^0.6.2",
