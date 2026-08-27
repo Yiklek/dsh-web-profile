@@ -13,7 +13,7 @@
     "dsh-context": "^0.27.0",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
-    "dshmarket": "^1.32.0"
+    "dshmarket": "^1.34.0"
   },
   "dsh": {
     "profile": {
