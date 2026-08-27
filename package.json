@@ -4,7 +4,7 @@
   "dependencies": {
     "@hytime/dsh-thinking-effort": "^0.1.8",
     "@linxin666/dsh-web-ui-all": "^0.2.9",
-    "@nanmicoder/dsh-agent-teams": "^0.1.13",
+    "@nanmicoder/dsh-agent-teams": "^0.1.14",
     "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
     "@wingsky-1/dsh-mcp-manager": "^0.1.13",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
@@ -13,7 +13,7 @@
     "dsh-context": "^0.27.0",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
-    "dshmarket": "^1.31.1"
+    "dshmarket": "^1.32.0"
   },
   "dsh": {
     "profile": {
