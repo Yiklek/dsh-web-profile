@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@hytime/dsh-thinking-effort':
-        specifier: ^0.1.8
-        version: 0.1.8
+        specifier: ^0.1.9
+        version: 0.1.9
       '@linxin666/dsh-web-ui-all':
         specifier: ^0.2.9
         version: 0.2.9
@@ -125,8 +125,8 @@ packages:
   '@codemirror/view@6.43.9':
     resolution: {integrity: sha512-sTuUzTpPMFebRhg6dawChoKKgndIwfjmJgKVxBefPElcU2NwQ6AFroupk0SFqEerQyZOGRfDNnSN8Dw/lMAsXw==}
 
-  '@hytime/dsh-thinking-effort@0.1.8':
-    resolution: {integrity: sha512-nrZjFF0FIPHYQVFaHa1keytTryrdMvEHXZWD9XLIu0BA3XlyeIxi9gDvYGN19WLXQBMO5WprpwPkNQmowVGLUA==}
+  '@hytime/dsh-thinking-effort@0.1.9':
+    resolution: {integrity: sha512-z78ispUmo45KWmszjA8PRP+quZt5AAVjxJrCgGkOhoEnG8Dxt27Bd1lv8kLfp7w38L090Tg68Ls9buLkdvvkAw==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
@@ -1255,7 +1255,7 @@ snapshots:
       style-mod: 4.1.3
       w3c-keyname: 2.2.8
 
-  '@hytime/dsh-thinking-effort@0.1.8': {}
+  '@hytime/dsh-thinking-effort@0.1.9': {}
 
   '@iconify/types@2.0.0': {}
 
