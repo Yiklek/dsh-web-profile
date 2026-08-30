@@ -2,18 +2,17 @@
   "name": "dsh-profile-web",
   "private": true,
   "dependencies": {
-    "@hytime/dsh-thinking-effort": "^0.1.8",
-    "@linxin666/dsh-web-ui-all": "^0.2.9",
+    "@linxin666/dsh-web-all": "^0.3.6",
     "@nanmicoder/dsh-agent-teams": "^0.1.14",
     "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
-    "@wingsky-1/dsh-mcp-manager": "^0.1.13",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-better-sidebar": "^0.16.1",
+    "dsh-coding-subscription-oauth": "^0.6.4",
     "dsh-complete-notify": "^0.6.2",
     "dsh-context": "^0.27.0",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
-    "dshmarket": "^1.36.0"
+    "dshmarket": "^1.37.0"
   },
   "dsh": {
     "profile": {
@@ -21,17 +20,16 @@
         "@deepseek-ai/dsh-base",
         "@deepseek-ai/dsh-web-app",
         "dshmarket",
-        "@linxin666/dsh-web-ui-all",
+        "@linxin666/dsh-web-all",
         "dsh-better-sidebar",
         "dsh-settings-manager",
         "dsh-llm-retry-settings",
         "dsh-anchored-standard",
-        "@hytime/dsh-thinking-effort",
         "dsh-context",
         "@nanmicoder/dsh-agent-teams",
         "@opendsh/dsh-plugin-setting-mcp",
-        "@wingsky-1/dsh-mcp-manager",
-        "dsh-complete-notify"
+        "dsh-complete-notify",
+        "dsh-coding-subscription-oauth"
       ]
     }
   }
