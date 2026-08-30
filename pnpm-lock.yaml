@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@hytime/dsh-thinking-effort':
-        specifier: ^0.1.8
-        version: 0.1.8
+        specifier: ^0.1.9
+        version: 0.1.9
       '@linxin666/dsh-web-ui-all':
         specifier: ^0.2.9
         version: 0.2.9
@@ -19,7 +19,7 @@ importers:
         version: 0.1.14
       '@opendsh/dsh-plugin-setting-mcp':
         specifier: ^0.1.2
-        version: 0.1.2(zod@4.5.2)
+        version: 0.1.2(zod@4.5.4)
       '@wingsky-1/dsh-mcp-manager':
         specifier: ^0.1.13
         version: 0.1.13
@@ -34,7 +34,7 @@ importers:
         version: 0.6.2
       dsh-context:
         specifier: ^0.27.0
-        version: 0.27.0(zod@4.5.2)
+        version: 0.27.0(zod@4.5.4)
       dsh-llm-retry-settings:
         specifier: github:Yiklek/dsh-llm-retry-settings
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5
@@ -125,8 +125,8 @@ packages:
   '@codemirror/view@6.43.9':
     resolution: {integrity: sha512-sTuUzTpPMFebRhg6dawChoKKgndIwfjmJgKVxBefPElcU2NwQ6AFroupk0SFqEerQyZOGRfDNnSN8Dw/lMAsXw==}
 
-  '@hytime/dsh-thinking-effort@0.1.8':
-    resolution: {integrity: sha512-nrZjFF0FIPHYQVFaHa1keytTryrdMvEHXZWD9XLIu0BA3XlyeIxi9gDvYGN19WLXQBMO5WprpwPkNQmowVGLUA==}
+  '@hytime/dsh-thinking-effort@0.1.9':
+    resolution: {integrity: sha512-z78ispUmo45KWmszjA8PRP+quZt5AAVjxJrCgGkOhoEnG8Dxt27Bd1lv8kLfp7w38L090Tg68Ls9buLkdvvkAw==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
@@ -1070,8 +1070,8 @@ packages:
     engines: {node: '>= 14.6'}
     hasBin: true
 
-  zod@4.5.2:
-    resolution: {integrity: sha512-XkYXCol10+ba/6F/cueWV+TezUeOqXW0hdeJt5CdXjTYeAgAQg5N03RQdJ80mhfFE72+pblvYMW4wy2Qp4Qbrg==}
+  zod@4.5.4:
+    resolution: {integrity: sha512-sC95tT5iHHH9gtpj6A81kh+NEaRAUFN+qlUPDUbRfOMvNf5QCBqsb3WgvnpVtK5Y+4UfA6KqufotuTvMGiTlsA==}
 
 snapshots:
 
@@ -1255,7 +1255,7 @@ snapshots:
       style-mod: 4.1.3
       w3c-keyname: 2.2.8
 
-  '@hytime/dsh-thinking-effort@0.1.8': {}
+  '@hytime/dsh-thinking-effort@0.1.9': {}
 
   '@iconify/types@2.0.0': {}
 
@@ -1408,7 +1408,7 @@ snapshots:
       clsx: 2.1.1
       qrcode.react: 4.2.0
       schemastery: 3.18.0
-      zod: 4.5.2
+      zod: 4.5.4
 
   '@linxin666/dsh-skins@0.2.9':
     dependencies:
@@ -1484,10 +1484,10 @@ snapshots:
 
   '@nanmicoder/dsh-agent-teams@0.1.14': {}
 
-  '@opendsh/dsh-plugin-setting-mcp@0.1.2(zod@4.5.2)':
+  '@opendsh/dsh-plugin-setting-mcp@0.1.2(zod@4.5.4)':
     dependencies:
       js-yaml: 4.3.2
-      zod: 4.5.2
+      zod: 4.5.4
 
   '@standard-schema/spec@1.1.0': {}
 
@@ -1932,9 +1932,9 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.27.0(zod@4.5.2):
+  dsh-context@0.27.0(zod@4.5.4):
     dependencies:
-      zod: 4.5.2
+      zod: 4.5.4
 
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/bf67826caf4238841b47d01c229bd22da10353b5: {}
 
@@ -2135,4 +2135,4 @@ snapshots:
 
   yaml@2.9.0: {}
 
-  zod@4.5.2: {}
+  zod@4.5.4: {}
