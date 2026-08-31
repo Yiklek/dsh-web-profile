@@ -2,7 +2,7 @@
   "name": "dsh-profile-web",
   "private": true,
   "dependencies": {
-    "@linxin666/dsh-web-all": "^0.3.6",
+    "@linxin666/dsh-web-all": "^0.3.9",
     "@nanmicoder/dsh-agent-teams": "^0.1.14",
     "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
@@ -12,7 +12,7 @@
     "dsh-context": "^0.27.0",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
-    "dshmarket": "^1.37.0"
+    "dshmarket": "^1.38.1"
   },
   "dsh": {
     "profile": {
