@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
+const fs = require("node:fs");
 
 const BLOCKED_PATTERNS = [
   /Failed to load plugins/i,
@@ -7,6 +8,31 @@ const BLOCKED_PATTERNS = [
   /client-modules:/i,
   /Cannot find package/i,
 ];
+
+/**
+ * Resolve the dsh connection URL to establish the browser session before the
+ * test navigates. dsh boot prints a token-bearing root URL
+ * (`http://host:port/?token=...`) and only serves the app once the browser has
+ * exchanged that token for an authority-bound cookie. The URL comes from
+ * `DSH_TOKEN_URL` when the caller knows it directly; otherwise it is parsed
+ * from the dsh boot log (`DSH_BOOT_LOG`, defaulting to the path the CI writes).
+ * Returns `undefined` when no token URL is available, in which case the test
+ * navigates straight to "/" (deployments that disable the root gate).
+ */
+function tokenUrl() {
+  if (process.env.DSH_TOKEN_URL && process.env.DSH_TOKEN_URL.trim() !== "") {
+    return process.env.DSH_TOKEN_URL.trim();
+  }
+  const logPath = process.env.DSH_BOOT_LOG || "/tmp/dsh-e2e.log";
+  let log;
+  try {
+    log = fs.readFileSync(logPath, "utf8");
+  } catch {
+    return undefined;
+  }
+  const match = log.match(/https?:\/\/[^\s]+[?&]token=[A-Za-z0-9_-]+/);
+  return match ? match[0] : undefined;
+}
 
 test("web profile loads and settings show plugin sections", async ({
   page,
@@ -16,6 +42,13 @@ test("web profile loads and settings show plugin sections", async ({
   page.on("console", (msg) => {
     if (msg.type() === "error") errors.push(`console: ${msg.text()}`);
   });
+
+  // Establish the session from the printed connection URL if one is available;
+  // the token exchange redirects to the clean root and sets the auth cookie.
+  const url = tokenUrl();
+  if (url !== undefined) {
+    await page.goto(url, { waitUntil: "commit", timeout: 30_000 });
+  }
 
   await page.goto("/", { waitUntil: "networkidle", timeout: 60_000 });
 

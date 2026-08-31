@@ -59,7 +59,7 @@ jobs:
           echo "install: profile ready (branch ci-web)"
 
       - name: Verify dsh can compose the profile
-        run: pnpm dlx @deepseek-ai/dsh@next --profile web --dump-config > /tmp/dump.yml
+        run: pnpm dlx @deepseek-ai/dsh@alpha --profile web --dump-config > /tmp/dump.yml
 
       - name: Show composed profile
         run: cat /tmp/dump.yml
@@ -69,7 +69,7 @@ jobs:
         env:
           DSH_PORT: "3099"
         run: |
-          pnpm dlx @deepseek-ai/dsh@next --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-boot.log 2>&1 &
+          pnpm dlx @deepseek-ai/dsh@alpha --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-boot.log 2>&1 &
           BOOT_PID=$!
           trap 'kill "$BOOT_PID" 2>/dev/null || true' EXIT
 
@@ -139,7 +139,7 @@ jobs:
       - name: Start dsh web server
         working-directory: ${{ env.DSH_HOME }}/profiles/web
         run: |
-          pnpm dlx @deepseek-ai/dsh@next --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-e2e.log 2>&1 &
+          pnpm dlx @deepseek-ai/dsh@alpha --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-e2e.log 2>&1 &
           echo "PID=$!" >> "$GITHUB_ENV"
           echo "e2e: server PID=$! port=$DSH_PORT"
           for i in $(seq 1 60); do
