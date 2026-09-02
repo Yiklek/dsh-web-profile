@@ -53,6 +53,13 @@ jobs:
       - name: Show pnpm version
         run: pnpm --version
 
+      - name: Show software versions
+        run: |
+          echo "node $(node --version)"
+          echo "pnpm $(pnpm --version)"
+          echo "dsh@alpha resolves to: $(npm view @deepseek-ai/dsh@alpha version)"
+          pnpm dlx @deepseek-ai/dsh@alpha --version
+
       - name: Install profile via install.sh (worktree)
         run: |
           ./install.sh web --mode worktree --branch ci-web --force

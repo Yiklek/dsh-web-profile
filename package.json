@@ -2,7 +2,6 @@
   "name": "dsh-profile-web",
   "private": true,
   "dependencies": {
-    "@nanmicoder/dsh-agent-teams": "^0.1.15",
     "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-better-sidebar": "0.18.0-alpha.0",
@@ -23,7 +22,6 @@
         "dsh-llm-retry-settings",
         "dsh-anchored-standard",
         "dsh-context",
-        "@nanmicoder/dsh-agent-teams",
         "@opendsh/dsh-plugin-setting-mcp",
         "dsh-complete-notify",
         "dsh-coding-subscription-oauth",
