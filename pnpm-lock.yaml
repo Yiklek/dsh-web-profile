@@ -21,14 +21,14 @@ importers:
         specifier: 0.18.0-alpha.0
         version: 0.18.0-alpha.0
       dsh-coding-subscription-oauth:
-        specifier: ^0.6.4
-        version: 0.6.4
+        specifier: ^0.6.5
+        version: 0.6.5
       dsh-complete-notify:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.38.5
-        version: 0.38.5
+        specifier: ^0.40.1
+        version: 0.40.1
       dsh-llm-retry-settings:
         specifier: github:Yiklek/dsh-llm-retry-settings
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b
@@ -36,8 +36,8 @@ importers:
         specifier: github:Yiklek/dsh-settings-manager#pkg
         version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/df7c3f2d5bace679712078453814c5a637b380a2
       dshmarket:
-        specifier: ^1.38.1
-        version: 1.38.1
+        specifier: ^1.40.0
+        version: 1.40.0
 
 packages:
 
@@ -104,8 +104,8 @@ packages:
   '@codemirror/language@6.12.4':
     resolution: {integrity: sha512-1q4PaT+o6PbgpkJt4Q8Fv5XJxTy4FUZ4MWETtyiDw3J0Pyr9E2vqcKL+k9wcvjNTIsauxvE7OfmWj3FRPHQ76A==}
 
-  '@codemirror/legacy-modes@6.5.3':
-    resolution: {integrity: sha512-xCsmIzH78MyWkib9jlPaaun57XNkfbMIhagfaZVd0iLTqlpw3jXaIcbZm72MTmmn64eTZpBVNjbyYh+QXnxRsg==}
+  '@codemirror/legacy-modes@6.5.4':
+    resolution: {integrity: sha512-/cZr6qZyl08iYNLGsJ862CXXNI51LryRFRE40ejgoIjXZz0C1rGkD3/Ek5jM/8w1ceRjqtt4qx/KLMh4zBTgew==}
 
   '@codemirror/lint@6.9.7':
     resolution: {integrity: sha512-28/+iWLYxKxsvGYhSYL7zaCZqLz5+FFFDq9tVsvGv9kv8RY4fFAchJ5WX9M3YrrRlTIsECjsXPqeNgnSmNP2dg==}
@@ -612,8 +612,8 @@ packages:
     resolution: {integrity: sha512-vUoMF3EuDEn2HiyEv4N/bACTO20+FYRtgbpYAchTBzj6QzXyhlzdmXMMUasMIbrf8hmTaNEGNMrUYM3LIivWXw==}
     engines: {node: ^22.19.0 || >=24.0.0}
 
-  dsh-coding-subscription-oauth@0.6.4:
-    resolution: {integrity: sha512-yKs2pfamvz061aTmwBGHKwVDXTKnaYiSUBBoEDuzN1dkIheuQE+WYZk//x+qjaQ8+uzqKJF453S6CHl4XszM7g==}
+  dsh-coding-subscription-oauth@0.6.5:
+    resolution: {integrity: sha512-I+sRNVDmIFp2oB5KuGtlyTp2vtbkfyVOTSR5VaIJiE6eL8sBapKXo5psHy+96FlUEg7hnmuAhBC8C7gW6ld0Gw==}
     engines: {node: ^22.19.0 || >=24.0.0}
     hasBin: true
     peerDependencies:
@@ -655,13 +655,13 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.38.5:
-    resolution: {integrity: sha512-/bFuTAWmLPbcqBeDHDdh8GbP2y60UT8uyYlslT7IHnBk6qudMI8Ueselh7Izf0aqb20uku5EFNzzZ3Orlq0qNA==}
+  dsh-context@0.40.1:
+    resolution: {integrity: sha512-aoJ6hbeOX8oTW82lPW5GrOvnoEr7P3eJ0hjV1zVROw4iYDzKqoqdZagnuTCCC2GJt0jjvO+5zZCtniWGEbupsw==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
-      '@deepseek-ai/dsh-client-ui-primitives': '>=0.1.0-rc.7'
-      '@deepseek-ai/dsh-session': '>=0.1.0-rc.7'
-      '@deepseek-ai/dsh-settings': '>=0.1.0-rc.7'
+      '@deepseek-ai/dsh-client-ui-primitives': '>=0.1.1-rc.2'
+      '@deepseek-ai/dsh-session': '>=0.1.1-rc.2'
+      '@deepseek-ai/dsh-settings': '>=0.1.1-rc.2'
       '@deepseek-ai/schemastery': ^3.18.1
       react: ^18.3.1
     peerDependenciesMeta:
@@ -689,11 +689,11 @@ packages:
       react:
         optional: true
 
-  dshmarket@1.38.1:
-    resolution: {integrity: sha512-Z9VleLtCXwk5OlbSJKayWtbMaKACL8JUMyb/JHpErS4N3q//GJS+cgOhhxNkZYmXxB8/lv9IbhX1CBzlMhJeJg==}
+  dshmarket@1.40.0:
+    resolution: {integrity: sha512-VqfDCu6zB+MXkeQB865v2Tajt48rNNjDjEaHxWf5UK7mO2VYX9FHwVt8i/lSlNc89opcNjW+h70YsMHjbXkaFA==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
-      '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2
+      '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2 || ^0.1.2-alpha.2
       '@deepseek-ai/schemastery': ^3.18.1
     peerDependenciesMeta:
       '@deepseek-ai/dsh-settings':
@@ -994,7 +994,7 @@ snapshots:
       '@lezer/lr': 1.4.10
       style-mod: 4.1.3
 
-  '@codemirror/legacy-modes@6.5.3':
+  '@codemirror/legacy-modes@6.5.4':
     dependencies:
       '@codemirror/language': 6.12.4
 
@@ -1493,7 +1493,7 @@ snapshots:
       '@codemirror/lang-xml': 6.1.0
       '@codemirror/lang-yaml': 6.1.3
       '@codemirror/language': 6.12.4
-      '@codemirror/legacy-modes': 6.5.3
+      '@codemirror/legacy-modes': 6.5.4
       '@codemirror/search': 6.7.2
       '@codemirror/state': 6.7.2
       '@codemirror/view': 6.43.10
@@ -1514,14 +1514,14 @@ snapshots:
     dependencies:
       undici: 7.29.0
 
-  dsh-coding-subscription-oauth@0.6.4:
+  dsh-coding-subscription-oauth@0.6.5:
     dependencies:
       dsh-coding-oauth-core: 0.1.1
       undici: 7.29.0
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.38.5:
+  dsh-context@0.40.1:
     dependencies:
       zod: 4.5.4
 
@@ -1529,7 +1529,7 @@ snapshots:
 
   dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/df7c3f2d5bace679712078453814c5a637b380a2: {}
 
-  dshmarket@1.38.1:
+  dshmarket@1.40.0:
     dependencies:
       js-yaml: 4.3.2
       undici: 7.29.0
