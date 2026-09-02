@@ -76,8 +76,10 @@ jobs:
           code=""
           for i in $(seq 1 60); do
             code="$(curl -s -o /dev/null -w '%{http_code}' "http://127.0.0.1:$DSH_PORT" || true)"
-            if [ "$code" = "200" ]; then
-              echo "Server responded 200 after ${i}s"
+            # dsh@alpha gates the root with 401 until the browser exchanges
+            # the boot token; readiness means the token URL has been printed.
+            if grep -qE 'https?://[^ ]+\?token=' /tmp/dsh-boot.log; then
+              echo "Server ready after ${i}s (HTTP $code)"
               break
             fi
             # Fail fast if the process died
@@ -91,8 +93,8 @@ jobs:
           echo "--- boot log ---"
           cat /tmp/dsh-boot.log
 
-          if [ "$code" != "200" ]; then
-            echo "::error::web server did not respond with 200 (last code: $code)"
+          if ! grep -qE 'https?://[^ ]+\?token=' /tmp/dsh-boot.log; then
+            echo "::error::web server did not become ready (last code: $code)"
             exit 1
           fi
 
@@ -142,16 +144,19 @@ jobs:
           pnpm dlx @deepseek-ai/dsh@alpha --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-e2e.log 2>&1 &
           echo "PID=$!" >> "$GITHUB_ENV"
           echo "e2e: server PID=$! port=$DSH_PORT"
+          # dsh@alpha gates the root with 401 until the browser exchanges the
+          # boot token; readiness means the token URL has been printed. The
+          # smoke spec parses the same log (DSH_BOOT_LOG) for the token URL.
           for i in $(seq 1 60); do
             code="$(curl -s -o /dev/null -w '%{http_code}' "http://127.0.0.1:$DSH_PORT" || true)"
-            if [ "$code" = "200" ]; then
-              echo "Server responded 200 after ${i}s"
+            if grep -qE 'https?://[^ ]+\?token=' /tmp/dsh-e2e.log; then
+              echo "Server ready after ${i}s (HTTP $code)"
               break
             fi
             sleep 1
           done
-          if [ "$code" != "200" ]; then
-            echo "::error::dsh web server did not respond with 200 (last code: $code)"
+          if ! grep -qE 'https?://[^ ]+\?token=' /tmp/dsh-e2e.log; then
+            echo "::error::dsh web server did not become ready (last code: $code)"
             cat /tmp/dsh-e2e.log
             exit 1
           fi
