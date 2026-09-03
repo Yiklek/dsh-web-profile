@@ -4,13 +4,13 @@
   "dependencies": {
     "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
-    "dsh-better-sidebar": "0.18.0-alpha.0",
+    "dsh-better-sidebar": "0.18.0",
     "dsh-coding-subscription-oauth": "^0.6.5",
     "dsh-complete-notify": "^0.6.2",
-    "dsh-context": "^0.41.0",
+    "dsh-context": "^0.41.2",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
-    "dshmarket": "^1.40.0"
+    "dshmarket": "^1.41.0"
   },
   "dsh": {
     "profile": {
