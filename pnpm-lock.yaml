@@ -24,8 +24,8 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.41.2
-        version: 0.41.2
+        specifier: ^0.41.3
+        version: 0.41.3
       dsh-llm-retry-settings:
         specifier: github:Yiklek/dsh-llm-retry-settings
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b
@@ -574,8 +574,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.41.2:
-    resolution: {integrity: sha512-ucspyGtmxv6Dx8wG/pD1WbZZYnx5I+Ismq93Kst5d4BRMeSdQttbszE10TS7tw2B0tP2JkRwu1kcr3s0cTwNeg==}
+  dsh-context@0.41.3:
+    resolution: {integrity: sha512-S/3nQjq3JfuWG9Id/jHLMNnKMRrHrMzfO60+vH6pDubXPXPErB2W+bHO2SU96D/3MoJmHP7rjI8dqaZyjGgwPQ==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
@@ -1439,7 +1439,7 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.41.2:
+  dsh-context@0.41.3:
     dependencies:
       zod: 4.5.4
 
