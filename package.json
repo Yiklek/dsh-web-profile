@@ -2,15 +2,22 @@
   "name": "dsh-profile-web",
   "private": true,
   "dependencies": {
+    "@goodandready/dsh-subscriptions": "^0.5.32",
     "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
+    "@quill507/dsh-auto-approval-llm": "^0.0.19",
+    "@tt-a1i/archify-dsh": "^0.1.0",
+    "@xmanrui/dsh-im": "^4.15.0",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
-    "dsh-better-sidebar": "0.18.0",
+    "dsh-better-sidebar": "0.18.1",
     "dsh-coding-subscription-oauth": "^0.6.5",
     "dsh-complete-notify": "^0.6.2",
-    "dsh-context": "^0.42.0",
+    "dsh-context": "^0.46.0",
+    "dsh-free-search": "^0.4.24",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
+    "dsh-mermaid": "^0.4.0",
+    "dsh-plugin-subscriptions": "^0.8.0",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
-    "dshmarket": "^1.42.0"
+    "dshmarket": "^1.45.1"
   },
   "dsh": {
     "profile": {
@@ -25,7 +32,14 @@
         "@opendsh/dsh-plugin-setting-mcp",
         "dsh-complete-notify",
         "dsh-coding-subscription-oauth",
-        "dsh-better-sidebar"
+        "dsh-better-sidebar",
+        "@tt-a1i/archify-dsh",
+        "@xmanrui/dsh-im",
+        "@quill507/dsh-auto-approval-llm",
+        "dsh-free-search",
+        "@goodandready/dsh-subscriptions",
+        "dsh-plugin-subscriptions",
+        "dsh-mermaid"
       ]
     }
   }
