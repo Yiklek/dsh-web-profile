@@ -17,6 +17,7 @@
     "dsh-mermaid": "^0.4.0",
     "dsh-plugin-subscriptions": "^0.8.0",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
+    "dsh-univer-office": "^0.2.14",
     "dshmarket": "^1.45.1"
   },
   "dsh": {
@@ -39,7 +40,8 @@
         "dsh-free-search",
         "@goodandready/dsh-subscriptions",
         "dsh-plugin-subscriptions",
-        "dsh-mermaid"
+        "dsh-mermaid",
+        "dsh-univer-office"
       ]
     }
   }
