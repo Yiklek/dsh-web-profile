@@ -1,558 +1,258 @@
 # dsh-web-profile
 
-使用 Git 管理 dsh `web` profile 配置的仓库，并提供一键安装脚本。
+用 Git 管理 dsh `web` profile 的配置：profile 只版本化 4 个配置文件，并提供一键安装脚本、CI 校验和自动化依赖更新。
+
+[![CI](https://github.com/Yiklek/dsh-web-profile/actions/workflows/ci.yml/badge.svg)](https://github.com/Yiklek/dsh-web-profile/actions/workflows/ci.yml)
+[![Update dependencies](https://github.com/Yiklek/dsh-web-profile/actions/workflows/update-deps.yml/badge.svg)](https://github.com/Yiklek/dsh-web-profile/actions/workflows/update-deps.yml)
 
 ## 为什么用这个仓库
 
-dsh 的 profile 位于 `~/.dsh/profiles/<name>`，其中既包含需要版本管理的配置文件，也包含不应提交的 `node_modules`、本机生成的 `cordis.patch.yml` 等。
+dsh 的 profile 位于 `$DSH_HOME/profiles/<name>`（`DSH_HOME` 默认 `~/.dsh`），目录里既有需要版本管理的配置，也有不该提交的内容：`node_modules/`、本机生成的 `cordis.patch.yml`、运行期数据 `.dsh-market/`、本地凭据 `.env` 等。
 
-本仓库只保存需要管理的配置文件：
+profile 需要管理的配置只有这 4 个：
 
 ```text
-package.json
-pnpm-lock.yaml
-cordis.yml
-pnpm-workspace.yaml
+package.json          # profile 依赖 + dsh.profile.bundles 声明
+pnpm-lock.yaml        # 依赖版本锁定
+pnpm-workspace.yaml   # pnpm 安装策略（hoisted、允许构建的原生模块）
+cordis.yml            # profile 根（空列表，实际由 bundles 与 patch 组合）
 ```
 
-并通过 `install.sh` 安装到 dsh profile 目录，支持 **clone** 或 **git worktree** 两种方式。
+通过 `install.sh` 安装到 profile 目录，支持 **clone** 与 **git worktree** 两种方式。
+
+## 特性
+
+| 能力 | 说明 |
+|---|---|
+| 配置版本化 | profile 配置只跟踪 4 个文件；`node_modules/` 与运行期数据被忽略 |
+| 一键安装 | 本地一条命令；远程 `curl \| bash` 无需先 clone |
+| worktree 工作流 | profile 目录即本仓库的 worktree，改动可直接提交并快进回 `main` |
+| 覆盖保护 | 覆盖已有 profile 前自动备份为 `<name>.bak.<YYYYMMDD-HHMMSS>` |
+| CI 校验 | shellcheck / prettier、profile 可组合可启动、Playwright 冒烟测试 |
+| 自动化依赖 | 每 6 小时 `pnpm update --latest` 自动提 PR；Dependabot 每日更新 npm、每周更新 Actions |
 
 ## 目录结构
 
 ```text
 dsh-web-profile/
-├── README.md
-├── install.sh
-├── .gitignore
-├── package.json
+├── .github/
+│   ├── dependabot.yml            # 每日 npm / 每周 GitHub Actions 更新
+│   └── workflows/
+│       ├── ci.yml                # lint + profile 启动校验 + Playwright 冒烟
+│       └── update-deps.yml       # 定时 pnpm update --latest 并提 PR
+├── tests/e2e/                    # Playwright 冒烟测试
+├── install.sh                    # 安装脚本（clone / worktree）
+├── package.json                  # profile 依赖与 bundles
 ├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
 ├── cordis.yml
-└── pnpm-workspace.yaml
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 
-## 安装
+## 快速开始
 
-### 本地 worktree 安装
+环境要求：`git`、`bash`。依赖安装优先用 `dsh`，没有 `dsh` 时用 `pnpm dlx`，没有 `pnpm` 时用 `npx --yes`。CI 参考环境为 Node 22 + pnpm 11.22（见 `.github/workflows/ci.yml`）。
 
-在本地主仓库目录执行：
+### 1. 安装
+
+本地安装（在仓库目录执行，只支持 worktree 模式）：
 
 ```bash
-# 安装为默认 profile：web
-./install.sh
+git clone https://github.com/Yiklek/dsh-web-profile.git
+cd dsh-web-profile
 
-# 安装为自定义 profile
-./install.sh web2
-
-# 跳过确认（覆盖前仍会备份）
-./install.sh --force web2
+./install.sh                 # 安装为默认 profile：web
+./install.sh web2            # 安装为自定义 profile
+./install.sh web2 --force    # 覆盖已存在的 profile（覆盖前仍会备份）
 ```
 
-本地主仓库目录只支持 **worktree** 安装；显式指定 `--mode clone` 会报错。
-
-### 远程一键安装（curl）
-
-不需要先 clone 本仓库，直接远程执行安装脚本：
+远程一键安装（默认 clone 到 `~/.dsh/profiles/web`）：
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Yiklek/dsh-web-profile/main/install.sh | bash -s -- web
 ```
 
-默认以 **clone** 方式安装到 `~/.dsh/profiles/web`。
-
-也可以指定其他 profile 或安装模式：
+### 2. 启动
 
 ```bash
-# 安装为 web2
-curl -fsSL https://raw.githubusercontent.com/Yiklek/dsh-web-profile/main/install.sh | bash -s -- web2
-
-# 直接 clone 到 profile
-curl -fsSL https://raw.githubusercontent.com/Yiklek/dsh-web-profile/main/install.sh | bash -s -- web --mode clone
-
-# 以 worktree 安装
-curl -fsSL https://raw.githubusercontent.com/Yiklek/dsh-web-profile/main/install.sh | bash -s -- web --mode worktree
-
-# worktree 安装时指定 source 仓库位置
-curl -fsSL https://raw.githubusercontent.com/Yiklek/dsh-web-profile/main/install.sh | bash -s -- web --mode worktree --dir ~/repos/dsh-web-profile
-
-# 如果目标 profile 已存在且想覆盖，必须加 --force
-curl -fsSL https://raw.githubusercontent.com/Yiklek/dsh-web-profile/main/install.sh | bash -s -- web --force
+dsh --profile web
+# 或
+npx @deepseek-ai/dsh --profile web
 ```
 
-非交互执行（`curl | bash`）时，如果目标 profile 已存在，**必须显式加 `--force`** 才会覆盖。
+安装脚本完成后会直接打印对应的启动命令。
 
-### 参数说明
+> dsh CLI 的版本通道会影响插件兼容性：CI 用 `@deepseek-ai/dsh@alpha` 验证，安装脚本回退时使用 `@next`。遇到插件加载异常时，先对齐 dsh 版本。
+
+## 安装详解
+
+### 参数
 
 | 参数 | 作用 | 默认值 | 适用模式 |
 |---|---|---|---|
-| `[profile-name]` | 目标 profile 名称 | `web` | 所有 |
-| `--force` / `-f` | 跳过覆盖确认（覆盖前仍会备份） | 关闭 | 所有 |
-| `--branch <branch>` | worktree 分支名 | `profile-<name>` | 仅 worktree |
-| `--mode <clone\|worktree>` | 安装方式 | 本地 worktree；远程 clone | 远程安装 |
-| `--dir <path>` | clone 后 source 仓库目录路径/名称 | `<cwd>/<仓库名>` | 仅远程 worktree |
+| `[profile-name]` | 目标 profile 名称 | `web` | 全部 |
+| `--force` / `-f` | 跳过覆盖确认（仍会备份） | 关闭 | 全部 |
+| `--branch <branch>` / `-b` | worktree 分支名 | `profile-<name>` | 仅 worktree |
+| `--mode <clone\|worktree>` | 安装方式 | 本地 worktree；远程 clone | 仅远程 |
+| `--dir <path>` | source 仓库目录路径或名称 | `<cwd>/<仓库名>` | 仅远程 worktree |
+| `--help` / `-h` | 显示用法 | — | 全部 |
 
-> `--dir` 和 `--branch` 只适用于 worktree 模式；`--mode clone` 下指定它们会报错。
+> `--branch` 在 worktree 模式生效（本地或远程）；`--dir` 只对**远程** worktree 安装生效，本地执行时会被忽略。`--mode clone` 下指定两者会直接报错。
 
 ### clone vs worktree
 
-| 方式 | 适合场景 |
-|---|---|
-| **clone** | 远程一键安装、不打算在 profile 里直接改配置提交 |
-| **worktree** | 本地主仓库开发、需要把 profile 修改合并回 `main` |
+| 方式 | 行为 | 适合场景 |
+|---|---|---|
+| **clone** | 把仓库 `git clone` 到 profile 目录 | 远程一键安装，不打算在 profile 里改配置提交 |
+| **worktree** | 在 profile 目录创建本仓库的 git worktree | 本地开发，需要把 profile 改动合并回 `main` |
 
-### 脚本做了什么
+### 脚本执行流程
 
-- **在本地主仓库目录执行时，只允许 worktree 安装**
-- **通过 `curl | bash` 远程执行时**：
-  - 未指定 `--mode`：默认 clone 到 profile 目录
-  - `--mode clone`：直接 `git clone` 到 profile 目录
-  - `--mode worktree`：默认把 source 仓库 clone 到当前目录（`<cwd>/<repo>`），也可用 `--dir` 指定 clone 后的仓库目录路径/名称，再创建 git worktree
+1. **判定模式**
+   - 在本地 git 检出中执行：强制 `worktree`；显式指定 `--mode clone` 会报错。
+   - 不在 git 检出中执行（如 `curl | bash`）：未指定 `--mode` 时默认 `clone`。
+2. **确认覆盖（仅当 profile 已存在）**
+   - 交互终端会询问；非交互执行必须加 `--force`。
+3. **准备 source 仓库（worktree 模式）**
+   - 远程 worktree：clone 到 `<cwd>/<仓库名>`，或用 `--dir` 指定目录；已存在则 `fetch --all --prune`。
+4. **创建分支与 worktree**
+   - 分支不存在时创建 `profile-<name>`：本地从 `main`（无则 `master`，分离 HEAD 则当前提交），远程从 `origin/main`（无则 `origin/master`，都没有则报错）。
+   - 分支已被其他 worktree 占用时报错退出。
+   - 需要覆盖时先把原目录备份为 `~/.dsh/profiles/<name>.bak.<YYYYMMDD-HHMMSS>`，再创建 worktree。
+5. **安装依赖**，按可用性依次尝试：
 
-worktree 模式默认分支：`profile-<name>`，例如 `web` 对应 `profile-web`。
+   ```bash
+   dsh plugin --profile <name> install
+   pnpm dlx @deepseek-ai/dsh@next plugin --profile <name> install
+   npx --yes @deepseek-ai/dsh@next plugin --profile <name> install
+   ```
 
-如果目标 profile 已存在：
+## 更新与同步
 
-- 交互终端会询问是否覆盖
-- 非交互（`curl | bash`）必须使用 `--force`
-- 覆盖前把原目录移动到带时间戳的备份：
+> 以下流程仅适用于 **worktree 安装**。clone 安装直接在 profile 目录 `git pull` 即可。
+>
+> - `<name>`：profile 名，默认 `web`
+> - `<source-repo>`：source 仓库目录。本地安装即本仓库；远程 worktree 安装是 `--dir` 指定的目录，或默认的 `<cwd>/dsh-web-profile`
 
-  ```text
-  ~/.dsh/profiles/<name>.bak.<YYYYMMDD-HHMMSS>
-  ```
-
-安装完成后执行：
+### 拉取上游更新
 
 ```bash
-dsh plugin --profile <name> install
+cd <source-repo> && git pull --ff-only origin main
+cd ~/.dsh/profiles/<name> && git rebase main
+dsh plugin --profile <name> install   # package.json / pnpm-lock.yaml 有变化时
 ```
 
-如果 `dsh` 不在 PATH，会回退到：
+profile 分支没有本地提交时，也可以直接快进：
 
 ```bash
-npx --yes @deepseek-ai/dsh@next plugin --profile <name> install
+git -C ~/.dsh/profiles/<name> merge --ff-only main
 ```
 
-### 为什么用 git worktree
-
-之前尝试过“整个目录软链接”和“配置文件软链接”，都有问题：
-
-- 整个目录软链接：Node 沿真实路径找不到 `~/.dsh/profiles/node_modules` 里的 `@deepseek-ai/*`
-- 配置文件软链接：pnpm 拒绝写入符号链接形式的 `pnpm-lock.yaml`
-
-使用 git worktree 后：
-
-- profile 目录是**真实 git 检出**
-- `pnpm-lock.yaml` 是真实文件，pnpm 可以正常写入
-- `node_modules/` 被 `.gitignore` 忽略
-- 配置修改可以直接在 profile 里提交，也可以回到主仓库统一管理
-
-## 使用
-
-安装完成后直接启动：
+### 本地改动回流 main
 
 ```bash
-npx @deepseek-ai/dsh web
-```
+cd ~/.dsh/profiles/<name>
+git add -A && git commit -m "update profile config"
+# 提示：git add -A 会连带暂存未忽略的本地文件（如自定义 Caddyfile）；
+# 只想提交配置改动时改用 git add <file>...
 
-或：
-
-```bash
-npx @deepseek-ai/dsh --profile <name>
-```
-
-## 更新 worktree 安装
-
-> 以下更新方式仅适用于 **worktree 安装**。
-> `<source-repo>` 指安装时的 source 仓库目录：
-> - 本地主仓库安装时，就是本仓库目录
-> - 远程 worktree 安装时，是 `--dir` 指定的目录，或默认的 `<cwd>/<仓库名>`
-
-### 1. 更新 source 仓库
-
-```bash
 cd <source-repo>
-git fetch origin main
-git pull --ff-only origin main
+git merge --ff-only profile-<name>
+git push origin main                  # 需要发布时
 ```
 
-### 2. 更新 profile worktree
+`--ff-only` 失败说明 `main` 与 `profile-<name>` 已分叉（例如 `main` 上有新提交）。先让 profile 分支基于最新 `main`，再快进：
 
 ```bash
 cd ~/.dsh/profiles/<name>
-git rebase main
+git fetch origin main
+git rebase origin/main                # 冲突时：git add -A && git rebase --continue
+cd <source-repo>
+git merge --ff-only profile-<name>
 ```
 
-如果 profile 分支没有本地提交，也可以直接快进到最新 `main`：
+### 把依赖升到最新（可选）
+
+与自动化工作流做的事一致，在 profile 目录执行后按上面的流程提交：
 
 ```bash
-git merge --ff-only main
-```
-
-### 3. 处理冲突
-
-如果 rebase 或 merge 出现冲突：
-
-```bash
-git status
-# 手动解决冲突后
-git add -A
-git rebase --continue
-```
-
-如果想放弃本次更新：
-
-```bash
-git rebase --abort
-```
-
-### 4. 重新安装依赖
-
-如果 `package.json` 或 `pnpm-lock.yaml` 有变化，更新后执行：
-
-```bash
+cd ~/.dsh/profiles/<name>
+pnpm update --latest
 dsh plugin --profile <name> install
 ```
 
-## 修改配置后的同步方式
-
-> 以下同步方式仅适用于 **worktree 安装**。
-> 如果使用 clone 模式安装，直接在 profile 目录里修改并提交即可。
-
-profile 目录是本仓库的一个 git worktree，所以修改后可以直接在 profile 里提交：
+### 冲突处理
 
 ```bash
-cd ~/.dsh/profiles/<name>
+git status                # 查看冲突文件
 git add -A
-git commit -m "update profile config"
+git rebase --continue     # 放弃本次更新：git rebase --abort
 ```
 
-如果想把 profile 分支合并回主仓库的 `main`，在仓库根目录执行：
+## 自动化
+
+### CI（`.github/workflows/ci.yml`）
+
+| Job | 内容 |
+|---|---|
+| `lint` | `shellcheck install.sh`、`bash -n install.sh`、prettier 检查 `package.json` 与 `*.yml` |
+| `test-dsh` | 以 `DSH_HOME=/tmp/dsh-home` 用 `install.sh` 做 worktree 安装（分支 `ci-web`）、`--dump-config` 校验组合结果、启动 web 并等待 boot token URL 出现、检查启动日志无错误 |
+| `e2e` | worktree 安装（分支 `ci-e2e`）+ Playwright/Chromium 跑 `tests/e2e/smoke.spec.js`：断言页面标题、可打开「设置」、本 profile 插件的设置分区已挂载，且无插件致命错误 |
+
+### 本地复现 e2e
+
+CI 的 `e2e` job 等价于下面两步（profile 已安装且依赖已装好）。本地跑用**本机已安装的浏览器**，不下载 Playwright 自带 Chromium：
 
 ```bash
-git merge --ff-only profile-<name>
+# 1. 启动 dsh web，boot 日志会被测试用来解析 token URL
+dsh --profile web --host 127.0.0.1 --port 3099 --no-open > /tmp/dsh-e2e.log 2>&1 &
+
+# 2. 安装 Playwright 依赖并运行冒烟测试（用本机 Edge）
+cd tests/e2e
+pnpm install
+DSH_BOOT_LOG=/tmp/dsh-e2e.log pnpm test:edge
 ```
 
-如果 `--ff-only` 失败，说明 `main` 和 `profile-<name>` 已经分叉（例如 `main` 上有新的提交）。此时不要直接创建合并提交，先让 profile 分支基于最新的 `main`：
+- `pnpm test:edge` 用本机 Microsoft Edge；本机是 Google Chrome 时改用 `PLAYWRIGHT_CHANNEL=chrome pnpm exec playwright test`。
+- 本机确实没有 Chrome / Edge 时，才需要 `pnpm exec playwright install chromium` 使用 Playwright 自带内核。
+- 测试从 `DSH_BOOT_LOG`（默认 `/tmp/dsh-e2e.log`）解析带 token 的连接 URL，也可直接用 `DSH_TOKEN_URL` 传入；端口不是 3099 时加 `DSH_PORT=<port>`。
 
-```bash
-cd ~/.dsh/profiles/<name>
-git fetch origin main
-git rebase origin/main
-```
+### 依赖更新（`.github/workflows/update-deps.yml`）
 
-如果有冲突，解决后继续：
+- **触发**：`main` 有推送、每 6 小时定时、手动 `workflow_dispatch`。自动提交合并进 `main` 时会跳过，避免自我循环。
+- **动作**：在仓库根目录与 `tests/e2e` 各执行 `pnpm update --latest`；有变化则提交到 `bot/dependency-updates-<时间戳>` 分支并开 PR。
+- **收敛**：同一时间只保留一个自动化 PR，旧的自动关闭并删除分支；提交信息在只有一条升级时为 `chore(deps): bump <pkg> from <old> to <new>`，多条时为 `chore(deps): update dependencies`。
 
-```bash
-git add -A
-git rebase --continue
-```
+### Dependabot（`.github/dependabot.yml`）
 
-然后再回到主仓库执行：
+每日 03:00（Asia/Shanghai）更新根目录与 `tests/e2e` 的 npm 依赖，每周更新 GitHub Actions。
 
-```bash
-git merge --ff-only profile-<name>
-```
+## 排障与恢复
 
-也可以直接推送 profile 分支：
+| 现象 | 处理 |
+|---|---|
+| `--dir` / `--branch` 不生效或报错 | `--branch` 仅 worktree 模式；`--dir` 仅远程 worktree 生效（本地忽略）；`--mode clone` 下指定会报错 |
+| 分支已被其他 worktree 占用 | `git worktree list` 定位后 `git worktree remove <path>` |
+| `dsh` 不在 PATH | 脚本自动回退到 `pnpm dlx` 或 `npx --yes @deepseek-ai/dsh@next` |
+| 安装后想回滚 | 删除 profile 目录，把备份目录改回原名 |
 
-```bash
-cd ~/.dsh/profiles/<name>
-git push origin profile-<name>
-```
-
-## 恢复备份
-
-脚本在覆盖前会保留备份，例如：
-
-```text
-~/.dsh/profiles/<name>.bak.<YYYYMMDD-HHMMSS>
-```
-
-如果需要恢复：
+恢复备份：
 
 ```bash
 rm -rf ~/.dsh/profiles/<name>
 mv ~/.dsh/profiles/<name>.bak.<YYYYMMDD-HHMMSS> ~/.dsh/profiles/<name>
 ```
 
-## Git 管理建议
+## 设计说明：为什么用 git worktree
 
-`.gitignore` 已忽略：
+此前尝试过两种方案，都无法正常工作：
 
-# dsh-web-profile
+- **整个目录软链接**：Node 按真实路径解析依赖，软链接后找不到 profile 里的 `@deepseek-ai/*`。
+- **配置文件软链接**：pnpm 拒绝写入符号链接形式的 `pnpm-lock.yaml`。
 
-使用 Git 管理 dsh `web` profile 配置的仓库，并提供一键安装脚本。
-
-## 为什么用这个仓库
-
-dsh 的 profile 位于 `~/.dsh/profiles/<name>`，其中既包含需要版本管理的配置文件，也包含不应提交的 `node_modules`、本机生成的 `cordis.patch.yml` 等。
-
-本仓库只保存需要管理的配置文件：
-
-```text
-package.json
-pnpm-lock.yaml
-cordis.yml
-pnpm-workspace.yaml
-```
-
-并通过 `install.sh` 安装到 dsh profile 目录，支持 **clone** 或 **git worktree** 两种方式。
-
-## 目录结构
-
-```text
-dsh-web-profile/
-├── README.md
-├── install.sh
-├── .gitignore
-├── package.json
-├── pnpm-lock.yaml
-├── cordis.yml
-└── pnpm-workspace.yaml
-```
-
-## 安装
-
-### 本地 worktree 安装
-
-在本地主仓库目录执行：
-
-```bash
-# 安装为默认 profile：web
-./install.sh
-
-# 安装为自定义 profile
-./install.sh web2
-
-# 跳过确认（覆盖前仍会备份）
-./install.sh --force web2
-```
-
-本地主仓库目录只支持 **worktree** 安装；显式指定 `--mode clone` 会报错。
-
-### 远程一键安装（curl）
-
-不需要先 clone 本仓库，直接远程执行安装脚本：
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/Yiklek/dsh-web-profile/main/install.sh | bash -s -- web
-```
-
-默认以 **clone** 方式安装到 `~/.dsh/profiles/web`。
-
-也可以指定其他 profile 或安装模式：
-
-```bash
-# 安装为 web2
-curl -fsSL https://raw.githubusercontent.com/Yiklek/dsh-web-profile/main/install.sh | bash -s -- web2
-
-# 直接 clone 到 profile
-curl -fsSL https://raw.githubusercontent.com/Yiklek/dsh-web-profile/main/install.sh | bash -s -- web --mode clone
-
-# 以 worktree 安装
-curl -fsSL https://raw.githubusercontent.com/Yiklek/dsh-web-profile/main/install.sh | bash -s -- web --mode worktree
-
-# worktree 安装时指定 source 仓库位置
-curl -fsSL https://raw.githubusercontent.com/Yiklek/dsh-web-profile/main/install.sh | bash -s -- web --mode worktree --dir ~/repos/dsh-web-profile
-
-# 如果目标 profile 已存在且想覆盖，必须加 --force
-curl -fsSL https://raw.githubusercontent.com/Yiklek/dsh-web-profile/main/install.sh | bash -s -- web --force
-```
-
-非交互执行（`curl | bash`）时，如果目标 profile 已存在，**必须显式加 `--force`** 才会覆盖。
-
-### 参数说明
-
-| 参数 | 作用 | 默认值 | 适用模式 |
-|---|---|---|---|
-| `[profile-name]` | 目标 profile 名称 | `web` | 所有 |
-| `--force` / `-f` | 跳过覆盖确认（覆盖前仍会备份） | 关闭 | 所有 |
-| `--branch <branch>` | worktree 分支名 | `profile-<name>` | 仅 worktree |
-| `--mode <clone\|worktree>` | 安装方式 | 本地 worktree；远程 clone | 远程安装 |
-| `--dir <path>` | clone 后 source 仓库目录路径/名称 | `<cwd>/<仓库名>` | 仅远程 worktree |
-
-> `--dir` 和 `--branch` 只适用于 worktree 模式；`--mode clone` 下指定它们会报错。
-
-### clone vs worktree
-
-| 方式 | 适合场景 |
-|---|---|
-| **clone** | 远程一键安装、不打算在 profile 里直接改配置提交 |
-| **worktree** | 本地主仓库开发、需要把 profile 修改合并回 `main` |
-
-### 脚本做了什么
-
-- **在本地主仓库目录执行时，只允许 worktree 安装**
-- **通过 `curl | bash` 远程执行时**：
-  - 未指定 `--mode`：默认 clone 到 profile 目录
-  - `--mode clone`：直接 `git clone` 到 profile 目录
-  - `--mode worktree`：默认把 source 仓库 clone 到当前目录（`<cwd>/<repo>`），也可用 `--dir` 指定 clone 后的仓库目录路径/名称，再创建 git worktree
-
-worktree 模式默认分支：`profile-<name>`，例如 `web` 对应 `profile-web`。
-
-如果目标 profile 已存在：
-
-- 交互终端会询问是否覆盖
-- 非交互（`curl | bash`）必须使用 `--force`
-- 覆盖前把原目录移动到带时间戳的备份：
-
-  ```text
-  ~/.dsh/profiles/<name>.bak.<YYYYMMDD-HHMMSS>
-  ```
-
-安装完成后执行：
-
-```bash
-dsh plugin --profile <name> install
-```
-
-如果 `dsh` 不在 PATH，会回退到：
-
-```bash
-npx --yes @deepseek-ai/dsh@next plugin --profile <name> install
-```
-
-### 为什么用 git worktree
-
-之前尝试过“整个目录软链接”和“配置文件软链接”，都有问题：
-
-- 整个目录软链接：Node 沿真实路径找不到 `~/.dsh/profiles/node_modules` 里的 `@deepseek-ai/*`
-- 配置文件软链接：pnpm 拒绝写入符号链接形式的 `pnpm-lock.yaml`
-
-使用 git worktree 后：
-
-- profile 目录是**真实 git 检出**
-- `pnpm-lock.yaml` 是真实文件，pnpm 可以正常写入
-- `node_modules/` 被 `.gitignore` 忽略
-- 配置修改可以直接在 profile 里提交，也可以回到主仓库统一管理
-
-## 使用
-
-安装完成后直接启动：
-
-```bash
-npx @deepseek-ai/dsh web
-```
-
-或：
-
-```bash
-npx @deepseek-ai/dsh --profile <name>
-```
-
-## 更新 worktree 安装
-
-> 以下更新方式仅适用于 **worktree 安装**。
-> `<source-repo>` 指安装时的 source 仓库目录：
-> - 本地主仓库安装时，就是本仓库目录
-> - 远程 worktree 安装时，是 `--dir` 指定的目录，或默认的 `<cwd>/<仓库名>`
-
-### 1. 更新 source 仓库
-
-```bash
-cd <source-repo>
-git fetch origin main
-git pull --ff-only origin main
-```
-
-### 2. 更新 profile worktree
-
-```bash
-cd ~/.dsh/profiles/<name>
-git rebase main
-```
-
-如果 profile 分支没有本地提交，也可以直接快进到最新 `main`：
-
-```bash
-git merge --ff-only main
-```
-
-### 3. 处理冲突
-
-如果 rebase 或 merge 出现冲突：
-
-```bash
-git status
-# 手动解决冲突后
-git add -A
-git rebase --continue
-```
-
-如果想放弃本次更新：
-
-```bash
-git rebase --abort
-```
-
-### 4. 重新安装依赖
-
-如果 `package.json` 或 `pnpm-lock.yaml` 有变化，更新后执行：
-
-```bash
-dsh plugin --profile <name> install
-```
-
-## 修改配置后的同步方式
-
-> 以下同步方式仅适用于 **worktree 安装**。
-> 如果使用 clone 模式安装，直接在 profile 目录里修改并提交即可。
-
-profile 目录是本仓库的一个 git worktree，所以修改后可以直接在 profile 里提交：
-
-```bash
-cd ~/.dsh/profiles/<name>
-git add -A
-git commit -m "update profile config"
-```
-
-如果想把 profile 分支合并回主仓库的 `main`，在仓库根目录执行：
-
-```bash
-git merge --ff-only profile-<name>
-```
-
-如果 `--ff-only` 失败，说明 `main` 和 `profile-<name>` 已经分叉（例如 `main` 上有新的提交）。此时不要直接创建合并提交，先让 profile 分支基于最新的 `main`：
-
-```bash
-cd ~/.dsh/profiles/<name>
-git fetch origin main
-git rebase origin/main
-```
-
-如果有冲突，解决后继续：
-
-```bash
-git add -A
-git rebase --continue
-```
-
-然后再回到主仓库执行：
-
-```bash
-git merge --ff-only profile-<name>
-```
-
-也可以直接推送 profile 分支：
-
-```bash
-cd ~/.dsh/profiles/<name>
-git push origin profile-<name>
-```
-
-## 恢复备份
-
-脚本在覆盖前会保留备份，例如：
-
-```text
-~/.dsh/profiles/<name>.bak.<YYYYMMDD-HHMMSS>
-```
-
-如果需要恢复：
-
-```bash
-rm -rf ~/.dsh/profiles/<name>
-mv ~/.dsh/profiles/<name>.bak.<YYYYMMDD-HHMMSS> ~/.dsh/profiles/<name>
-```
+改用 git worktree 后：profile 目录是真实 git 检出，`pnpm-lock.yaml` 是可写真实文件，`node_modules/` 由 `.gitignore` 忽略，配置改动既能在 profile 里提交，也能回到主仓库统一管理。
 
 ## Git 管理建议
 
@@ -566,27 +266,14 @@ cordis.patch.yml
 .env.*
 *.local
 .DS_Store
+thinking-effort-loaded.json
+tests/e2e/test-results/
+tests/e2e/playwright-report/
+.npmrc
 ```
 
-请勿提交：
+以上内容都不要提交：依赖目录、本机生成的 `cordis.patch.yml`、运行期数据、任何包含凭据的本地文件。
 
-- `node_modules/`
-- 本机生成的 `cordis.patch.yml`（由 `dsh-mcp-manager-ui` 等写本机 MCP/patch 配置）
-- `.dsh-market/`
-- 任何包含凭据的 `.env` / 本地文件
-```gitignore
-node_modules/
-cordis.patch.yml
-.dsh-market/
-.env
-.env.*
-*.local
-.DS_Store
-```
+## License
 
-请勿提交：
-
-- `node_modules/`
-- 本机生成的 `cordis.patch.yml`（由 `dsh-mcp-manager-ui` 等写本机 MCP/patch 配置）
-- `.dsh-market/`
-- 任何包含凭据的 `.env` / 本地文件
+[MIT](LICENSE) © 2026 Yiklek
