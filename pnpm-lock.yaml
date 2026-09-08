@@ -21,8 +21,8 @@ importers:
         specifier: ^0.1.0
         version: 0.1.0
       '@xmanrui/dsh-im':
-        specifier: ^4.15.0
-        version: 4.15.0(debug@4.4.3)
+        specifier: ^4.16.0
+        version: 4.16.0(debug@4.4.3)
       dsh-anchored-standard:
         specifier: github:Yiklek/dsh-anchored-standard
         version: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2
@@ -488,8 +488,8 @@ packages:
   '@wecom/aibot-node-sdk@1.0.7':
     resolution: {integrity: sha512-51w+sTqunry6GD3HFvmuh0gArMSJDFE418vyvR1wMJHj1N6DaFuGD3HuaY2fazZs3mb9FWeQFX3+vU5t0Qhwmw==}
 
-  '@xmanrui/dsh-im@4.15.0':
-    resolution: {integrity: sha512-FycFLktjzDLOOJOEM1fzbW/EHyGV4/dhT7e/Ouz/IcGP+sWw5atuiQ0+ZNw9G395Y+LeztffaP0K1ubIsTM4Kw==}
+  '@xmanrui/dsh-im@4.16.0':
+    resolution: {integrity: sha512-6d34HwTxj9hYg6tcbW65/czoKUjor7ijisdg3kdsW85mPxeDS/KutEV7tGCOUFnRm56MRS9JNnp8BU/B2J9AzQ==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -774,7 +774,7 @@ packages:
     resolution: {integrity: sha512-EUBjM+B+lkDE41iE82DDSCfkoPGfXx8IxFxPMjNzm/Uk4xDet77rTN9wqlxlVg71kK7XGuUMv6wUxJUwwv+Xyw==}
 
   dsh-anchored-standard@https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
+    resolution: {gitHosted: true, integrity: sha512-YCAgruV6NOkw1gsRK6YvaRlcw3BfH1Ro/qm1TlkJ093vL2ZBCveAGCDBKj067RXgXLcAsK71EPoXV8WuqC+BeQ==, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
     version: 0.1.0
     engines: {node: '>=22.19.0'}
     peerDependencies:
@@ -1856,7 +1856,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@xmanrui/dsh-im@4.15.0(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.16.0(debug@4.4.3)':
     dependencies:
       '@tencent-connect/qqbot-connector': 1.2.0
       '@tencent-connect/qqbot-nodejs': 1.0.4

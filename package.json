@@ -6,7 +6,7 @@
     "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
     "@quill507/dsh-auto-approval-llm": "^0.0.19",
     "@tt-a1i/archify-dsh": "^0.1.0",
-    "@xmanrui/dsh-im": "^4.15.0",
+    "@xmanrui/dsh-im": "^4.16.0",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-better-sidebar": "0.18.1",
     "dsh-coding-subscription-oauth": "^0.6.5",
