@@ -2,6 +2,7 @@
   "name": "dsh-profile-web",
   "private": true,
   "dependencies": {
+    "@michengai/dsh-archive-manager": "^0.1.34",
     "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
     "@quill507/dsh-auto-approval-llm": "^0.0.20",
     "@tt-a1i/archify-dsh": "^0.1.0",
@@ -30,14 +31,15 @@
         "dsh-context",
         "@opendsh/dsh-plugin-setting-mcp",
         "dsh-complete-notify",
-        "dsh-coding-subscription-oauth",
         "dsh-better-sidebar",
         "@tt-a1i/archify-dsh",
         "@xmanrui/dsh-im",
         "@quill507/dsh-auto-approval-llm",
         "dsh-free-search",
         "dsh-mermaid",
-        "dsh-univer-office"
+        "dsh-univer-office",
+        "@michengai/dsh-archive-manager",
+        "dsh-coding-subscription-oauth"
       ]
     }
   }
