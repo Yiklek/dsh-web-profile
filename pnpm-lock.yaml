@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@goodandready/dsh-subscriptions':
-        specifier: ^0.5.32
-        version: 0.5.32
       '@opendsh/dsh-plugin-setting-mcp':
         specifier: ^0.1.2
         version: 0.1.2(zod@4.5.4)
@@ -47,9 +44,6 @@ importers:
       dsh-mermaid:
         specifier: ^0.4.0
         version: 0.4.0
-      dsh-plugin-subscriptions:
-        specifier: ^0.8.0
-        version: 0.8.0
       dsh-settings-manager:
         specifier: github:Yiklek/dsh-settings-manager#pkg
         version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d
@@ -145,16 +139,6 @@ packages:
 
   '@deepseek-ai/schemastery@3.18.2':
     resolution: {integrity: sha512-njDtZsznjYxok7KLLlHOPyuv2efdWVbSflAHgztSfbMsg+CVraEoRe2DjOCgClYv3ZCSm7WXoaUkbB/+RY7tWQ==}
-
-  '@goodandready/dsh-subscriptions@0.5.32':
-    resolution: {integrity: sha512-vRbBKWx7+3fBCJbxzMkXD0hQNikdAPPJi8Mv9LN/NfgeteeEqoQDny3B27kSkFumR3eIBBbnjQF/B+OP92GEOA==}
-    peerDependencies:
-      '@deepseek-ai/cordis': ^4.0.1
-      '@deepseek-ai/dsh-credentials': ^0.1.0-rc.6
-      '@deepseek-ai/dsh-host-webserver': ^0.1.0-rc.6
-      '@deepseek-ai/dsh-llm': ^0.1.0-rc.6
-      '@deepseek-ai/dsh-settings': ^0.1.0-rc.6
-      '@deepseek-ai/schemastery': ^3.18.1
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -884,16 +868,6 @@ packages:
     engines: {node: '>=22.19.0'}
     hasBin: true
 
-  dsh-plugin-subscriptions@0.8.0:
-    resolution: {integrity: sha512-gG8xbDQmUgizKmcNkPzdNsKG3JPmnAVrTsFKQqa6/bvpvYucCHKpzVHAf+nKwOFeUvaxoiUB8tvlP4uVamoQ3Q==}
-    peerDependencies:
-      '@deepseek-ai/cordis': ^4.0.1
-      '@deepseek-ai/dsh-attachment': ^0.1.1-rc.2 || ^0.1.2-alpha.1
-      '@deepseek-ai/dsh-home-paths': ^0.1.1-rc.2 || ^0.1.2-alpha.1
-      '@deepseek-ai/dsh-llm': ^0.1.1-rc.2 || ^0.1.2-alpha.1
-      '@deepseek-ai/dsh-tools': ^0.1.1-rc.2 || ^0.1.2-alpha.1
-      '@deepseek-ai/schemastery': ^3.18.1
-
   dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d:
     resolution: {gitHosted: true, integrity: sha512-UAlloqlJF8HFV6i1qogy/10o/cDQ4piYeYyuwpApudK1fGScNw+rDhWzFE7JS8eRJwVdGEUlgnlfHa6OZrS4uw==, tarball: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d}
     version: 0.1.0
@@ -1047,10 +1021,6 @@ packages:
     resolution: {integrity: sha512-5Hh7Y1wQbvY5ooGgPbDaL5iYLAPzMTUrjMulskHLH6wnv/A+1q5rgEaiuqEjB+oxGXIVZs1FF+R/KPN3ZSQYYg==}
     engines: {node: '>=12'}
 
-  ip-address@10.7.0:
-    resolution: {integrity: sha512-BGFsyJd5mpXp3rK6jIdADLNgpJUK1jnjzvYF8lK+VyDab9JAmqN0YOKDdP17HlgKb2+ehPgDc8EtnRLbGCAMhA==}
-    engines: {node: '>= 12'}
-
   is-fullwidth-code-point@3.0.0:
     resolution: {integrity: sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==}
     engines: {node: '>=8'}
@@ -1202,14 +1172,6 @@ packages:
   set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
 
-  smart-buffer@4.2.0:
-    resolution: {integrity: sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==}
-    engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
-
-  socks@2.8.10:
-    resolution: {integrity: sha512-e0VyvkVTwVYViNovRkZ9aodhxVlyoMn7eJhVUPxZ+eK9P/7CBkxvvsBOHqFPEH416726W8tLXXXjKwqgTErrCQ==}
-    engines: {node: '>= 10.0.0', npm: '>= 3.0.0'}
-
   strictdom@1.0.1:
     resolution: {integrity: sha512-cEmp9QeXXRmjj/rVp9oyiqcvyocWab/HaoN4+bwFeZ7QzykJD6L3yD4v12K1x0tHpqRqVpJevN3gW7kyM39Bqg==}
 
@@ -1260,10 +1222,6 @@ packages:
   undici@7.29.1:
     resolution: {integrity: sha512-RYONW2MeafgYlkVOKYKkA/Ag7BmXqgIWCa8t1m0JcxrQg9pI9lEqRhAOruOBCbAohOa/gkCF+iPi9hrgvTzu6Q==}
     engines: {node: '>=20.18.1'}
-
-  undici@8.10.2:
-    resolution: {integrity: sha512-/y4/bH9YNU5hi9NIrpOuvGXFcxrj3CMrV+/AYpowAYTpHn8gX/XPFjNy766FPoYY0miQhdW977JFWKGNhBdwyQ==}
-    engines: {node: '>=22.19.0'}
 
   uuid@14.0.2:
     resolution: {integrity: sha512-xZe/16rV4aa+HGSOCiY2YeLT1OybRLrrkL/Rqaq7p7GMVXjFh+6wN4oMYgjFmnSnhY8t6Xpdl2l9qmnHYuMHwQ==}
@@ -1515,11 +1473,6 @@ snapshots:
     dependencies:
       '@deepseek-ai/cosmokit': 1.8.3
       '@standard-schema/spec': 1.1.0
-
-  '@goodandready/dsh-subscriptions@0.5.32':
-    dependencies:
-      socks: 2.8.10
-      undici: 8.10.2
 
   '@iconify/types@2.0.0': {}
 
@@ -2234,10 +2187,6 @@ snapshots:
 
   dsh-mermaid@0.4.0: {}
 
-  dsh-plugin-subscriptions@0.8.0:
-    dependencies:
-      undici: 7.29.1
-
   dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d: {}
 
   dsh-univer-office@0.2.14:
@@ -2365,8 +2314,6 @@ snapshots:
   internmap@1.0.1: {}
 
   internmap@2.0.3: {}
-
-  ip-address@10.7.0: {}
 
   is-fullwidth-code-point@3.0.0: {}
 
@@ -2531,13 +2478,6 @@ snapshots:
 
   set-blocking@2.0.0: {}
 
-  smart-buffer@4.2.0: {}
-
-  socks@2.8.10:
-    dependencies:
-      ip-address: 10.7.0
-      smart-buffer: 4.2.0
-
   strictdom@1.0.1: {}
 
   string-width@4.2.3:
@@ -2580,8 +2520,6 @@ snapshots:
   undici@7.29.0: {}
 
   undici@7.29.1: {}
-
-  undici@8.10.2: {}
 
   uuid@14.0.2: {}
 
