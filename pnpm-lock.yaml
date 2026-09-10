@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@michengai/dsh-archive-manager':
-        specifier: ^0.1.36
-        version: 0.1.36
+        specifier: ^0.1.37
+        version: 0.1.37
       '@opendsh/dsh-plugin-setting-mcp':
         specifier: ^0.1.2
         version: 0.1.2(zod@4.6.1)
@@ -21,8 +21,8 @@ importers:
         specifier: ^0.1.0
         version: 0.1.0
       '@xmanrui/dsh-im':
-        specifier: ^4.18.1
-        version: 4.18.1(debug@4.4.3)
+        specifier: ^4.19.0
+        version: 4.19.0(debug@4.4.3)
       dsh-anchored-standard:
         specifier: github:Yiklek/dsh-anchored-standard
         version: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2
@@ -248,8 +248,8 @@ packages:
   '@mermaid-js/parser@1.2.1':
     resolution: {integrity: sha512-n12NohV3mrUyUL2o93IgG/ifeW9FTyeJn3zDxkhwa8MJ9Fxg3HQMlA3RiGmD/3UnJvheztkjjQAjA2T4LmUcpw==}
 
-  '@michengai/dsh-archive-manager@0.1.36':
-    resolution: {integrity: sha512-D1uF9fwfaHbedWgkNcy7m7A6umMD6/L2TfcF2+GbUCEcKPGfA4vAoOLPhg3XSzUTF3zwI92vCjvi+wZ2AoAmPA==}
+  '@michengai/dsh-archive-manager@0.1.37':
+    resolution: {integrity: sha512-/gMpxYld863aD/Xm8gB3Ekr34tFQ7GVgh/FJaaXIOLg/eszosrbX7Qs2h50cRaFoBfM/U05wdoXOZOGHXnNzmw==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
@@ -502,8 +502,8 @@ packages:
   '@wecom/aibot-node-sdk@1.0.7':
     resolution: {integrity: sha512-51w+sTqunry6GD3HFvmuh0gArMSJDFE418vyvR1wMJHj1N6DaFuGD3HuaY2fazZs3mb9FWeQFX3+vU5t0Qhwmw==}
 
-  '@xmanrui/dsh-im@4.18.1':
-    resolution: {integrity: sha512-M684m3qaFcA9pdrwG+fHcnBliuCLxx3EgJYMfJ+0GY1peEYxoZGNb7C/uN0CoPBn4p44A4+jJ1CuSt9s0O7FAg==}
+  '@xmanrui/dsh-im@4.19.0':
+    resolution: {integrity: sha512-Jl8f0lhncgEfncg9+fW+SMVRR0U155oQWjP8thKaLiOol7tVCNltraN2HZXU0KfSXG06Db6hsN3AVZjqIowFAQ==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -788,7 +788,7 @@ packages:
     resolution: {integrity: sha512-EUBjM+B+lkDE41iE82DDSCfkoPGfXx8IxFxPMjNzm/Uk4xDet77rTN9wqlxlVg71kK7XGuUMv6wUxJUwwv+Xyw==}
 
   dsh-anchored-standard@https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
+    resolution: {gitHosted: true, integrity: sha512-YCAgruV6NOkw1gsRK6YvaRlcw3BfH1Ro/qm1TlkJ093vL2ZBCveAGCDBKj067RXgXLcAsK71EPoXV8WuqC+BeQ==, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
     version: 0.1.0
     engines: {node: '>=22.19.0'}
     peerDependencies:
@@ -1637,7 +1637,7 @@ snapshots:
     dependencies:
       '@chevrotain/types': 11.1.2
 
-  '@michengai/dsh-archive-manager@0.1.36': {}
+  '@michengai/dsh-archive-manager@0.1.37': {}
 
   '@neon-rs/load@0.0.4': {}
 
@@ -1846,7 +1846,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@xmanrui/dsh-im@4.18.1(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.19.0(debug@4.4.3)':
     dependencies:
       '@tencent-connect/qqbot-connector': 1.2.0
       '@tencent-connect/qqbot-nodejs': 1.0.4
