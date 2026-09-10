@@ -2,11 +2,11 @@
   "name": "dsh-profile-web",
   "private": true,
   "dependencies": {
-    "@michengai/dsh-archive-manager": "^0.1.36",
+    "@michengai/dsh-archive-manager": "^0.1.38",
     "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
     "@quill507/dsh-auto-approval-llm": "^0.0.20",
     "@tt-a1i/archify-dsh": "^0.1.0",
-    "@xmanrui/dsh-im": "^4.18.1",
+    "@xmanrui/dsh-im": "^4.19.1",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-better-sidebar": "0.19.0",
     "dsh-coding-subscription-oauth": "^0.7.1",
@@ -15,6 +15,7 @@
     "dsh-free-search": "^0.4.24",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-mermaid": "^0.4.0",
+    "dsh-rewind-plugin": "^0.11.0",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
     "dsh-univer-office": "^0.2.14",
     "dshmarket": "^1.45.1"
@@ -39,7 +40,8 @@
         "dsh-mermaid",
         "dsh-univer-office",
         "@michengai/dsh-archive-manager",
-        "dsh-coding-subscription-oauth"
+        "dsh-coding-subscription-oauth",
+        "dsh-rewind-plugin"
       ]
     }
   }

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@michengai/dsh-archive-manager':
-        specifier: ^0.1.36
-        version: 0.1.36
+        specifier: ^0.1.38
+        version: 0.1.38
       '@opendsh/dsh-plugin-setting-mcp':
         specifier: ^0.1.2
         version: 0.1.2(zod@4.6.1)
@@ -21,8 +21,8 @@ importers:
         specifier: ^0.1.0
         version: 0.1.0
       '@xmanrui/dsh-im':
-        specifier: ^4.18.1
-        version: 4.18.1(debug@4.4.3)
+        specifier: ^4.19.1
+        version: 4.19.1(debug@4.4.3)
       dsh-anchored-standard:
         specifier: github:Yiklek/dsh-anchored-standard
         version: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2
@@ -47,6 +47,9 @@ importers:
       dsh-mermaid:
         specifier: ^0.4.0
         version: 0.4.0
+      dsh-rewind-plugin:
+        specifier: ^0.11.0
+        version: 0.11.0
       dsh-settings-manager:
         specifier: github:Yiklek/dsh-settings-manager#pkg
         version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d
@@ -248,27 +251,27 @@ packages:
   '@mermaid-js/parser@1.2.1':
     resolution: {integrity: sha512-n12NohV3mrUyUL2o93IgG/ifeW9FTyeJn3zDxkhwa8MJ9Fxg3HQMlA3RiGmD/3UnJvheztkjjQAjA2T4LmUcpw==}
 
-  '@michengai/dsh-archive-manager@0.1.36':
-    resolution: {integrity: sha512-D1uF9fwfaHbedWgkNcy7m7A6umMD6/L2TfcF2+GbUCEcKPGfA4vAoOLPhg3XSzUTF3zwI92vCjvi+wZ2AoAmPA==}
+  '@michengai/dsh-archive-manager@0.1.38':
+    resolution: {integrity: sha512-LQZ84ciSz+lF/Enl03NdS/Y6Jve07nqcU+vRc0QdjhLNPPi5NU11L5k9J1q0zk9hO4RUiCbFyMThiI4glOWLUQ==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
-      '@deepseek-ai/dsh-client-connection': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-client-locale': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-client-runtime': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-client-store': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-client-ui-conversation': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-client-ui-primitives': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-client-ui-sidebar': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-client-ui-workspace': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-host-webserver': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-session': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-session-projection-cache': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-spill-local': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-storage-domain': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-typert-protocol': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-typert-registry': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
-      '@deepseek-ai/dsh-workspace': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1
+      '@deepseek-ai/dsh-client-connection': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-client-locale': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-client-runtime': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-client-store': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-client-ui-conversation': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-client-ui-primitives': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-client-ui-sidebar': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-client-ui-workspace': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-host-webserver': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-session': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-session-projection-cache': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-spill-local': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-storage-domain': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-typert-protocol': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-typert-registry': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
+      '@deepseek-ai/dsh-workspace': 0.1.0-rc.8 || 0.1.1-rc.2 || 0.1.2-rc.1 || 0.1.5-rc.1 || 0.1.5-rc.2
     peerDependenciesMeta:
       '@deepseek-ai/dsh-client-runtime':
         optional: true
@@ -502,8 +505,8 @@ packages:
   '@wecom/aibot-node-sdk@1.0.7':
     resolution: {integrity: sha512-51w+sTqunry6GD3HFvmuh0gArMSJDFE418vyvR1wMJHj1N6DaFuGD3HuaY2fazZs3mb9FWeQFX3+vU5t0Qhwmw==}
 
-  '@xmanrui/dsh-im@4.18.1':
-    resolution: {integrity: sha512-M684m3qaFcA9pdrwG+fHcnBliuCLxx3EgJYMfJ+0GY1peEYxoZGNb7C/uN0CoPBn4p44A4+jJ1CuSt9s0O7FAg==}
+  '@xmanrui/dsh-im@4.19.1':
+    resolution: {integrity: sha512-ONFZsDXQ0igTzGd5cOHKWS3SbUvRFSlZ1SpfW0Ho94Ftl9Op2ALXfl+n7ToszghulLFUddL5R7XJa6YFqI+M/A==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -902,6 +905,54 @@ packages:
     resolution: {integrity: sha512-SVXmo3MdINyAf097eEF7A4D41wb+bZr5pX8uoHVbD+ZnMOdfW80AXcHMlMPkcrAHFPzkOeC9cL91zjDEqteTIg==}
     engines: {node: '>=22.19.0'}
     hasBin: true
+
+  dsh-rewind-plugin@0.11.0:
+    resolution: {integrity: sha512-7sbKIKNFuzTQJXpNA/E+BntCWKIOR8vXjsAsSbu4GTntnq8X0HNJLFopDw6ZP3ALVI8Qa2jkVKO/G0moU+GTbw==}
+    engines: {node: ^22.19.0 || >=24.0.0}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      '@deepseek-ai/dsh-client-locale': ^0.1.5-rc.1
+      '@deepseek-ai/dsh-client-ui-commands': ^0.1.5-rc.1
+      '@deepseek-ai/dsh-client-ui-settings': ^0.1.5-rc.1
+      '@deepseek-ai/dsh-client-ui-slots': ^0.1.5-rc.1
+      '@deepseek-ai/dsh-commands': ^0.1.5-rc.1
+      '@deepseek-ai/dsh-fs': ^0.1.5-rc.1
+      '@deepseek-ai/dsh-home-paths': ^0.1.5-rc.1
+      '@deepseek-ai/dsh-llm': ^0.1.5-rc.1
+      '@deepseek-ai/dsh-sandbox': ^0.1.5-rc.1
+      '@deepseek-ai/dsh-session': ^0.1.5-rc.1
+      '@deepseek-ai/dsh-settings': ^0.1.5-rc.1
+      '@deepseek-ai/dsh-tools': ^0.1.5-rc.1
+      '@deepseek-ai/schemastery': ^3.18.1
+    peerDependenciesMeta:
+      '@deepseek-ai/cordis':
+        optional: true
+      '@deepseek-ai/dsh-client-locale':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-commands':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-settings':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-slots':
+        optional: true
+      '@deepseek-ai/dsh-commands':
+        optional: true
+      '@deepseek-ai/dsh-fs':
+        optional: true
+      '@deepseek-ai/dsh-home-paths':
+        optional: true
+      '@deepseek-ai/dsh-llm':
+        optional: true
+      '@deepseek-ai/dsh-sandbox':
+        optional: true
+      '@deepseek-ai/dsh-session':
+        optional: true
+      '@deepseek-ai/dsh-settings':
+        optional: true
+      '@deepseek-ai/dsh-tools':
+        optional: true
+      '@deepseek-ai/schemastery':
+        optional: true
 
   dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d:
     resolution: {gitHosted: true, integrity: sha512-UAlloqlJF8HFV6i1qogy/10o/cDQ4piYeYyuwpApudK1fGScNw+rDhWzFE7JS8eRJwVdGEUlgnlfHa6OZrS4uw==, tarball: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d}
@@ -1637,7 +1688,7 @@ snapshots:
     dependencies:
       '@chevrotain/types': 11.1.2
 
-  '@michengai/dsh-archive-manager@0.1.36': {}
+  '@michengai/dsh-archive-manager@0.1.38': {}
 
   '@neon-rs/load@0.0.4': {}
 
@@ -1846,7 +1897,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@xmanrui/dsh-im@4.18.1(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.19.1(debug@4.4.3)':
     dependencies:
       '@tencent-connect/qqbot-connector': 1.2.0
       '@tencent-connect/qqbot-nodejs': 1.0.4
@@ -2223,6 +2274,8 @@ snapshots:
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b: {}
 
   dsh-mermaid@0.4.0: {}
+
+  dsh-rewind-plugin@0.11.0: {}
 
   dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d: {}
 
