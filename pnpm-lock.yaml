@@ -13,7 +13,7 @@ importers:
         version: 0.1.34
       '@opendsh/dsh-plugin-setting-mcp':
         specifier: ^0.1.2
-        version: 0.1.2(zod@4.5.4)
+        version: 0.1.2(zod@4.6.1)
       '@quill507/dsh-auto-approval-llm':
         specifier: ^0.0.20
         version: 0.0.20
@@ -36,8 +36,8 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.47.0
-        version: 0.47.0
+        specifier: ^0.48.0
+        version: 0.48.0
       dsh-free-search:
         specifier: ^0.4.24
         version: 0.4.24
@@ -788,7 +788,7 @@ packages:
     resolution: {integrity: sha512-EUBjM+B+lkDE41iE82DDSCfkoPGfXx8IxFxPMjNzm/Uk4xDet77rTN9wqlxlVg71kK7XGuUMv6wUxJUwwv+Xyw==}
 
   dsh-anchored-standard@https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
+    resolution: {gitHosted: true, integrity: sha512-YCAgruV6NOkw1gsRK6YvaRlcw3BfH1Ro/qm1TlkJ093vL2ZBCveAGCDBKj067RXgXLcAsK71EPoXV8WuqC+BeQ==, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
     version: 0.1.0
     engines: {node: '>=22.19.0'}
     peerDependencies:
@@ -866,8 +866,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.47.0:
-    resolution: {integrity: sha512-wymzyVR3fWpQeECZjfMn/LGB7x7nvWi0rU1vMAEUKf6T8uBe1vhnTySMCJER1MnOzI7wnX6vdvNfyBMLfx/4ZA==}
+  dsh-context@0.48.0:
+    resolution: {integrity: sha512-gJnhrZ7DV6ETZvJrMIxZ7kSEZ9pYqZaYotUJCOIfQYAo43TFSTLmaOJFhajdadKPN2IX779i741qJvB/A+jADg==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -1312,8 +1312,8 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.5.4:
-    resolution: {integrity: sha512-sC95tT5iHHH9gtpj6A81kh+NEaRAUFN+qlUPDUbRfOMvNf5QCBqsb3WgvnpVtK5Y+4UfA6KqufotuTvMGiTlsA==}
+  zod@4.6.1:
+    resolution: {integrity: sha512-341aRWQsve0rvronKNTqZpjmzdbUDlFuzHaI/XLg/Ej82qffDJRRfBTCuv7+9q/rMjB6LSLyEBnW4InJeMtt/Q==}
 
 snapshots:
 
@@ -1636,10 +1636,10 @@ snapshots:
 
   '@neon-rs/load@0.0.4': {}
 
-  '@opendsh/dsh-plugin-setting-mcp@0.1.2(zod@4.5.4)':
+  '@opendsh/dsh-plugin-setting-mcp@0.1.2(zod@4.6.1)':
     dependencies:
       js-yaml: 4.3.2
-      zod: 4.5.4
+      zod: 4.6.1
 
   '@puppeteer/browsers@3.2.2':
     dependencies:
@@ -2207,9 +2207,9 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.47.0:
+  dsh-context@0.48.0:
     dependencies:
-      zod: 4.5.4
+      zod: 4.6.1
 
   dsh-free-search@0.4.24:
     dependencies:
@@ -2611,4 +2611,4 @@ snapshots:
 
   zod@3.25.76: {}
 
-  zod@4.5.4: {}
+  zod@4.6.1: {}

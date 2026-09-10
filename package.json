@@ -11,7 +11,7 @@
     "dsh-better-sidebar": "0.18.1",
     "dsh-coding-subscription-oauth": "^0.6.5",
     "dsh-complete-notify": "^0.6.2",
-    "dsh-context": "^0.47.0",
+    "dsh-context": "^0.48.0",
     "dsh-free-search": "^0.4.24",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-mermaid": "^0.4.0",
