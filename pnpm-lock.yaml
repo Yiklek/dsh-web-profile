@@ -13,16 +13,16 @@ importers:
         version: 0.1.38
       '@opendsh/dsh-plugin-setting-mcp':
         specifier: ^0.1.2
-        version: 0.1.2(zod@4.6.1)
+        version: 0.1.2(zod@4.6.2)
       '@quill507/dsh-auto-approval-llm':
-        specifier: ^0.0.20
-        version: 0.0.20
+        specifier: ^0.0.22
+        version: 0.0.22
       '@tt-a1i/archify-dsh':
         specifier: ^0.1.0
         version: 0.1.0
       '@xmanrui/dsh-im':
-        specifier: ^4.19.1
-        version: 4.19.1(debug@4.4.3)
+        specifier: ^4.19.2
+        version: 4.19.2(debug@4.4.3)
       dsh-anchored-standard:
         specifier: github:Yiklek/dsh-anchored-standard
         version: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2
@@ -316,12 +316,12 @@ packages:
       yauzl:
         optional: true
 
-  '@quill507/dsh-auto-approval-llm@0.0.20':
-    resolution: {integrity: sha512-q02xTfMFR2xd99TCTxO4nzSUz702hs0ziJ2Jhkjsfote+HKuN26I9n5eo+xZzkfoDyQRbo03IhRlhUutok/sSA==}
+  '@quill507/dsh-auto-approval-llm@0.0.22':
+    resolution: {integrity: sha512-QQTvK4NUF+uahFcWwxXE2dut2U6HMouobEkuj7e5bWeQ1Zgk8/uKVR1MbDYQ0j26vA7zKNgdFrftLgyNMUidQw==}
     peerDependencies:
       '@deepseek-ai/cordis': '>=4.0.1 <5'
-      '@deepseek-ai/dsh-llm': '>=0.1.2-rc.1 <2'
-      '@deepseek-ai/dsh-tools': '>=0.1.2-rc.1 <2'
+      '@deepseek-ai/dsh-llm': '>=0.1.5-rc.2 <2'
+      '@deepseek-ai/dsh-tools': '>=0.1.5-rc.2 <2'
       '@deepseek-ai/schemastery': ^3.18.0
 
   '@standard-schema/spec@1.1.0':
@@ -505,8 +505,8 @@ packages:
   '@wecom/aibot-node-sdk@1.0.7':
     resolution: {integrity: sha512-51w+sTqunry6GD3HFvmuh0gArMSJDFE418vyvR1wMJHj1N6DaFuGD3HuaY2fazZs3mb9FWeQFX3+vU5t0Qhwmw==}
 
-  '@xmanrui/dsh-im@4.19.1':
-    resolution: {integrity: sha512-ONFZsDXQ0igTzGd5cOHKWS3SbUvRFSlZ1SpfW0Ho94Ftl9Op2ALXfl+n7ToszghulLFUddL5R7XJa6YFqI+M/A==}
+  '@xmanrui/dsh-im@4.19.2':
+    resolution: {integrity: sha512-JUJQ/GX5Pv8Br2TgdpO/cuyu0NRHygQjZcvgSq53MQboA5e+udXFHjSjtnK0jq+O7P3Cb/kGSdub1h14kTzKCw==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -791,7 +791,7 @@ packages:
     resolution: {integrity: sha512-EUBjM+B+lkDE41iE82DDSCfkoPGfXx8IxFxPMjNzm/Uk4xDet77rTN9wqlxlVg71kK7XGuUMv6wUxJUwwv+Xyw==}
 
   dsh-anchored-standard@https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
+    resolution: {gitHosted: true, integrity: sha512-YCAgruV6NOkw1gsRK6YvaRlcw3BfH1Ro/qm1TlkJ093vL2ZBCveAGCDBKj067RXgXLcAsK71EPoXV8WuqC+BeQ==, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
     version: 0.1.0
     engines: {node: '>=22.19.0'}
     peerDependencies:
@@ -1368,8 +1368,8 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.6.1:
-    resolution: {integrity: sha512-341aRWQsve0rvronKNTqZpjmzdbUDlFuzHaI/XLg/Ej82qffDJRRfBTCuv7+9q/rMjB6LSLyEBnW4InJeMtt/Q==}
+  zod@4.6.2:
+    resolution: {integrity: sha512-lh5RCAGFa1Cm2hjtNwLQhSs/AsqdWnTQaBER9fEwN/88pSh7KOtJavtBx/0VlkN/uFd61SwYmljLMDAsHlvzBQ==}
 
 snapshots:
 
@@ -1692,17 +1692,17 @@ snapshots:
 
   '@neon-rs/load@0.0.4': {}
 
-  '@opendsh/dsh-plugin-setting-mcp@0.1.2(zod@4.6.1)':
+  '@opendsh/dsh-plugin-setting-mcp@0.1.2(zod@4.6.2)':
     dependencies:
       js-yaml: 4.3.2
-      zod: 4.6.1
+      zod: 4.6.2
 
   '@puppeteer/browsers@3.2.2':
     dependencies:
       modern-tar: 0.8.5
       yargs: 18.1.0
 
-  '@quill507/dsh-auto-approval-llm@0.0.20': {}
+  '@quill507/dsh-auto-approval-llm@0.0.22': {}
 
   '@standard-schema/spec@1.1.0': {}
 
@@ -1897,7 +1897,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@xmanrui/dsh-im@4.19.1(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.19.2(debug@4.4.3)':
     dependencies:
       '@tencent-connect/qqbot-connector': 1.2.0
       '@tencent-connect/qqbot-nodejs': 1.0.4
@@ -2265,7 +2265,7 @@ snapshots:
 
   dsh-context@0.49.1:
     dependencies:
-      zod: 4.6.1
+      zod: 4.6.2
 
   dsh-free-search@0.4.24:
     dependencies:
@@ -2669,4 +2669,4 @@ snapshots:
 
   zod@3.25.76: {}
 
-  zod@4.6.1: {}
+  zod@4.6.2: {}
