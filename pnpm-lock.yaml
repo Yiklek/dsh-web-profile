@@ -13,31 +13,31 @@ importers:
         version: 0.1.38
       '@opendsh/dsh-plugin-setting-mcp':
         specifier: ^0.1.2
-        version: 0.1.2(zod@4.6.1)
+        version: 0.1.2(zod@4.6.2)
       '@quill507/dsh-auto-approval-llm':
-        specifier: ^0.0.20
-        version: 0.0.20
+        specifier: ^0.0.23
+        version: 0.0.23
       '@tt-a1i/archify-dsh':
         specifier: ^0.1.0
         version: 0.1.0
       '@xmanrui/dsh-im':
-        specifier: ^4.19.1
-        version: 4.19.1(debug@4.4.3)
+        specifier: ^4.19.2
+        version: 4.19.2(debug@4.4.3)
       dsh-anchored-standard:
         specifier: github:Yiklek/dsh-anchored-standard
         version: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2
       dsh-better-sidebar:
-        specifier: 0.19.0
-        version: 0.19.0
+        specifier: 0.19.1
+        version: 0.19.1
       dsh-coding-subscription-oauth:
-        specifier: ^0.7.1
-        version: 0.7.1
+        specifier: ^0.8.0
+        version: 0.8.0
       dsh-complete-notify:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.49.1
-        version: 0.49.1
+        specifier: ^0.49.4
+        version: 0.49.4
       dsh-free-search:
         specifier: ^0.4.24
         version: 0.4.24
@@ -48,8 +48,8 @@ importers:
         specifier: ^0.4.0
         version: 0.4.0
       dsh-rewind-plugin:
-        specifier: ^0.11.0
-        version: 0.11.0
+        specifier: ^0.12.0
+        version: 0.12.0
       dsh-settings-manager:
         specifier: github:Yiklek/dsh-settings-manager#pkg
         version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d
@@ -316,12 +316,12 @@ packages:
       yauzl:
         optional: true
 
-  '@quill507/dsh-auto-approval-llm@0.0.20':
-    resolution: {integrity: sha512-q02xTfMFR2xd99TCTxO4nzSUz702hs0ziJ2Jhkjsfote+HKuN26I9n5eo+xZzkfoDyQRbo03IhRlhUutok/sSA==}
+  '@quill507/dsh-auto-approval-llm@0.0.23':
+    resolution: {integrity: sha512-aJ6/WLbGJarnvK7wWgLgJSmHDUBT3NLwz9kUFsBObknIU02C6oo+RHSAulSNnch/1y1fWZYAbKtv1t/zeei0XQ==}
     peerDependencies:
       '@deepseek-ai/cordis': '>=4.0.1 <5'
-      '@deepseek-ai/dsh-llm': '>=0.1.2-rc.1 <2'
-      '@deepseek-ai/dsh-tools': '>=0.1.2-rc.1 <2'
+      '@deepseek-ai/dsh-llm': '>=0.1.5-rc.2 <2'
+      '@deepseek-ai/dsh-tools': '>=0.1.5-rc.2 <2'
       '@deepseek-ai/schemastery': ^3.18.0
 
   '@standard-schema/spec@1.1.0':
@@ -505,8 +505,8 @@ packages:
   '@wecom/aibot-node-sdk@1.0.7':
     resolution: {integrity: sha512-51w+sTqunry6GD3HFvmuh0gArMSJDFE418vyvR1wMJHj1N6DaFuGD3HuaY2fazZs3mb9FWeQFX3+vU5t0Qhwmw==}
 
-  '@xmanrui/dsh-im@4.19.1':
-    resolution: {integrity: sha512-ONFZsDXQ0igTzGd5cOHKWS3SbUvRFSlZ1SpfW0Ho94Ftl9Op2ALXfl+n7ToszghulLFUddL5R7XJa6YFqI+M/A==}
+  '@xmanrui/dsh-im@4.19.2':
+    resolution: {integrity: sha512-JUJQ/GX5Pv8Br2TgdpO/cuyu0NRHygQjZcvgSq53MQboA5e+udXFHjSjtnK0jq+O7P3Cb/kGSdub1h14kTzKCw==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -791,14 +791,14 @@ packages:
     resolution: {integrity: sha512-EUBjM+B+lkDE41iE82DDSCfkoPGfXx8IxFxPMjNzm/Uk4xDet77rTN9wqlxlVg71kK7XGuUMv6wUxJUwwv+Xyw==}
 
   dsh-anchored-standard@https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
+    resolution: {gitHosted: true, integrity: sha512-YCAgruV6NOkw1gsRK6YvaRlcw3BfH1Ro/qm1TlkJ093vL2ZBCveAGCDBKj067RXgXLcAsK71EPoXV8WuqC+BeQ==, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
     version: 0.1.0
     engines: {node: '>=22.19.0'}
     peerDependencies:
       '@deepseek-ai/dsh-typert-protocol': '>=0.1.0-rc.6'
 
-  dsh-better-sidebar@0.19.0:
-    resolution: {integrity: sha512-eUNfVfJScUfvBiiB7yqot4UDslTOaDcRxPR9LKWE2Kv/Mp/iSk14whgrVg2RggYLc5aq2c+zpXG6qeQ5+aiHrg==}
+  dsh-better-sidebar@0.19.1:
+    resolution: {integrity: sha512-Jr0tPJoDKUVkq+fioL6Td+YwXZ+PULx3CnBJ4iktaQGNP5y9hgpz6V7o7f4Yh2czheVKZsewurqCaiN10GQYeQ==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -831,8 +831,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/dsh-llm': 0.1.1-rc.2
 
-  dsh-coding-subscription-oauth@0.7.1:
-    resolution: {integrity: sha512-n5FAUXCgUSFqNGClaAuteKVJJoj7QHAhF+YdHU8imjVb0GQn63XtNGs0/dEFBdBRaxNsmtUmEbxU8XJBv/yhRA==}
+  dsh-coding-subscription-oauth@0.8.0:
+    resolution: {integrity: sha512-/DoLKgSO4doI88e7FzG3MA4z6mQpnZWZ00mKZRq6pftNk9A6K/Rhu/nV0ukfiE8ewI9zUlb7O19LlDrY2H1Kaw==}
     engines: {node: ^22.19.0 || >=24.0.0}
     hasBin: true
     peerDependencies:
@@ -874,8 +874,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.49.1:
-    resolution: {integrity: sha512-kHltKzp481eT+r7Qi9Mcq9ymDyoh2QxknXdp9tBkscg4ZMZIL5oVl+Fst6Wwu/ikEBRwjYgP2maWNfp9l+WbhQ==}
+  dsh-context@0.49.4:
+    resolution: {integrity: sha512-VFhuYgLEFf1mOCT68kfl1P08cic3eC4yB6STE5M0oHjX/NFGjEqfplf8PbPS7OvHDyTj5lQVB6wxY9d5NFY0dQ==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -906,8 +906,8 @@ packages:
     engines: {node: '>=22.19.0'}
     hasBin: true
 
-  dsh-rewind-plugin@0.11.0:
-    resolution: {integrity: sha512-7sbKIKNFuzTQJXpNA/E+BntCWKIOR8vXjsAsSbu4GTntnq8X0HNJLFopDw6ZP3ALVI8Qa2jkVKO/G0moU+GTbw==}
+  dsh-rewind-plugin@0.12.0:
+    resolution: {integrity: sha512-Pzl3N5tb3b8FWsXg7J9eY7OSkbc64V56sfw1T2xWkPvxNpYCVxxaES9cQjNSm+QHR0Kkc2/oajqpFV1nLpJZeQ==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
@@ -1368,8 +1368,8 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.6.1:
-    resolution: {integrity: sha512-341aRWQsve0rvronKNTqZpjmzdbUDlFuzHaI/XLg/Ej82qffDJRRfBTCuv7+9q/rMjB6LSLyEBnW4InJeMtt/Q==}
+  zod@4.6.2:
+    resolution: {integrity: sha512-lh5RCAGFa1Cm2hjtNwLQhSs/AsqdWnTQaBER9fEwN/88pSh7KOtJavtBx/0VlkN/uFd61SwYmljLMDAsHlvzBQ==}
 
 snapshots:
 
@@ -1692,17 +1692,17 @@ snapshots:
 
   '@neon-rs/load@0.0.4': {}
 
-  '@opendsh/dsh-plugin-setting-mcp@0.1.2(zod@4.6.1)':
+  '@opendsh/dsh-plugin-setting-mcp@0.1.2(zod@4.6.2)':
     dependencies:
       js-yaml: 4.3.2
-      zod: 4.6.1
+      zod: 4.6.2
 
   '@puppeteer/browsers@3.2.2':
     dependencies:
       modern-tar: 0.8.5
       yargs: 18.1.0
 
-  '@quill507/dsh-auto-approval-llm@0.0.20': {}
+  '@quill507/dsh-auto-approval-llm@0.0.23': {}
 
   '@standard-schema/spec@1.1.0': {}
 
@@ -1897,7 +1897,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@xmanrui/dsh-im@4.19.1(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.19.2(debug@4.4.3)':
     dependencies:
       '@tencent-connect/qqbot-connector': 1.2.0
       '@tencent-connect/qqbot-nodejs': 1.0.4
@@ -2216,7 +2216,7 @@ snapshots:
 
   dsh-anchored-standard@https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2: {}
 
-  dsh-better-sidebar@0.19.0:
+  dsh-better-sidebar@0.19.1:
     dependencies:
       '@codemirror/commands': 6.11.0
       '@codemirror/lang-cpp': 6.0.3
@@ -2256,16 +2256,16 @@ snapshots:
     dependencies:
       undici: 7.29.0
 
-  dsh-coding-subscription-oauth@0.7.1:
+  dsh-coding-subscription-oauth@0.8.0:
     dependencies:
       dsh-coding-oauth-core: 0.1.2
       undici: 7.29.0
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.49.1:
+  dsh-context@0.49.4:
     dependencies:
-      zod: 4.6.1
+      zod: 4.6.2
 
   dsh-free-search@0.4.24:
     dependencies:
@@ -2275,7 +2275,7 @@ snapshots:
 
   dsh-mermaid@0.4.0: {}
 
-  dsh-rewind-plugin@0.11.0: {}
+  dsh-rewind-plugin@0.12.0: {}
 
   dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d: {}
 
@@ -2669,4 +2669,4 @@ snapshots:
 
   zod@3.25.76: {}
 
-  zod@4.6.1: {}
+  zod@4.6.2: {}
