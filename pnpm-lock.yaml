@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@michengai/dsh-archive-manager':
-        specifier: ^0.1.38
-        version: 0.1.38
+        specifier: ^0.1.39
+        version: 0.1.39
       '@opendsh/dsh-plugin-setting-mcp':
         specifier: ^0.1.2
         version: 0.1.2(zod@4.6.2)
@@ -18,8 +18,8 @@ importers:
         specifier: ^0.1.0
         version: 0.1.0
       '@xmanrui/dsh-im':
-        specifier: ^4.19.2
-        version: 4.19.2(debug@4.4.3)
+        specifier: ^4.20.0
+        version: 4.20.0(debug@4.4.3)
       dsh-anchored-standard:
         specifier: github:Yiklek/dsh-anchored-standard
         version: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2
@@ -33,8 +33,8 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.49.4
-        version: 0.49.4
+        specifier: ^0.50.0
+        version: 0.50.0
       dsh-free-search:
         specifier: ^0.4.24
         version: 0.4.24
@@ -248,8 +248,8 @@ packages:
   '@mermaid-js/parser@1.2.1':
     resolution: {integrity: sha512-n12NohV3mrUyUL2o93IgG/ifeW9FTyeJn3zDxkhwa8MJ9Fxg3HQMlA3RiGmD/3UnJvheztkjjQAjA2T4LmUcpw==}
 
-  '@michengai/dsh-archive-manager@0.1.38':
-    resolution: {integrity: sha512-LQZ84ciSz+lF/Enl03NdS/Y6Jve07nqcU+vRc0QdjhLNPPi5NU11L5k9J1q0zk9hO4RUiCbFyMThiI4glOWLUQ==}
+  '@michengai/dsh-archive-manager@0.1.39':
+    resolution: {integrity: sha512-QKW/PcQ416oHucih7+5YwIIoaX+EW/k+S00MIiOt0q6ZSMkpKqoEM8U6Vh9O9VaNQHhshztlni2azn8iNXl7lw==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
@@ -494,8 +494,8 @@ packages:
   '@wecom/aibot-node-sdk@1.0.7':
     resolution: {integrity: sha512-51w+sTqunry6GD3HFvmuh0gArMSJDFE418vyvR1wMJHj1N6DaFuGD3HuaY2fazZs3mb9FWeQFX3+vU5t0Qhwmw==}
 
-  '@xmanrui/dsh-im@4.19.2':
-    resolution: {integrity: sha512-JUJQ/GX5Pv8Br2TgdpO/cuyu0NRHygQjZcvgSq53MQboA5e+udXFHjSjtnK0jq+O7P3Cb/kGSdub1h14kTzKCw==}
+  '@xmanrui/dsh-im@4.20.0':
+    resolution: {integrity: sha512-c3PsHN3n2IYSgGJk3nTDGyo6oFX8/I5P+dLz0Vqf/Jp3UuMS6BGkNoSURsZWaEMKfkJOcqQ2MBfnMkSCV8VCQw==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -863,8 +863,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.49.4:
-    resolution: {integrity: sha512-VFhuYgLEFf1mOCT68kfl1P08cic3eC4yB6STE5M0oHjX/NFGjEqfplf8PbPS7OvHDyTj5lQVB6wxY9d5NFY0dQ==}
+  dsh-context@0.50.0:
+    resolution: {integrity: sha512-qQv5m7K2oVqsLXsynxseycMuKsgmGstb23zAz+vwOYzHsFlqacdk1nW1jU80ji1oZN63AEHNsKrYdKFxHA4RBw==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -1677,7 +1677,7 @@ snapshots:
     dependencies:
       '@chevrotain/types': 11.1.2
 
-  '@michengai/dsh-archive-manager@0.1.38': {}
+  '@michengai/dsh-archive-manager@0.1.39': {}
 
   '@neon-rs/load@0.0.4': {}
 
@@ -1884,7 +1884,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@xmanrui/dsh-im@4.19.2(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.20.0(debug@4.4.3)':
     dependencies:
       '@tencent-connect/qqbot-connector': 1.2.0
       '@tencent-connect/qqbot-nodejs': 1.0.4
@@ -2250,7 +2250,7 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.49.4:
+  dsh-context@0.50.0:
     dependencies:
       zod: 4.6.2
 
