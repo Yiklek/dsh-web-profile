@@ -7,7 +7,7 @@
     "@xmanrui/dsh-im": "^4.20.2",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-better-sidebar": "0.19.1",
-    "dsh-coding-subscription-oauth": "^0.8.4",
+    "dsh-coding-subscription-oauth": "^0.8.5",
     "dsh-complete-notify": "^0.6.2",
     "dsh-context": "^0.52.2",
     "dsh-free-search": "^0.4.28",

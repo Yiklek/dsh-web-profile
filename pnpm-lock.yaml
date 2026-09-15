@@ -24,8 +24,8 @@ importers:
         specifier: 0.19.1
         version: 0.19.1
       dsh-coding-subscription-oauth:
-        specifier: ^0.8.4
-        version: 0.8.4
+        specifier: ^0.8.5
+        version: 0.8.5
       dsh-complete-notify:
         specifier: ^0.6.2
         version: 0.6.2
@@ -750,7 +750,7 @@ packages:
     resolution: {integrity: sha512-EUBjM+B+lkDE41iE82DDSCfkoPGfXx8IxFxPMjNzm/Uk4xDet77rTN9wqlxlVg71kK7XGuUMv6wUxJUwwv+Xyw==}
 
   dsh-anchored-standard@https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
+    resolution: {gitHosted: true, integrity: sha512-YCAgruV6NOkw1gsRK6YvaRlcw3BfH1Ro/qm1TlkJ093vL2ZBCveAGCDBKj067RXgXLcAsK71EPoXV8WuqC+BeQ==, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
     version: 0.1.0
     engines: {node: '>=22.19.0'}
     peerDependencies:
@@ -790,8 +790,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/dsh-llm': 0.1.1-rc.2
 
-  dsh-coding-subscription-oauth@0.8.4:
-    resolution: {integrity: sha512-IWfr+S+ivzjbwHsAiaesulTsR5I35mAauuZepNIKvpyO4AaFmaVRywgBxXPyMc1rUyFuEWLYC4KWsR48bR4o7w==}
+  dsh-coding-subscription-oauth@0.8.5:
+    resolution: {integrity: sha512-u2Glrt9uytQd9yNlyHVigw2+WKCzKXMVBlizliKmyVC3omLuszvrTAdW9Tr713mq3IgHk6XIN4fYbvOAqnEB8Q==}
     engines: {node: ^22.19.0 || >=24.0.0}
     hasBin: true
     peerDependencies:
@@ -2211,7 +2211,7 @@ snapshots:
     dependencies:
       undici: 7.29.0
 
-  dsh-coding-subscription-oauth@0.8.4:
+  dsh-coding-subscription-oauth@0.8.5:
     dependencies:
       dsh-coding-oauth-core: 0.1.2
       undici: 7.29.0
