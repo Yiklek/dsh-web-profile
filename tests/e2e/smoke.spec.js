@@ -52,8 +52,13 @@ test("web profile loads and settings show plugin sections", async ({
 
   await page.goto("/", { waitUntil: "networkidle", timeout: 60_000 });
 
-  // Core dsh web UI is up.
+  // Fail with the real boot symptom before looking for shell controls. Without
+  // this check, a plugin activation failure is misreported as a missing
+  // Settings button.
   await expect(page).toHaveTitle(/DeepSeek Harness/);
+  await expect(
+    page.getByText("Failed to load plugins", { exact: true }),
+  ).toHaveCount(0);
   await expect(page.getByText("设置", { exact: true }).first()).toBeVisible({
     timeout: 30_000,
   });
