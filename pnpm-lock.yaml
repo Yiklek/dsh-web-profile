@@ -15,8 +15,8 @@ importers:
         specifier: ^0.1.0
         version: 0.1.0
       '@xmanrui/dsh-im':
-        specifier: ^4.20.2
-        version: 4.20.2(debug@4.4.3)
+        specifier: ^4.21.1
+        version: 4.21.1(debug@4.4.3)
       dsh-anchored-standard:
         specifier: github:Yiklek/dsh-anchored-standard
         version: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2
@@ -24,14 +24,14 @@ importers:
         specifier: 0.19.1
         version: 0.19.1
       dsh-coding-subscription-oauth:
-        specifier: ^0.8.4
-        version: 0.8.4
+        specifier: ^0.8.5
+        version: 0.8.5
       dsh-complete-notify:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.52.2
-        version: 0.52.2
+        specifier: ^0.53.0
+        version: 0.53.0
       dsh-free-search:
         specifier: ^0.4.28
         version: 0.4.28
@@ -48,8 +48,8 @@ importers:
         specifier: github:Yiklek/dsh-settings-manager#pkg
         version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d
       dsh-univer-office:
-        specifier: ^0.2.14
-        version: 0.2.14
+        specifier: ^0.3.0
+        version: 0.3.0
       dshmarket:
         specifier: ^1.47.0
         version: 1.47.0
@@ -68,8 +68,8 @@ packages:
   '@codemirror/autocomplete@6.20.3':
     resolution: {integrity: sha512-tlosUqb+3BbxCxZdu4tKeRghPFC+QM7q4X5YhKV2eCmPG+1r2F3f4AaSz5sCrFqUtX4Jh20VFTKecl16MgiV9g==}
 
-  '@codemirror/commands@6.11.0':
-    resolution: {integrity: sha512-/K4Rl5BN0OtTiPWmJCdqODu38XnDMsDxKY5rgrPnCkutPTJf2wVbkoixLfealF5Kwse/s8P8M5jAiURiwSwnFA==}
+  '@codemirror/commands@6.11.1':
+    resolution: {integrity: sha512-O/4hG3SC1YwcmQ0d2UVNDs+AsaNWd1iHVxbTeEBuqH+6bExAiPK3iS/BvpY6rZGURALv4ZD3sIgcCmRvw3ehBg==}
 
   '@codemirror/lang-cpp@6.0.3':
     resolution: {integrity: sha512-URM26M3vunFFn9/sm6rzqrBzDgfWuDixp85uTY49wKudToc2jTHUrKIGGKs+QWND+YLofNNZpxcNGRynFJfvgA==}
@@ -128,11 +128,11 @@ packages:
   '@codemirror/search@6.7.2':
     resolution: {integrity: sha512-gUYkYhT2+n/+VGZ+8EzE5WFkYZUZYm1VOKDudIsNqh42uRVQJ0a6Yss9sdKT3MeOYfuL1N6AZA57oza0Oyr0LA==}
 
-  '@codemirror/state@6.7.4':
-    resolution: {integrity: sha512-QhQIVRY+xHZDxwOSFrJ1eUMapJBUID3IdeAjf7dHO7zBUzSkyooHiodnalz5MG3iHzwixKMlAAyn7244y537EA==}
+  '@codemirror/state@6.7.5':
+    resolution: {integrity: sha512-QjLbZmY1Au3JiRrDVYFLRD0BZ3SOKS9pR3yjIkd7u27YY8TFD9/Q9fhPnLV5l1mHFSo3hHU/N31vpwEJOx4owQ==}
 
-  '@codemirror/view@6.43.11':
-    resolution: {integrity: sha512-2+esucbQX6wB2JYi1eDvdCPFTA31BN8oSy6xCmk3G6CloV11yOvEjYk+gH7kLrP0MuHG94E8WDhjs5oMiu3+Wg==}
+  '@codemirror/view@6.43.12':
+    resolution: {integrity: sha512-Nv0vxQ19NAqvB/c2pFzjIzFlzzJl7jmdtNkwOwGbn0Ks9mFAzibvumz7cQem5cRsFA2cEw2fg+uHZGbcHupLQQ==}
 
   '@deepseek-ai/cosmokit@1.8.3':
     resolution: {integrity: sha512-qBo+ronVM6Eu2WNVJXi8JcMiqZ19T9BRIpV+5qJUFPXjGH/Z0QKcQMC/IZJ7L394YTOtJgcovbk9qP0w2GsBXQ==}
@@ -408,64 +408,14 @@ packages:
   '@univerjs-pro/cli-assets@0.1.0':
     resolution: {integrity: sha512-LWgwulcNkL4lnaosAyPwTssgtih52FCgGfMt7k6QRWz1scRakjNp++3souMaIxbzxXjIPXSJmwwXiNCsWnBMCA==}
 
-  '@univerjs-pro/engine-formula-rust-binding-darwin-arm64@1.0.0-insiders.20260829-2e3c387':
-    resolution: {integrity: sha512-31GP3q3hBXDQvtCHDBsXU7HqTEfxZTY6fJyMoyf5eEUldSZ7M9/Bzc1UmUpD+LRZvafq/z4Ud5MrLdKW8Rv50g==}
-    cpu: [arm64]
-    os: [darwin]
-
-  '@univerjs-pro/engine-formula-rust-binding-linux-arm64-gnu@1.0.0-insiders.20260829-2e3c387':
-    resolution: {integrity: sha512-FgYnbBQkSOFcc6z3+pg2LlPXKpdZTE/gTXq20ZMAgGeq0E1inPvHtbPMsdMeEiRmICVV2CCs+TdtxNQRMXvG+A==}
-    cpu: [arm64]
-    os: [linux]
-    libc: [glibc]
-
-  '@univerjs-pro/engine-formula-rust-binding-linux-x64-gnu@1.0.0-insiders.20260829-2e3c387':
-    resolution: {integrity: sha512-9I/Yzc8ZL1Tq6OG7dutV1UvmwCR8CLR6k1VwSSx6t/JskfJy2IPP/Q1r3qUVT5lz3Cc4Pv3azAUcvHIJ8/3s9w==}
-    cpu: [x64]
-    os: [linux]
-    libc: [glibc]
-
-  '@univerjs-pro/engine-formula-rust-binding-win32-x64-msvc@1.0.0-insiders.20260829-2e3c387':
-    resolution: {integrity: sha512-XlAFS6bE65pDdY7Rr5L2HAikMMchZtPscdFfQVTtv6SPa/8OkO0ndFMFhlM2CckB+ueRKEsoUHBmKdQEW0gG+A==}
-    cpu: [x64]
-    os: [win32]
-
-  '@univerjs-pro/engine-formula-rust-binding@1.0.0-insiders.20260829-2e3c387':
-    resolution: {integrity: sha512-2A9Okfy4bKjB4x3NO9BG9uMP5uWG5ToSiZy3Spmkl84hH8/NbJ1B2V1SLZwWehUh3C1epfE5UEYicmPeM9n9aw==}
-
-  '@univerjs-pro/exchange-node-binding-darwin-arm64@0.1.1':
-    resolution: {integrity: sha512-AjYNE3HBU08snieqmACmKDE0Vybqj1qvXxOUVPYKSrqnDJR7lh098oCeje/PiF7hMkucwkiB6a5jAJlGj1RAfw==}
-    cpu: [arm64]
-    os: [darwin]
-
-  '@univerjs-pro/exchange-node-binding-linux-arm64-gnu@0.1.1':
-    resolution: {integrity: sha512-SuMMVPI/ms2rQtzZAA7/0f8R61vtP17nenho6DocekyLVpwRGzDrtZFvcecwCcjy31OwaPzunufr8N/BzCe2WQ==}
-    cpu: [arm64]
-    os: [linux]
-    libc: [glibc]
-
-  '@univerjs-pro/exchange-node-binding-linux-x64-gnu@0.1.1':
-    resolution: {integrity: sha512-Jxjoo+w2PrvTNCcVoP0klKbFvkjzAOUTQhT2MKxQ1opDx9ROENBF22lEWFel9hSPI1dmpj6DtPBVJAw9zeJTYw==}
-    cpu: [x64]
-    os: [linux]
-    libc: [glibc]
-
-  '@univerjs-pro/exchange-node-binding-win32-x64-msvc@0.1.1':
-    resolution: {integrity: sha512-oSkbOOau/9vOIYAWj6NZ6bfqB1szn3yM1vUQe1qfA6xhdGGn848bBVhpIlq/nPnQcA1O70pzUrDBbORv1LoCDQ==}
-    cpu: [x64]
-    os: [win32]
-
-  '@univerjs-pro/exchange-node-binding@0.1.1':
-    resolution: {integrity: sha512-8P02leiOE8/z4SthVmPYnPGxMb9eLdjc+OqEFn4utl3bo/3T/lhSFWqvwdH9ytaZunhcwif+F54v1cA7ZUg3FQ==}
-
   '@upsetjs/venn.js@2.0.0':
     resolution: {integrity: sha512-WbBhLrooyePuQ1VZxrJjtLvTc4NVfpOyKx0sKqioq9bX1C1m7Jgykkn8gLrtwumBioXIqam8DLxp88Adbue6Hw==}
 
   '@wecom/aibot-node-sdk@1.0.7':
     resolution: {integrity: sha512-51w+sTqunry6GD3HFvmuh0gArMSJDFE418vyvR1wMJHj1N6DaFuGD3HuaY2fazZs3mb9FWeQFX3+vU5t0Qhwmw==}
 
-  '@xmanrui/dsh-im@4.20.2':
-    resolution: {integrity: sha512-vZWScKLBLTkEc6Shi1f4lJHNg3anOKKWaumI0bFmNUSIFNq5AoJaKAK9UOHzDV+QQMPgqDkuga21iudRLKPxVA==}
+  '@xmanrui/dsh-im@4.21.1':
+    resolution: {integrity: sha512-kJed9ScJ7K7AMdv9QXAlneDzuHL4vjBHCYllyAi0Q7h4lUUROhV5/KcZsVAARpVI9hE3Z7czdJ700UnjE2yuHA==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -750,7 +700,7 @@ packages:
     resolution: {integrity: sha512-EUBjM+B+lkDE41iE82DDSCfkoPGfXx8IxFxPMjNzm/Uk4xDet77rTN9wqlxlVg71kK7XGuUMv6wUxJUwwv+Xyw==}
 
   dsh-anchored-standard@https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
+    resolution: {gitHosted: true, integrity: sha512-YCAgruV6NOkw1gsRK6YvaRlcw3BfH1Ro/qm1TlkJ093vL2ZBCveAGCDBKj067RXgXLcAsK71EPoXV8WuqC+BeQ==, tarball: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2}
     version: 0.1.0
     engines: {node: '>=22.19.0'}
     peerDependencies:
@@ -790,8 +740,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/dsh-llm': 0.1.1-rc.2
 
-  dsh-coding-subscription-oauth@0.8.4:
-    resolution: {integrity: sha512-IWfr+S+ivzjbwHsAiaesulTsR5I35mAauuZepNIKvpyO4AaFmaVRywgBxXPyMc1rUyFuEWLYC4KWsR48bR4o7w==}
+  dsh-coding-subscription-oauth@0.8.5:
+    resolution: {integrity: sha512-u2Glrt9uytQd9yNlyHVigw2+WKCzKXMVBlizliKmyVC3omLuszvrTAdW9Tr713mq3IgHk6XIN4fYbvOAqnEB8Q==}
     engines: {node: ^22.19.0 || >=24.0.0}
     hasBin: true
     peerDependencies:
@@ -833,8 +783,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.52.2:
-    resolution: {integrity: sha512-65345RjT1tJXxqmSocHDCLwJS096ZNjdcN5doQ61C+dZKADeoARmp9QedCBMNF5RZqxBBNl4+TrQRCN6HSQwSA==}
+  dsh-context@0.53.0:
+    resolution: {integrity: sha512-AwwRPCgWYi38sNL0i7Y3GKldMI2AyqThyqPW8C8irwMZDpyUhdj3z0mqWKkCWWEBWvBctFbLakXHCduxp4GR2w==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -928,18 +878,18 @@ packages:
       react:
         optional: true
 
-  dsh-univer-office@0.2.14:
-    resolution: {integrity: sha512-/DUy1ZnY50KVSHaxpDeXCB4HFrtlGGoC3FOM/pX2uBVu3eQWk6sEHTTHXCnAKuNLZHCzMsVW2pUwPw0s1V9UdA==}
+  dsh-univer-office@0.3.0:
+    resolution: {integrity: sha512-GTA2C8Yg0uolFQHqAbSh8Xn0ooyTyudUjQCC/DgcQzpQEa9vpGSinGTZO6t97jClmytTUF7oXT7ycx2DehdJCg==}
     engines: {node: '>=22.19.0'}
     peerDependencies:
-      '@deepseek-ai/cordis': ^4.0.1
-      '@deepseek-ai/dsh-attachment': 0.1.1-rc.2 || 0.1.2-rc.1
-      '@deepseek-ai/dsh-host-webserver': 0.1.1-rc.2 || 0.1.2-rc.1
-      '@deepseek-ai/dsh-llm': 0.1.1-rc.2 || 0.1.2-rc.1
-      '@deepseek-ai/dsh-session': 0.1.1-rc.2 || 0.1.2-rc.1
-      '@deepseek-ai/dsh-settings': 0.1.1-rc.2 || 0.1.2-rc.1
-      '@deepseek-ai/dsh-skill': 0.1.1-rc.2 || 0.1.2-rc.1
-      '@deepseek-ai/dsh-tools': 0.1.1-rc.2 || 0.1.2-rc.1
+      '@deepseek-ai/cordis': ^4.0.2
+      '@deepseek-ai/dsh-attachment': ^0.1.5-rc.1 || ^0.1.6-alpha.1
+      '@deepseek-ai/dsh-host-webserver': ^0.1.5-rc.1 || ^0.1.6-alpha.1
+      '@deepseek-ai/dsh-llm': ^0.1.5-rc.1 || ^0.1.6-alpha.1
+      '@deepseek-ai/dsh-session': ^0.1.5-rc.1 || ^0.1.6-alpha.1
+      '@deepseek-ai/dsh-settings': ^0.1.5-rc.1 || ^0.1.6-alpha.1
+      '@deepseek-ai/dsh-skill': ^0.1.5-rc.1 || ^0.1.6-alpha.1
+      '@deepseek-ai/dsh-tools': ^0.1.5-rc.1 || ^0.1.6-alpha.1
       '@deepseek-ai/schemastery': ^3.18.1
 
   dshmarket@1.47.0:
@@ -1344,15 +1294,15 @@ snapshots:
   '@codemirror/autocomplete@6.20.3':
     dependencies:
       '@codemirror/language': 6.12.4
-      '@codemirror/state': 6.7.4
-      '@codemirror/view': 6.43.11
+      '@codemirror/state': 6.7.5
+      '@codemirror/view': 6.43.12
       '@lezer/common': 1.5.2
 
-  '@codemirror/commands@6.11.0':
+  '@codemirror/commands@6.11.1':
     dependencies:
       '@codemirror/language': 6.12.4
-      '@codemirror/state': 6.7.4
-      '@codemirror/view': 6.43.11
+      '@codemirror/state': 6.7.5
+      '@codemirror/view': 6.43.12
       '@lezer/common': 1.5.2
 
   '@codemirror/lang-cpp@6.0.3':
@@ -1364,7 +1314,7 @@ snapshots:
     dependencies:
       '@codemirror/autocomplete': 6.20.3
       '@codemirror/language': 6.12.4
-      '@codemirror/state': 6.7.4
+      '@codemirror/state': 6.7.5
       '@lezer/common': 1.5.2
       '@lezer/css': 1.3.6
 
@@ -1372,7 +1322,7 @@ snapshots:
     dependencies:
       '@codemirror/autocomplete': 6.20.3
       '@codemirror/language': 6.12.4
-      '@codemirror/state': 6.7.4
+      '@codemirror/state': 6.7.5
       '@lezer/common': 1.5.2
       '@lezer/go': 1.0.1
 
@@ -1382,8 +1332,8 @@ snapshots:
       '@codemirror/lang-css': 6.3.1
       '@codemirror/lang-javascript': 6.2.5
       '@codemirror/language': 6.12.4
-      '@codemirror/state': 6.7.4
-      '@codemirror/view': 6.43.11
+      '@codemirror/state': 6.7.5
+      '@codemirror/view': 6.43.12
       '@lezer/common': 1.5.2
       '@lezer/css': 1.3.6
       '@lezer/html': 1.3.13
@@ -1398,8 +1348,8 @@ snapshots:
       '@codemirror/autocomplete': 6.20.3
       '@codemirror/language': 6.12.4
       '@codemirror/lint': 6.9.7
-      '@codemirror/state': 6.7.4
-      '@codemirror/view': 6.43.11
+      '@codemirror/state': 6.7.5
+      '@codemirror/view': 6.43.12
       '@lezer/common': 1.5.2
       '@lezer/javascript': 1.5.4
 
@@ -1413,8 +1363,8 @@ snapshots:
       '@codemirror/autocomplete': 6.20.3
       '@codemirror/lang-html': 6.4.12
       '@codemirror/language': 6.12.4
-      '@codemirror/state': 6.7.4
-      '@codemirror/view': 6.43.11
+      '@codemirror/state': 6.7.5
+      '@codemirror/view': 6.43.12
       '@lezer/common': 1.5.2
       '@lezer/markdown': 1.7.2
 
@@ -1422,7 +1372,7 @@ snapshots:
     dependencies:
       '@codemirror/lang-html': 6.4.12
       '@codemirror/language': 6.12.4
-      '@codemirror/state': 6.7.4
+      '@codemirror/state': 6.7.5
       '@lezer/common': 1.5.2
       '@lezer/php': 1.0.6
 
@@ -1430,7 +1380,7 @@ snapshots:
     dependencies:
       '@codemirror/autocomplete': 6.20.3
       '@codemirror/language': 6.12.4
-      '@codemirror/state': 6.7.4
+      '@codemirror/state': 6.7.5
       '@lezer/common': 1.5.2
       '@lezer/python': 1.1.19
 
@@ -1443,7 +1393,7 @@ snapshots:
     dependencies:
       '@codemirror/autocomplete': 6.20.3
       '@codemirror/language': 6.12.4
-      '@codemirror/state': 6.7.4
+      '@codemirror/state': 6.7.5
       '@lezer/common': 1.5.2
       '@lezer/highlight': 1.2.3
       '@lezer/lr': 1.4.10
@@ -1461,8 +1411,8 @@ snapshots:
     dependencies:
       '@codemirror/autocomplete': 6.20.3
       '@codemirror/language': 6.12.4
-      '@codemirror/state': 6.7.4
-      '@codemirror/view': 6.43.11
+      '@codemirror/state': 6.7.5
+      '@codemirror/view': 6.43.12
       '@lezer/common': 1.5.2
       '@lezer/xml': 1.0.6
 
@@ -1470,7 +1420,7 @@ snapshots:
     dependencies:
       '@codemirror/autocomplete': 6.20.3
       '@codemirror/language': 6.12.4
-      '@codemirror/state': 6.7.4
+      '@codemirror/state': 6.7.5
       '@lezer/common': 1.5.2
       '@lezer/highlight': 1.2.3
       '@lezer/lr': 1.4.10
@@ -1478,8 +1428,8 @@ snapshots:
 
   '@codemirror/language@6.12.4':
     dependencies:
-      '@codemirror/state': 6.7.4
-      '@codemirror/view': 6.43.11
+      '@codemirror/state': 6.7.5
+      '@codemirror/view': 6.43.12
       '@lezer/common': 1.5.2
       '@lezer/highlight': 1.2.3
       '@lezer/lr': 1.4.10
@@ -1491,23 +1441,23 @@ snapshots:
 
   '@codemirror/lint@6.9.7':
     dependencies:
-      '@codemirror/state': 6.7.4
-      '@codemirror/view': 6.43.11
+      '@codemirror/state': 6.7.5
+      '@codemirror/view': 6.43.12
       crelt: 1.0.7
 
   '@codemirror/search@6.7.2':
     dependencies:
-      '@codemirror/state': 6.7.4
-      '@codemirror/view': 6.43.11
+      '@codemirror/state': 6.7.5
+      '@codemirror/view': 6.43.12
       crelt: 1.0.7
 
-  '@codemirror/state@6.7.4':
+  '@codemirror/state@6.7.5':
     dependencies:
       '@marijn/find-cluster-break': 1.0.4
 
-  '@codemirror/view@6.43.11':
+  '@codemirror/view@6.43.12':
     dependencies:
-      '@codemirror/state': 6.7.4
+      '@codemirror/state': 6.7.5
       crelt: 1.0.7
       style-mod: 4.1.3
       w3c-keyname: 2.2.8
@@ -1798,44 +1748,6 @@ snapshots:
 
   '@univerjs-pro/cli-assets@0.1.0': {}
 
-  '@univerjs-pro/engine-formula-rust-binding-darwin-arm64@1.0.0-insiders.20260829-2e3c387':
-    optional: true
-
-  '@univerjs-pro/engine-formula-rust-binding-linux-arm64-gnu@1.0.0-insiders.20260829-2e3c387':
-    optional: true
-
-  '@univerjs-pro/engine-formula-rust-binding-linux-x64-gnu@1.0.0-insiders.20260829-2e3c387':
-    optional: true
-
-  '@univerjs-pro/engine-formula-rust-binding-win32-x64-msvc@1.0.0-insiders.20260829-2e3c387':
-    optional: true
-
-  '@univerjs-pro/engine-formula-rust-binding@1.0.0-insiders.20260829-2e3c387':
-    optionalDependencies:
-      '@univerjs-pro/engine-formula-rust-binding-darwin-arm64': 1.0.0-insiders.20260829-2e3c387
-      '@univerjs-pro/engine-formula-rust-binding-linux-arm64-gnu': 1.0.0-insiders.20260829-2e3c387
-      '@univerjs-pro/engine-formula-rust-binding-linux-x64-gnu': 1.0.0-insiders.20260829-2e3c387
-      '@univerjs-pro/engine-formula-rust-binding-win32-x64-msvc': 1.0.0-insiders.20260829-2e3c387
-
-  '@univerjs-pro/exchange-node-binding-darwin-arm64@0.1.1':
-    optional: true
-
-  '@univerjs-pro/exchange-node-binding-linux-arm64-gnu@0.1.1':
-    optional: true
-
-  '@univerjs-pro/exchange-node-binding-linux-x64-gnu@0.1.1':
-    optional: true
-
-  '@univerjs-pro/exchange-node-binding-win32-x64-msvc@0.1.1':
-    optional: true
-
-  '@univerjs-pro/exchange-node-binding@0.1.1':
-    optionalDependencies:
-      '@univerjs-pro/exchange-node-binding-darwin-arm64': 0.1.1
-      '@univerjs-pro/exchange-node-binding-linux-arm64-gnu': 0.1.1
-      '@univerjs-pro/exchange-node-binding-linux-x64-gnu': 0.1.1
-      '@univerjs-pro/exchange-node-binding-win32-x64-msvc': 0.1.1
-
   '@upsetjs/venn.js@2.0.0':
     optionalDependencies:
       d3-selection: 3.0.0
@@ -1852,7 +1764,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@xmanrui/dsh-im@4.20.2(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.21.1(debug@4.4.3)':
     dependencies:
       '@tencent-connect/qqbot-connector': 1.2.0
       '@tencent-connect/qqbot-nodejs': 1.0.4
@@ -2173,7 +2085,7 @@ snapshots:
 
   dsh-better-sidebar@0.19.1:
     dependencies:
-      '@codemirror/commands': 6.11.0
+      '@codemirror/commands': 6.11.1
       '@codemirror/lang-cpp': 6.0.3
       '@codemirror/lang-css': 6.3.1
       '@codemirror/lang-go': 6.0.1
@@ -2192,8 +2104,8 @@ snapshots:
       '@codemirror/language': 6.12.4
       '@codemirror/legacy-modes': 6.5.4
       '@codemirror/search': 6.7.2
-      '@codemirror/state': 6.7.4
-      '@codemirror/view': 6.43.11
+      '@codemirror/state': 6.7.5
+      '@codemirror/view': 6.43.12
       '@lezer/highlight': 1.2.3
       clsx: 2.1.1
       dompurify: 3.4.15
@@ -2211,14 +2123,14 @@ snapshots:
     dependencies:
       undici: 7.29.0
 
-  dsh-coding-subscription-oauth@0.8.4:
+  dsh-coding-subscription-oauth@0.8.5:
     dependencies:
       dsh-coding-oauth-core: 0.1.2
       undici: 7.29.0
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.52.2:
+  dsh-context@0.53.0:
     dependencies:
       zod: 4.6.5
 
@@ -2234,12 +2146,10 @@ snapshots:
 
   dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d: {}
 
-  dsh-univer-office@0.2.14:
+  dsh-univer-office@0.3.0:
     dependencies:
       '@puppeteer/browsers': 3.2.2
       '@univerjs-pro/cli-assets': 0.1.0
-      '@univerjs-pro/engine-formula-rust-binding': 1.0.0-insiders.20260829-2e3c387
-      '@univerjs-pro/exchange-node-binding': 0.1.1
       libsql: 0.5.29
       puppeteer-core: 25.11.0
     transitivePeerDependencies:
