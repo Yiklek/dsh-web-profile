@@ -15,8 +15,8 @@ importers:
         specifier: ^0.1.0
         version: 0.1.0
       '@xmanrui/dsh-im':
-        specifier: ^4.21.1
-        version: 4.21.1(debug@4.4.3)
+        specifier: ^4.21.2
+        version: 4.21.2(debug@4.4.3)
       dsh-anchored-standard:
         specifier: github:Yiklek/dsh-anchored-standard
         version: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2
@@ -30,8 +30,8 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.53.0
-        version: 0.53.0
+        specifier: ^0.53.2
+        version: 0.53.2
       dsh-free-search:
         specifier: ^0.4.28
         version: 0.4.28
@@ -48,8 +48,8 @@ importers:
         specifier: github:Yiklek/dsh-settings-manager#pkg
         version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d
       dsh-univer-office:
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: ^0.3.2
+        version: 0.3.2
       dshmarket:
         specifier: ^1.47.0
         version: 1.47.0
@@ -408,14 +408,74 @@ packages:
   '@univerjs-pro/cli-assets@0.1.0':
     resolution: {integrity: sha512-LWgwulcNkL4lnaosAyPwTssgtih52FCgGfMt7k6QRWz1scRakjNp++3souMaIxbzxXjIPXSJmwwXiNCsWnBMCA==}
 
+  '@univerjs-pro/engine-formula-rust-binding-darwin-arm64@1.0.0-insiders.20260910-22fe9c7':
+    resolution: {integrity: sha512-1bep71QWGk0fEaBkc/WWw3ikmP2awaOoEOfHNIeUaO/6WZjV3fRftcTgMpOk49CckgYRAg0yWhY0O9q6H/tsdA==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@univerjs-pro/engine-formula-rust-binding-darwin-x64@1.0.0-insiders.20260910-22fe9c7':
+    resolution: {integrity: sha512-lOURv1xJBouU2yiCmRSJ4SarVsmMk15rfOdI4hgw2uA3In5CHyHDY6aCCeFvG6xVzb3OtFnjpDF2pQwlEFtM1w==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@univerjs-pro/engine-formula-rust-binding-linux-arm64-gnu@1.0.0-insiders.20260910-22fe9c7':
+    resolution: {integrity: sha512-DBJTCVaRA1JQr8LO+1AqiW8IfTE3SFldODlYhUrO5LKcmkF6n7rwZHBmrwo13Vzpax34up5d7xwME2StnDfkcg==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@univerjs-pro/engine-formula-rust-binding-linux-x64-gnu@1.0.0-insiders.20260910-22fe9c7':
+    resolution: {integrity: sha512-CVb7Fo+9jAkFSq8NAzoiuaaYQFL1EyMDcMec71/bbXfQhw9L4Z2oWGzo7dQXErVCRRkLg6R0Z+D6fVNbhpLdVA==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@univerjs-pro/engine-formula-rust-binding-win32-x64-msvc@1.0.0-insiders.20260910-22fe9c7':
+    resolution: {integrity: sha512-ewY3OT5FxLSn0Bzrvg2Z66vaUsTyVYpDTyb8UX2HDPxPSggX33aS3TDygzE3xb1AMqVJGd3XIUCVAJn8XcNrwA==}
+    cpu: [x64]
+    os: [win32]
+
+  '@univerjs-pro/engine-formula-rust-binding@1.0.0-insiders.20260910-22fe9c7':
+    resolution: {integrity: sha512-z0mr06pmdUHTgP18z1EZJpR3XpBJEvizXGC750OpkaZddNbIfMo3KohDMHKLiudXTYgrla83H6JssANFnrAs1w==}
+
+  '@univerjs-pro/exchange-node-binding-darwin-arm64@0.1.2':
+    resolution: {integrity: sha512-LDzF5PsNd8SkSkYONdcV1sj0/5yLQlIFwbEmniQ/Mfej4zeMXXlFzeUexaSWy564/VfnfNUsX8bDQ810lsBEhg==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@univerjs-pro/exchange-node-binding-darwin-x64@0.1.2':
+    resolution: {integrity: sha512-5rJ6wvCAnqB5fEuqYsVBIUkUM2/KSfi5yfSOcMMIkeuf14hYHxxj6YBkdDvvsJvzg478KOXu/j9DwfVXYnATuA==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@univerjs-pro/exchange-node-binding-linux-arm64-gnu@0.1.2':
+    resolution: {integrity: sha512-uttYBdak2VSUAvFxS4xdPyJqeTLrdOzS8aaPAglcQUf0Ts2pFf1nb4mx52QzhGGcL0CsSISzqtahXvWiPScTdA==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@univerjs-pro/exchange-node-binding-linux-x64-gnu@0.1.2':
+    resolution: {integrity: sha512-dwjAhCIrCTO71w6SYgG3S5dILDVjUoQ4WNgL6B5oMZZh0QwdBztBGf6LI7OF7QEVLkhHaO1Dd8CMIXHFkGrNuQ==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@univerjs-pro/exchange-node-binding-win32-x64-msvc@0.1.2':
+    resolution: {integrity: sha512-shll70Dgr0Cs/kg55EZiv8zMF1DQTP348I/jANVKuv9CIRi9nHrPI3gFDPqzEAylRYlPdwIkMJQOh/JNa4sF3g==}
+    cpu: [x64]
+    os: [win32]
+
+  '@univerjs-pro/exchange-node-binding@0.1.2':
+    resolution: {integrity: sha512-f4XWw+nm0gBNNMQAZcF5rgDYBlK7mJt2C4TRBFnZ1oztkg/gLTNFWOiQqTQq3nt+33I8pQNM9H/Z6ZnWTLlAxg==}
+
   '@upsetjs/venn.js@2.0.0':
     resolution: {integrity: sha512-WbBhLrooyePuQ1VZxrJjtLvTc4NVfpOyKx0sKqioq9bX1C1m7Jgykkn8gLrtwumBioXIqam8DLxp88Adbue6Hw==}
 
   '@wecom/aibot-node-sdk@1.0.7':
     resolution: {integrity: sha512-51w+sTqunry6GD3HFvmuh0gArMSJDFE418vyvR1wMJHj1N6DaFuGD3HuaY2fazZs3mb9FWeQFX3+vU5t0Qhwmw==}
 
-  '@xmanrui/dsh-im@4.21.1':
-    resolution: {integrity: sha512-kJed9ScJ7K7AMdv9QXAlneDzuHL4vjBHCYllyAi0Q7h4lUUROhV5/KcZsVAARpVI9hE3Z7czdJ700UnjE2yuHA==}
+  '@xmanrui/dsh-im@4.21.2':
+    resolution: {integrity: sha512-rHwHzbj8eYrYl10NHPdGRLoKr93wkdf/PXhkDSMhx3AYHutDqaDL8s5pd9YueKmu+mLNeNL2o88Huzy5OyVDFw==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -783,8 +843,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.53.0:
-    resolution: {integrity: sha512-AwwRPCgWYi38sNL0i7Y3GKldMI2AyqThyqPW8C8irwMZDpyUhdj3z0mqWKkCWWEBWvBctFbLakXHCduxp4GR2w==}
+  dsh-context@0.53.2:
+    resolution: {integrity: sha512-YEWVosUcu4zOzIf7J8eMJlJm+s52uyT/+erOrPHIP3+/W7/u3SOakm84+Q7N8SiM0N74u1MfkpAuchk6BwTKeQ==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -878,8 +938,8 @@ packages:
       react:
         optional: true
 
-  dsh-univer-office@0.3.0:
-    resolution: {integrity: sha512-GTA2C8Yg0uolFQHqAbSh8Xn0ooyTyudUjQCC/DgcQzpQEa9vpGSinGTZO6t97jClmytTUF7oXT7ycx2DehdJCg==}
+  dsh-univer-office@0.3.2:
+    resolution: {integrity: sha512-88Rq+5GvWS1wQe3zCS483uUAA+wo9MFd3lSS1gUXw7FVLxW8eUIg7p/mGd/yG9W/CHxvSuP3SUd3rPtRJY0Xzg==}
     engines: {node: '>=22.19.0'}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -967,8 +1027,8 @@ packages:
     resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==}
     engines: {node: 6.* || 8.* || >= 10.*}
 
-  get-east-asian-width@1.6.0:
-    resolution: {integrity: sha512-QRbvDIbx6YklUe6RxeTeleMR0yv3cYH6PsPZHcnVn7xv7zO1BHN8r0XETu8n6Ye3Q+ahtSarc3WgtNWmehIBfA==}
+  get-east-asian-width@1.7.0:
+    resolution: {integrity: sha512-XjH1AECxf0giL2V1aU8vKyRR2ppRUb5c0EvT7zuJTokQ74bNo52zOtghqdWIqrhUD79fo3x0WfKZdOqxF6LG1Q==}
     engines: {node: '>=18'}
 
   get-intrinsic@1.3.0:
@@ -1748,6 +1808,52 @@ snapshots:
 
   '@univerjs-pro/cli-assets@0.1.0': {}
 
+  '@univerjs-pro/engine-formula-rust-binding-darwin-arm64@1.0.0-insiders.20260910-22fe9c7':
+    optional: true
+
+  '@univerjs-pro/engine-formula-rust-binding-darwin-x64@1.0.0-insiders.20260910-22fe9c7':
+    optional: true
+
+  '@univerjs-pro/engine-formula-rust-binding-linux-arm64-gnu@1.0.0-insiders.20260910-22fe9c7':
+    optional: true
+
+  '@univerjs-pro/engine-formula-rust-binding-linux-x64-gnu@1.0.0-insiders.20260910-22fe9c7':
+    optional: true
+
+  '@univerjs-pro/engine-formula-rust-binding-win32-x64-msvc@1.0.0-insiders.20260910-22fe9c7':
+    optional: true
+
+  '@univerjs-pro/engine-formula-rust-binding@1.0.0-insiders.20260910-22fe9c7':
+    optionalDependencies:
+      '@univerjs-pro/engine-formula-rust-binding-darwin-arm64': 1.0.0-insiders.20260910-22fe9c7
+      '@univerjs-pro/engine-formula-rust-binding-darwin-x64': 1.0.0-insiders.20260910-22fe9c7
+      '@univerjs-pro/engine-formula-rust-binding-linux-arm64-gnu': 1.0.0-insiders.20260910-22fe9c7
+      '@univerjs-pro/engine-formula-rust-binding-linux-x64-gnu': 1.0.0-insiders.20260910-22fe9c7
+      '@univerjs-pro/engine-formula-rust-binding-win32-x64-msvc': 1.0.0-insiders.20260910-22fe9c7
+
+  '@univerjs-pro/exchange-node-binding-darwin-arm64@0.1.2':
+    optional: true
+
+  '@univerjs-pro/exchange-node-binding-darwin-x64@0.1.2':
+    optional: true
+
+  '@univerjs-pro/exchange-node-binding-linux-arm64-gnu@0.1.2':
+    optional: true
+
+  '@univerjs-pro/exchange-node-binding-linux-x64-gnu@0.1.2':
+    optional: true
+
+  '@univerjs-pro/exchange-node-binding-win32-x64-msvc@0.1.2':
+    optional: true
+
+  '@univerjs-pro/exchange-node-binding@0.1.2':
+    optionalDependencies:
+      '@univerjs-pro/exchange-node-binding-darwin-arm64': 0.1.2
+      '@univerjs-pro/exchange-node-binding-darwin-x64': 0.1.2
+      '@univerjs-pro/exchange-node-binding-linux-arm64-gnu': 0.1.2
+      '@univerjs-pro/exchange-node-binding-linux-x64-gnu': 0.1.2
+      '@univerjs-pro/exchange-node-binding-win32-x64-msvc': 0.1.2
+
   '@upsetjs/venn.js@2.0.0':
     optionalDependencies:
       d3-selection: 3.0.0
@@ -1764,7 +1870,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@xmanrui/dsh-im@4.21.1(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.21.2(debug@4.4.3)':
     dependencies:
       '@tencent-connect/qqbot-connector': 1.2.0
       '@tencent-connect/qqbot-nodejs': 1.0.4
@@ -2130,7 +2236,7 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.53.0:
+  dsh-context@0.53.2:
     dependencies:
       zod: 4.6.5
 
@@ -2146,10 +2252,12 @@ snapshots:
 
   dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d: {}
 
-  dsh-univer-office@0.3.0:
+  dsh-univer-office@0.3.2:
     dependencies:
       '@puppeteer/browsers': 3.2.2
       '@univerjs-pro/cli-assets': 0.1.0
+      '@univerjs-pro/engine-formula-rust-binding': 1.0.0-insiders.20260910-22fe9c7
+      '@univerjs-pro/exchange-node-binding': 0.1.2
       libsql: 0.5.29
       puppeteer-core: 25.11.0
     transitivePeerDependencies:
@@ -2219,7 +2327,7 @@ snapshots:
 
   get-caller-file@2.0.5: {}
 
-  get-east-asian-width@1.6.0: {}
+  get-east-asian-width@1.7.0: {}
 
   get-intrinsic@1.3.0:
     dependencies:
@@ -2444,12 +2552,12 @@ snapshots:
   string-width@7.2.0:
     dependencies:
       emoji-regex: 10.6.0
-      get-east-asian-width: 1.6.0
+      get-east-asian-width: 1.7.0
       strip-ansi: 7.2.0
 
   string-width@8.2.2:
     dependencies:
-      get-east-asian-width: 1.6.0
+      get-east-asian-width: 1.7.0
       strip-ansi: 7.2.0
 
   strip-ansi@6.0.1:
