@@ -10,7 +10,7 @@
     "dsh-coding-subscription-oauth": "^0.8.5",
     "dsh-complete-notify": "^0.6.2",
     "dsh-context": "^0.53.2",
-    "dsh-free-search": "^0.4.28",
+    "dsh-free-search": "^0.4.29",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-mermaid": "^0.4.0",
     "dsh-rewind-plugin": "^0.12.2",
@@ -28,14 +28,12 @@
         "dsh-llm-retry-settings",
         "dsh-anchored-standard",
         "dsh-context",
-        "@opendsh/dsh-plugin-setting-mcp",
         "dsh-complete-notify",
         "dsh-better-sidebar",
         "@tt-a1i/archify-dsh",
         "@xmanrui/dsh-im",
         "dsh-free-search",
         "dsh-mermaid",
-        "dsh-univer-office",
         "dsh-coding-subscription-oauth",
         "dsh-rewind-plugin"
       ]
