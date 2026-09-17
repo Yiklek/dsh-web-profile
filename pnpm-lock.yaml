@@ -30,8 +30,8 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.53.2
-        version: 0.53.2
+        specifier: ^0.53.3
+        version: 0.53.3
       dsh-free-search:
         specifier: ^0.4.29
         version: 0.4.29
@@ -843,8 +843,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.53.2:
-    resolution: {integrity: sha512-YEWVosUcu4zOzIf7J8eMJlJm+s52uyT/+erOrPHIP3+/W7/u3SOakm84+Q7N8SiM0N74u1MfkpAuchk6BwTKeQ==}
+  dsh-context@0.53.3:
+    resolution: {integrity: sha512-yhI+qxRM5haQTxWWRrMegzd0Z/jKs17EiWa+0SmBL7+6l7sJLubvNXk8LP4HoXef2ubO3YpoEgLmOUxtKYfmNA==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -2236,7 +2236,7 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.53.2:
+  dsh-context@0.53.3:
     dependencies:
       zod: 4.6.5
 

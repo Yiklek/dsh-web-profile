@@ -9,7 +9,7 @@
     "dsh-better-sidebar": "0.19.1",
     "dsh-coding-subscription-oauth": "^0.8.5",
     "dsh-complete-notify": "^0.6.2",
-    "dsh-context": "^0.53.2",
+    "dsh-context": "^0.53.3",
     "dsh-free-search": "^0.4.29",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-mermaid": "^0.4.0",
