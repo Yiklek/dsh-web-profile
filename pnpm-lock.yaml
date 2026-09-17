@@ -15,8 +15,8 @@ importers:
         specifier: ^0.1.0
         version: 0.1.0
       '@xmanrui/dsh-im':
-        specifier: ^4.21.1
-        version: 4.21.1(debug@4.4.3)
+        specifier: ^4.21.2
+        version: 4.21.2(debug@4.4.3)
       dsh-anchored-standard:
         specifier: github:Yiklek/dsh-anchored-standard
         version: https://codeload.github.com/Yiklek/dsh-anchored-standard/tar.gz/8e75018f60ab16a3c687fcc5323b81ce0c9e28e2
@@ -30,8 +30,8 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.53.0
-        version: 0.53.0
+        specifier: ^0.53.1
+        version: 0.53.1
       dsh-free-search:
         specifier: ^0.4.28
         version: 0.4.28
@@ -414,8 +414,8 @@ packages:
   '@wecom/aibot-node-sdk@1.0.7':
     resolution: {integrity: sha512-51w+sTqunry6GD3HFvmuh0gArMSJDFE418vyvR1wMJHj1N6DaFuGD3HuaY2fazZs3mb9FWeQFX3+vU5t0Qhwmw==}
 
-  '@xmanrui/dsh-im@4.21.1':
-    resolution: {integrity: sha512-kJed9ScJ7K7AMdv9QXAlneDzuHL4vjBHCYllyAi0Q7h4lUUROhV5/KcZsVAARpVI9hE3Z7czdJ700UnjE2yuHA==}
+  '@xmanrui/dsh-im@4.21.2':
+    resolution: {integrity: sha512-rHwHzbj8eYrYl10NHPdGRLoKr93wkdf/PXhkDSMhx3AYHutDqaDL8s5pd9YueKmu+mLNeNL2o88Huzy5OyVDFw==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -783,8 +783,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.53.0:
-    resolution: {integrity: sha512-AwwRPCgWYi38sNL0i7Y3GKldMI2AyqThyqPW8C8irwMZDpyUhdj3z0mqWKkCWWEBWvBctFbLakXHCduxp4GR2w==}
+  dsh-context@0.53.1:
+    resolution: {integrity: sha512-C13jfsX6h/Z7LGk7LpwzChWZ2Rtzn2nQtPKCvfu3n42PerJsLi+Pd3TXU210eLs8AGPhQg0lxH9l6nSjuTdung==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -1764,7 +1764,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@xmanrui/dsh-im@4.21.1(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.21.2(debug@4.4.3)':
     dependencies:
       '@tencent-connect/qqbot-connector': 1.2.0
       '@tencent-connect/qqbot-nodejs': 1.0.4
@@ -2130,7 +2130,7 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.53.0:
+  dsh-context@0.53.1:
     dependencies:
       zod: 4.6.5
 
