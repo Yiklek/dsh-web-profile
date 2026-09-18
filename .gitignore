@@ -22,3 +22,6 @@ thinking-effort-loaded.json
 tests/e2e/test-results/
 tests/e2e/playwright-report/
 .npmrc
+
+# profile-local service data
+.services/

@@ -1,22 +1,33 @@
 {
   "name": "dsh-profile-web",
+  "version": "0.0.0",
   "private": true,
+  "scripts": {
+    "install-services": "node ./scripts/install-services.mjs",
+    "postinstall": "node ./scripts/install-services.mjs"
+  },
   "dependencies": {
+    "@mnemon-dev/mnemon": "^0.2.9",
     "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
+    "@openviking/dsh-memory-plugin": "^0.3.2",
     "@tt-a1i/archify-dsh": "^0.1.0",
     "@xmanrui/dsh-im": "^4.21.2",
     "dsh-anchored-standard": "github:Yiklek/dsh-anchored-standard",
     "dsh-better-sidebar": "0.19.1",
     "dsh-coding-subscription-oauth": "^0.8.5",
     "dsh-complete-notify": "^0.6.2",
-    "dsh-context": "^0.53.2",
-    "dsh-free-search": "^0.4.29",
+    "dsh-context": "^0.53.3",
+    "dsh-find-plugin": "^0.3.7",
+    "dsh-free-search": "^0.4.32",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-mermaid": "^0.4.0",
+    "dsh-mnemon": "^0.5.11",
+    "dsh-openviking-service": "workspace:*",
     "dsh-rewind-plugin": "^0.12.2",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
     "dsh-univer-office": "^0.3.2",
-    "dshmarket": "^1.47.0"
+    "dshmarket": "^1.48.0",
+    "yaml": "^2.9.1"
   },
   "dsh": {
     "profile": {
@@ -35,7 +46,9 @@
         "dsh-free-search",
         "dsh-mermaid",
         "dsh-coding-subscription-oauth",
-        "dsh-rewind-plugin"
+        "dsh-rewind-plugin",
+        "dsh-mnemon",
+        "dsh-find-plugin"
       ]
     }
   }

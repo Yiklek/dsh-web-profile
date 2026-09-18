@@ -1,0 +1,22 @@
+{
+  "name": "dsh-openviking-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH profile lifecycle plugin that starts and stops the local OpenViking server on demand.",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "README.md"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "openviking",
+    "lifecycle"
+  ],
+  "license": "MIT"
+}
