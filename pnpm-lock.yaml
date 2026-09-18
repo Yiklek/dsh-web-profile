@@ -30,11 +30,11 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.53.2
-        version: 0.53.2
+        specifier: ^0.53.3
+        version: 0.53.3
       dsh-free-search:
-        specifier: ^0.4.29
-        version: 0.4.29
+        specifier: ^0.4.32
+        version: 0.4.32
       dsh-llm-retry-settings:
         specifier: github:Yiklek/dsh-llm-retry-settings
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b
@@ -843,8 +843,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.53.2:
-    resolution: {integrity: sha512-YEWVosUcu4zOzIf7J8eMJlJm+s52uyT/+erOrPHIP3+/W7/u3SOakm84+Q7N8SiM0N74u1MfkpAuchk6BwTKeQ==}
+  dsh-context@0.53.3:
+    resolution: {integrity: sha512-yhI+qxRM5haQTxWWRrMegzd0Z/jKs17EiWa+0SmBL7+6l7sJLubvNXk8LP4HoXef2ubO3YpoEgLmOUxtKYfmNA==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -859,8 +859,8 @@ packages:
       react:
         optional: true
 
-  dsh-free-search@0.4.29:
-    resolution: {integrity: sha512-9Ym7oCuR634T0ove0lx9QwO+m4OdYLE4NlnxbMgM22/Kyv6nTQmrWxzOgwObi/qMnfOC9JIg+V62oqehwFD47A==}
+  dsh-free-search@0.4.32:
+    resolution: {integrity: sha512-QZEEHk/WE+6JYkS2pWDGWEOvqKGI6DjGTXqxR7F0UV2Ah0BnKqnfZvKJHg2uvEZGyL9od3Ia0+B1tRJ1wTuUZw==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2 || ^0.1.2-alpha.2 || ^0.1.3-alpha.2 || ^0.1.5-alpha.1
@@ -2236,11 +2236,11 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.53.2:
+  dsh-context@0.53.3:
     dependencies:
       zod: 4.6.5
 
-  dsh-free-search@0.4.29:
+  dsh-free-search@0.4.32:
     dependencies:
       '@deepseek-ai/schemastery': 3.18.2
 
