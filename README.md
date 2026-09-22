@@ -125,8 +125,8 @@ npx @deepseek-ai/dsh --profile web
 
    ```bash
    dsh plugin --profile <name> install
-   pnpm dlx @deepseek-ai/dsh@next plugin --profile <name> install
-   npx --yes @deepseek-ai/dsh@next plugin --profile <name> install
+   pnpm dlx @deepseek-ai/dsh@alpha plugin --profile <name> install
+   npx --yes @deepseek-ai/dsh@alpha plugin --profile <name> install
    ```
 
 ## 更新与同步
@@ -235,7 +235,7 @@ DSH_BOOT_LOG=/tmp/dsh-e2e.log pnpm test:edge
 |---|---|
 | `--dir` / `--branch` 不生效或报错 | `--branch` 仅 worktree 模式；`--dir` 仅远程 worktree 生效（本地忽略）；`--mode clone` 下指定会报错 |
 | 分支已被其他 worktree 占用 | `git worktree list` 定位后 `git worktree remove <path>` |
-| `dsh` 不在 PATH | 脚本自动回退到 `pnpm dlx` 或 `npx --yes @deepseek-ai/dsh@next` |
+| `dsh` 不在 PATH | 脚本自动回退到 `pnpm dlx` 或 `npx --yes @deepseek-ai/dsh@alpha` |
 | 安装后想回滚 | 删除 profile 目录，把备份目录改回原名 |
 
 恢复备份：
