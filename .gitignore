@@ -25,3 +25,9 @@ tests/e2e/playwright-report/
 
 # profile-local service data
 .services/
+
+# local backups (config snapshots and raw Session logs — never publish these)
+.backups/
+
+# plugin-manager runtime logs
+.plugin-manager/
