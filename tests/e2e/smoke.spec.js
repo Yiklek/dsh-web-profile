@@ -103,7 +103,9 @@ test("web profile loads and settings show plugin sections", async ({
   await expect(page.getByText("通用设置", { exact: true })).toBeVisible({
     timeout: 10_000,
   });
-  await expect(page.getByText("Anchored 预设", { exact: true })).toBeVisible();
+  // "Anchored 预设" is deliberately not asserted: that Settings section was
+  // owned by the dsh-anchored-standard plugin, which this profile no longer
+  // loads.
   await expect(page.getByText("API 重试", { exact: true })).toBeVisible();
 
   // No plugin/client fatal errors should have been emitted.
