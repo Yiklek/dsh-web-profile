@@ -8,25 +8,25 @@
     "postinstall": "node ./scripts/install-services.mjs"
   },
   "dependencies": {
+    "@mnemon-dev/mnemon": "^0.2.9",
+    "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
+    "@openviking/dsh-memory-plugin": "^0.5.2",
     "@tt-a1i/archify-dsh": "^0.1.0",
-    "@xmanrui/dsh-im": "^4.25.0",
+    "@xmanrui/dsh-im": "^4.27.0",
+    "dsh-better-sidebar": "0.19.1",
     "dsh-coding-subscription-oauth": "^0.8.5",
     "dsh-complete-notify": "^0.6.2",
-    "dsh-context": "^0.54.4",
+    "dsh-context": "^0.55.0",
     "dsh-find-plugin": "^0.3.7",
+    "dsh-free-search": "^0.4.36",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
-    "dsh-mermaid": "^0.4.0",
+    "dsh-mermaid": "^0.4.1",
+    "dsh-mnemon": "^0.5.13",
+    "dsh-openviking-service": "workspace:*",
     "dsh-rewind-plugin": "^0.12.2",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
-    "@opendsh/dsh-plugin-setting-mcp": "^0.1.2",
-    "@openviking/dsh-memory-plugin": "^0.5.0",
-    "dsh-better-sidebar": "0.19.1",
-    "dsh-free-search": "^0.4.35",
-    "dsh-mnemon": "^0.5.12",
-    "dsh-univer-office": "^0.3.2",
-    "dshmarket": "^1.55.0",
-    "@mnemon-dev/mnemon": "^0.2.9",
-    "dsh-openviking-service": "workspace:*",
+    "dsh-univer-office": "^0.3.3",
+    "dshmarket": "^1.58.0",
     "yaml": "^2.9.1"
   },
   "dsh": {
@@ -44,6 +44,10 @@
         "dsh-coding-subscription-oauth",
         "dsh-rewind-plugin",
         "dsh-find-plugin",
+        "dsh-mnemon",
+        "dshmarket",
+        "dsh-univer-office",
+        "dsh-free-search",
         "@deepseek-ai/dsh-experimental-agent-team-profile"
       ]
     }
