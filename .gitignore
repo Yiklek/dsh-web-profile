@@ -4,6 +4,10 @@ node_modules/
 # local MCP / patch layer (managed by dsh-mcp-manager-ui on this machine)
 cordis.patch.yml
 
+# composition root — regenerated as an empty list on every boot by
+# prepareProfile; the Loader bakes its live tree back into it at runtime
+cordis.yml
+
 # runtime/market data
 .dsh-market/
 
