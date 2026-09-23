@@ -28,7 +28,7 @@ jobs:
         run: shellcheck install.sh
 
       - name: Prettier check (JSON / YAML)
-        run: pnpm dlx prettier --check "package.json" "*.yml"
+        run: pnpm dlx prettier --check "package.json" "pnpm-workspace.yaml" ".github/workflows/*.yml"
 
       - name: bash syntax check
         run: bash -n install.sh
