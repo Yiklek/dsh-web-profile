@@ -13,7 +13,7 @@
     "@tt-a1i/archify-dsh": "^0.1.0",
     "@wingsky-1/dsh-mcp-manager": "0.2.7",
     "@xmanrui/dsh-im": "^4.28.1",
-    "dsh-better-sidebar": "0.21.1",
+    "dsh-better-sidebar": "0.22.0",
     "dsh-complete-notify": "^0.6.2",
     "dsh-context": "^0.57.0",
     "dsh-find-plugin": "^0.4.0",

@@ -24,8 +24,8 @@ importers:
         specifier: ^4.28.1
         version: 4.28.1(debug@4.4.3)
       dsh-better-sidebar:
-        specifier: 0.21.1
-        version: 0.21.1
+        specifier: 0.22.0
+        version: 0.22.0
       dsh-complete-notify:
         specifier: ^0.6.2
         version: 0.6.2
@@ -1450,8 +1450,8 @@ packages:
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
 
-  dsh-better-sidebar@0.21.1:
-    resolution: {integrity: sha512-gbE5E9pwoJeHeedefBftSpTjGjd3TUOPUGYc4LlXUkW+NuYHwY6Hhfcsd//OKuohQLv6snle+sWhrdGWc8ARCg==}
+  dsh-better-sidebar@0.22.0:
+    resolution: {integrity: sha512-hk780sD2Gycd7nR5VwxT4MAAHVf+LaiqSvp7GB7X/LpX9KQtWG2BLNhhe5E7+tgl0vVJlFgMmHRwlVs5t16mZw==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.4
@@ -3734,7 +3734,7 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
-  dsh-better-sidebar@0.21.1:
+  dsh-better-sidebar@0.22.0:
     dependencies:
       '@codemirror/commands': 6.11.1
       '@codemirror/lang-cpp': 6.0.3
