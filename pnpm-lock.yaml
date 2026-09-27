@@ -17,6 +17,9 @@ importers:
       '@tt-a1i/archify-dsh':
         specifier: ^0.1.0
         version: 0.1.0
+      '@wingsky-1/dsh-mcp-manager':
+        specifier: 0.2.7
+        version: 0.2.7
       '@xmanrui/dsh-im':
         specifier: ^4.28.1
         version: 4.28.1(debug@4.4.3)
@@ -28,7 +31,7 @@ importers:
         version: 0.6.2
       dsh-context:
         specifier: ^0.57.0
-        version: 0.57.0
+        version: 0.57.0(@deepseek-ai/schemastery@3.18.4)
       dsh-find-plugin:
         specifier: ^0.4.0
         version: 0.4.0
@@ -40,7 +43,7 @@ importers:
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b
       dsh-mcp-panel:
         specifier: 0.6.19
-        version: 0.6.19
+        version: 0.6.19(@deepseek-ai/schemastery@3.18.4)
       dsh-mermaid:
         specifier: ^0.4.1
         version: 0.4.1
@@ -52,19 +55,19 @@ importers:
         version: link:packages/openviking-service
       dsh-plugin-subscriptions:
         specifier: 0.9.4
-        version: 0.9.4
+        version: 0.9.4(@deepseek-ai/schemastery@3.18.4)
       dsh-rewind-plugin:
         specifier: ^0.12.2
-        version: 0.12.2
+        version: 0.12.2(@deepseek-ai/schemastery@3.18.4)
       dsh-settings-manager:
         specifier: github:Yiklek/dsh-settings-manager#pkg
-        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d
+        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d(@deepseek-ai/schemastery@3.18.4)
       dsh-univer-office:
         specifier: ^0.3.5
-        version: 0.3.5
+        version: 0.3.5(@deepseek-ai/schemastery@3.18.4)
       dshmarket:
         specifier: ^1.66.2
-        version: 1.66.2
+        version: 1.66.2(@deepseek-ai/schemastery@3.18.4)
       yaml:
         specifier: ^2.9.1
         version: 2.9.1
@@ -955,6 +958,42 @@ packages:
 
   '@wecom/aibot-node-sdk@1.0.7':
     resolution: {integrity: sha512-51w+sTqunry6GD3HFvmuh0gArMSJDFE418vyvR1wMJHj1N6DaFuGD3HuaY2fazZs3mb9FWeQFX3+vU5t0Qhwmw==}
+
+  '@wingsky-1/dsh-mcp-manager@0.2.7':
+    resolution: {integrity: sha512-vUGZWHbgZ0SwBplKhbX1MBRXLRY/ggHL20v+wC7QPuGa3BW8lHWNm2S0YpMTgYZGPh4uyc93Jv8QZK7hXRRkmA==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      '@deepseek-ai/cordis': 4.0.4
+      '@deepseek-ai/dsh-agent': 0.1.7-rc.2
+      '@deepseek-ai/dsh-api-session-controller': 0.1.7-rc.2
+      '@deepseek-ai/dsh-client-store': 0.1.7-rc.2
+      '@deepseek-ai/dsh-client-ui-session': 0.1.7-rc.2
+      '@deepseek-ai/dsh-client-ui-slots': 0.1.7-rc.2
+      '@deepseek-ai/dsh-host-webserver': 0.1.7-rc.2
+      '@deepseek-ai/dsh-llm': 0.1.7-rc.2
+      '@deepseek-ai/dsh-system-prompt': 0.1.7-rc.2
+      '@deepseek-ai/dsh-tools': 0.1.7-rc.2
+    peerDependenciesMeta:
+      '@deepseek-ai/cordis':
+        optional: true
+      '@deepseek-ai/dsh-agent':
+        optional: true
+      '@deepseek-ai/dsh-api-session-controller':
+        optional: true
+      '@deepseek-ai/dsh-client-store':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-session':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-slots':
+        optional: true
+      '@deepseek-ai/dsh-host-webserver':
+        optional: true
+      '@deepseek-ai/dsh-llm':
+        optional: true
+      '@deepseek-ai/dsh-system-prompt':
+        optional: true
+      '@deepseek-ai/dsh-tools':
+        optional: true
 
   '@xmanrui/dsh-im@4.28.1':
     resolution: {integrity: sha512-wrKufO3V+OGFOPuBjbYNHeRI26YqYktiZt/ZdplK3wbgTRKV/4bvfnAobYGvWNh9kcyIkxPxC4cZuOX+PDrjXQ==}
@@ -1927,8 +1966,8 @@ packages:
     resolution: {integrity: sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==}
     engines: {node: '>=0.10.0'}
 
-  imapflow@2.0.7:
-    resolution: {integrity: sha512-KyeYpa2fR7n0I8VUS4YFumAMBo4arcAXomFhLYheKvhK3fSLP6ADh50JZSwMppvrfm7k2v2nVUfb56rtC4Dz0Q==}
+  imapflow@2.0.8:
+    resolution: {integrity: sha512-x2qbXzaZSh5BCUN8GT/GcqoPJ/8vALXTj5AGF6w2aPeZ2L50m9oFnPMCkq+xR7QxHOnyzhX6FAnt3FFYNsNiug==}
     engines: {node: '>=20.0.0'}
 
   import-meta-resolve@4.2.0:
@@ -2042,6 +2081,10 @@ packages:
 
   nodemailer@10.0.10:
     resolution: {integrity: sha512-He9XskOFms62SyAKkLu8CcGcYHAo+BSHSsORI8s4PJH8qZgZY4L4lDfvyN0twvmbpyG+eGrxpyBlskj9d9rJ8A==}
+    engines: {node: '>=20.0.0'}
+
+  nodemailer@10.0.11:
+    resolution: {integrity: sha512-/c4P7U7aGpiNu2Rl08q525q2zECkUpSaf2zQPgIStCcAjHAkkQQKwD4sTyi3l91mGcLQrKzL1syXPHymo+Ogtw==}
     engines: {node: '>=20.0.0'}
 
   obug@2.2.1:
@@ -3255,6 +3298,8 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  '@wingsky-1/dsh-mcp-manager@0.2.7': {}
+
   '@xmanrui/dsh-im@4.28.1(debug@4.4.3)':
     dependencies:
       '@matrix-org/olm': 3.2.15
@@ -3262,9 +3307,9 @@ snapshots:
       '@tencent-connect/qqbot-nodejs': 1.0.4
       '@wecom/aibot-node-sdk': 1.0.7(debug@4.4.3)
       dingtalk-stream: 2.1.4
-      imapflow: 2.0.7
+      imapflow: 2.0.8
       mailparser: 3.9.28
-      nodemailer: 10.0.10
+      nodemailer: 10.0.11
       qrcode: 1.5.4
       undici: 7.29.0
     optionalDependencies:
@@ -3727,8 +3772,9 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.57.0:
+  dsh-context@0.57.0(@deepseek-ai/schemastery@3.18.4):
     dependencies:
+      '@deepseek-ai/schemastery': 3.18.4
       zod: 4.6.5
 
   dsh-find-plugin@0.4.0: {}
@@ -3739,9 +3785,10 @@ snapshots:
 
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b: {}
 
-  dsh-mcp-panel@0.6.19:
+  dsh-mcp-panel@0.6.19(@deepseek-ai/schemastery@3.18.4):
     dependencies:
       '@deepseek-ai/dsh-subprocess': 0.1.7-rc.2
+      '@deepseek-ai/schemastery': 3.18.4
       tsdown: 0.23.0(typescript@7.0.2)
       typescript: 7.0.2
       zod: 4.6.5
@@ -3859,16 +3906,22 @@ snapshots:
       yaml: 2.9.1
       zod: 4.6.5
 
-  dsh-plugin-subscriptions@0.9.4:
+  dsh-plugin-subscriptions@0.9.4(@deepseek-ai/schemastery@3.18.4):
     dependencies:
+      '@deepseek-ai/schemastery': 3.18.4
       undici: 7.30.0
 
-  dsh-rewind-plugin@0.12.2: {}
+  dsh-rewind-plugin@0.12.2(@deepseek-ai/schemastery@3.18.4):
+    optionalDependencies:
+      '@deepseek-ai/schemastery': 3.18.4
 
-  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d: {}
+  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d(@deepseek-ai/schemastery@3.18.4):
+    optionalDependencies:
+      '@deepseek-ai/schemastery': 3.18.4
 
-  dsh-univer-office@0.3.5:
+  dsh-univer-office@0.3.5(@deepseek-ai/schemastery@3.18.4):
     dependencies:
+      '@deepseek-ai/schemastery': 3.18.4
       '@puppeteer/browsers': 3.2.3
       '@univerjs-pro/cli-assets': 0.1.0
       '@univerjs-pro/engine-formula-rust-binding': 1.0.1
@@ -3881,10 +3934,12 @@ snapshots:
       - utf-8-validate
       - yauzl
 
-  dshmarket@1.66.2:
+  dshmarket@1.66.2(@deepseek-ai/schemastery@3.18.4):
     dependencies:
       js-yaml: 4.3.2
       undici: 7.30.0
+    optionalDependencies:
+      '@deepseek-ai/schemastery': 3.18.4
 
   dts-resolver@3.0.0: {}
 
@@ -4030,7 +4085,7 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
-  imapflow@2.0.7:
+  imapflow@2.0.8:
     dependencies:
       '@zone-eu/mailsplit': 5.4.17
       encoding-japanese: 2.4.0
@@ -4162,6 +4217,8 @@ snapshots:
   ms@2.1.3: {}
 
   nodemailer@10.0.10: {}
+
+  nodemailer@10.0.11: {}
 
   obug@2.2.1: {}
 

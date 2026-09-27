@@ -11,6 +11,7 @@
     "@mnemon-dev/mnemon": "^0.2.9",
     "@openviking/dsh-memory-plugin": "^0.5.8",
     "@tt-a1i/archify-dsh": "^0.1.0",
+    "@wingsky-1/dsh-mcp-manager": "0.2.7",
     "@xmanrui/dsh-im": "^4.28.1",
     "dsh-better-sidebar": "0.21.1",
     "dsh-complete-notify": "^0.6.2",
@@ -51,7 +52,8 @@
         "dsh-mcp-panel",
         "dsh-better-sidebar",
         "@deepseek-ai/dsh-experimental-auto-review",
-        "dsh-plugin-subscriptions"
+        "dsh-plugin-subscriptions",
+        "@wingsky-1/dsh-mcp-manager"
       ]
     }
   }
