@@ -57,8 +57,8 @@ jobs:
         run: |
           echo "node $(node --version)"
           echo "pnpm $(pnpm --version)"
-          echo "dsh@alpha resolves to: $(npm view @deepseek-ai/dsh@alpha version)"
-          pnpm dlx @deepseek-ai/dsh@alpha --version
+          echo "dsh@alpha resolves to: $(npm view @deepseek-ai/dsh@0.1.7-rc.2 version)"
+          pnpm dlx @deepseek-ai/dsh@0.1.7-rc.2 --version
 
       - name: Install profile via install.sh (worktree)
         run: |
@@ -66,7 +66,7 @@ jobs:
           echo "install: profile ready (branch ci-web)"
 
       - name: Verify dsh can compose the profile
-        run: pnpm dlx @deepseek-ai/dsh@alpha --profile web --dump-config > /tmp/dump.yml
+        run: pnpm dlx @deepseek-ai/dsh@0.1.7-rc.2 --profile web --dump-config > /tmp/dump.yml
 
       - name: Show composed profile
         run: cat /tmp/dump.yml
@@ -76,7 +76,7 @@ jobs:
         env:
           DSH_PORT: "3099"
         run: |
-          pnpm dlx @deepseek-ai/dsh@alpha --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-boot.log 2>&1 &
+          pnpm dlx @deepseek-ai/dsh@0.1.7-rc.2 --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-boot.log 2>&1 &
           BOOT_PID=$!
           trap 'kill "$BOOT_PID" 2>/dev/null || true' EXIT
 
@@ -148,7 +148,7 @@ jobs:
       - name: Start dsh web server
         working-directory: ${{ env.DSH_HOME }}/profiles/web
         run: |
-          pnpm dlx @deepseek-ai/dsh@alpha --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-e2e.log 2>&1 &
+          pnpm dlx @deepseek-ai/dsh@0.1.7-rc.2 --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-e2e.log 2>&1 &
           echo "PID=$!" >> "$GITHUB_ENV"
           echo "e2e: server PID=$! port=$DSH_PORT"
           # dsh@alpha gates the root with 401 until the browser exchanges the
