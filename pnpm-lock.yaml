@@ -28,7 +28,7 @@ importers:
         version: 0.6.2
       dsh-context:
         specifier: ^0.57.0
-        version: 0.57.0
+        version: 0.57.0(@deepseek-ai/schemastery@3.18.4)
       dsh-find-plugin:
         specifier: ^0.4.0
         version: 0.4.0
@@ -40,7 +40,7 @@ importers:
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b
       dsh-mcp-panel:
         specifier: 0.6.19
-        version: 0.6.19
+        version: 0.6.19(@deepseek-ai/schemastery@3.18.4)
       dsh-mermaid:
         specifier: ^0.4.1
         version: 0.4.1
@@ -52,19 +52,19 @@ importers:
         version: link:packages/openviking-service
       dsh-plugin-subscriptions:
         specifier: 0.9.4
-        version: 0.9.4
+        version: 0.9.4(@deepseek-ai/schemastery@3.18.4)
       dsh-rewind-plugin:
         specifier: ^0.12.2
-        version: 0.12.2
+        version: 0.12.2(@deepseek-ai/schemastery@3.18.4)
       dsh-settings-manager:
         specifier: github:Yiklek/dsh-settings-manager#pkg
-        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d
+        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d(@deepseek-ai/schemastery@3.18.4)
       dsh-univer-office:
         specifier: ^0.3.5
-        version: 0.3.5
+        version: 0.3.5(@deepseek-ai/schemastery@3.18.4)
       dshmarket:
         specifier: ^1.66.2
-        version: 1.66.2
+        version: 1.66.2(@deepseek-ai/schemastery@3.18.4)
       yaml:
         specifier: ^2.9.1
         version: 2.9.1
@@ -3727,8 +3727,9 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.57.0:
+  dsh-context@0.57.0(@deepseek-ai/schemastery@3.18.4):
     dependencies:
+      '@deepseek-ai/schemastery': 3.18.4
       zod: 4.6.5
 
   dsh-find-plugin@0.4.0: {}
@@ -3739,9 +3740,10 @@ snapshots:
 
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b: {}
 
-  dsh-mcp-panel@0.6.19:
+  dsh-mcp-panel@0.6.19(@deepseek-ai/schemastery@3.18.4):
     dependencies:
       '@deepseek-ai/dsh-subprocess': 0.1.7-rc.2
+      '@deepseek-ai/schemastery': 3.18.4
       tsdown: 0.23.0(typescript@7.0.2)
       typescript: 7.0.2
       zod: 4.6.5
@@ -3859,16 +3861,22 @@ snapshots:
       yaml: 2.9.1
       zod: 4.6.5
 
-  dsh-plugin-subscriptions@0.9.4:
+  dsh-plugin-subscriptions@0.9.4(@deepseek-ai/schemastery@3.18.4):
     dependencies:
+      '@deepseek-ai/schemastery': 3.18.4
       undici: 7.30.0
 
-  dsh-rewind-plugin@0.12.2: {}
+  dsh-rewind-plugin@0.12.2(@deepseek-ai/schemastery@3.18.4):
+    optionalDependencies:
+      '@deepseek-ai/schemastery': 3.18.4
 
-  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d: {}
+  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d(@deepseek-ai/schemastery@3.18.4):
+    optionalDependencies:
+      '@deepseek-ai/schemastery': 3.18.4
 
-  dsh-univer-office@0.3.5:
+  dsh-univer-office@0.3.5(@deepseek-ai/schemastery@3.18.4):
     dependencies:
+      '@deepseek-ai/schemastery': 3.18.4
       '@puppeteer/browsers': 3.2.3
       '@univerjs-pro/cli-assets': 0.1.0
       '@univerjs-pro/engine-formula-rust-binding': 1.0.1
@@ -3881,10 +3889,12 @@ snapshots:
       - utf-8-validate
       - yauzl
 
-  dshmarket@1.66.2:
+  dshmarket@1.66.2(@deepseek-ai/schemastery@3.18.4):
     dependencies:
       js-yaml: 4.3.2
       undici: 7.30.0
+    optionalDependencies:
+      '@deepseek-ai/schemastery': 3.18.4
 
   dts-resolver@3.0.0: {}
 
