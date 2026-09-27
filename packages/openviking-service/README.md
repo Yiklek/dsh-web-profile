@@ -1,54 +1,49 @@
 # dsh-openviking-service
 
-A DSH profile lifecycle plugin that starts the local OpenViking server on
-demand and stops it when the profile disposes.
+一个 DSH profile 生命周期插件：按需启动本地 OpenViking 服务，并在 profile 销毁时
+停止它。
 
-It is a **process supervisor only** — memory, recall, capture and the
-`mcp__openviking__*` tools all belong to `@openviking/dsh-memory-plugin`, which
-this entry deliberately loads *after* itself.
+它**只是进程守护**——记忆、召回、捕获以及 `mcp__openviking__*` 工具全部属于
+`@openviking/dsh-memory-plugin`，本条目有意排在它**之前**加载。
 
-## Mounting
+## 挂载方式
 
-`scripts/install-services.mjs` writes the managed block into the profile's
-`cordis.patch.yml`:
+`scripts/install-services.mjs` 会把受管块写入 profile 的 `cordis.patch.yml`：
 
 ```yaml
 - id: openviking-memory
   config:
     - id: openviking-service-autostart
-      name: dsh-openviking-service          # bare package name
+      name: dsh-openviking-service          # 裸包名
       config:
         serviceRoot: "<profile>/.services/openviking"
     - id: openviking-memory-runtime
       name: '@openviking/dsh-memory-plugin'
 ```
 
-The entry name is a real package name rather than a `file://` path on purpose:
-DSH's DeepSeek request-extension inventory resolves every active entry to an
-owning npm package before each request, and a loose module path has to be
-resolved by walking up to some `package.json`. Keeping a proper package
-identity avoids that fragile path entirely.
+条目名使用真实包名而非 `file://` 路径是有意的：DSH 的 DeepSeek 请求扩展清单会在
+每个请求前把每个活动条目解析到其所属 npm 包，而松散模块路径必须靠向上查找某个
+`package.json` 来解析。使用规范的包标识可以完全避开这条脆弱路径。
 
-## Behaviour
+## 行为
 
-| Condition | Result |
+| 条件 | 结果 |
 |---|---|
-| `/health` already answers | Adopt it; do not restart, do not stop on exit |
-| `uvx` missing on PATH | Skip silently — OpenViking is optional |
-| `ov.conf` missing | Log a warning and skip |
-| Otherwise | Spawn `uvx --from openviking[local-embed] openviking-server` |
+| `/health` 已有响应 | 直接接管；不重启，退出时也不停止它 |
+| PATH 中没有 `uvx` | 静默跳过——OpenViking 是可选组件 |
+| 缺少 `ov.conf` | 打印警告并跳过 |
+| 其他情况 | 启动 `uvx --from openviking[local-embed] openviking-server` |
 
-The spawn is **non-blocking**: readiness is awaited in the background so a cold
-start cannot stall DSH startup. That is safe because the runtime queues writes
-in `.services/openviking/pending/` while the endpoint is unreachable and
-replays them once it is up.
+启动是**非阻塞**的：就绪状态在后台等待，因此冷启动不会拖住 DSH 启动。这样做是
+安全的，因为运行时在端点不可达期间会把写入排入 `.services/openviking/pending/`，
+待其就绪后再重放。
 
-Environment exported to the rest of the process:
+导出给进程其余部分的变量：
 
 ```text
 OPENVIKING_HOME · OPENVIKING_CONFIG_FILE · OPENVIKING_CLI_CONFIG_FILE
 OPENVIKING_STATE_DIR · OPENVIKING_PENDING_DIR · OPENVIKING_URL
 ```
 
-Cleanup is registered with `ctx.effect`, so the profile stops the server it
-started (SIGTERM, then SIGKILL after 5s).
+清理通过 `ctx.effect` 注册，因此 profile 会停止它自己启动的服务（先 SIGTERM，
+5 秒后 SIGKILL）。
