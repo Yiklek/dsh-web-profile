@@ -5,7 +5,8 @@
   "//": "dependencies 的顺序即分组：第1组=已激活的 bundle 插件（同时列在 dsh.profile.bundles 中，由它声明的 dsh.bundle.patch 参与组合）；第2组=未激活的 bundle 插件（已安装且声明了 dsh.bundle.patch，但当前 dsh 版本有问题或暂不需要，不进 bundles）；第3组=非 bundle 包（不含 dsh.bundle 声明：CLI 二进制、库、以及靠 profile patch 的 entry 行按 name 激活的本地 workspace 插件，例如 dsh-openviking-service 由 OpenViking managed block 的 openviking-service-autostart 条目引用）。新增依赖请放进对应分组并保持组内字典序。",
   "scripts": {
     "install-services": "node ./scripts/install-services.mjs",
-    "postinstall": "node ./scripts/install-services.mjs"
+    "postinstall": "node ./scripts/install-services.mjs",
+    "test": "node --test \"scripts/*.test.mjs\""
   },
   "dependencies": {
     "@mnemon-dev/mnemon": "^0.2.9",

@@ -33,6 +33,37 @@ jobs:
       - name: bash syntax check
         run: bash -n install.sh
 
+  # install-services.mjs behaves differently per platform (the mnemon CLI path,
+  # how that CLI is probed), so its suite runs on all three rather than relying
+  # on the Linux-only jobs to represent them.
+  install-services:
+    name: install-services tests (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11.22.0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: pnpm
+
+      # The suite needs this profile's dependencies (the script and the test both
+      # parse YAML) and nothing else. --ignore-scripts keeps the profile's own
+      # postinstall from reconfiguring this checkout as if it were a live profile.
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: Test install-services
+        run: pnpm test
+
   test-dsh:
     name: Test dsh profile boots
     runs-on: ubuntu-latest
