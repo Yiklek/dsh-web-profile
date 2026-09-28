@@ -128,13 +128,19 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet; then
+          # Gate on the manifests, not the lockfiles. `pnpm update --latest` can
+          # move a transitive dependency without any declared range moving, which
+          # leaves a lockfile-only diff — nothing to review, and the bump summary
+          # it would generate is empty. Only a declared version change is worth a
+          # branch and a PR.
+          if git diff --quiet -- package.json tests/e2e/package.json; then
             CHANGED=false
+            echo "changes: none in package.json (lockfile-only update ignored)"
           else
             CHANGED=true
+            echo "changes: declared dependencies changed"
           fi
           echo "changed=$CHANGED" >> "$GITHUB_OUTPUT"
-          echo "changes: changed=$CHANGED"
 
       - name: Generate bump message
         if: steps.changes.outputs.changed == 'true'
