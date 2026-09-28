@@ -21,8 +21,8 @@ importers:
         specifier: 0.2.7
         version: 0.2.7
       '@xmanrui/dsh-im':
-        specifier: ^4.29.0
-        version: 4.29.0(debug@4.4.3)
+        specifier: ^4.29.1
+        version: 4.29.1(debug@4.4.3)
       dsh-better-sidebar:
         specifier: 0.22.1
         version: 0.22.1
@@ -30,14 +30,14 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.59.0
-        version: 0.59.0(@deepseek-ai/schemastery@3.18.4)
+        specifier: ^0.59.1
+        version: 0.59.1(@deepseek-ai/schemastery@3.18.4)
       dsh-find-plugin:
         specifier: ^0.4.0
         version: 0.4.0
       dsh-free-search:
-        specifier: ^0.4.39
-        version: 0.4.39
+        specifier: ^0.5.0
+        version: 0.5.0
       dsh-llm-retry-settings:
         specifier: github:Yiklek/dsh-llm-retry-settings
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b
@@ -995,8 +995,8 @@ packages:
       '@deepseek-ai/dsh-tools':
         optional: true
 
-  '@xmanrui/dsh-im@4.29.0':
-    resolution: {integrity: sha512-iA/iPSyxlQkvo3bOHhdZmJNw7XibO8Wc/H8VUxvP4CQ+uPlGSlezH3FqhYw9sdrY27II9VpbXVrpBOhHXlUqMw==}
+  '@xmanrui/dsh-im@4.29.1':
+    resolution: {integrity: sha512-U7HG07KtPn89o6AMTYnubDoIZxlub5N7n7KUXp/d/dsjGf1NE3ya5tdwrhQ9Sa5/QmYHxcmylKxXGS37DgAs9A==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -1135,8 +1135,8 @@ packages:
   '@yuku-toolchain/types@0.10.2':
     resolution: {integrity: sha512-sSeo4SSSToiS+sSD+bwn/s94EEcaLJ7tG5LCp8gFYC1G5VzxzX7fqB6m9RU1yMD8KTpu6zdU/I1NlQf8hVBJ9Q==}
 
-  '@zone-eu/mailsplit@5.4.17':
-    resolution: {integrity: sha512-LOMzdrKRVgaghLaezIPdHRhsGpfDiWNQo1RptWc84CRllI4dWLwqX/L4x1iTt1CaeyvyUfMXM/6mjIsEisT3Tg==}
+  '@zone-eu/mailsplit@5.4.18':
+    resolution: {integrity: sha512-ufNquC1VWilkF6IUyy7+qYA19Q1JXNkeiiSIgS9+f7ojNs5ijHLg03FUcXDCR2tDDJ51zSoPNTsUu4DQz613KQ==}
 
   agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
@@ -1481,8 +1481,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.59.0:
-    resolution: {integrity: sha512-ViPqZoMeQkMwJ62Gfl3ThfBseDKChmOhdh+RCp2JEHLTUws+wbSriIpTccJbru4Lws9QMl1YxArVXBnXw834cg==}
+  dsh-context@0.59.1:
+    resolution: {integrity: sha512-nu1eMx1ASyiRUnQPuCkEYXtEfFjM4XnyQDxQ0tnaR/sE6f3fXuLogEI2OZ2KIVofJEesJOxdenS/EssTglM+VQ==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -1506,8 +1506,8 @@ packages:
       '@deepseek-ai/cordis': ^4.0.1
       '@deepseek-ai/dsh-tools': ^0.1.0-rc.6 || ^0.1.1-rc.1 || ^0.1.2-alpha.2 || ^0.1.3-alpha.2 || ^0.1.5-alpha.1 || ^0.1.6-alpha.1 || ^0.1.7-alpha.1
 
-  dsh-free-search@0.4.39:
-    resolution: {integrity: sha512-Kc0lMgw6yXHTi19S5cr2C5/uLI/QCiMvQZKfOUEQstd+LzeEoMuoUfo1Re9Iz3Pq7YlndpHQFjtKRFr/x+L4cw==}
+  dsh-free-search@0.5.0:
+    resolution: {integrity: sha512-dRxttXNCmIVwuYBKrRMUyFGz98nvE+/WnTE9aX8Uu8GNkp0WL43V+u7FPVf4SFkrMrklpWNJ95WHc1yxk+Ot6A==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
@@ -1977,8 +1977,8 @@ packages:
     resolution: {integrity: sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==}
     engines: {node: '>=0.10.0'}
 
-  imapflow@2.1.0:
-    resolution: {integrity: sha512-sf4FImfOPV4ajAbtZRqFEQ1A7bZd4Ow3cNiQqkd3rVY1JdKIHo/SVXRnS8URv9r4ByYAu7yr7bjkWjPdYSb6xQ==}
+  imapflow@2.1.1:
+    resolution: {integrity: sha512-AElpiKc/llWTJy17Igs5qqjTfSCAwRc7zFuRcb3PHHX55g+Sy4z8E3GjQRKhLUSKvVE8f3wMdn6K/GWEBuXcyw==}
     engines: {node: '>=20.0.0'}
 
   import-meta-resolve@4.2.0:
@@ -2026,8 +2026,8 @@ packages:
   libbase64@1.3.0:
     resolution: {integrity: sha512-GgOXd0Eo6phYgh0DJtjQ2tO8dc0IVINtZJeARPeiIJqge+HdsWSuaDTe8ztQ7j/cONByDZ3zeB325AHiv5O0dg==}
 
-  libmime@5.4.4:
-    resolution: {integrity: sha512-d3zZ2k8s6iO+8u9Vfkl6HfhD5lSVocGcmOViTz/i0CJcwhJADyubEJ/+TkBhuLDUSIBOiG+D8G5kJKwXwKbXXA==}
+  libmime@5.4.5:
+    resolution: {integrity: sha512-5xZSF0j71GqXMEolQAnS/gOD4nHrAhf9nPWdqvfIXXeFODx0T4BlO9XudlXe9AgDKAoOkR2YeFagQ1Dwy1v6RQ==}
 
   libqp@2.1.1:
     resolution: {integrity: sha512-0Wd+GPz1O134cP62YU2GTOPNA7Qgl09XwCqM5zpBv87ERCXdfDtyKXvV7c9U22yWJh44QZqBocFnXN11K96qow==}
@@ -2047,8 +2047,8 @@ packages:
   lodash-es@4.18.1:
     resolution: {integrity: sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==}
 
-  mailparser@3.9.29:
-    resolution: {integrity: sha512-lOiYwyF7SyjZn+OloNgbWSU7QwRRvhOPZxhPOnJEfhRUt4QcbmSZymzPhqYkktRpXS1l9kCz8bLSOfyeiDsZlQ==}
+  mailparser@3.9.30:
+    resolution: {integrity: sha512-jtLxunaB3fxrX4x0scARwHd9Ctj3uWKt/Ps3Ge+DUnfdHf8LtQMF8ENUpptprxde+mwfGW0PSanb4hMfyE/xxg==}
     engines: {node: '>=20.0.0'}
 
   markdown-to-jsx@7.7.17:
@@ -2090,8 +2090,8 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  nodemailer@10.0.11:
-    resolution: {integrity: sha512-/c4P7U7aGpiNu2Rl08q525q2zECkUpSaf2zQPgIStCcAjHAkkQQKwD4sTyi3l91mGcLQrKzL1syXPHymo+Ogtw==}
+  nodemailer@10.0.12:
+    resolution: {integrity: sha512-PQ46oNbNMuH/Sno7B5IWIU9etytwrO0xdTFvWXpIQFRXhBAXtzD48243AS+BCbQQTPD8y3fqUrgLn0tSo77gvg==}
     engines: {node: '>=20.0.0'}
 
   obug@2.2.1:
@@ -3304,16 +3304,16 @@ snapshots:
 
   '@wingsky-1/dsh-mcp-manager@0.2.7': {}
 
-  '@xmanrui/dsh-im@4.29.0(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.29.1(debug@4.4.3)':
     dependencies:
       '@matrix-org/olm': 3.2.15
       '@tencent-connect/qqbot-connector': 1.2.0
       '@tencent-connect/qqbot-nodejs': 1.0.4
       '@wecom/aibot-node-sdk': 1.0.7(debug@4.4.3)
       dingtalk-stream: 2.1.4
-      imapflow: 2.1.0
-      mailparser: 3.9.29
-      nodemailer: 10.0.11
+      imapflow: 2.1.1
+      mailparser: 3.9.30
+      nodemailer: 10.0.12
       qrcode: 1.5.4
       undici: 7.29.0
     optionalDependencies:
@@ -3402,10 +3402,10 @@ snapshots:
 
   '@yuku-toolchain/types@0.10.2': {}
 
-  '@zone-eu/mailsplit@5.4.17':
+  '@zone-eu/mailsplit@5.4.18':
     dependencies:
       libbase64: 1.3.0
-      libmime: 5.4.4
+      libmime: 5.4.5
       libqp: 2.1.1
 
   agent-base@6.0.2:
@@ -3774,14 +3774,14 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.59.0(@deepseek-ai/schemastery@3.18.4):
+  dsh-context@0.59.1(@deepseek-ai/schemastery@3.18.4):
     dependencies:
       '@deepseek-ai/schemastery': 3.18.4
       zod: 4.6.5
 
   dsh-find-plugin@0.4.0: {}
 
-  dsh-free-search@0.4.39:
+  dsh-free-search@0.5.0:
     dependencies:
       '@deepseek-ai/schemastery': 3.18.4
 
@@ -4088,13 +4088,13 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
-  imapflow@2.1.0:
+  imapflow@2.1.1:
     dependencies:
-      '@zone-eu/mailsplit': 5.4.17
+      '@zone-eu/mailsplit': 5.4.18
       encoding-japanese: 2.4.0
       iconv-lite: 0.7.3
       libbase64: 1.3.0
-      libmime: 5.4.4
+      libmime: 5.4.5
       libqp: 2.1.1
       pino: 10.3.1
       socks: 2.8.10
@@ -4129,7 +4129,7 @@ snapshots:
 
   libbase64@1.3.0: {}
 
-  libmime@5.4.4:
+  libmime@5.4.5:
     dependencies:
       encoding-japanese: 2.4.0
       iconv-lite: 0.7.3
@@ -4163,16 +4163,16 @@ snapshots:
 
   lodash-es@4.18.1: {}
 
-  mailparser@3.9.29:
+  mailparser@3.9.30:
     dependencies:
-      '@zone-eu/mailsplit': 5.4.17
+      '@zone-eu/mailsplit': 5.4.18
       encoding-japanese: 2.4.0
       he: 1.2.0
       html-to-text: 10.0.1
       iconv-lite: 0.7.3
-      libmime: 5.4.4
+      libmime: 5.4.5
       linkify-it: 5.0.2
-      nodemailer: 10.0.11
+      nodemailer: 10.0.12
       punycode.js: 2.3.1
       tlds: 1.261.0
 
@@ -4219,7 +4219,7 @@ snapshots:
 
   ms@2.1.3: {}
 
-  nodemailer@10.0.11: {}
+  nodemailer@10.0.12: {}
 
   obug@2.2.1: {}
 
