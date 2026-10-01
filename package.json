@@ -13,7 +13,7 @@
     "@openviking/dsh-memory-plugin": "^0.5.8",
     "@tt-a1i/archify-dsh": "^0.1.0",
     "@wingsky-1/dsh-mcp-manager": "0.2.7",
-    "@xmanrui/dsh-im": "^4.29.0",
+    "@xmanrui/dsh-im": "^4.30.0",
     "dsh-better-sidebar": "0.22.1",
     "dsh-complete-notify": "^0.6.2",
     "dsh-context": "^0.59.0",

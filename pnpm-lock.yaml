@@ -21,8 +21,8 @@ importers:
         specifier: 0.2.7
         version: 0.2.7
       '@xmanrui/dsh-im':
-        specifier: ^4.29.0
-        version: 4.29.0(debug@4.4.3)
+        specifier: ^4.30.0
+        version: 4.30.0(debug@4.4.3)
       dsh-better-sidebar:
         specifier: 0.22.1
         version: 0.22.1
@@ -995,8 +995,8 @@ packages:
       '@deepseek-ai/dsh-tools':
         optional: true
 
-  '@xmanrui/dsh-im@4.29.0':
-    resolution: {integrity: sha512-iA/iPSyxlQkvo3bOHhdZmJNw7XibO8Wc/H8VUxvP4CQ+uPlGSlezH3FqhYw9sdrY27II9VpbXVrpBOhHXlUqMw==}
+  '@xmanrui/dsh-im@4.30.0':
+    resolution: {integrity: sha512-sINgdN6LSR9hfoA4ajatnODAS7a+2vU/DrxHg4uUpDdFdCjvpKBo/AH6n1OwxubFIT90EHlknG9le9v5rIBisg==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -3304,7 +3304,7 @@ snapshots:
 
   '@wingsky-1/dsh-mcp-manager@0.2.7': {}
 
-  '@xmanrui/dsh-im@4.29.0(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.30.0(debug@4.4.3)':
     dependencies:
       '@matrix-org/olm': 3.2.15
       '@tencent-connect/qqbot-connector': 1.2.0
