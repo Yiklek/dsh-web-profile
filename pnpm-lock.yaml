@@ -24,8 +24,8 @@ importers:
         specifier: ^4.29.0
         version: 4.29.0(debug@4.4.3)
       dsh-better-sidebar:
-        specifier: 0.22.1
-        version: 0.22.1
+        specifier: 0.24.1
+        version: 0.24.1
       dsh-complete-notify:
         specifier: ^0.6.2
         version: 0.6.2
@@ -1447,25 +1447,25 @@ packages:
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
 
-  dsh-better-sidebar@0.22.1:
-    resolution: {integrity: sha512-5Gr2LFu8aay74osaDEQ4IZNRGMRDhs5XMyHc6a7q1BF6xGFfuz1s2+XW3hEdDknO9rgi/7Ax2XQ1MvwEBthNEQ==}
+  dsh-better-sidebar@0.24.1:
+    resolution: {integrity: sha512-X5tdu07Ub0isxruG559o46891F7MjxM+CzR6QoGpHZtN5J8gz6FA8Dq632lLI77c4IjL2GP+N6PuWaDnoKPuPQ==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.4
-      '@deepseek-ai/dsh-agent': ^0.1.7-rc.1
-      '@deepseek-ai/dsh-client-locale': ^0.1.7-rc.1
-      '@deepseek-ai/dsh-client-ui-conversation': ^0.1.7-rc.1
-      '@deepseek-ai/dsh-client-ui-primitives': ^0.1.7-rc.1
-      '@deepseek-ai/dsh-client-ui-settings': ^0.1.7-rc.1
-      '@deepseek-ai/dsh-client-ui-sidebar-right': ^0.1.7-rc.1
-      '@deepseek-ai/dsh-client-ui-slots': ^0.1.7-rc.1
-      '@deepseek-ai/dsh-host-webserver': ^0.1.7-rc.1
-      '@deepseek-ai/dsh-invariants': ^0.1.7-rc.1
-      '@deepseek-ai/dsh-llm': ^0.1.7-rc.1
-      '@deepseek-ai/dsh-session': ^0.1.7-rc.1
-      '@deepseek-ai/dsh-settings': ^0.1.7-rc.1
-      '@deepseek-ai/dsh-subagent': ^0.1.7-rc.1
-      '@deepseek-ai/dsh-tools': ^0.1.7-rc.1
+      '@deepseek-ai/dsh-agent': ^0.2.0-rc.1
+      '@deepseek-ai/dsh-client-locale': ^0.2.0-rc.1
+      '@deepseek-ai/dsh-client-ui-conversation': ^0.2.0-rc.1
+      '@deepseek-ai/dsh-client-ui-primitives': ^0.2.0-rc.1
+      '@deepseek-ai/dsh-client-ui-settings': ^0.2.0-rc.1
+      '@deepseek-ai/dsh-client-ui-sidebar-right': ^0.2.0-rc.1
+      '@deepseek-ai/dsh-client-ui-slots': ^0.2.0-rc.1
+      '@deepseek-ai/dsh-host-webserver': ^0.2.0-rc.1
+      '@deepseek-ai/dsh-invariants': ^0.2.0-rc.1
+      '@deepseek-ai/dsh-llm': ^0.2.0-rc.1
+      '@deepseek-ai/dsh-session': ^0.2.0-rc.1
+      '@deepseek-ai/dsh-settings': ^0.2.0-rc.1
+      '@deepseek-ai/dsh-subagent': ^0.2.0-rc.1
+      '@deepseek-ai/dsh-tools': ^0.2.0-rc.1
       '@huanlin/dsh-plugin-better-locale': ^0.1.0
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -3736,7 +3736,7 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
-  dsh-better-sidebar@0.22.1:
+  dsh-better-sidebar@0.24.1:
     dependencies:
       '@codemirror/commands': 6.11.1
       '@codemirror/lang-cpp': 6.0.3
