@@ -28,7 +28,7 @@
     "dsh-rewind-plugin": "0.14.0",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
     "dsh-univer-office": "^0.3.5",
-    "dshmarket": "^1.66.3",
+    "dshmarket": "^1.66.5",
     "yaml": "^2.9.1"
   },
   "dsh": {
