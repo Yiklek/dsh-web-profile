@@ -9,14 +9,15 @@
 
 dsh 的 profile 位于 `$DSH_HOME/profiles/<name>`（`DSH_HOME` 默认 `~/.dsh`），目录里既有需要版本管理的配置，也有不该提交的内容：`node_modules/`、本机生成的 `cordis.patch.yml`、运行期数据 `.dsh-market/`、本地凭据 `.env` 等。
 
-profile 需要管理的配置只有这 4 个：
+profile 需要管理的配置只有这 3 个：
 
 ```text
 package.json          # profile 依赖 + dsh.profile.bundles 声明
 pnpm-lock.yaml        # 依赖版本锁定
 pnpm-workspace.yaml   # pnpm 安装策略（hoisted、允许构建的原生模块）
-cordis.yml            # profile 根（空列表，实际由 bundles 与 patch 组合）
 ```
+
+`cordis.yml` 不在其中：它是组合根，每次启动由 `prepareProfile` 重写为空列表，Loader 再把运行期的活树写回去。真正的组合入口是 `package.json` 的 `dsh.profile.bundles`，加上本机的 `cordis.patch.yml`。
 
 通过 `install.sh` 安装到 profile 目录，支持 **clone** 与 **git worktree** 两种方式。
 
@@ -24,12 +25,12 @@ cordis.yml            # profile 根（空列表，实际由 bundles 与 patch �
 
 | 能力 | 说明 |
 |---|---|
-| 配置版本化 | profile 配置只跟踪 4 个文件；`node_modules/` 与运行期数据被忽略 |
+| 配置版本化 | profile 配置只跟踪 3 个文件；`node_modules/`、`cordis.yml` 与运行期数据被忽略 |
 | 一键安装 | 本地一条命令；远程 `curl \| bash` 无需先 clone |
 | worktree 工作流 | profile 目录即本仓库的 worktree，改动可直接提交并快进回 `main` |
 | 覆盖保护 | 覆盖已有 profile 前自动备份为 `<name>.bak.<YYYYMMDD-HHMMSS>` |
-| CI 校验 | shellcheck / prettier、profile 可组合可启动、Playwright 冒烟测试 |
-| 自动化依赖 | 每 6 小时 `pnpm update --latest` 自动提 PR；Dependabot 每日更新 npm、每周更新 Actions |
+| CI 校验 | shellcheck / prettier、install-services 三平台测试、profile 可组合可启动、Playwright 冒烟测试 |
+| 自动化依赖 | 每 6 小时 `pnpm update --latest` 自动提 PR（纯 lock 变更不提）；Dependabot 每日更新 npm、每周更新 Actions |
 
 ## 目录结构
 
@@ -38,17 +39,46 @@ dsh-web-profile/
 ├── .github/
 │   ├── dependabot.yml            # 每日 npm / 每周 GitHub Actions 更新
 │   └── workflows/
-│       ├── ci.yml                # lint + profile 启动校验 + Playwright 冒烟
+│       ├── ci.yml                # lint + install-services 三平台测试 + profile 启动校验 + Playwright 冒烟
 │       └── update-deps.yml       # 定时 pnpm update --latest 并提 PR
-├── tests/e2e/                    # Playwright 冒烟测试
+├── packages/
+│   └── openviking-service/       # 本地 workspace 插件：拉起/停止 OpenViking 服务
+│       ├── index.mjs
+│       ├── package.json
+│       └── README.md
+├── scripts/
+│   ├── install-services.mjs      # postinstall 入口：接线 Mnemon / OpenViking
+│   ├── install-services.test.mjs # 34 项测试（Linux / Windows / macOS）
+│   └── README.md
+├── tests/
+│   └── e2e/                      # 独立的 pnpm 工作区
+│       ├── .npmrc
+│       ├── package.json
+│       ├── pnpm-lock.yaml
+│       ├── pnpm-workspace.yaml
+│       ├── playwright.config.js
+│       └── smoke.spec.js
 ├── install.sh                    # 安装脚本（clone / worktree）
-├── package.json                  # profile 依赖与 bundles
+├── package.json                  # profile 依赖、bundles、scripts
 ├── pnpm-lock.yaml
-├── pnpm-workspace.yaml
-├── cordis.yml
+├── pnpm-workspace.yaml           # workspaces: "." 与 "packages/*"
 ├── .gitignore
 ├── LICENSE
 └── README.md
+```
+
+以下是运行期生成、已被 `.gitignore` 排除的：
+
+```text
+node_modules/          依赖
+cordis.patch.yml       本机 patch 层（dsh-mcp-manager-ui 管理）
+cordis.yml             组合根，每次启动重写为空列表
+.dsh-market/           插件市场运行期数据
+.services/             profile 本地服务数据（Mnemon / OpenViking）
+.backups/              配置快照与原始 Session 日志
+.plugin-manager/       插件管理器运行日志
+.env .env.* *.local    密钥 / 本地覆盖
+tests/e2e/test-results/  tests/e2e/playwright-report/
 ```
 
 ## 快速开始
@@ -129,6 +159,13 @@ npx @deepseek-ai/dsh --profile web
    npx --yes @deepseek-ai/dsh@0.2.0-rc.2 plugin --profile <name> install
    ```
 
+6. **接线本地服务** —— 上面的安装会触发本 profile 的 `postinstall`，即 `scripts/install-services.mjs`。它负责：
+   - 校验 `@mnemon-dev/mnemon` 提供的本地 CLI 可执行，并把它写进 `cordis.patch.yml` 的 `id: mnemon` 行
+   - 按该行现有的 `storageScope` / `dataDir` 准备 Mnemon 数据目录（未配置过才回落到 profile 本地）
+   - OpenViking 默认**关闭**；`--openviking` 会写入挂载行、把 bundle 加进 `package.json`，并预热 `uvx` 运行时
+
+   细节与退出码见 [`scripts/README.md`](scripts/README.md)。
+
 ## 更新与同步
 
 > 以下流程仅适用于 **worktree 安装**。clone 安装直接在 profile 目录 `git pull` 即可。
@@ -197,9 +234,12 @@ git rebase --continue     # 放弃本次更新：git rebase --abort
 
 | Job | 内容 |
 |---|---|
-| `lint` | `shellcheck install.sh`、`bash -n install.sh`、prettier 检查 `package.json` 与 `*.yml` |
+| `lint` | `shellcheck install.sh`、`bash -n install.sh`、prettier 检查 `package.json`、`pnpm-workspace.yaml` 与 `.github/workflows/*.yml` |
+| `install-services` | 在 **ubuntu / windows / macos** 三平台跑 `pnpm test`（`scripts/install-services.test.mjs`，34 项）。脚本的 `cliPath` 取值与 CLI 探测方式都随平台变化，只在 Linux 上跑代表不了另外两个 |
 | `test-dsh` | 以 `DSH_HOME=/tmp/dsh-home` 用 `install.sh` 做 worktree 安装（分支 `ci-web`）、`--dump-config` 校验组合结果、启动 web 并等待 boot token URL 出现、检查启动日志无错误 |
 | `e2e` | worktree 安装（分支 `ci-e2e`）+ Playwright/Chromium 跑 `tests/e2e/smoke.spec.js`：断言页面标题、可打开「设置」、本 profile 插件的设置分区已挂载，且无插件致命错误 |
+
+各 job 用的 dsh 版本由 workflow 顶部的 `DSH_VERSION` 单点定义（`install.sh` 的回退路径有同名的常量）。
 
 ### 本地复现 e2e
 
@@ -223,6 +263,7 @@ DSH_BOOT_LOG=/tmp/dsh-e2e.log pnpm test:edge
 
 - **触发**：`main` 有推送、每 6 小时定时、手动 `workflow_dispatch`。自动提交合并进 `main` 时会跳过，避免自我循环。
 - **动作**：在仓库根目录与 `tests/e2e` 各执行 `pnpm update --latest`；有变化则提交到 `bot/dependency-updates-<时间戳>` 分支并开 PR。
+- **只在 `package.json` 变了才提 PR**：`pnpm update` 有时只解析到更新的传递依赖，`package.json` 一个字节都没动。这种 PR 的正文会是空的 "No dependency version changes detected"，没有可审的内容，因此变更检测只看 `package.json` 与 `tests/e2e/package.json`；纯 lock 变更到此为止，不开分支也不开 PR。声明版本确实变了时行为不变，lock 仍随提交一起走（提交用 `git add -A`）。
 - **收敛**：同一时间只保留一个自动化 PR，旧的自动关闭并删除分支；提交信息在只有一条升级时为 `chore(deps): bump <pkg> from <old> to <new>`，多条时为 `chore(deps): update dependencies`。
 
 ### Dependabot（`.github/dependabot.yml`）
