@@ -40,6 +40,9 @@ fi
 DSH_HOME="${DSH_HOME:-$HOME/.dsh}"
 PROFILES_DIR="$DSH_HOME/profiles"
 DEFAULT_REMOTE="https://github.com/Yiklek/dsh-web-profile.git"
+# The dsh CLI the fallback paths below run. Keep in step with DSH_VERSION in
+# .github/workflows/ci.yml.
+DSH_VERSION="0.2.0-rc.2"
 
 usage() {
   cat <<'EOF'
@@ -208,9 +211,9 @@ install_deps() {
   elif command -v pnpm >/dev/null 2>&1; then
     # Use pnpm's store (cached in CI) so the dsh CLI itself is not re-downloaded
     # through npx on every fresh runner.
-    pnpm dlx @deepseek-ai/dsh@0.2.0-rc.2 plugin --profile "$PROFILE_NAME" install
+    pnpm dlx "@deepseek-ai/dsh@$DSH_VERSION" plugin --profile "$PROFILE_NAME" install
   else
-    npx --yes @deepseek-ai/dsh@0.2.0-rc.2 plugin --profile "$PROFILE_NAME" install
+    npx --yes "@deepseek-ai/dsh@$DSH_VERSION" plugin --profile "$PROFILE_NAME" install
   fi
 }
 

@@ -5,6 +5,11 @@ on:
     branches: [main]
   pull_request:
 
+env:
+  # The dsh CLI every job here runs, named once so the five places that invoke it
+  # cannot drift apart. install.sh pins the same version for its own fallback.
+  DSH_VERSION: 0.2.0-rc.2
+
 jobs:
   lint:
     name: Lint & format check
@@ -88,8 +93,8 @@ jobs:
         run: |
           echo "node $(node --version)"
           echo "pnpm $(pnpm --version)"
-          echo "dsh@0.2.0-rc.2 resolves to: $(npm view @deepseek-ai/dsh@0.2.0-rc.2 version)"
-          pnpm dlx @deepseek-ai/dsh@0.2.0-rc.2 --version
+          echo "dsh@${{ env.DSH_VERSION }} resolves to: $(npm view @deepseek-ai/dsh@${{ env.DSH_VERSION }} version)"
+          pnpm dlx @deepseek-ai/dsh@${{ env.DSH_VERSION }} --version
 
       - name: Install profile via install.sh (worktree)
         run: |
@@ -97,7 +102,7 @@ jobs:
           echo "install: profile ready (branch ci-web)"
 
       - name: Verify dsh can compose the profile
-        run: pnpm dlx @deepseek-ai/dsh@0.2.0-rc.2 --profile web --dump-config > /tmp/dump.yml
+        run: pnpm dlx @deepseek-ai/dsh@${{ env.DSH_VERSION }} --profile web --dump-config > /tmp/dump.yml
 
       - name: Show composed profile
         run: cat /tmp/dump.yml
@@ -107,7 +112,7 @@ jobs:
         env:
           DSH_PORT: "3099"
         run: |
-          pnpm dlx @deepseek-ai/dsh@0.2.0-rc.2 --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-boot.log 2>&1 &
+          pnpm dlx @deepseek-ai/dsh@${{ env.DSH_VERSION }} --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-boot.log 2>&1 &
           BOOT_PID=$!
           trap 'kill "$BOOT_PID" 2>/dev/null || true' EXIT
 
@@ -179,7 +184,7 @@ jobs:
       - name: Start dsh web server
         working-directory: ${{ env.DSH_HOME }}/profiles/web
         run: |
-          pnpm dlx @deepseek-ai/dsh@0.2.0-rc.2 --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-e2e.log 2>&1 &
+          pnpm dlx @deepseek-ai/dsh@${{ env.DSH_VERSION }} --profile web --host 127.0.0.1 --port "$DSH_PORT" --no-open > /tmp/dsh-e2e.log 2>&1 &
           echo "PID=$!" >> "$GITHUB_ENV"
           echo "e2e: server PID=$! port=$DSH_PORT"
           # dsh gates the root with 401 until the browser exchanges the
