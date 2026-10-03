@@ -130,9 +130,6 @@ profile 本身坏掉了。
 > 一次，之后由 uv 缓存。想完全避免构建，可在 `ov.conf` 里配置远程
 > `embedding.dense.provider`。
 
-**Hindsight**——已彻底移除。插件、bundle 条目、服务插件、`.services/hindsight/`
-与 `~/.hindsight/` 均已不存在。
-
 ## 环境隔离
 
 OpenViking 插件会把 `OPENVIKING_*` 变量（config、state、pending、URL）导出到 DSH
