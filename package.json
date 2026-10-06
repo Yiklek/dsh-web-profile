@@ -9,7 +9,7 @@
     "test": "node --test \"scripts/*.test.mjs\""
   },
   "dependencies": {
-    "@mnemon-dev/mnemon": "^0.2.9",
+    "@mnemon-dev/mnemon": "^0.2.10",
     "@openviking/dsh-memory-plugin": "^0.5.13",
     "@tt-a1i/archify-dsh": "^0.1.0",
     "@wingsky-1/dsh-mcp-manager": "0.2.8",
