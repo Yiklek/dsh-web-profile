@@ -24,7 +24,7 @@
     "dsh-mnemon": "^0.5.22",
     "dsh-openviking-service": "workspace:*",
     "dsh-plugin-subscriptions": "0.9.7",
-    "dsh-rewind-plugin": "0.15.0",
+    "dsh-rewind-plugin": "0.15.1",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
     "dsh-univer-office": "^0.3.6",
     "dshmarket": "^1.66.8",
