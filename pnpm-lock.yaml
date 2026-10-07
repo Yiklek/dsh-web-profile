@@ -9,20 +9,20 @@ importers:
   .:
     dependencies:
       '@mnemon-dev/mnemon':
-        specifier: ^0.2.9
-        version: 0.2.9
+        specifier: ^0.2.10
+        version: 0.2.10
       '@openviking/dsh-memory-plugin':
-        specifier: ^0.5.13
-        version: 0.5.13
+        specifier: ^0.5.16
+        version: 0.5.16
       '@tt-a1i/archify-dsh':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^1.0.0
+        version: 1.0.0
       '@wingsky-1/dsh-mcp-manager':
         specifier: 0.2.8
         version: 0.2.8
       '@xmanrui/dsh-im':
-        specifier: ^4.34.2
-        version: 4.34.2(debug@4.4.3)
+        specifier: ^4.37.0
+        version: 4.37.0(debug@4.4.3)
       dsh-better-sidebar:
         specifier: 0.24.1
         version: 0.24.1
@@ -30,41 +30,41 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.62.3
-        version: 0.62.3(@deepseek-ai/schemastery@3.18.4)
+        specifier: ^0.64.0
+        version: 0.64.0
       dsh-free-search:
-        specifier: ^0.6.6
-        version: 0.6.6
+        specifier: ^0.8.1
+        version: 0.8.1
       dsh-llm-retry-settings:
         specifier: github:Yiklek/dsh-llm-retry-settings
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b
       dsh-mcp-panel:
-        specifier: 0.6.19
-        version: 0.6.19(@deepseek-ai/schemastery@3.18.4)
+        specifier: 0.6.22
+        version: 0.6.22
       dsh-mermaid:
         specifier: ^0.4.1
         version: 0.4.1
       dsh-mnemon:
-        specifier: ^0.5.22
-        version: 0.5.22
+        specifier: ^0.5.24
+        version: 0.5.24
       dsh-openviking-service:
         specifier: workspace:*
         version: link:packages/openviking-service
       dsh-plugin-subscriptions:
         specifier: 0.9.7
-        version: 0.9.7(@deepseek-ai/schemastery@3.18.4)
+        version: 0.9.7
       dsh-rewind-plugin:
-        specifier: 0.15.0
-        version: 0.15.0(@deepseek-ai/schemastery@3.18.4)
+        specifier: 0.15.1
+        version: 0.15.1
       dsh-settings-manager:
         specifier: github:Yiklek/dsh-settings-manager#pkg
-        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d(@deepseek-ai/schemastery@3.18.4)
+        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d
       dsh-univer-office:
         specifier: ^0.3.6
-        version: 0.3.6(@deepseek-ai/schemastery@3.18.4)
+        version: 0.3.6
       dshmarket:
-        specifier: ^1.66.8
-        version: 1.66.8(@deepseek-ai/schemastery@3.18.4)
+        specifier: ^1.66.9
+        version: 1.66.9
       yaml:
         specifier: ^2.9.1
         version: 2.9.1
@@ -154,11 +154,11 @@ packages:
   '@deepseek-ai/cosmokit@1.8.5':
     resolution: {integrity: sha512-LXsrlem9z8dq4sLflj2yuCuYX7KqhdzF5hZly3eZyuTo8d6oDSOXuEgC5DbQWKW+lksm6zmOutQLsP/ma6wR6A==}
 
-  '@deepseek-ai/dsh-subprocess@0.1.7-rc.2':
-    resolution: {integrity: sha512-HgELZIXAEDvlqI4ThbaJ7bJi2ytotxjcaAoXgiKstFGyyf9EAHOSmLkmJZ1G4nunF7cop2YclSEpAvGNTofBTg==}
+  '@deepseek-ai/dsh-subprocess@0.2.1-alpha.1':
+    resolution: {integrity: sha512-2tjlzMl9hTjl5X14eKH9fpqsX0tD3446B7WaHIspyTdHBWBofZS6FLIJNKwgZ2ItQHOeb+khSfBQioCxna0O7w==}
     peerDependencies:
-      '@deepseek-ai/cordis': ~4.0.4
-      '@deepseek-ai/dsh-http-proxy': 0.1.7-rc.2
+      '@deepseek-ai/cordis': ~4.0.5-alpha.1
+      '@deepseek-ai/dsh-http-proxy': 0.2.1-alpha.1
 
   '@deepseek-ai/schemastery@3.18.4':
     resolution: {integrity: sha512-SSXO6tYuyrIqKVbmOnIq0s+riUywYzouFMcnBluHF9n4KMo2G8HvEzhCYj6pj2617/glOjbJuVInJ9hfONsjkg==}
@@ -176,160 +176,160 @@ packages:
     resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==}
     engines: {node: '>=18'}
 
-  '@img/sharp-darwin-arm64@0.35.4':
-    resolution: {integrity: sha512-Uhfl4V4lhP2nbUVF9+hyH1+luj86f1gUFeo8ALYxFoULoU+G87D43BfeMP8XHsk9boxAnCY/bf2EHwhA7MuGsA==}
+  '@img/sharp-darwin-arm64@0.35.5':
+    resolution: {integrity: sha512-QRUlFQ0WxvdWyqqG/WtI3iupfD5rBzmCHXSdPsY91sAtVtTo7Q4cb6zOccZ3gqEqkr0f1As1ehLqmEpDsRf+lg==}
     engines: {node: '>=20.9.0'}
     cpu: [arm64]
     os: [darwin]
 
-  '@img/sharp-darwin-x64@0.35.4':
-    resolution: {integrity: sha512-hWniXY3bG5qKpkKrAwPe4y+VTPmf086YQAnkxWh7uA1YrlRouWGa0M0Mxj3ZjnXFkv7/TD1bTy9lGUK26vRvWw==}
+  '@img/sharp-darwin-x64@0.35.5':
+    resolution: {integrity: sha512-+BR255RhDlpygUpOc/Jdt1nT6DQ3XG/ERo5wbcdOf5Q320dKtPCKPLR1LJs9VGXRaMa8l1uUa0tkCNOXiAxZUw==}
     engines: {node: '>=20.9.0'}
     cpu: [x64]
     os: [darwin]
 
-  '@img/sharp-freebsd-wasm32@0.35.4':
-    resolution: {integrity: sha512-lIsKw/BU+kjB4eZjxrYrZmwOJYi3Ajrv66iAlBmUPyKc3HpnloevB1g3wxGD9P/5BbQ1brBGl65VRRrCvQDEqA==}
+  '@img/sharp-freebsd-wasm32@0.35.5':
+    resolution: {integrity: sha512-Y/z91nEZ4uIBX5X3nfTovjU9lHNKFYbL2lpHCLVNmXQK03VIZvXBBt0KxbPGp2SdGSF+2mQU4e+hQaWOt86iAw==}
     engines: {node: '>=20.9.0'}
     os: [freebsd]
 
-  '@img/sharp-libvips-darwin-arm64@1.3.3':
-    resolution: {integrity: sha512-suTBPTDGrI9WodccaDdwZItTSaBYASlBk1NSfElSHrUfzu3szG6lvIF58+WiFvnfzuK8ZBFS5zE00PxqxnRiPg==}
+  '@img/sharp-libvips-darwin-arm64@1.3.4':
+    resolution: {integrity: sha512-5R89nBYiRdUlSWJxPhO+GVtaXzXSxKnRu/xqMn3KTA3L9EB9Oy/P+Nn2f2vlhPuUdy/Zusb2DarbyTpGCfEDuw==}
     cpu: [arm64]
     os: [darwin]
 
-  '@img/sharp-libvips-darwin-x64@1.3.3':
-    resolution: {integrity: sha512-FVJZ5mITMobmXIz/hPDTw0EintTW5H3WfrxwLqEqjiIihlu+hVRyGrFQ60xl0Lxn7Bt3zdpevPaQi0HEzqz9fw==}
+  '@img/sharp-libvips-darwin-x64@1.3.4':
+    resolution: {integrity: sha512-iR2OKH80yi0U+dUplyh3/xdpFvps6YkCwsXenIJxqxR1v9o+xtKTGbS9H7cps+2Vxjc8B1j96p75NmTGjIhtpQ==}
     cpu: [x64]
     os: [darwin]
 
-  '@img/sharp-libvips-linux-arm64@1.3.3':
-    resolution: {integrity: sha512-0DaL0A6Xu6sQSQFwe4iVCrKWU2cCTItnRsYsCdxAMm9NF6twAA9BKnoqy4hqz4+azQ0JHuA26qiUKsf1XJ/v5A==}
+  '@img/sharp-libvips-linux-arm64@1.3.4':
+    resolution: {integrity: sha512-Y3dgX/6lE2QhQb+Gxy0WZxfg9MEm/JBjamZpS2IklP7xIQoKN4hzAm7KcMVGtaVDt3neE9OKBC7vAfonA/Lr1A==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@img/sharp-libvips-linux-arm@1.3.3':
-    resolution: {integrity: sha512-3rbU4vqXXc3hY/OiXdl52xZvT0F1yEngWfvqudtPJg/KkyiaQw2DRsFrNzpmLvfavbwOq3qXn36GP8obHRULQA==}
+  '@img/sharp-libvips-linux-arm@1.3.4':
+    resolution: {integrity: sha512-LmRtTsOHuvM2+wlO2Db37dx5MiZhB0FvSunciw48YjdOkZz9KAiRbm8ujeMOA1INqmei5NapFxYEK1D1ZSidmw==}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
 
-  '@img/sharp-libvips-linux-ppc64@1.3.3':
-    resolution: {integrity: sha512-cdn1OvUBwsXhbC0zSzJnNzf5MZ/mTrobawDvNXBTxe8VtqKAm0sRuEY2Evzovb/w9JMk4TvRxqt1mekSuJz64w==}
+  '@img/sharp-libvips-linux-ppc64@1.3.4':
+    resolution: {integrity: sha512-Le6boB8Tai0Nis+gIxIpKx68UDVVIqdR8Tin5Yf1z2LJJQLDJvCDRqRu+jC2qCoD+eIomonmOwB4smBRxfVpYQ==}
     cpu: [ppc64]
     os: [linux]
     libc: [glibc]
 
-  '@img/sharp-libvips-linux-riscv64@1.3.3':
-    resolution: {integrity: sha512-HjPVx7yKz+0lqdhDlTw1tt90wamBoxhiXpvl1XZpJLiHH4RCJ5yDTqH+VlYPv2fwFs89JFw4c1IexYOcQUi4IQ==}
+  '@img/sharp-libvips-linux-riscv64@1.3.4':
+    resolution: {integrity: sha512-aHkkIEHPRdQEegJN20MLmGtxYD9R2wQr3Cwpddnu5+YKMt6Uzax7S9h5gpZTo8wyrGuZSlfQ63OevL5mTyOC7Q==}
     cpu: [riscv64]
     os: [linux]
     libc: [glibc]
 
-  '@img/sharp-libvips-linux-s390x@1.3.3':
-    resolution: {integrity: sha512-neWLh+3yCNThxnfy3c4BbVBeGgt9aftno+XbT56iK28RgeDs3UOFWviLWlUu0bArYVYJaFDK+RRohbicUNCm8Q==}
+  '@img/sharp-libvips-linux-s390x@1.3.4':
+    resolution: {integrity: sha512-ra/mB6MikESDUO7Yg+Mi95bFBb9GsObURuhnOv3OqknjGe9sZrG8tCe9q0xSIGrtLgvgw0gKnFWcK4blSgQOuQ==}
     cpu: [s390x]
     os: [linux]
     libc: [glibc]
 
-  '@img/sharp-libvips-linux-x64@1.3.3':
-    resolution: {integrity: sha512-4vKmvAst9nrowcqquKFAyZJUDolUaIp8uRiN0mWFguJ1IplC9/pitXtlnnlU4aa/eJw3J7i67V+pwUL+wZGdsA==}
+  '@img/sharp-libvips-linux-x64@1.3.4':
+    resolution: {integrity: sha512-GJ//SSXbnwSDes02umB3nDJLFcQzw8a18V8fyhqr6tV515tOEMdImjjxj1AoafMRz56F3PHgftnj1QEKSU1zkw==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@img/sharp-libvips-linuxmusl-arm64@1.3.3':
-    resolution: {integrity: sha512-Y9kQaLMuNoB0bPYOOdcZMaseNrFpPodIWWMrx+CZyydf2xn68j9WYc6sWWRrDwNkzCQjKYfc68L7jKjGlHMibw==}
+  '@img/sharp-libvips-linuxmusl-arm64@1.3.4':
+    resolution: {integrity: sha512-hvulFwtjUcagsis6BBxHwGFwWoNZjgYmULGVrZcyfNbjA8hKILbRxGg15/7w5HDyXHXUos/j6baAWqnCyQ2DWA==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@img/sharp-libvips-linuxmusl-x64@1.3.3':
-    resolution: {integrity: sha512-fj8Mv0HHfD1Rr+4I68+3agJynxDWtBFgicTbSOb9Bke6pIwzGcJ+RX/yHjmiEGFMCavY/dxvem7MyNaJF+wDiw==}
+  '@img/sharp-libvips-linuxmusl-x64@1.3.4':
+    resolution: {integrity: sha512-6zXKeE/p39I1AmA3cJG35eyBGNqNddLnUXjhwBnsGjFPWqf5VKkDBEqaEkPDoTEtkxwi2vv8Tcr2mDyP4So7Fg==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@img/sharp-linux-arm64@0.35.4':
-    resolution: {integrity: sha512-De4jpEnAU8Hd5oT0j1G3uL4ZvTuipVMn7YC6vPaJhy6/7EwEae0SVAoBrUMYQbkLGDm85taVWwuPc1a44LTzCQ==}
+  '@img/sharp-linux-arm64@0.35.5':
+    resolution: {integrity: sha512-LYVx5JTsOM2CBzmxreh+nl64/3H6Xb09iSLknqH47z2T2DFFxDeFLP5y4dJwe6H7uGQlHPyEEtIqyo3DYsRwdQ==}
     engines: {node: '>=20.9.0'}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@img/sharp-linux-arm@0.35.4':
-    resolution: {integrity: sha512-7OAS8gI0EReKGVN2HssHlM6umJgxF5VI3xN0p9FA91p/YO+ou5hiNghLdZ5BEHztwaaK5+bLKRf8x/o2L2nk9A==}
+  '@img/sharp-linux-arm@0.35.5':
+    resolution: {integrity: sha512-LEaXK2WdXVK5ykcw0buWyPMsmLLL2vpHLD6yrNSW+JGEL3BZPA4tpKN6iaMc4AxTTAoaX/sU1rOL51lcIz48ZQ==}
     engines: {node: '>=20.9.0'}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
 
-  '@img/sharp-linux-ppc64@0.35.4':
-    resolution: {integrity: sha512-2oYZJeIl4kCcMGk4ouZVjnkCtFrpQFlNEtJ6GbxzhHQchwH0NH/qEb9ykmOl29dqwMq+JhFdZn+1ak2FKhI9fQ==}
+  '@img/sharp-linux-ppc64@0.35.5':
+    resolution: {integrity: sha512-QVxAAq8evVRI9ia2vqgwrmWucn5Dfv+JdWzj75pD8omHLPSP7f8p20O8jxzjCcuCEQEOtYOZUmX1hkiZ0kdevA==}
     engines: {node: '>=20.9.0'}
     cpu: [ppc64]
     os: [linux]
     libc: [glibc]
 
-  '@img/sharp-linux-riscv64@0.35.4':
-    resolution: {integrity: sha512-cPbNChoRURAWdebDIHSenxRpgEdy7JkPydSnUxRm9VvKD7m0/xVaR/8Fzlu81pk5nHEvHH87UZUA7cTtwnbJSA==}
+  '@img/sharp-linux-riscv64@0.35.5':
+    resolution: {integrity: sha512-LtdreXguaavKODPIfzJ4kffx7UNt1omwtK0rch4EBbbSTXPnxWmYSayXdLJw0fJzQ97kHt1gL/yh4tvU+nCyRQ==}
     engines: {node: '>=20.9.0'}
     cpu: [riscv64]
     os: [linux]
     libc: [glibc]
 
-  '@img/sharp-linux-s390x@0.35.4':
-    resolution: {integrity: sha512-RY0JFY8Fd6RonCBtHz+DvadaPkXDSI1AUn6yWL9TipqkZ1vY8w8evqdgyDFnkm4/K1ve1TvZiaePP5oSd4+WVQ==}
+  '@img/sharp-linux-s390x@0.35.5':
+    resolution: {integrity: sha512-UZasTOFiYzotTsGOCu42BfUzP6Tu6Do/947iRm1RsLKvlllxwGcn4RN27LibGWceix4Y+Pmw3jsnTcCQIgWjqA==}
     engines: {node: '>=20.9.0'}
     cpu: [s390x]
     os: [linux]
     libc: [glibc]
 
-  '@img/sharp-linux-x64@0.35.4':
-    resolution: {integrity: sha512-9qvvEAuk8k89TfWUoX2htWjbAMX8p+NxCppjpcg5k6xMsjhBQPTsoIh36h9Qde4WRuGpJeYnOjdosDn/cnv+OA==}
+  '@img/sharp-linux-x64@0.35.5':
+    resolution: {integrity: sha512-SxFtLTeJInhAA9Q836kux2vZNeOBQEx658qvbboZScr0wIARym3IcGmW7KpVD5sbVg0Ojy+udFQdayYIZyoNog==}
     engines: {node: '>=20.9.0'}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@img/sharp-linuxmusl-arm64@0.35.4':
-    resolution: {integrity: sha512-KB5jxpfWQTr0nc3xdHtWChdbifHrBGsd2SM62Eyxrl8afikm+f5qGBU75SJIZBT/S1MC8XyacdlXBMSWq6OURA==}
+  '@img/sharp-linuxmusl-arm64@0.35.5':
+    resolution: {integrity: sha512-9HbMclmI1zlNkFRs3z9/eBtDjfD0sGlrX1z6b1qwmiFY5ElDLh4BC0LPBdVp7z1DXFiKlIcznf+ZlsuZzLxQqg==}
     engines: {node: '>=20.9.0'}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@img/sharp-linuxmusl-x64@0.35.4':
-    resolution: {integrity: sha512-f+eZJZIQNEEd26RPSW+76chwOf1XtA2Y/O+5ocVyLliHkeih3e+jhLVBdNTd2rS3IbNXK8+ug93Vf5ZXtF5Lxg==}
+  '@img/sharp-linuxmusl-x64@0.35.5':
+    resolution: {integrity: sha512-4KOphqB035HrVdqLZfCgMzzERrQkkzOwRhl4OAkRO1YCldbaFjySXMaK534Mo0V+LndnlJk+sbUyLeU0ULyD1A==}
     engines: {node: '>=20.9.0'}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@img/sharp-wasm32@0.35.4':
-    resolution: {integrity: sha512-zQnl4Kwp7Q6NHsENtU2T/00Zi+w3AQNwz3+UaTyVBy2FpXrzXzGjndpK61onhZjRtRpQXxCTeqw19bVyXOh7jA==}
+  '@img/sharp-wasm32@0.35.5':
+    resolution: {integrity: sha512-Ptsga1su4tQx+LLF1ECS9U6nz5kmrXKo6XVbtR48Ke3ZRxxgaWBu7IDtEe1quo8hiupwm6WFqxVlXaSf7IINGQ==}
     engines: {node: '>=20.9.0'}
 
-  '@img/sharp-webcontainers-wasm32@0.35.4':
-    resolution: {integrity: sha512-ESfNkywmCfPNyaZjxooddJQiQ+l/nTpGEOGthxiLnIHXC/CmcBixnfwUleX9mCz9ovrUUvKMap/pm8RYbzfwaA==}
+  '@img/sharp-webcontainers-wasm32@0.35.5':
+    resolution: {integrity: sha512-hfhF/FmoQyTUkA0bIKFOtw536BQSeBMe6BF6QyWlrPxT754+TFLaZ7sKKTfvvM0yJgKgaYTwnFCIZ/GuDw5SUA==}
     engines: {node: '>=20.9.0'}
     cpu: [wasm32]
 
-  '@img/sharp-win32-arm64@0.35.4':
-    resolution: {integrity: sha512-iNdlBX9gLVvqe2I3uIJSIKTq6wckP/DYxZtcqxm09x5Gi24DnFBmPAWZmr60ZyYMG0xlzo6goG3670ar+RXvRw==}
+  '@img/sharp-win32-arm64@0.35.5':
+    resolution: {integrity: sha512-X4t7g+7ZA5DKblCBEXGjUqqemj4vczING/5viFwAL8h4N3qYeyjwdCvRLHi4EdOUI+2Z7UFlp1VM+p/AuEtm6Q==}
     engines: {node: '>=20.9.0'}
     cpu: [arm64]
     os: [win32]
 
-  '@img/sharp-win32-ia32@0.35.4':
-    resolution: {integrity: sha512-kqRsbaa5CS6KHlpxnN7WhE6vAAugXyZButpRdvDWetlv6Qv4N9WTcrWzF7tXfB9T7MsoadqdI8hmwLq6UlLvtw==}
+  '@img/sharp-win32-ia32@0.35.5':
+    resolution: {integrity: sha512-5Zm82LoBc43nhwNybZlG7Y1KO//Zhsn306fQl29ZOuStHLGTo3BWL83q3cznX0poxSAMuYL1On/BHBxkBeKr6A==}
     engines: {node: ^20.9.0}
     cpu: [ia32]
     os: [win32]
 
-  '@img/sharp-win32-x64@0.35.4':
-    resolution: {integrity: sha512-XtmnYhBcrORsJ4XJngyzr/EWP0hRZLAZRFaApdKuviyqF78+ylxh2y06ZmtULAMOnObJ3ucpN0AcwSWnMowTRg==}
+  '@img/sharp-win32-x64@0.35.5':
+    resolution: {integrity: sha512-x76eH0vEiHlcMQu8Y8IenntaACtddpT6W0wmXtWrnKcnKI7ME5DdgqhAD6SEWOEl1v2zDvkZDhFA9KnURwpfqg==}
     engines: {node: '>=20.9.0'}
     cpu: [x64]
     os: [win32]
@@ -436,46 +436,46 @@ packages:
   '@mermaid-js/parser@1.2.1':
     resolution: {integrity: sha512-n12NohV3mrUyUL2o93IgG/ifeW9FTyeJn3zDxkhwa8MJ9Fxg3HQMlA3RiGmD/3UnJvheztkjjQAjA2T4LmUcpw==}
 
-  '@mnemon-dev/mnemon@0.2.9':
-    resolution: {integrity: sha512-wrIigB5MlaHwDq0R6qBlGtbKstMnYtpXCkRYyM7vYytInstaWJCjRkq8pNIUjGwhlmwj4tIjVESI53LSbs6Wuw==}
+  '@mnemon-dev/mnemon@0.2.10':
+    resolution: {integrity: sha512-XqBu2n2aCAvU/X5Ysf7IRh6p+g2rJTqYcSYKrBOY9NYGR9lgSMT8hJY5AciNnbbsjwtRQTwxp0OlqH47HJKhKQ==}
     engines: {node: '>=22'}
     hasBin: true
 
-  '@mnemon-dev/mnemon@0.2.9-darwin-arm64':
-    resolution: {integrity: sha512-G7kP7+IrMtwgWVM4UwxyXoLT5CiLauE9LzSFkK0ZKmVbWMlHhwBmz1y9axYdz5JUtcJK5Wx59q+/hztkSiCPcg==}
+  '@mnemon-dev/mnemon@0.2.10-darwin-arm64':
+    resolution: {integrity: sha512-1b3PmFh79biTbY8SbG3BbloI8wlAstx/Q+16Ck2HKSfrKD8NCdMAH2pbxQejMkdO4NZHcn5WF2uGNo6kYe6cRg==}
     cpu: [arm64]
     os: [darwin]
 
-  '@mnemon-dev/mnemon@0.2.9-darwin-x64':
-    resolution: {integrity: sha512-VG50u3i4o9RjPyYdvz2LwXW2C7ifvgKcZx150HSW/afCL9rhaZymKLZrL8rSrfoXW3AJpwiTqTc3XnKlUjPrPA==}
+  '@mnemon-dev/mnemon@0.2.10-darwin-x64':
+    resolution: {integrity: sha512-HokOtVH5DIzFat4+kzCB1wX6tMOzFLi99wVSa1fcu0hWRq4ZWKNeDeC+oPhjamzEjxRXzICUFEWdPd5243+NyQ==}
     cpu: [x64]
     os: [darwin]
 
-  '@mnemon-dev/mnemon@0.2.9-linux-arm64':
-    resolution: {integrity: sha512-IqhY1G2IKdEZTTVofJEudHx8NHehdZcMBsQziySBvDyp7BZwpSryESRxPIikhaRfuGd9gcuHZ+/IHdZ49MvQCA==}
+  '@mnemon-dev/mnemon@0.2.10-linux-arm64':
+    resolution: {integrity: sha512-g2Nq39+8xXxQ58kEzvhqrA4y9kk+uW1BQcNbg6/vRV1sX131K03VRZBWUFIYxleNbh0i4Vs8ZgO4FbpdpJJCGA==}
     cpu: [arm64]
     os: [linux]
 
-  '@mnemon-dev/mnemon@0.2.9-linux-x64':
-    resolution: {integrity: sha512-31tqR/4V6sFbn5wN0+1NqOgVKUN36Rf+2O43KkWVP7rTFwJUk3A6Vup9VOeOkEjJ1O2/EceXV/OSOhuOvWK85w==}
+  '@mnemon-dev/mnemon@0.2.10-linux-x64':
+    resolution: {integrity: sha512-amptFtYGqa+am9IKLnYFtPoJhA6a8xEJCAvXPaMrk80jCoOi4YuR9tXI8mwdiWiYscsBVrlKqoLDbzkdqiMgKQ==}
     cpu: [x64]
     os: [linux]
 
-  '@mnemon-dev/mnemon@0.2.9-win32-arm64':
-    resolution: {integrity: sha512-9PaTTlDngfKcIOmE9f+iW/HVAgMkoU1eUoeZpezqbLgOl/SwHOxy2wXatB+n+z4dswbopEFdMFY71//DV+otOw==}
+  '@mnemon-dev/mnemon@0.2.10-win32-arm64':
+    resolution: {integrity: sha512-s4SwtcR7W8rv7tqP/VQEcN4eqH3p47DZNJWA/hhteUNdCcjSdg2jZlAJkEdpX6K8rHA4oJLEEuqOZhcQDgXvvg==}
     cpu: [arm64]
     os: [win32]
 
-  '@mnemon-dev/mnemon@0.2.9-win32-x64':
-    resolution: {integrity: sha512-l8iSeUdtHMLk+ngxaglmO3GwopW3x7W3Fv7KOsYHLiKQSGjx9zlJFLbRsqS5e56Sp6BcnadEGYDwziG1Qi8TIw==}
+  '@mnemon-dev/mnemon@0.2.10-win32-x64':
+    resolution: {integrity: sha512-oTr5JEUJCl8XJYeG41c4N3IxsuVl/Hk1HXwRzzPzH9sDsuAYAAtXwoWikLeqWqdtWR2lQ7fmjEHr3Qi93Xd/iA==}
     cpu: [x64]
     os: [win32]
 
   '@neon-rs/load@0.0.4':
     resolution: {integrity: sha512-kTPhdZyTQxB+2wpiRcFWrDcejc4JI6tkPuS7UZCG4l6Zvc5kU/gGQ/ozvHTh1XR5tS+UlfAfGuPajjzQjCiHCw==}
 
-  '@openviking/dsh-memory-plugin@0.5.13':
-    resolution: {integrity: sha512-PMxXqXyuPebniAYQVAnSA5JCHc4aB6scrcIONmb63DYZfFQ6p143Kk9zvOvHhP7LBzx6IKU3+HWzY52Yaa9B2g==}
+  '@openviking/dsh-memory-plugin@0.5.16':
+    resolution: {integrity: sha512-p70ZwUBWV6RLFp/de/cCsqkME5V6UD81SuPu6jW4RxCEep8UawZZlHdU0kKeWuZwN7Bvm9LshgSw4vwrq09ibA==}
     engines: {node: ^22.19.0 || >=24}
     peerDependencies:
       '@deepseek-ai/dsh-llm': '>=0.1.0-rc.6 <0.2.0 || ^0.1.5-rc.1 || ^0.1.7-rc.2'
@@ -664,8 +664,8 @@ packages:
     os: [darwin, linux, win32]
     hasBin: true
 
-  '@tt-a1i/archify-dsh@0.1.0':
-    resolution: {integrity: sha512-D8fDqV6DV/vo80Gj/3rgidd+hwBbhTVncaVoD5Uhh+DbgYlEoQQOmBVbhU5HW33wE5OqJP/2HkTRPJ0hf7W0tA==}
+  '@tt-a1i/archify-dsh@1.0.0':
+    resolution: {integrity: sha512-ae5L+SyZngy3EzYnWHHfccAYJCZh5e9MTkEBh7mrwTMfpwpFtkIhiOg2vI5xnluCS8CSb+Ne1hi1kOWRQQtGBQ==}
     engines: {node: ^22.19.0 || >=24.0.0}
 
   '@types/d3-array@3.2.2':
@@ -1004,8 +1004,8 @@ packages:
       '@deepseek-ai/dsh-tools':
         optional: true
 
-  '@xmanrui/dsh-im@4.34.2':
-    resolution: {integrity: sha512-6t3Epsq8ZqCqAEhmJzvtBgwjUKC2bBxsfnJj26uqWOAGDt+6jpBlaDZFr/So1RTS0SJ3SbfW9KDJ5verP4iHCQ==}
+  '@xmanrui/dsh-im@4.37.0':
+    resolution: {integrity: sha512-Aw57odSIyWPh2/fSIpMhNtLxqud8mH/JoJJHefctECua7sJjFUKjPQtMhnnLfgU5662o8zt+EK9FXLF/jCNYow==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -1013,139 +1013,163 @@ packages:
     resolution: {integrity: sha512-Oc2KInVkPfUjEB4PeV6X0NvIoyYTzDe/WmqFrTwBqKs6YKnz4A7XwWQvJTb7M0rLz9a6WgpUUiiS5QKaCi4O/g==}
     cpu: [arm64]
     os: [android]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-darwin-arm64@0.10.2':
     resolution: {integrity: sha512-3H7eNPIHJndUJXZ4QUGBPq1zC6RGcUZfm7bymJes+/N7wTVWUn1bxZ9JcozYHpkWQNm9f23G8YWbaHD9aYH72A==}
     cpu: [arm64]
     os: [darwin]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-darwin-x64@0.10.2':
     resolution: {integrity: sha512-AJOUpR2s3LF9AWiiub/Uyc/UoXNTWcq8hK3cVI6fUSXtwh34dG21J6hRuNlO6JVJFTo4o3ScVvZOrh/YFfUEAA==}
     cpu: [x64]
     os: [darwin]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-freebsd-x64@0.10.2':
     resolution: {integrity: sha512-ms7DcZu87u5CiK/wMwvpKAvAmtaqKjCQIXNweMLypG6qbuiaOMQf1jpbB5+j46xBcgCovo8TQMcv0bCQLKIL9w==}
     cpu: [x64]
     os: [freebsd]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm-gnu@0.10.2':
     resolution: {integrity: sha512-xJDpYAsKV5+eaiBhTYl05fvT6sst4PsCeuIFMRu9b0/WCSrNQPfCDtAQ5/MS6xNpsdujdZEPR+gmfWk3ZG5i3A==}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm-musl@0.10.2':
     resolution: {integrity: sha512-qfTkgd7AEx61l4K9VtXWCGTxc/fmXJ4ZheDz3i+/AAJUtg4sa0bPrc0VBxPggB/rayR8Z3+JfrBItuyanBJJ9Q==}
     cpu: [arm]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm64-gnu@0.10.2':
     resolution: {integrity: sha512-4e6Mifm/4UdjtU3D8mATIrvgP+xEiH8xtQOjd0zpd72XKWT7ug3sdyhq2utkkZFP6BvYp7SgZrI+aR4VeIOHdw==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm64-musl@0.10.2':
     resolution: {integrity: sha512-RdsJrUfDYFVV3JOmWFUWwSu31fa1APn12xDeIKxgl/YWxrabwtxsDBNjF2561c7tmcbiewdCUvngqRs8AyGVLA==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-x64-gnu@0.10.2':
     resolution: {integrity: sha512-mVzWimEPPreaPyXIUvxsHoJzvO7ckZ5j0LgQFHz04zQIRwt9A9T2hA7K5/jYjJKkMxWG/U2VjhGNwVhtyU+uqg==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-x64-musl@0.10.2':
     resolution: {integrity: sha512-Y77fyISurmr2mvO1yeq3u+x/WJbACgPR4w+lzEVx30ViCxZzIGrZPRN1yEdZ9xUNPNsIO5thBHIdRNG+UGUG+Q==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-win32-arm64@0.10.2':
     resolution: {integrity: sha512-1+tGLyG0u5YYy0lev4ck7/0sd8xJ9SZde0dLut7qLDPZV5WVTV8x6OxNXUne/PGuHZyO1vK+txPQzzHOyXHGSw==}
     cpu: [arm64]
     os: [win32]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-win32-x64@0.10.2':
     resolution: {integrity: sha512-8a2SExRohRbwC0MY4VpOF0/RSckrJ2ASZqAor5/RYSJJaeadR93n10gZzcKT6pY9ukiSOIZCRKVRD2tH73T0qA==}
     cpu: [x64]
     os: [win32]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-parser/binding-android-arm64@0.10.2':
     resolution: {integrity: sha512-2VPBU9fRGRAQ2xPAvghnec3oou5Nrxm2Bezhf+13UMspAxQSkF/32r+ySKXSwIPA5/RivumDJDxAxc301Sgicw==}
     cpu: [arm64]
     os: [android]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-darwin-arm64@0.10.2':
     resolution: {integrity: sha512-LD+PMZE51tCYTOss5HBkm3/AE39MvcMDBfWJx7A4yDcjfNbAQDnHZKtzSOuqrswx+TQHY0ws5xn6+fWOwtmfBA==}
     cpu: [arm64]
     os: [darwin]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-darwin-x64@0.10.2':
     resolution: {integrity: sha512-mmZ8cND+AoIIMRERyMinlg5ApHxP23B9jH2B5wT7T+dliPa9rubLxneB/SUjFwyUjGaFnB5G7t4YvpfbO5zbkQ==}
     cpu: [x64]
     os: [darwin]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-freebsd-x64@0.10.2':
     resolution: {integrity: sha512-gVIjaaIddbRfAhHlC8N809wQWml7mxfSVnzaLtzGXObTeFTPAg/YVnQXt1UOhPM1ah5eG/8Y0RUlNpB4GVe7eQ==}
     cpu: [x64]
     os: [freebsd]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm-gnu@0.10.2':
     resolution: {integrity: sha512-q/XPPQQAPdlw05aPj30ygBhekmQryGOwxVraBgApjKK8yY1kNQgqq6XCYLF1WHSee+lhxclrTO7W0/bt7dR1GA==}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm-musl@0.10.2':
     resolution: {integrity: sha512-A+Cb0I1hFF4wilTQpWs79k1aNnj4B2tkrHx3zsuUNF9BtVY2zPZ4yeQEM/zjXrS/qJlNMZVK9NrWJjwdpnTrfg==}
     cpu: [arm]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm64-gnu@0.10.2':
     resolution: {integrity: sha512-aGNSzqIqqphFwAdIFwVvKIyXD1Iy3CxrEJVIZAT87Ecyi4vCmmDD2v2l9h+Gd3/wSy3JZlOI792LJbKAjyy9rQ==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm64-musl@0.10.2':
     resolution: {integrity: sha512-Ddl1sF0rtuCXyHGSOV6dcmdx+ETv1iD+IVFqQuOjzkJZWclxJxdBWX6ZJMRtTiGqGUTbqLEKiTXxpR/Bvqk+2A==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-x64-gnu@0.10.2':
     resolution: {integrity: sha512-/nlcpR6IF5U+0m5L9wvAIXeQa2DT+BXuvqKDsTcOTlcc0B4dHNyqE5hTXsS4hAyimpy2ZK8A1zMNF5hTrjg2cg==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-x64-musl@0.10.2':
     resolution: {integrity: sha512-GX80dxTQD/M/OryyuxJcFzFENzry3cDFPvCFTyWogNWQH3fSHfMrNfpwpl1YzMos1eV9NygK5GSDG7VArQlb4w==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-win32-arm64@0.10.2':
     resolution: {integrity: sha512-agePQBV4VHewiGU0ACSjscZ/hJd283f9JfAF19Gf1rI5+wy5tTgx4GS36i0b3xim15AQ4RCpDRosEvhLZ4zAOw==}
     cpu: [arm64]
     os: [win32]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-win32-x64@0.10.2':
     resolution: {integrity: sha512-s8//CMpgL5+y1lvDCdyh1rwGI5+ytDJywFJRe1vnhI7n0j+caxshNucurikYLLVeQ2SYFex6aPrzgQxkabBQRA==}
     cpu: [x64]
     os: [win32]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-toolchain/types@0.10.2':
     resolution: {integrity: sha512-sSeo4SSSToiS+sSD+bwn/s94EEcaLJ7tG5LCp8gFYC1G5VzxzX7fqB6m9RU1yMD8KTpu6zdU/I1NlQf8hVBJ9Q==}
 
-  '@zone-eu/mailsplit@5.4.19':
-    resolution: {integrity: sha512-nDWzw+X3tqfwd7DpDThAjg3KqtrNA6bG2gkrf6m2j1JBaGyyKAZzu1TguzB4GEco+HYpXAbXZ7kbl4Sn8H1vXw==}
+  '@zone-eu/mailsplit@5.4.20':
+    resolution: {integrity: sha512-6B2w0zRBWOwbO5h7SL5N/2z1AuNchTP3OT33MObUr4/cz9bWPrZ6KadLKxnSrOZG0AGu7Q03p4X7eQhZHc1u/A==}
 
   agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
@@ -1490,8 +1514,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.62.3:
-    resolution: {integrity: sha512-686D95bafw0OOwdL7/oxXewgLlagjWktlAAtI9KKJGCTVFWJP1n94Ote5cSE2QA43GtibPngK0va58nGlrx1nA==}
+  dsh-context@0.64.0:
+    resolution: {integrity: sha512-GZxFmEHdFQjJuOqj1C6q5kyG10pyF3qxiu5awPhgWAQHy69TbuvpiSOL2uyGjJjU9j/KeSy+pqhxTHlVTF7D/A==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -1509,8 +1533,8 @@ packages:
       react-dom:
         optional: true
 
-  dsh-free-search@0.6.6:
-    resolution: {integrity: sha512-B3eFTdCdGci6m31Q0CWZi+j2mML2u0HPkIFcdYy1iex4ikDdudH29zGa8gfY4vxG3vmvB4MwwH23j8sKOkj65g==}
+  dsh-free-search@0.8.1:
+    resolution: {integrity: sha512-WJ26G+DFrxnrPQXs2IiCH0jApV2SDsAKTAMV5j/KnMqWXME9LPPvCz7wwMAHY7NTkCoZBz8BjIb+3vEAfpZ2JQ==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
@@ -1540,21 +1564,21 @@ packages:
     resolution: {gitHosted: true, integrity: sha512-oMHICVp/5BmsmLxX0MX9QnacBDR8jzMQMen+2LK5QLkACxH+g0PzY8BfIcGvJU7zw0skTVoXBUTTCaXZBO73OQ==, tarball: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b}
     version: 0.1.0
 
-  dsh-mcp-panel@0.6.19:
-    resolution: {integrity: sha512-5kWyt2DW2DHq/gGjqSWX15yXLgK3fuxC3mwBs3Fy/02WMFsiT7c51OqKoxbOCfnZwAtoXjL8xt8vTY5r8W5pBw==}
-    engines: {dsh: '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0', node: ^22.19.0 || >=24.0.0}
+  dsh-mcp-panel@0.6.22:
+    resolution: {integrity: sha512-VTfb34PD7mhj7ISnN27E++2F8ZYIlK4w3AKkfobdonY+Jha5WdTJh0m7bg8C5/4TwihMHAeWInomCgrTbEMPGA==}
+    engines: {dsh: '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0', node: ^22.19.0 || >=24.0.0}
     peerDependencies:
-      '@deepseek-ai/cordis': ^4.0.4
+      '@deepseek-ai/cordis': ^4.0.5-alpha.1
       '@deepseek-ai/cordis-plugin-loader': ^1.0.3
-      '@deepseek-ai/dsh-api-remotes': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0'
-      '@deepseek-ai/dsh-client-connection': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0'
-      '@deepseek-ai/dsh-client-locale': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0'
-      '@deepseek-ai/dsh-client-ui-settings': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0'
-      '@deepseek-ai/dsh-commands': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0'
-      '@deepseek-ai/dsh-jobs': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0'
-      '@deepseek-ai/dsh-tools': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0'
-      '@deepseek-ai/dsh-typert-protocol': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0'
-      '@deepseek-ai/schemastery': ^3.18.2
+      '@deepseek-ai/dsh-api-remotes': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0'
+      '@deepseek-ai/dsh-client-connection': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0'
+      '@deepseek-ai/dsh-client-locale': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0'
+      '@deepseek-ai/dsh-client-ui-settings': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0'
+      '@deepseek-ai/dsh-commands': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0'
+      '@deepseek-ai/dsh-jobs': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0'
+      '@deepseek-ai/dsh-tools': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0'
+      '@deepseek-ai/dsh-typert-protocol': '>=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0'
+      '@deepseek-ai/schemastery': ^3.18.5-alpha.1
     peerDependenciesMeta:
       '@deepseek-ai/dsh-api-remotes':
         optional: true
@@ -1584,8 +1608,8 @@ packages:
       '@deepseek-ai/cordis': ^4.0.1
       dsh-mnemon-source-memory-spaces: ^0.5.1
 
-  dsh-mnemon-provider-holographic@0.5.5:
-    resolution: {integrity: sha512-yWNQFRC6o3/yriG8vK7PbTUx0F+cYH7kC1K9jUXNcIvV5m8wVsz2GCYpwM9tgCEieGf9wMUw2vkjiW5WNvXDdA==}
+  dsh-mnemon-provider-holographic@0.5.6:
+    resolution: {integrity: sha512-mzIsCsH4IuDQwsLJhzdRzCYlMAQHueiWb9gJL13RfD+y7gDxJBBlv/sgqLrtJg+DetcpMqISqClZwTw7tXxElQ==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
@@ -1633,8 +1657,8 @@ packages:
       '@deepseek-ai/cordis': ^4.0.1
       dsh-mnemon-source-memory-spaces: ^0.5.1
 
-  dsh-mnemon-source-documents@0.5.8:
-    resolution: {integrity: sha512-WqM/AsNBHyN5/mQkDPCoIrNDVXNQqSnviD3zmvjv7I9DnXLMPpafws8ZsDd3603oMMFkGB6L0mwM4nxbgLujWA==}
+  dsh-mnemon-source-documents@0.5.9:
+    resolution: {integrity: sha512-TVFLNSF0AipZkOVsuzDml197R5vitik7OuzekVqWFU5Alz3PzX5lAvedo56tYm7QHAwlQNMtcMYWETsN+0psFQ==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
@@ -1644,8 +1668,8 @@ packages:
       react:
         optional: true
 
-  dsh-mnemon-source-memory-spaces@0.5.14:
-    resolution: {integrity: sha512-qSqURsZvpHFNqhJdPua3uIcrCQ9Xf17dkB9cxF4USCoviyivN5RBggRA/XejpPXcEXFCWYmua7o1R0Brmhe3TQ==}
+  dsh-mnemon-source-memory-spaces@0.5.16:
+    resolution: {integrity: sha512-RAmm9SB0i1gzdHac14CYZ01wu3Rm0aJzIJZCyINXerOyumO8a6s48ErxmwSEejXFg57V5fMriC8gKtw4EtlzLQ==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
@@ -1656,8 +1680,8 @@ packages:
       react:
         optional: true
 
-  dsh-mnemon-source-runtime@0.5.11:
-    resolution: {integrity: sha512-2DD3bDaoLX75JcZIp1elSU/gwkJPx5VGqYGJkMdGjqiRUSY1W5vthVauyu2vmYAYMO2+Grfvfea5niWnB8xkcg==}
+  dsh-mnemon-source-runtime@0.5.12:
+    resolution: {integrity: sha512-KfJ4V/DmSiFAqSD3i0HF7ua1r3tq8WCm0/InIgs2bWK9Co37XJ0Hpcw6TpLL8yHAfCQnEIi97/WGl7zpbQnOsw==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
@@ -1702,8 +1726,8 @@ packages:
       '@deepseek-ai/cordis': ^4.0.1
       dsh-mnemon: ^0.5.17
 
-  dsh-mnemon@0.5.22:
-    resolution: {integrity: sha512-zvL6O5iZEA2VTCv2jgROSJHfX5VxTeMtbjSgWjgqDElEdF7NhiuPPWOtKTp9y5A327YpGGgeWWY20/5oSg9SOA==}
+  dsh-mnemon@0.5.24:
+    resolution: {integrity: sha512-1pqf5PWIAbi4aJ2c/HwpgpK10l+ue3C9z81ZU8yh/FTiEso525IyGHuQ9N+jquBLGZ1wSh+eDneXxT035hkh3w==}
     engines: {node: '>=20'}
     hasBin: true
     peerDependencies:
@@ -1728,8 +1752,8 @@ packages:
       '@deepseek-ai/dsh-web': ^0.1.1-rc.2 || ^0.1.2-alpha.1 || ^0.1.3-alpha.1 || ^0.1.5-alpha.1 || ^0.1.7-rc.1 || 0.2.0-rc.2
       '@deepseek-ai/schemastery': ^3.18.1
 
-  dsh-rewind-plugin@0.15.0:
-    resolution: {integrity: sha512-gWeATITjWF1So/7oP1JjkgAVSHxIJKUYNLn66mbS1zT+oTlTpXj3Cr5UFiKlrRkk32WN13c+8ID3fp0D/47J0w==}
+  dsh-rewind-plugin@0.15.1:
+    resolution: {integrity: sha512-ieNFRjUnHuVBOXuaavVuUWGFIo1mE8XZceVWONs+iufeK0Qn3wVLrubt6/S/aqn0VX4NObF15YvdXRqrO/BqtA==}
     engines: {dsh: '>=0.2.0-rc.1', node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
@@ -1811,8 +1835,8 @@ packages:
       '@deepseek-ai/dsh-tools': ^0.1.5-rc.3 || ^0.1.7-rc.1 || ^0.2.0-rc.1
       '@deepseek-ai/schemastery': ^3.18.1
 
-  dshmarket@1.66.8:
-    resolution: {integrity: sha512-zOYCijI/du6qlcmUbx47aaUv6OM7Z/akIQ8n3f9Q2ihtV3U3sbRI5nG0guS+8npsb/vhA2turyEf9Yblg6LweQ==}
+  dshmarket@1.66.9:
+    resolution: {integrity: sha512-av9EZ4+xd1yUpStItqNCM2PpeqrxFNbh+iD2ki+5TrdZbI3HyO2ARel8hK1rdwLHJArMzFVekl+GqM7SSb27iw==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
       '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2 || ^0.1.2-alpha.2 || ^0.2.0-rc.1
@@ -1984,8 +2008,8 @@ packages:
     resolution: {integrity: sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==}
     engines: {node: '>=0.10.0'}
 
-  imapflow@2.2.1:
-    resolution: {integrity: sha512-d7/sRGEtexA8e0Y71sN0rKfB2yWgZMHY8JqCbk17arRLGicjX1LpBuxPH+wowOIA5sVWs7U//B6S+mKfrBtT6w==}
+  imapflow@2.2.6:
+    resolution: {integrity: sha512-8yMy5Pe9CfWGGrs8z+GzJ3q7DVCD6hNiiuUjxNTUJHM/QwwMHLYiVmTfcwWKSPaf8Aim/IPkcMK0I1thDdjgWg==}
     engines: {node: '>=20.0.0'}
 
   import-meta-resolve@4.2.0:
@@ -2030,11 +2054,11 @@ packages:
   leac@0.7.0:
     resolution: {integrity: sha512-qMrZeyEekgdRQ9o6a4NAB2EQZrv827GJdn1vnapwSJ90hWRB4TzUSunvacPkxQ2TnNqHNI1/zSt0hlo0crG8Jw==}
 
-  libbase64@1.3.1:
-    resolution: {integrity: sha512-1b9LXEjEtXj35YKOR9RqNKBootlb37qbIzmqiw4MsP52cjOsfR6i/AYU1Y8qN4kV2TJQmLJ5aiXn45qI6h+Szw==}
+  libbase64@1.3.2:
+    resolution: {integrity: sha512-fFCoI0ceXhTu/0QiJ6Uf6BV9k7X/8QW2/D4BR1vw3BPrHcIjLbGLH+U7inQ4SeWrfNCOmpGE09Qt4XjSFfus0g==}
 
-  libmime@5.4.6:
-    resolution: {integrity: sha512-Cgx1vHd76GTwDaLNsl0K44CjNFfhkX/1bMcoruoWr8Ugcl0/zMw7x/8NpZERIOcpGyzlQo10tOEw9goGsv2Wlg==}
+  libmime@5.4.7:
+    resolution: {integrity: sha512-r1ENu4wMVSB52AAORwaW4L/MeQJr9rryzHLRpcjud3zcUPWXh1Xkgn+tAqL8oTnRO/LW7y5xxPBE20ta5amtMA==}
 
   libqp@2.1.2:
     resolution: {integrity: sha512-rp+U80tl9Os4K7GnVbPzPRmghPu6eqB8rcF+ontvNAnoga0JhMFG/bkTD/reC8yoznKMgOc5/ttZHJasiWeFPw==}
@@ -2054,8 +2078,8 @@ packages:
   lodash-es@4.18.1:
     resolution: {integrity: sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==}
 
-  mailparser@3.9.33:
-    resolution: {integrity: sha512-+ZYhApN4f7B8+jokb7VZeml8lxYHixVJ3tJTB5iPG9/MJpy8YmBHGdy+AWJ9dmtUX6t0xlu4rxwj1b7eWCvbDA==}
+  mailparser@3.9.36:
+    resolution: {integrity: sha512-Fng3OmPN7khG0oVHDwwBIOYxjGu7kFxEuN6NnVV1H2tQYCIWjqvjK6cKvhj2r3XQVToVabP0b4HF+N7YgNdXFQ==}
     engines: {node: '>=20.0.0'}
 
   markdown-to-jsx@7.7.17:
@@ -2097,8 +2121,12 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  nodemailer@10.0.13:
-    resolution: {integrity: sha512-SzG86OlvcW/NNhUFC6uROMwRTL4n7MswfQqC/T8mhkmnY1YVa23zUEMYi4ijSeXSl9GLz9ZeTJDUatEDuY5FeQ==}
+  nodemailer@10.0.14:
+    resolution: {integrity: sha512-eJoLFKg55fesSlzUekmfOv/SBXh4KUYT8oiQc2RLP0tfG0rbNMJBK7wgHJwXTJwqyKlSJMz9UzDZ4v+aHEvo8g==}
+    engines: {node: '>=20.0.0'}
+
+  nodemailer@10.0.15:
+    resolution: {integrity: sha512-EUqp5PhtcsYXs9Fq/lS7s/8zlTrnBqmzZWzFFROrNikMiz+om/YRKMwqN907t+0A1KKyT8jd39CBUbFZmaZmcA==}
     engines: {node: '>=20.0.0'}
 
   obug@2.2.1:
@@ -2125,8 +2153,8 @@ packages:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
 
-  package-manager-detector@1.8.0:
-    resolution: {integrity: sha512-yQA4H19AmPEoMUeavPMDIe1higySl/gH/yaQrkT/s07Qp+7pp2hYz30N3z2l5BkjVkF9Ow6o0wjJamm2y7Sn0A==}
+  package-manager-detector@1.9.0:
+    resolution: {integrity: sha512-zAMfbta9nPA8AKkA4WdmNAT8R8s6Dk0/xwPsqNnRidMFcLo1YkLuPDTgs2f64XdzS8vbLNnoJ+uUIkgbz7oRHA==}
 
   parseley@0.13.1:
     resolution: {integrity: sha512-uNBJZzmb60l6p6VWLTmevizNAGnE0xoSf1n0B4q3ntegDNzcS68NRCcBDZTcyXHxt2XhBChsCuqj4M+nChvE/A==}
@@ -2274,8 +2302,8 @@ packages:
   set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
 
-  sharp@0.35.4:
-    resolution: {integrity: sha512-n++8XWcj+jCOr2IOl7h8LbKnGBDY4aPbmprMONBNFdn0ImXqpGVv5zliDs0V9HbmbCQLpbuo2ej9rAoOQTvMDA==}
+  sharp@0.35.5:
+    resolution: {integrity: sha512-Ywn4OnzGukp7CDMrp08RQ50YKmuwG47brZgIVPTvBaaAfQlRlygrRqSrxdCiL9M+LlzLBiJ68IR1QqvzHyjC7g==}
     engines: {node: '>=20.9.0'}
     peerDependencies:
       '@types/node': '*'
@@ -2494,7 +2522,7 @@ snapshots:
 
   '@antfu/install-pkg@2.1.0':
     dependencies:
-      package-manager-detector: 1.8.0
+      package-manager-detector: 1.9.0
       tinyexec: 1.3.1
 
   '@braintree/sanitize-url@7.1.2': {}
@@ -2674,7 +2702,7 @@ snapshots:
 
   '@deepseek-ai/cosmokit@1.8.5': {}
 
-  '@deepseek-ai/dsh-subprocess@0.1.7-rc.2': {}
+  '@deepseek-ai/dsh-subprocess@0.2.1-alpha.1': {}
 
   '@deepseek-ai/schemastery@3.18.4':
     dependencies:
@@ -2697,108 +2725,108 @@ snapshots:
   '@img/colour@1.1.0':
     optional: true
 
-  '@img/sharp-darwin-arm64@0.35.4':
+  '@img/sharp-darwin-arm64@0.35.5':
     optionalDependencies:
-      '@img/sharp-libvips-darwin-arm64': 1.3.3
+      '@img/sharp-libvips-darwin-arm64': 1.3.4
     optional: true
 
-  '@img/sharp-darwin-x64@0.35.4':
+  '@img/sharp-darwin-x64@0.35.5':
     optionalDependencies:
-      '@img/sharp-libvips-darwin-x64': 1.3.3
+      '@img/sharp-libvips-darwin-x64': 1.3.4
     optional: true
 
-  '@img/sharp-freebsd-wasm32@0.35.4':
+  '@img/sharp-freebsd-wasm32@0.35.5':
     dependencies:
-      '@img/sharp-wasm32': 0.35.4
+      '@img/sharp-wasm32': 0.35.5
     optional: true
 
-  '@img/sharp-libvips-darwin-arm64@1.3.3':
+  '@img/sharp-libvips-darwin-arm64@1.3.4':
     optional: true
 
-  '@img/sharp-libvips-darwin-x64@1.3.3':
+  '@img/sharp-libvips-darwin-x64@1.3.4':
     optional: true
 
-  '@img/sharp-libvips-linux-arm64@1.3.3':
+  '@img/sharp-libvips-linux-arm64@1.3.4':
     optional: true
 
-  '@img/sharp-libvips-linux-arm@1.3.3':
+  '@img/sharp-libvips-linux-arm@1.3.4':
     optional: true
 
-  '@img/sharp-libvips-linux-ppc64@1.3.3':
+  '@img/sharp-libvips-linux-ppc64@1.3.4':
     optional: true
 
-  '@img/sharp-libvips-linux-riscv64@1.3.3':
+  '@img/sharp-libvips-linux-riscv64@1.3.4':
     optional: true
 
-  '@img/sharp-libvips-linux-s390x@1.3.3':
+  '@img/sharp-libvips-linux-s390x@1.3.4':
     optional: true
 
-  '@img/sharp-libvips-linux-x64@1.3.3':
+  '@img/sharp-libvips-linux-x64@1.3.4':
     optional: true
 
-  '@img/sharp-libvips-linuxmusl-arm64@1.3.3':
+  '@img/sharp-libvips-linuxmusl-arm64@1.3.4':
     optional: true
 
-  '@img/sharp-libvips-linuxmusl-x64@1.3.3':
+  '@img/sharp-libvips-linuxmusl-x64@1.3.4':
     optional: true
 
-  '@img/sharp-linux-arm64@0.35.4':
+  '@img/sharp-linux-arm64@0.35.5':
     optionalDependencies:
-      '@img/sharp-libvips-linux-arm64': 1.3.3
+      '@img/sharp-libvips-linux-arm64': 1.3.4
     optional: true
 
-  '@img/sharp-linux-arm@0.35.4':
+  '@img/sharp-linux-arm@0.35.5':
     optionalDependencies:
-      '@img/sharp-libvips-linux-arm': 1.3.3
+      '@img/sharp-libvips-linux-arm': 1.3.4
     optional: true
 
-  '@img/sharp-linux-ppc64@0.35.4':
+  '@img/sharp-linux-ppc64@0.35.5':
     optionalDependencies:
-      '@img/sharp-libvips-linux-ppc64': 1.3.3
+      '@img/sharp-libvips-linux-ppc64': 1.3.4
     optional: true
 
-  '@img/sharp-linux-riscv64@0.35.4':
+  '@img/sharp-linux-riscv64@0.35.5':
     optionalDependencies:
-      '@img/sharp-libvips-linux-riscv64': 1.3.3
+      '@img/sharp-libvips-linux-riscv64': 1.3.4
     optional: true
 
-  '@img/sharp-linux-s390x@0.35.4':
+  '@img/sharp-linux-s390x@0.35.5':
     optionalDependencies:
-      '@img/sharp-libvips-linux-s390x': 1.3.3
+      '@img/sharp-libvips-linux-s390x': 1.3.4
     optional: true
 
-  '@img/sharp-linux-x64@0.35.4':
+  '@img/sharp-linux-x64@0.35.5':
     optionalDependencies:
-      '@img/sharp-libvips-linux-x64': 1.3.3
+      '@img/sharp-libvips-linux-x64': 1.3.4
     optional: true
 
-  '@img/sharp-linuxmusl-arm64@0.35.4':
+  '@img/sharp-linuxmusl-arm64@0.35.5':
     optionalDependencies:
-      '@img/sharp-libvips-linuxmusl-arm64': 1.3.3
+      '@img/sharp-libvips-linuxmusl-arm64': 1.3.4
     optional: true
 
-  '@img/sharp-linuxmusl-x64@0.35.4':
+  '@img/sharp-linuxmusl-x64@0.35.5':
     optionalDependencies:
-      '@img/sharp-libvips-linuxmusl-x64': 1.3.3
+      '@img/sharp-libvips-linuxmusl-x64': 1.3.4
     optional: true
 
-  '@img/sharp-wasm32@0.35.4':
+  '@img/sharp-wasm32@0.35.5':
     dependencies:
       '@emnapi/runtime': 1.11.3
     optional: true
 
-  '@img/sharp-webcontainers-wasm32@0.35.4':
+  '@img/sharp-webcontainers-wasm32@0.35.5':
     dependencies:
-      '@img/sharp-wasm32': 0.35.4
+      '@img/sharp-wasm32': 0.35.5
     optional: true
 
-  '@img/sharp-win32-arm64@0.35.4':
+  '@img/sharp-win32-arm64@0.35.5':
     optional: true
 
-  '@img/sharp-win32-ia32@0.35.4':
+  '@img/sharp-win32-ia32@0.35.5':
     optional: true
 
-  '@img/sharp-win32-x64@0.35.4':
+  '@img/sharp-win32-x64@0.35.5':
     optional: true
 
   '@lezer/common@1.5.3': {}
@@ -2923,36 +2951,36 @@ snapshots:
     dependencies:
       '@chevrotain/types': 11.1.2
 
-  '@mnemon-dev/mnemon@0.2.9':
+  '@mnemon-dev/mnemon@0.2.10':
     optionalDependencies:
-      '@mnemon-dev/mnemon-darwin-arm64': '@mnemon-dev/mnemon@0.2.9-darwin-arm64'
-      '@mnemon-dev/mnemon-darwin-x64': '@mnemon-dev/mnemon@0.2.9-darwin-x64'
-      '@mnemon-dev/mnemon-linux-arm64': '@mnemon-dev/mnemon@0.2.9-linux-arm64'
-      '@mnemon-dev/mnemon-linux-x64': '@mnemon-dev/mnemon@0.2.9-linux-x64'
-      '@mnemon-dev/mnemon-win32-arm64': '@mnemon-dev/mnemon@0.2.9-win32-arm64'
-      '@mnemon-dev/mnemon-win32-x64': '@mnemon-dev/mnemon@0.2.9-win32-x64'
+      '@mnemon-dev/mnemon-darwin-arm64': '@mnemon-dev/mnemon@0.2.10-darwin-arm64'
+      '@mnemon-dev/mnemon-darwin-x64': '@mnemon-dev/mnemon@0.2.10-darwin-x64'
+      '@mnemon-dev/mnemon-linux-arm64': '@mnemon-dev/mnemon@0.2.10-linux-arm64'
+      '@mnemon-dev/mnemon-linux-x64': '@mnemon-dev/mnemon@0.2.10-linux-x64'
+      '@mnemon-dev/mnemon-win32-arm64': '@mnemon-dev/mnemon@0.2.10-win32-arm64'
+      '@mnemon-dev/mnemon-win32-x64': '@mnemon-dev/mnemon@0.2.10-win32-x64'
 
-  '@mnemon-dev/mnemon@0.2.9-darwin-arm64':
+  '@mnemon-dev/mnemon@0.2.10-darwin-arm64':
     optional: true
 
-  '@mnemon-dev/mnemon@0.2.9-darwin-x64':
+  '@mnemon-dev/mnemon@0.2.10-darwin-x64':
     optional: true
 
-  '@mnemon-dev/mnemon@0.2.9-linux-arm64':
+  '@mnemon-dev/mnemon@0.2.10-linux-arm64':
     optional: true
 
-  '@mnemon-dev/mnemon@0.2.9-linux-x64':
+  '@mnemon-dev/mnemon@0.2.10-linux-x64':
     optional: true
 
-  '@mnemon-dev/mnemon@0.2.9-win32-arm64':
+  '@mnemon-dev/mnemon@0.2.10-win32-arm64':
     optional: true
 
-  '@mnemon-dev/mnemon@0.2.9-win32-x64':
+  '@mnemon-dev/mnemon@0.2.10-win32-x64':
     optional: true
 
   '@neon-rs/load@0.0.4': {}
 
-  '@openviking/dsh-memory-plugin@0.5.13': {}
+  '@openviking/dsh-memory-plugin@0.5.16': {}
 
   '@oxc-project/types@0.152.0': {}
 
@@ -3061,7 +3089,7 @@ snapshots:
       '@tencent-qqmail/agently-cli-win32-x64': 1.0.18
     optional: true
 
-  '@tt-a1i/archify-dsh@0.1.0': {}
+  '@tt-a1i/archify-dsh@1.0.0': {}
 
   '@types/d3-array@3.2.2': {}
 
@@ -3311,21 +3339,21 @@ snapshots:
 
   '@wingsky-1/dsh-mcp-manager@0.2.8': {}
 
-  '@xmanrui/dsh-im@4.34.2(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.37.0(debug@4.4.3)':
     dependencies:
       '@matrix-org/olm': 3.2.15
       '@tencent-connect/qqbot-connector': 1.2.0
       '@tencent-connect/qqbot-nodejs': 1.0.4
       '@wecom/aibot-node-sdk': 1.0.7(debug@4.4.3)
       dingtalk-stream: 2.1.4
-      imapflow: 2.2.1
-      mailparser: 3.9.33
-      nodemailer: 10.0.13
+      imapflow: 2.2.6
+      mailparser: 3.9.36
+      nodemailer: 10.0.15
       qrcode: 1.5.4
       undici: 7.29.1
     optionalDependencies:
       '@tencent-qqmail/agently-cli': 1.0.18
-      sharp: 0.35.4
+      sharp: 0.35.5
     transitivePeerDependencies:
       - '@types/node'
       - bufferutil
@@ -3409,10 +3437,10 @@ snapshots:
 
   '@yuku-toolchain/types@0.10.2': {}
 
-  '@zone-eu/mailsplit@5.4.19':
+  '@zone-eu/mailsplit@5.4.20':
     dependencies:
-      libbase64: 1.3.1
-      libmime: 5.4.6
+      libbase64: 1.3.2
+      libmime: 5.4.7
       libqp: 2.1.2
 
   agent-base@6.0.2:
@@ -3781,21 +3809,19 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.62.3(@deepseek-ai/schemastery@3.18.4):
+  dsh-context@0.64.0:
     dependencies:
-      '@deepseek-ai/schemastery': 3.18.4
       zod: 4.6.5
 
-  dsh-free-search@0.6.6:
+  dsh-free-search@0.8.1:
     dependencies:
       '@deepseek-ai/schemastery': 3.18.4
 
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b: {}
 
-  dsh-mcp-panel@0.6.19(@deepseek-ai/schemastery@3.18.4):
+  dsh-mcp-panel@0.6.22:
     dependencies:
-      '@deepseek-ai/dsh-subprocess': 0.1.7-rc.2
-      '@deepseek-ai/schemastery': 3.18.4
+      '@deepseek-ai/dsh-subprocess': 0.2.1-alpha.1
       tsdown: 0.23.0(typescript@7.0.2)
       typescript: 7.0.2
       zod: 4.6.5
@@ -3817,119 +3843,113 @@ snapshots:
 
   dsh-mermaid@0.4.1: {}
 
-  dsh-mnemon-provider-byterover@0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22)):
+  dsh-mnemon-provider-byterover@0.5.5(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24)):
     dependencies:
-      dsh-mnemon-source-memory-spaces: 0.5.14(dsh-mnemon@0.5.22)
+      dsh-mnemon-source-memory-spaces: 0.5.16(dsh-mnemon@0.5.24)
 
-  dsh-mnemon-provider-hindsight@0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22)):
+  dsh-mnemon-provider-hindsight@0.5.5(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24)):
     dependencies:
-      dsh-mnemon-source-memory-spaces: 0.5.14(dsh-mnemon@0.5.22)
+      dsh-mnemon-source-memory-spaces: 0.5.16(dsh-mnemon@0.5.24)
 
-  dsh-mnemon-provider-holographic@0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22)):
+  dsh-mnemon-provider-holographic@0.5.6(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24)):
     dependencies:
-      dsh-mnemon-source-memory-spaces: 0.5.14(dsh-mnemon@0.5.22)
+      dsh-mnemon-source-memory-spaces: 0.5.16(dsh-mnemon@0.5.24)
 
-  dsh-mnemon-provider-honcho@0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22)):
+  dsh-mnemon-provider-honcho@0.5.5(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24)):
     dependencies:
-      dsh-mnemon-source-memory-spaces: 0.5.14(dsh-mnemon@0.5.22)
+      dsh-mnemon-source-memory-spaces: 0.5.16(dsh-mnemon@0.5.24)
 
-  dsh-mnemon-provider-mem0@0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22)):
+  dsh-mnemon-provider-mem0@0.5.5(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24)):
     dependencies:
-      dsh-mnemon-source-memory-spaces: 0.5.14(dsh-mnemon@0.5.22)
+      dsh-mnemon-source-memory-spaces: 0.5.16(dsh-mnemon@0.5.24)
 
-  dsh-mnemon-provider-mnemon-native@0.5.8(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22)):
+  dsh-mnemon-provider-mnemon-native@0.5.8(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24)):
     dependencies:
-      dsh-mnemon-source-memory-spaces: 0.5.14(dsh-mnemon@0.5.22)
+      dsh-mnemon-source-memory-spaces: 0.5.16(dsh-mnemon@0.5.24)
 
-  dsh-mnemon-provider-openviking@0.5.7(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22)):
+  dsh-mnemon-provider-openviking@0.5.7(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24)):
     dependencies:
-      dsh-mnemon-source-memory-spaces: 0.5.14(dsh-mnemon@0.5.22)
+      dsh-mnemon-source-memory-spaces: 0.5.16(dsh-mnemon@0.5.24)
 
-  dsh-mnemon-provider-retaindb@0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22)):
+  dsh-mnemon-provider-retaindb@0.5.5(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24)):
     dependencies:
-      dsh-mnemon-source-memory-spaces: 0.5.14(dsh-mnemon@0.5.22)
+      dsh-mnemon-source-memory-spaces: 0.5.16(dsh-mnemon@0.5.24)
 
-  dsh-mnemon-provider-supermemory@0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22)):
+  dsh-mnemon-provider-supermemory@0.5.5(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24)):
     dependencies:
-      dsh-mnemon-source-memory-spaces: 0.5.14(dsh-mnemon@0.5.22)
+      dsh-mnemon-source-memory-spaces: 0.5.16(dsh-mnemon@0.5.24)
 
-  dsh-mnemon-source-documents@0.5.8(dsh-mnemon@0.5.22):
+  dsh-mnemon-source-documents@0.5.9(dsh-mnemon@0.5.24):
     dependencies:
       '@deepseek-ai/schemastery': 3.18.4
-      dsh-mnemon: 0.5.22
+      dsh-mnemon: 0.5.24
       markdown-to-jsx: 7.7.17
 
-  dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22):
+  dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24):
     dependencies:
       '@deepseek-ai/schemastery': 3.18.4
-      dsh-mnemon: 0.5.22
+      dsh-mnemon: 0.5.24
 
-  dsh-mnemon-source-runtime@0.5.11(dsh-mnemon@0.5.22):
+  dsh-mnemon-source-runtime@0.5.12(dsh-mnemon@0.5.24):
     dependencies:
       '@deepseek-ai/schemastery': 3.18.4
-      dsh-mnemon: 0.5.22
+      dsh-mnemon: 0.5.24
 
-  dsh-mnemon-strategy-auto-capture@0.5.5(dsh-mnemon@0.5.22):
+  dsh-mnemon-strategy-auto-capture@0.5.5(dsh-mnemon@0.5.24):
     dependencies:
-      dsh-mnemon: 0.5.22
+      dsh-mnemon: 0.5.24
 
-  dsh-mnemon-strategy-default-three-tier@0.5.7(dsh-mnemon@0.5.22):
+  dsh-mnemon-strategy-default-three-tier@0.5.7(dsh-mnemon@0.5.24):
     dependencies:
-      dsh-mnemon: 0.5.22
+      dsh-mnemon: 0.5.24
 
-  dsh-mnemon-strategy-general@0.5.1(dsh-mnemon@0.5.22):
+  dsh-mnemon-strategy-general@0.5.1(dsh-mnemon@0.5.24):
     dependencies:
-      dsh-mnemon: 0.5.22
+      dsh-mnemon: 0.5.24
 
-  dsh-mnemon-strategy-light-context@0.5.5(dsh-mnemon@0.5.22):
+  dsh-mnemon-strategy-light-context@0.5.5(dsh-mnemon@0.5.24):
     dependencies:
-      dsh-mnemon: 0.5.22
+      dsh-mnemon: 0.5.24
 
-  dsh-mnemon-strategy-scoped@0.5.5(dsh-mnemon@0.5.22):
+  dsh-mnemon-strategy-scoped@0.5.5(dsh-mnemon@0.5.24):
     dependencies:
-      dsh-mnemon: 0.5.22
+      dsh-mnemon: 0.5.24
 
-  dsh-mnemon@0.5.22:
+  dsh-mnemon@0.5.24:
     dependencies:
       '@deepseek-ai/cosmokit': 1.8.5
       '@deepseek-ai/schemastery': 3.18.4
-      dsh-mnemon-provider-byterover: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22))
-      dsh-mnemon-provider-hindsight: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22))
-      dsh-mnemon-provider-holographic: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22))
-      dsh-mnemon-provider-honcho: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22))
-      dsh-mnemon-provider-mem0: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22))
-      dsh-mnemon-provider-mnemon-native: 0.5.8(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22))
-      dsh-mnemon-provider-openviking: 0.5.7(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22))
-      dsh-mnemon-provider-retaindb: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22))
-      dsh-mnemon-provider-supermemory: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.14(dsh-mnemon@0.5.22))
-      dsh-mnemon-source-documents: 0.5.8(dsh-mnemon@0.5.22)
-      dsh-mnemon-source-memory-spaces: 0.5.14(dsh-mnemon@0.5.22)
-      dsh-mnemon-source-runtime: 0.5.11(dsh-mnemon@0.5.22)
-      dsh-mnemon-strategy-auto-capture: 0.5.5(dsh-mnemon@0.5.22)
-      dsh-mnemon-strategy-default-three-tier: 0.5.7(dsh-mnemon@0.5.22)
-      dsh-mnemon-strategy-general: 0.5.1(dsh-mnemon@0.5.22)
-      dsh-mnemon-strategy-light-context: 0.5.5(dsh-mnemon@0.5.22)
-      dsh-mnemon-strategy-scoped: 0.5.5(dsh-mnemon@0.5.22)
+      dsh-mnemon-provider-byterover: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24))
+      dsh-mnemon-provider-hindsight: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24))
+      dsh-mnemon-provider-holographic: 0.5.6(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24))
+      dsh-mnemon-provider-honcho: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24))
+      dsh-mnemon-provider-mem0: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24))
+      dsh-mnemon-provider-mnemon-native: 0.5.8(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24))
+      dsh-mnemon-provider-openviking: 0.5.7(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24))
+      dsh-mnemon-provider-retaindb: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24))
+      dsh-mnemon-provider-supermemory: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.16(dsh-mnemon@0.5.24))
+      dsh-mnemon-source-documents: 0.5.9(dsh-mnemon@0.5.24)
+      dsh-mnemon-source-memory-spaces: 0.5.16(dsh-mnemon@0.5.24)
+      dsh-mnemon-source-runtime: 0.5.12(dsh-mnemon@0.5.24)
+      dsh-mnemon-strategy-auto-capture: 0.5.5(dsh-mnemon@0.5.24)
+      dsh-mnemon-strategy-default-three-tier: 0.5.7(dsh-mnemon@0.5.24)
+      dsh-mnemon-strategy-general: 0.5.1(dsh-mnemon@0.5.24)
+      dsh-mnemon-strategy-light-context: 0.5.5(dsh-mnemon@0.5.24)
+      dsh-mnemon-strategy-scoped: 0.5.5(dsh-mnemon@0.5.24)
       fflate: 0.8.3
       yaml: 2.9.1
       zod: 4.6.5
 
-  dsh-plugin-subscriptions@0.9.7(@deepseek-ai/schemastery@3.18.4):
+  dsh-plugin-subscriptions@0.9.7:
     dependencies:
-      '@deepseek-ai/schemastery': 3.18.4
       undici: 7.30.0
 
-  dsh-rewind-plugin@0.15.0(@deepseek-ai/schemastery@3.18.4):
-    optionalDependencies:
-      '@deepseek-ai/schemastery': 3.18.4
+  dsh-rewind-plugin@0.15.1: {}
 
-  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d(@deepseek-ai/schemastery@3.18.4):
-    optionalDependencies:
-      '@deepseek-ai/schemastery': 3.18.4
+  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d: {}
 
-  dsh-univer-office@0.3.6(@deepseek-ai/schemastery@3.18.4):
+  dsh-univer-office@0.3.6:
     dependencies:
-      '@deepseek-ai/schemastery': 3.18.4
       '@puppeteer/browsers': 3.2.3
       '@univerjs-pro/cli-assets': 0.1.0
       '@univerjs-pro/engine-formula-rust-binding': 1.0.1
@@ -3942,12 +3962,10 @@ snapshots:
       - utf-8-validate
       - yauzl
 
-  dshmarket@1.66.8(@deepseek-ai/schemastery@3.18.4):
+  dshmarket@1.66.9:
     dependencies:
       js-yaml: 4.3.2
       undici: 7.30.0
-    optionalDependencies:
-      '@deepseek-ai/schemastery': 3.18.4
 
   dts-resolver@3.0.0: {}
 
@@ -4093,13 +4111,13 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
-  imapflow@2.2.1:
+  imapflow@2.2.6:
     dependencies:
-      '@zone-eu/mailsplit': 5.4.19
+      '@zone-eu/mailsplit': 5.4.20
       encoding-japanese: 2.4.0
       iconv-lite: 0.7.3
-      libbase64: 1.3.1
-      libmime: 5.4.6
+      libbase64: 1.3.2
+      libmime: 5.4.7
       libqp: 2.1.2
       pino: 10.3.1
       socks: 2.8.10
@@ -4132,13 +4150,13 @@ snapshots:
 
   leac@0.7.0: {}
 
-  libbase64@1.3.1: {}
+  libbase64@1.3.2: {}
 
-  libmime@5.4.6:
+  libmime@5.4.7:
     dependencies:
       encoding-japanese: 2.4.0
       iconv-lite: 0.7.3
-      libbase64: 1.3.1
+      libbase64: 1.3.2
       libqp: 2.1.2
 
   libqp@2.1.2: {}
@@ -4168,16 +4186,16 @@ snapshots:
 
   lodash-es@4.18.1: {}
 
-  mailparser@3.9.33:
+  mailparser@3.9.36:
     dependencies:
-      '@zone-eu/mailsplit': 5.4.19
+      '@zone-eu/mailsplit': 5.4.20
       encoding-japanese: 2.4.0
       he: 1.2.0
       html-to-text: 10.0.1
       iconv-lite: 0.7.3
-      libmime: 5.4.6
+      libmime: 5.4.7
       linkify-it: 5.0.2
-      nodemailer: 10.0.13
+      nodemailer: 10.0.14
       punycode.js: 2.3.1
       tlds: 1.261.0
 
@@ -4224,7 +4242,9 @@ snapshots:
 
   ms@2.1.3: {}
 
-  nodemailer@10.0.13: {}
+  nodemailer@10.0.14: {}
+
+  nodemailer@10.0.15: {}
 
   obug@2.2.1: {}
 
@@ -4242,7 +4262,7 @@ snapshots:
 
   p-try@2.2.0: {}
 
-  package-manager-detector@1.8.0: {}
+  package-manager-detector@1.9.0: {}
 
   parseley@0.13.1:
     dependencies:
@@ -4393,37 +4413,37 @@ snapshots:
 
   set-blocking@2.0.0: {}
 
-  sharp@0.35.4:
+  sharp@0.35.5:
     dependencies:
       '@img/colour': 1.1.0
       detect-libc: 2.1.2
       semver: 7.8.5
     optionalDependencies:
-      '@img/sharp-darwin-arm64': 0.35.4
-      '@img/sharp-darwin-x64': 0.35.4
-      '@img/sharp-freebsd-wasm32': 0.35.4
-      '@img/sharp-libvips-darwin-arm64': 1.3.3
-      '@img/sharp-libvips-darwin-x64': 1.3.3
-      '@img/sharp-libvips-linux-arm': 1.3.3
-      '@img/sharp-libvips-linux-arm64': 1.3.3
-      '@img/sharp-libvips-linux-ppc64': 1.3.3
-      '@img/sharp-libvips-linux-riscv64': 1.3.3
-      '@img/sharp-libvips-linux-s390x': 1.3.3
-      '@img/sharp-libvips-linux-x64': 1.3.3
-      '@img/sharp-libvips-linuxmusl-arm64': 1.3.3
-      '@img/sharp-libvips-linuxmusl-x64': 1.3.3
-      '@img/sharp-linux-arm': 0.35.4
-      '@img/sharp-linux-arm64': 0.35.4
-      '@img/sharp-linux-ppc64': 0.35.4
-      '@img/sharp-linux-riscv64': 0.35.4
-      '@img/sharp-linux-s390x': 0.35.4
-      '@img/sharp-linux-x64': 0.35.4
-      '@img/sharp-linuxmusl-arm64': 0.35.4
-      '@img/sharp-linuxmusl-x64': 0.35.4
-      '@img/sharp-webcontainers-wasm32': 0.35.4
-      '@img/sharp-win32-arm64': 0.35.4
-      '@img/sharp-win32-ia32': 0.35.4
-      '@img/sharp-win32-x64': 0.35.4
+      '@img/sharp-darwin-arm64': 0.35.5
+      '@img/sharp-darwin-x64': 0.35.5
+      '@img/sharp-freebsd-wasm32': 0.35.5
+      '@img/sharp-libvips-darwin-arm64': 1.3.4
+      '@img/sharp-libvips-darwin-x64': 1.3.4
+      '@img/sharp-libvips-linux-arm': 1.3.4
+      '@img/sharp-libvips-linux-arm64': 1.3.4
+      '@img/sharp-libvips-linux-ppc64': 1.3.4
+      '@img/sharp-libvips-linux-riscv64': 1.3.4
+      '@img/sharp-libvips-linux-s390x': 1.3.4
+      '@img/sharp-libvips-linux-x64': 1.3.4
+      '@img/sharp-libvips-linuxmusl-arm64': 1.3.4
+      '@img/sharp-libvips-linuxmusl-x64': 1.3.4
+      '@img/sharp-linux-arm': 0.35.5
+      '@img/sharp-linux-arm64': 0.35.5
+      '@img/sharp-linux-ppc64': 0.35.5
+      '@img/sharp-linux-riscv64': 0.35.5
+      '@img/sharp-linux-s390x': 0.35.5
+      '@img/sharp-linux-x64': 0.35.5
+      '@img/sharp-linuxmusl-arm64': 0.35.5
+      '@img/sharp-linuxmusl-x64': 0.35.5
+      '@img/sharp-webcontainers-wasm32': 0.35.5
+      '@img/sharp-win32-arm64': 0.35.5
+      '@img/sharp-win32-ia32': 0.35.5
+      '@img/sharp-win32-x64': 0.35.5
     optional: true
 
   smart-buffer@4.2.0: {}
