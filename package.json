@@ -16,7 +16,7 @@
     "@xmanrui/dsh-im": "^4.34.2",
     "dsh-better-sidebar": "0.24.1",
     "dsh-complete-notify": "^0.6.2",
-    "dsh-context": "^0.62.3",
+    "dsh-context": "^0.64.0",
     "dsh-free-search": "^0.6.6",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-mcp-panel": "0.6.19",
