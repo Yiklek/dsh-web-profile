@@ -16,10 +16,10 @@
     "@xmanrui/dsh-im": "^4.38.0",
     "dsh-better-sidebar": "0.25.0",
     "dsh-complete-notify": "^0.6.2",
-    "dsh-context": "^0.66.1",
-    "dsh-free-search": "^0.8.3",
+    "dsh-context": "^0.67.0",
+    "dsh-free-search": "^0.8.5",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
-    "dsh-mcp-panel": "0.6.23",
+    "dsh-mcp-panel": "0.6.24",
     "dsh-mermaid": "^0.4.1",
     "dsh-mnemon": "^0.5.27",
     "dsh-openviking-service": "workspace:*",
@@ -27,7 +27,7 @@
     "dsh-rewind-plugin": "0.15.3",
     "dsh-settings-manager": "github:Yiklek/dsh-settings-manager#pkg",
     "dsh-univer-office": "^0.3.7",
-    "dshmarket": "^1.66.14",
+    "dshmarket": "^1.66.15",
     "yaml": "^2.9.1"
   },
   "dsh": {
