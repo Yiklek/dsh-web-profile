@@ -56,9 +56,9 @@ importers:
       dsh-rewind-plugin:
         specifier: 0.15.3
         version: 0.15.3
-      dsh-settings-manager:
-        specifier: github:Yiklek/dsh-settings-manager#pkg
-        version: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d
+      dsh-slots-manager:
+        specifier: github:Yiklek/dsh-slots-manager#pkg
+        version: https://codeload.github.com/Yiklek/dsh-slots-manager/tar.gz/e2cbfca1c1c18d74560f820d39cc0bbc5be95bc6
       dsh-univer-office:
         specifier: ^0.3.7
         version: 0.3.7
@@ -1724,16 +1724,13 @@ packages:
       '@deepseek-ai/schemastery':
         optional: true
 
-  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d:
-    resolution: {gitHosted: true, integrity: sha512-UAlloqlJF8HFV6i1qogy/10o/cDQ4piYeYyuwpApudK1fGScNw+rDhWzFE7JS8eRJwVdGEUlgnlfHa6OZrS4uw==, tarball: https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d}
+  dsh-slots-manager@https://codeload.github.com/Yiklek/dsh-slots-manager/tar.gz/e2cbfca1c1c18d74560f820d39cc0bbc5be95bc6:
+    resolution: {gitHosted: true, integrity: sha512-4qx6JMNAmAbb37znC8un9zCfejLy12SCMqGMwcS2my953wSYm7Vh9KDXmCYkAQxx4UZA+FwsFyt+p3EjEd3rMg==, tarball: https://codeload.github.com/Yiklek/dsh-slots-manager/tar.gz/e2cbfca1c1c18d74560f820d39cc0bbc5be95bc6}
     version: 0.1.0
     peerDependencies:
-      '@deepseek-ai/dsh-settings': '*'
       '@deepseek-ai/schemastery': '*'
       react: '*'
     peerDependenciesMeta:
-      '@deepseek-ai/dsh-settings':
-        optional: true
       '@deepseek-ai/schemastery':
         optional: true
       react:
@@ -3833,7 +3830,7 @@ snapshots:
 
   dsh-rewind-plugin@0.15.3: {}
 
-  dsh-settings-manager@https://codeload.github.com/Yiklek/dsh-settings-manager/tar.gz/e8e0abe4b872e95c54596d21385258706cbc257d: {}
+  dsh-slots-manager@https://codeload.github.com/Yiklek/dsh-slots-manager/tar.gz/e2cbfca1c1c18d74560f820d39cc0bbc5be95bc6: {}
 
   dsh-univer-office@0.3.7:
     dependencies:
