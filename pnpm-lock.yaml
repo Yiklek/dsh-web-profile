@@ -12,8 +12,8 @@ importers:
         specifier: ^0.2.10
         version: 0.2.10
       '@openviking/dsh-memory-plugin':
-        specifier: ^0.5.20
-        version: 0.5.20
+        specifier: ^0.5.23
+        version: 0.5.23
       '@tt-a1i/archify-dsh':
         specifier: ^1.0.0
         version: 1.0.0
@@ -477,8 +477,8 @@ packages:
   '@neon-rs/load@0.0.4':
     resolution: {integrity: sha512-kTPhdZyTQxB+2wpiRcFWrDcejc4JI6tkPuS7UZCG4l6Zvc5kU/gGQ/ozvHTh1XR5tS+UlfAfGuPajjzQjCiHCw==}
 
-  '@openviking/dsh-memory-plugin@0.5.20':
-    resolution: {integrity: sha512-7TFfADd+8ZuSLNxEs1qg/OzR+ZHalE1XZLBLuCSHx4UGgbCVEte6uolRx0GippXSpsYYhlGGeDBhNPn/zjCWGQ==}
+  '@openviking/dsh-memory-plugin@0.5.23':
+    resolution: {integrity: sha512-/eMDkcJCWAzvwn8TX8zvDLi5nzQw4W3ed64iSy27RfaRYjO5X9cuh0fKLfW2BkWJXq7631l4DULxEKxCZwvWzw==}
     engines: {node: ^22.19.0 || >=24}
     peerDependencies:
       '@deepseek-ai/dsh-llm': '>=0.1.0-rc.6 <1.0.0-0'
@@ -2894,7 +2894,7 @@ snapshots:
 
   '@neon-rs/load@0.0.4': {}
 
-  '@openviking/dsh-memory-plugin@0.5.20': {}
+  '@openviking/dsh-memory-plugin@0.5.23': {}
 
   '@oxc-project/types@0.153.0': {}
 
