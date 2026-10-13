@@ -12,8 +12,8 @@ importers:
         specifier: ^0.2.10
         version: 0.2.10
       '@openviking/dsh-memory-plugin':
-        specifier: ^0.5.23
-        version: 0.5.23
+        specifier: ^0.5.24
+        version: 0.5.24
       '@tt-a1i/archify-dsh':
         specifier: ^1.0.0
         version: 1.0.0
@@ -21,8 +21,8 @@ importers:
         specifier: 0.2.9
         version: 0.2.9
       '@xmanrui/dsh-im':
-        specifier: ^4.38.1
-        version: 4.38.1(debug@4.4.3)
+        specifier: ^4.38.2
+        version: 4.38.2(debug@4.4.3)
       dsh-better-sidebar:
         specifier: 0.25.0
         version: 0.25.0
@@ -477,8 +477,8 @@ packages:
   '@neon-rs/load@0.0.4':
     resolution: {integrity: sha512-kTPhdZyTQxB+2wpiRcFWrDcejc4JI6tkPuS7UZCG4l6Zvc5kU/gGQ/ozvHTh1XR5tS+UlfAfGuPajjzQjCiHCw==}
 
-  '@openviking/dsh-memory-plugin@0.5.23':
-    resolution: {integrity: sha512-/eMDkcJCWAzvwn8TX8zvDLi5nzQw4W3ed64iSy27RfaRYjO5X9cuh0fKLfW2BkWJXq7631l4DULxEKxCZwvWzw==}
+  '@openviking/dsh-memory-plugin@0.5.24':
+    resolution: {integrity: sha512-RgXkRMnRBcPyQ9ZnKPSddl1f0B//e93RPQV4qwg9VqyDyKBwDdX+LPrvYSTs7Bh3QqXeWR4xUZRL06v1TCueVA==}
     engines: {node: ^22.19.0 || >=24}
     peerDependencies:
       '@deepseek-ai/dsh-llm': '>=0.1.0-rc.6 <1.0.0-0'
@@ -1010,8 +1010,8 @@ packages:
       react:
         optional: true
 
-  '@xmanrui/dsh-im@4.38.1':
-    resolution: {integrity: sha512-DvaoinxXCHh/H1OI7A1rBwGFcnOZM/M2sKRtcHwW3xWXM7tF/p4wAK0p5XH4L0/E8X12IBkUPZ+oFRJkS3GzHw==}
+  '@xmanrui/dsh-im@4.38.2':
+    resolution: {integrity: sha512-8eRbRH2lkAPcFvGZlBTlEuJQFRRzQxDGqE3ZvRMklsKxY1Mmzyb6QRZQNDtbgtDEhi7Vnf+uLZv6RzeNczULRw==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -2897,7 +2897,7 @@ snapshots:
 
   '@neon-rs/load@0.0.4': {}
 
-  '@openviking/dsh-memory-plugin@0.5.23': {}
+  '@openviking/dsh-memory-plugin@0.5.24': {}
 
   '@oxc-project/types@0.153.0': {}
 
@@ -3256,7 +3256,7 @@ snapshots:
 
   '@wingsky-1/dsh-mcp-manager@0.2.9': {}
 
-  '@xmanrui/dsh-im@4.38.1(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.38.2(debug@4.4.3)':
     dependencies:
       '@matrix-org/olm': 3.2.15
       '@tencent-connect/qqbot-connector': 1.2.0
