@@ -21,11 +21,11 @@ importers:
         specifier: 0.2.9
         version: 0.2.9
       '@xmanrui/dsh-im':
-        specifier: ^4.38.2
-        version: 4.38.2(debug@4.4.3)
+        specifier: ^4.39.0
+        version: 4.39.0(debug@4.4.3)
       dsh-better-sidebar:
-        specifier: 0.25.0
-        version: 0.25.0
+        specifier: 0.26.0
+        version: 0.26.0
       dsh-complete-notify:
         specifier: ^0.6.2
         version: 0.6.2
@@ -63,8 +63,8 @@ importers:
         specifier: ^0.3.7
         version: 0.3.7
       dshmarket:
-        specifier: ^1.66.18
-        version: 1.66.18
+        specifier: ^1.66.21
+        version: 1.66.21
       yaml:
         specifier: ^2.9.1
         version: 2.9.1
@@ -168,6 +168,9 @@ packages:
 
   '@emnapi/runtime@1.11.3':
     resolution: {integrity: sha512-Xz4Tpyki7XyrpbUK1jR1AhdAdaXyhhY4lZ3neLodmhpuWfy2PAQN5B46sAiU4liOXGLkHypn/qU+jvfWSCYYLA==}
+
+  '@formkit/auto-animate@0.10.0':
+    resolution: {integrity: sha512-KGomRttjUfORuPUaR/ZGQw+6xfMrTM+sxnILv7JAd9AmabU9rg9i6gF/iC0Ih+QpKCubJpCA/1DX9UHKE8cX+A==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -1010,8 +1013,8 @@ packages:
       react:
         optional: true
 
-  '@xmanrui/dsh-im@4.38.2':
-    resolution: {integrity: sha512-8eRbRH2lkAPcFvGZlBTlEuJQFRRzQxDGqE3ZvRMklsKxY1Mmzyb6QRZQNDtbgtDEhi7Vnf+uLZv6RzeNczULRw==}
+  '@xmanrui/dsh-im@4.39.0':
+    resolution: {integrity: sha512-FsfOr/qCfSqeyIOuHGk9MEYlo7xioNDkV+wtAo//v+D0tTAm/B6x1a60LYGHAZdCrUBgI80wnEZHlDcGBBaOUA==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -1402,8 +1405,8 @@ packages:
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
 
-  dsh-better-sidebar@0.25.0:
-    resolution: {integrity: sha512-5dro5VDpkrnWBO5jNff6Kzt8UlniZEWwXFqsl+wptlqnGMC4PrdJQ4Sd3+tLU8LPKYH8dDI00Dd5IC3FtH/erA==}
+  dsh-better-sidebar@0.26.0:
+    resolution: {integrity: sha512-tjWdPvvOgSeHvtPex/5c8pwBUa9zbKTemkGdnbbRgx6Y3oTXxBLqZ/2HJk29wrYKnth8bW3RiLxyFK1M2oa5SA==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.4
@@ -1753,8 +1756,8 @@ packages:
       '@deepseek-ai/dsh-tools': ^0.1.5-rc.3 || ^0.1.7-rc.1 || ^0.2.0-rc.1
       '@deepseek-ai/schemastery': ^3.18.1
 
-  dshmarket@1.66.18:
-    resolution: {integrity: sha512-T3Lyr3521t9e+4oLa+c0YpjUs0mm1Ec1ghIM8NMT68W7eTDOwc8M6478YXvxK73q/CPqR51b/bLY/AGSF+64Ww==}
+  dshmarket@1.66.21:
+    resolution: {integrity: sha512-Ny943/KLs7XCFaS5liN21Ne8kc1mZgg8H/ReyZkiwksPFkzfa4pKuhq14V2VeA6SgcUilrtqGMH7ccSt1Clakw==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
       '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2 || ^0.1.2-alpha.2 || ^0.2.0-rc.1
@@ -2631,6 +2634,8 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
+  '@formkit/auto-animate@0.10.0': {}
+
   '@iconify/types@2.0.0': {}
 
   '@iconify/utils@3.1.7':
@@ -3256,7 +3261,7 @@ snapshots:
 
   '@wingsky-1/dsh-mcp-manager@0.2.9': {}
 
-  '@xmanrui/dsh-im@4.38.2(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.39.0(debug@4.4.3)':
     dependencies:
       '@matrix-org/olm': 3.2.15
       '@tencent-connect/qqbot-connector': 1.2.0
@@ -3656,7 +3661,7 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
-  dsh-better-sidebar@0.25.0:
+  dsh-better-sidebar@0.26.0:
     dependencies:
       '@codemirror/commands': 6.11.1
       '@codemirror/lang-cpp': 6.0.3
@@ -3680,6 +3685,7 @@ snapshots:
       '@codemirror/state': 6.7.6
       '@codemirror/view': 6.43.14
       '@deepseek-ai/schemastery': 3.18.4
+      '@formkit/auto-animate': 0.10.0
       '@lezer/highlight': 1.2.5
       '@xterm/addon-fit': 0.11.0
       '@xterm/xterm': 6.0.0
@@ -3849,7 +3855,7 @@ snapshots:
       - utf-8-validate
       - yauzl
 
-  dshmarket@1.66.18:
+  dshmarket@1.66.21:
     dependencies:
       js-yaml: 4.3.2
       undici: 7.30.0

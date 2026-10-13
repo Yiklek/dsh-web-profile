@@ -13,8 +13,8 @@
     "@openviking/dsh-memory-plugin": "^0.5.24",
     "@tt-a1i/archify-dsh": "^1.0.0",
     "@wingsky-1/dsh-mcp-manager": "0.2.9",
-    "@xmanrui/dsh-im": "^4.38.2",
-    "dsh-better-sidebar": "0.25.0",
+    "@xmanrui/dsh-im": "^4.39.0",
+    "dsh-better-sidebar": "0.26.0",
     "dsh-complete-notify": "^0.6.2",
     "dsh-context": "^0.69.1",
     "dsh-free-search": "^0.8.9",
@@ -27,7 +27,7 @@
     "dsh-rewind-plugin": "0.15.3",
     "dsh-slots-manager": "github:Yiklek/dsh-slots-manager#pkg",
     "dsh-univer-office": "^0.3.7",
-    "dshmarket": "^1.66.18",
+    "dshmarket": "^1.66.21",
     "yaml": "^2.9.1"
   },
   "dsh": {
