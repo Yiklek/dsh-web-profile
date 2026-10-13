@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "@mnemon-dev/mnemon": "^0.2.10",
-    "@openviking/dsh-memory-plugin": "^0.5.23",
+    "@openviking/dsh-memory-plugin": "^0.5.24",
     "@tt-a1i/archify-dsh": "^1.0.0",
     "@wingsky-1/dsh-mcp-manager": "0.2.9",
-    "@xmanrui/dsh-im": "^4.38.1",
+    "@xmanrui/dsh-im": "^4.38.2",
     "dsh-better-sidebar": "0.25.0",
     "dsh-complete-notify": "^0.6.2",
     "dsh-context": "^0.69.1",
