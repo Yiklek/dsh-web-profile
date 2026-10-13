@@ -21,8 +21,8 @@ importers:
         specifier: 0.2.9
         version: 0.2.9
       '@xmanrui/dsh-im':
-        specifier: ^4.38.2
-        version: 4.38.2(debug@4.4.3)
+        specifier: ^4.39.0
+        version: 4.39.0(debug@4.4.3)
       dsh-better-sidebar:
         specifier: 0.25.0
         version: 0.25.0
@@ -63,8 +63,8 @@ importers:
         specifier: ^0.3.7
         version: 0.3.7
       dshmarket:
-        specifier: ^1.66.18
-        version: 1.66.18
+        specifier: ^1.66.20
+        version: 1.66.20
       yaml:
         specifier: ^2.9.1
         version: 2.9.1
@@ -1010,8 +1010,8 @@ packages:
       react:
         optional: true
 
-  '@xmanrui/dsh-im@4.38.2':
-    resolution: {integrity: sha512-8eRbRH2lkAPcFvGZlBTlEuJQFRRzQxDGqE3ZvRMklsKxY1Mmzyb6QRZQNDtbgtDEhi7Vnf+uLZv6RzeNczULRw==}
+  '@xmanrui/dsh-im@4.39.0':
+    resolution: {integrity: sha512-FsfOr/qCfSqeyIOuHGk9MEYlo7xioNDkV+wtAo//v+D0tTAm/B6x1a60LYGHAZdCrUBgI80wnEZHlDcGBBaOUA==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -1753,8 +1753,8 @@ packages:
       '@deepseek-ai/dsh-tools': ^0.1.5-rc.3 || ^0.1.7-rc.1 || ^0.2.0-rc.1
       '@deepseek-ai/schemastery': ^3.18.1
 
-  dshmarket@1.66.18:
-    resolution: {integrity: sha512-T3Lyr3521t9e+4oLa+c0YpjUs0mm1Ec1ghIM8NMT68W7eTDOwc8M6478YXvxK73q/CPqR51b/bLY/AGSF+64Ww==}
+  dshmarket@1.66.20:
+    resolution: {integrity: sha512-qmWbLSXqey8tW6OPXMcbsdC/7kHZTVD5ZBd7taMGGZjN2EtmKZvFvBEscyYcAkayWkL/kJrF5Zk2+SC1djCWXg==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
       '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2 || ^0.1.2-alpha.2 || ^0.2.0-rc.1
@@ -3256,7 +3256,7 @@ snapshots:
 
   '@wingsky-1/dsh-mcp-manager@0.2.9': {}
 
-  '@xmanrui/dsh-im@4.38.2(debug@4.4.3)':
+  '@xmanrui/dsh-im@4.39.0(debug@4.4.3)':
     dependencies:
       '@matrix-org/olm': 3.2.15
       '@tencent-connect/qqbot-connector': 1.2.0
@@ -3849,7 +3849,7 @@ snapshots:
       - utf-8-validate
       - yauzl
 
-  dshmarket@1.66.18:
+  dshmarket@1.66.20:
     dependencies:
       js-yaml: 4.3.2
       undici: 7.30.0
