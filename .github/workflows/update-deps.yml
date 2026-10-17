@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
   schedule:
-    # Every 6 hours (UTC)
-    - cron: "0 */6 * * *"
+    # Daily at 04:00 Asia/Shanghai (GitHub cron is UTC: 20:00 the previous day)
+    - cron: "0 20 * * *"
   workflow_dispatch:
 
 permissions:
