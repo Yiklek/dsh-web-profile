@@ -18,8 +18,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       '@xmanrui/dsh-im':
-        specifier: ^4.39.0
-        version: 4.39.0(debug@4.4.3)
+        specifier: ^5.0.2
+        version: 5.0.2(debug@4.4.3)
       dsh-better-sidebar:
         specifier: 0.28.0
         version: 0.28.0
@@ -725,8 +725,8 @@ packages:
   '@wecom/aibot-node-sdk@1.0.7':
     resolution: {integrity: sha512-51w+sTqunry6GD3HFvmuh0gArMSJDFE418vyvR1wMJHj1N6DaFuGD3HuaY2fazZs3mb9FWeQFX3+vU5t0Qhwmw==}
 
-  '@xmanrui/dsh-im@4.39.0':
-    resolution: {integrity: sha512-FsfOr/qCfSqeyIOuHGk9MEYlo7xioNDkV+wtAo//v+D0tTAm/B6x1a60LYGHAZdCrUBgI80wnEZHlDcGBBaOUA==}
+  '@xmanrui/dsh-im@5.0.2':
+    resolution: {integrity: sha512-6Ke85YQLoLANGQhMpwp8fBVXTRNhYNSjvp/TOp6lytGyxZv7gOtjRFGQ+iEUz6f4VNaXGoSB6KemFh7TTKeGPg==}
     engines: {node: '>=22.19'}
     hasBin: true
 
@@ -2611,7 +2611,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@xmanrui/dsh-im@4.39.0(debug@4.4.3)':
+  '@xmanrui/dsh-im@5.0.2(debug@4.4.3)':
     dependencies:
       '@matrix-org/olm': 3.2.15
       '@tencent-connect/qqbot-connector': 1.2.0
