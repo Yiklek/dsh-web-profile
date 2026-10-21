@@ -12,7 +12,7 @@
     "@mnemon-dev/mnemon": "^0.2.10",
     "@openviking/dsh-memory-plugin": "^0.5.26",
     "@tt-a1i/archify-dsh": "^1.0.0",
-    "@xmanrui/dsh-im": "^4.39.0",
+    "@xmanrui/dsh-im": "^5.1.0",
     "dsh-better-sidebar": "0.28.0",
     "dsh-complete-notify": "^0.6.2",
     "dsh-context": "^0.73.0",
