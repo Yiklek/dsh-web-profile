@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@mnemon-dev/mnemon':
-        specifier: ^0.2.10
-        version: 0.2.10
+        specifier: ^0.2.11
+        version: 0.2.11
       '@openviking/dsh-memory-plugin':
         specifier: ^0.5.26
         version: 0.5.26
@@ -430,38 +430,38 @@ packages:
   '@mermaid-js/parser@1.2.1':
     resolution: {integrity: sha512-n12NohV3mrUyUL2o93IgG/ifeW9FTyeJn3zDxkhwa8MJ9Fxg3HQMlA3RiGmD/3UnJvheztkjjQAjA2T4LmUcpw==}
 
-  '@mnemon-dev/mnemon@0.2.10':
-    resolution: {integrity: sha512-XqBu2n2aCAvU/X5Ysf7IRh6p+g2rJTqYcSYKrBOY9NYGR9lgSMT8hJY5AciNnbbsjwtRQTwxp0OlqH47HJKhKQ==}
+  '@mnemon-dev/mnemon@0.2.11':
+    resolution: {integrity: sha512-pumeBNRArKlvc6pF7kbK/7HGznMeWnmLXUJJcOGB1k+i9OXwScaEf/JsQ9AvarU1zyvb8ohS0JMd0bJEalOUMg==}
     engines: {node: '>=22'}
     hasBin: true
 
-  '@mnemon-dev/mnemon@0.2.10-darwin-arm64':
-    resolution: {integrity: sha512-1b3PmFh79biTbY8SbG3BbloI8wlAstx/Q+16Ck2HKSfrKD8NCdMAH2pbxQejMkdO4NZHcn5WF2uGNo6kYe6cRg==}
+  '@mnemon-dev/mnemon@0.2.11-darwin-arm64':
+    resolution: {integrity: sha512-q4TDocpTuYvGEzawhbHNB3CBACDAotMo9/rwPx1vSYRi1jA/CriUYzKfY7Pwo0JB66qj/+fHwdv40eF0O/HLZA==}
     cpu: [arm64]
     os: [darwin]
 
-  '@mnemon-dev/mnemon@0.2.10-darwin-x64':
-    resolution: {integrity: sha512-HokOtVH5DIzFat4+kzCB1wX6tMOzFLi99wVSa1fcu0hWRq4ZWKNeDeC+oPhjamzEjxRXzICUFEWdPd5243+NyQ==}
+  '@mnemon-dev/mnemon@0.2.11-darwin-x64':
+    resolution: {integrity: sha512-yPZ2DDGUwrdH6qGUzd5Lr7xj5RsUROu17Gff2N20X8FzN5Ahgw4y7pH6J2ohhPIzt6zAp+9RkWALiTmWTskj1A==}
     cpu: [x64]
     os: [darwin]
 
-  '@mnemon-dev/mnemon@0.2.10-linux-arm64':
-    resolution: {integrity: sha512-g2Nq39+8xXxQ58kEzvhqrA4y9kk+uW1BQcNbg6/vRV1sX131K03VRZBWUFIYxleNbh0i4Vs8ZgO4FbpdpJJCGA==}
+  '@mnemon-dev/mnemon@0.2.11-linux-arm64':
+    resolution: {integrity: sha512-fQUPdxIGzXEUkp3bwKcwsGpbWWbO6XrKFvavUyND09ILh4zKKfwcNn7Zelk8ojqF9Ih7U0aOKDWTAZvRTgUu/g==}
     cpu: [arm64]
     os: [linux]
 
-  '@mnemon-dev/mnemon@0.2.10-linux-x64':
-    resolution: {integrity: sha512-amptFtYGqa+am9IKLnYFtPoJhA6a8xEJCAvXPaMrk80jCoOi4YuR9tXI8mwdiWiYscsBVrlKqoLDbzkdqiMgKQ==}
+  '@mnemon-dev/mnemon@0.2.11-linux-x64':
+    resolution: {integrity: sha512-o0u+SdkGGl4mmf0waSuieXa6F8lOvu3MQVlaYbymUge7yYiuAcrhB8KPXEcbhwdZepKXpZrp2nhUZAIxlP6ZoQ==}
     cpu: [x64]
     os: [linux]
 
-  '@mnemon-dev/mnemon@0.2.10-win32-arm64':
-    resolution: {integrity: sha512-s4SwtcR7W8rv7tqP/VQEcN4eqH3p47DZNJWA/hhteUNdCcjSdg2jZlAJkEdpX6K8rHA4oJLEEuqOZhcQDgXvvg==}
+  '@mnemon-dev/mnemon@0.2.11-win32-arm64':
+    resolution: {integrity: sha512-lrs4yMPzSrTguYhh0U6zWC9L5WFADRvex/YiUnoQkCRKMvqXbm/RZH2KvTG7F20ShZ1HlypACjTAoABu6+EZsA==}
     cpu: [arm64]
     os: [win32]
 
-  '@mnemon-dev/mnemon@0.2.10-win32-x64':
-    resolution: {integrity: sha512-oTr5JEUJCl8XJYeG41c4N3IxsuVl/Hk1HXwRzzPzH9sDsuAYAAtXwoWikLeqWqdtWR2lQ7fmjEHr3Qi93Xd/iA==}
+  '@mnemon-dev/mnemon@0.2.11-win32-x64':
+    resolution: {integrity: sha512-BSi7CrBHGe1nttGki12QxjRg0QlGrrNVEzyJIppvFWNQerX/SMh8vVMnzupi19G95fz5HUieMGp8OFfmzWuTOA==}
     cpu: [x64]
     os: [win32]
 
@@ -2338,31 +2338,31 @@ snapshots:
     dependencies:
       '@chevrotain/types': 11.1.2
 
-  '@mnemon-dev/mnemon@0.2.10':
+  '@mnemon-dev/mnemon@0.2.11':
     optionalDependencies:
-      '@mnemon-dev/mnemon-darwin-arm64': '@mnemon-dev/mnemon@0.2.10-darwin-arm64'
-      '@mnemon-dev/mnemon-darwin-x64': '@mnemon-dev/mnemon@0.2.10-darwin-x64'
-      '@mnemon-dev/mnemon-linux-arm64': '@mnemon-dev/mnemon@0.2.10-linux-arm64'
-      '@mnemon-dev/mnemon-linux-x64': '@mnemon-dev/mnemon@0.2.10-linux-x64'
-      '@mnemon-dev/mnemon-win32-arm64': '@mnemon-dev/mnemon@0.2.10-win32-arm64'
-      '@mnemon-dev/mnemon-win32-x64': '@mnemon-dev/mnemon@0.2.10-win32-x64'
+      '@mnemon-dev/mnemon-darwin-arm64': '@mnemon-dev/mnemon@0.2.11-darwin-arm64'
+      '@mnemon-dev/mnemon-darwin-x64': '@mnemon-dev/mnemon@0.2.11-darwin-x64'
+      '@mnemon-dev/mnemon-linux-arm64': '@mnemon-dev/mnemon@0.2.11-linux-arm64'
+      '@mnemon-dev/mnemon-linux-x64': '@mnemon-dev/mnemon@0.2.11-linux-x64'
+      '@mnemon-dev/mnemon-win32-arm64': '@mnemon-dev/mnemon@0.2.11-win32-arm64'
+      '@mnemon-dev/mnemon-win32-x64': '@mnemon-dev/mnemon@0.2.11-win32-x64'
 
-  '@mnemon-dev/mnemon@0.2.10-darwin-arm64':
+  '@mnemon-dev/mnemon@0.2.11-darwin-arm64':
     optional: true
 
-  '@mnemon-dev/mnemon@0.2.10-darwin-x64':
+  '@mnemon-dev/mnemon@0.2.11-darwin-x64':
     optional: true
 
-  '@mnemon-dev/mnemon@0.2.10-linux-arm64':
+  '@mnemon-dev/mnemon@0.2.11-linux-arm64':
     optional: true
 
-  '@mnemon-dev/mnemon@0.2.10-linux-x64':
+  '@mnemon-dev/mnemon@0.2.11-linux-x64':
     optional: true
 
-  '@mnemon-dev/mnemon@0.2.10-win32-arm64':
+  '@mnemon-dev/mnemon@0.2.11-win32-arm64':
     optional: true
 
-  '@mnemon-dev/mnemon@0.2.10-win32-x64':
+  '@mnemon-dev/mnemon@0.2.11-win32-x64':
     optional: true
 
   '@neon-rs/load@0.0.4': {}
