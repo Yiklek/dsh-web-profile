@@ -21,7 +21,7 @@
     "dsh-mermaid": "^0.4.2",
     "dsh-mnemon": "^0.5.31",
     "dsh-openviking-service": "workspace:*",
-    "dsh-plugin-subscriptions": "0.9.9",
+    "dsh-plugin-subscriptions": "0.9.10",
     "dsh-rewind-plugin": "0.16.0",
     "dsh-slots-manager": "github:Yiklek/dsh-slots-manager#pkg",
     "dsh-univer-office": "^0.3.7",
