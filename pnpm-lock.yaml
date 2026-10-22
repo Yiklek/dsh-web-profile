@@ -30,8 +30,8 @@ importers:
         specifier: ^0.73.0
         version: 0.73.0(@deepseek-ai/schemastery@3.18.5)
       dsh-free-search:
-        specifier: ^0.9.1
-        version: 0.9.1
+        specifier: ^0.9.7
+        version: 0.9.7
       dsh-llm-retry-settings:
         specifier: github:Yiklek/dsh-llm-retry-settings
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b
@@ -1092,8 +1092,8 @@ packages:
       react-dom:
         optional: true
 
-  dsh-free-search@0.9.1:
-    resolution: {integrity: sha512-/SFWQUNFH8GY46rs7jeb+UklhTkKIZy4iYyKnxdos7lKBVLJBNwpiViX/tndhPskDHPQVO1eBHCSWr446gJ83A==}
+  dsh-free-search@0.9.7:
+    resolution: {integrity: sha512-VQDndiUxWWkcXhsOHT96T9Bge20kFX70PHgMzfM2hAm5Ll/vUBLWxkHf92LSFzB0rSgVLU4YaH/mfuJDT5Nk8Q==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
@@ -3015,7 +3015,7 @@ snapshots:
       '@deepseek-ai/schemastery': 3.18.5
       zod: 4.6.7
 
-  dsh-free-search@0.9.1:
+  dsh-free-search@0.9.7:
     dependencies:
       '@deepseek-ai/schemastery': 3.18.5
 
