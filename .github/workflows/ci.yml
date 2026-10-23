@@ -219,3 +219,15 @@ jobs:
       - name: Show dsh boot log on failure
         if: failure()
         run: cat /tmp/dsh-e2e.log
+
+      # Playwright writes a DOM snapshot, a screenshot and the console for every
+      # failure into tests/e2e/test-results. Without this the log only shows the
+      # assertion, and the reason lives in a browser on a CI runner.
+      - name: Upload Playwright artefacts on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-results
+          path: tests/e2e/test-results
+          if-no-files-found: ignore
+          retention-days: 7

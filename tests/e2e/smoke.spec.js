@@ -59,7 +59,11 @@ test("web profile loads and settings show plugin sections", async ({
   await expect(
     page.getByText("Failed to load plugins", { exact: true }),
   ).toHaveCount(0);
-  await expect(page.getByText("设置", { exact: true }).first()).toBeVisible({
+  // The shell is up if a sidebar row renders. Assert one that exists in both UI
+  // languages, not a specific control: this check is about "the shell booted",
+  // and pinning it to a label makes it fail when a sidebar plugin renames or
+  // moves things (which is what happened to the Settings entry).
+  await expect(page.getByText(/^(插件|Plugins)$/).first()).toBeVisible({
     timeout: 30_000,
   });
 
@@ -68,6 +72,7 @@ test("web profile loads and settings show plugin sections", async ({
   // If a modal mounts late and blocks the first attempt, the loop sees it on
   // the next iteration and dismisses it before retrying.
   let settingsOpened = false;
+  let lastScreen = "";
   for (let attempt = 0; attempt < 5 && !settingsOpened; attempt++) {
     const modal = page.locator('[role="presentation"]').first();
     if ((await modal.count()) > 0) {
@@ -86,6 +91,21 @@ test("web profile loads and settings show plugin sections", async ({
       }
     }
 
+    // Not every dialog names its button one of the above — a plugin's own
+    // onboarding can say anything. Escape closes the focused dialog whatever it
+    // is, so try that too rather than teaching this list every label.
+    await page.keyboard.press("Escape").catch(() => {});
+    await page.waitForTimeout(200);
+
+    // A sidebar plugin may fold Settings into an overflow ("更多" / "More")
+    // menu; open it when it is there. Without this the entry is simply absent
+    // from the DOM and the click below can never succeed.
+    const more = page.getByText(/^(更多|More)$/, { exact: false }).first();
+    if ((await more.count()) > 0 && (await more.isVisible().catch(() => false))) {
+      await more.click({ timeout: 2_000 }).catch(() => {});
+      await page.waitForTimeout(300);
+    }
+
     try {
       await page.getByText("设置", { exact: true }).first().click({
         timeout: 3_000,
@@ -95,7 +115,14 @@ test("web profile loads and settings show plugin sections", async ({
       // The modal probably mounted just in time; loop and dismiss it again.
     }
   }
-  expect(settingsOpened, "settings should open after dismissing first-run dialogs").toBe(true);
+  if (!settingsOpened) {
+    lastScreen = await page.evaluate(() => document.body.innerText).catch(() => "");
+  }
+  expect(
+    settingsOpened,
+    "settings should open after dismissing first-run dialogs. Screen was:\n" +
+      lastScreen.split("\n").filter(Boolean).slice(0, 40).join("\n"),
+  ).toBe(true);
 
   // The built-in Settings UI should now be open with our plugin sections
   // mounted. These are the sections owned by this profile (our own plugins),
