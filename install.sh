@@ -42,7 +42,7 @@ PROFILES_DIR="$DSH_HOME/profiles"
 DEFAULT_REMOTE="https://github.com/Yiklek/dsh-web-profile.git"
 # The dsh CLI the fallback paths below run. Keep in step with DSH_VERSION in
 # .github/workflows/ci.yml.
-DSH_VERSION="0.2.1-rc.2"
+DSH_VERSION="0.2.1-rc.3"
 
 usage() {
   cat <<'EOF'

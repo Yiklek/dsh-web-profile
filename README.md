@@ -114,7 +114,7 @@ npx @deepseek-ai/dsh --profile web
 
 安装脚本完成后会直接打印对应的启动命令。
 
-> dsh CLI 的版本会影响插件兼容性：安装脚本的回退路径与 CI 都固定在 `@deepseek-ai/dsh@0.2.1-rc.2`。遇到插件加载异常时，先对齐 dsh 版本。
+> dsh CLI 的版本会影响插件兼容性：安装脚本的回退路径与 CI 都固定在 `@deepseek-ai/dsh@0.2.1-rc.3`。遇到插件加载异常时，先对齐 dsh 版本。
 
 ## 安装详解
 
@@ -155,8 +155,8 @@ npx @deepseek-ai/dsh --profile web
 
    ```bash
    dsh plugin --profile <name> install
-   pnpm dlx @deepseek-ai/dsh@0.2.1-rc.2 plugin --profile <name> install
-   npx --yes @deepseek-ai/dsh@0.2.1-rc.2 plugin --profile <name> install
+   pnpm dlx @deepseek-ai/dsh@0.2.1-rc.3 plugin --profile <name> install
+   npx --yes @deepseek-ai/dsh@0.2.1-rc.3 plugin --profile <name> install
    ```
 
 6. **接线本地服务** —— 上面的安装会触发本 profile 的 `postinstall`，即 `scripts/install-services.mjs`。它负责：
@@ -276,7 +276,7 @@ DSH_BOOT_LOG=/tmp/dsh-e2e.log pnpm test:edge
 |---|---|
 | `--dir` / `--branch` 不生效或报错 | `--branch` 仅 worktree 模式；`--dir` 仅远程 worktree 生效（本地忽略）；`--mode clone` 下指定会报错 |
 | 分支已被其他 worktree 占用 | `git worktree list` 定位后 `git worktree remove <path>` |
-| `dsh` 不在 PATH | 脚本自动回退到 `pnpm dlx` 或 `npx --yes @deepseek-ai/dsh@0.2.1-rc.2` |
+| `dsh` 不在 PATH | 脚本自动回退到 `pnpm dlx` 或 `npx --yes @deepseek-ai/dsh@0.2.1-rc.3` |
 | 安装后想回滚 | 删除 profile 目录，把备份目录改回原名 |
 
 恢复备份：
