@@ -8,7 +8,7 @@ on:
 env:
   # The dsh CLI every job here runs, named once so the five places that invoke it
   # cannot drift apart. install.sh pins the same version for its own fallback.
-  DSH_VERSION: 0.2.1-rc.3
+  DSH_VERSION: 0.2.2-alpha.2
 
 jobs:
   lint:

@@ -12,8 +12,8 @@ importers:
         specifier: ^0.2.13
         version: 0.2.13
       '@openviking/dsh-memory-plugin':
-        specifier: ^0.5.30
-        version: 0.5.30
+        specifier: ^0.5.31
+        version: 0.5.31
       '@tt-a1i/archify-dsh':
         specifier: ^1.0.0
         version: 1.0.0
@@ -27,17 +27,17 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.77.0
-        version: 0.77.0(@deepseek-ai/schemastery@3.18.5)
+        specifier: ^0.78.0
+        version: 0.78.0(@deepseek-ai/schemastery@3.18.5)
       dsh-free-search:
-        specifier: ^0.9.17
-        version: 0.9.17
+        specifier: ^0.9.19
+        version: 0.9.19
       dsh-llm-retry-settings:
         specifier: github:Yiklek/dsh-llm-retry-settings
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b
       dsh-mcp-panel:
         specifier: github:Yiklek/dsh-mcp-panel#pkg
-        version: https://codeload.github.com/Yiklek/dsh-mcp-panel/tar.gz/bcef154800d43b488cf814a2c6a8e0fe6ed5d479(@deepseek-ai/schemastery@3.18.5)
+        version: https://codeload.github.com/Yiklek/dsh-mcp-panel/tar.gz/7d02b3b622f0205978f3fda6d596886b965b3658(@deepseek-ai/schemastery@3.18.5)
       dsh-mermaid:
         specifier: ^0.4.4
         version: 0.4.4
@@ -55,7 +55,7 @@ importers:
         version: 0.19.1(@deepseek-ai/schemastery@3.18.5)
       dsh-slots-manager:
         specifier: github:Yiklek/dsh-slots-manager#pkg
-        version: https://codeload.github.com/Yiklek/dsh-slots-manager/tar.gz/e2cbfca1c1c18d74560f820d39cc0bbc5be95bc6(@deepseek-ai/schemastery@3.18.5)
+        version: https://codeload.github.com/Yiklek/dsh-slots-manager/tar.gz/82826d377736b507e3162524d9720deb020f4e21(@deepseek-ai/schemastery@3.18.5)
       dsh-univer-office:
         specifier: ^0.3.7
         version: 0.3.7(@deepseek-ai/schemastery@3.18.5)
@@ -471,8 +471,8 @@ packages:
   '@neon-rs/load@0.0.4':
     resolution: {integrity: sha512-kTPhdZyTQxB+2wpiRcFWrDcejc4JI6tkPuS7UZCG4l6Zvc5kU/gGQ/ozvHTh1XR5tS+UlfAfGuPajjzQjCiHCw==}
 
-  '@openviking/dsh-memory-plugin@0.5.30':
-    resolution: {integrity: sha512-txr1MoR+wvTjCWtaF06A5Oe9NxpwSgOtBlBKFknUD4FatWHjRt10bPIA3O6pFqHNjGyLo6MOM5qXv6HTb7wZOQ==}
+  '@openviking/dsh-memory-plugin@0.5.31':
+    resolution: {integrity: sha512-XXtwYsOyQEQDqtk3Jt/vgsjDXMwNw9SYs0Vl1IGF3M85EXo1JMMQMqiZqMCYg1MvfYKkQJ3enLxhN7SxZls8Og==}
     engines: {node: ^22.19.0 || >=24}
     peerDependencies:
       '@deepseek-ai/dsh-llm': '>=0.1.0-rc.6 <1.0.0-0'
@@ -1078,8 +1078,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.77.0:
-    resolution: {integrity: sha512-KDq7LlhpGJC9pA/NwjvnalOk2i1OYnYIX24hjwiJS46dSAAC0oL7r3hx9kc7s2noFgn1redUL7iN0lIxwDe9Gg==}
+  dsh-context@0.78.0:
+    resolution: {integrity: sha512-JeaQdFpie/GaDJJsQDALYFPao+tHbJQqiOVyqCeiaHXCqrnAqrfPFzaESJdgkx1GnNWv80bI2HZqLe2BIZ4ovg==}
     engines: {dsh: '>=0.2.0-rc.2 || >=0.2.1-rc.2', node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.4
@@ -1096,8 +1096,8 @@ packages:
       react-dom:
         optional: true
 
-  dsh-free-search@0.9.17:
-    resolution: {integrity: sha512-JEsWa/swrhWDQmqxPRCdZQGGUHadAun4udJoptlIwRGLB6fbMMavoz4YSPiFOn+NeMxaMSy2SbZMCv3wgAMf/g==}
+  dsh-free-search@0.9.19:
+    resolution: {integrity: sha512-UMOy07+0D+yqVNSecvqGvUICLg4z97XWO71qhuS9MEOw07BS1jkpmd8TQ3TZPslyY2L9RvjVHvAl4Ms09aHAQg==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
@@ -1127,8 +1127,8 @@ packages:
     resolution: {gitHosted: true, integrity: sha512-oMHICVp/5BmsmLxX0MX9QnacBDR8jzMQMen+2LK5QLkACxH+g0PzY8BfIcGvJU7zw0skTVoXBUTTCaXZBO73OQ==, tarball: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b}
     version: 0.1.0
 
-  dsh-mcp-panel@https://codeload.github.com/Yiklek/dsh-mcp-panel/tar.gz/bcef154800d43b488cf814a2c6a8e0fe6ed5d479:
-    resolution: {gitHosted: true, integrity: sha512-acBkgFz4x1CY6dvzZljADVp4M6+QkKvuS6KvyNYzzevZDRLjWSS+W1t9Zn+1IC8f6hmJygh8JD349hLxPBC6NQ==, tarball: https://codeload.github.com/Yiklek/dsh-mcp-panel/tar.gz/bcef154800d43b488cf814a2c6a8e0fe6ed5d479}
+  dsh-mcp-panel@https://codeload.github.com/Yiklek/dsh-mcp-panel/tar.gz/7d02b3b622f0205978f3fda6d596886b965b3658:
+    resolution: {gitHosted: true, integrity: sha512-ntH8YBaxnBDdr3KjH26Uo6XsW21ENH4o83CmYAubKMo4gzLwnKx90ryvWKin7pNQeWVkiMp4nuKpPPv/gXSqCA==, tarball: https://codeload.github.com/Yiklek/dsh-mcp-panel/tar.gz/7d02b3b622f0205978f3fda6d596886b965b3658}
     version: 0.1.0
     engines: {node: '>=22'}
     peerDependencies:
@@ -1372,8 +1372,8 @@ packages:
       '@deepseek-ai/schemastery':
         optional: true
 
-  dsh-slots-manager@https://codeload.github.com/Yiklek/dsh-slots-manager/tar.gz/e2cbfca1c1c18d74560f820d39cc0bbc5be95bc6:
-    resolution: {gitHosted: true, integrity: sha512-4qx6JMNAmAbb37znC8un9zCfejLy12SCMqGMwcS2my953wSYm7Vh9KDXmCYkAQxx4UZA+FwsFyt+p3EjEd3rMg==, tarball: https://codeload.github.com/Yiklek/dsh-slots-manager/tar.gz/e2cbfca1c1c18d74560f820d39cc0bbc5be95bc6}
+  dsh-slots-manager@https://codeload.github.com/Yiklek/dsh-slots-manager/tar.gz/82826d377736b507e3162524d9720deb020f4e21:
+    resolution: {gitHosted: true, integrity: sha512-sSLXkZj1kVbJqpTyOXeRrXmOdpTvDSfgf1NMlOCmpZQa/8DU/snnLapqsdulG2CD/4190MMPGfu8D/3StJon3A==, tarball: https://codeload.github.com/Yiklek/dsh-slots-manager/tar.gz/82826d377736b507e3162524d9720deb020f4e21}
     version: 0.1.0
     peerDependencies:
       '@deepseek-ai/schemastery': '*'
@@ -2397,7 +2397,7 @@ snapshots:
 
   '@neon-rs/load@0.0.4': {}
 
-  '@openviking/dsh-memory-plugin@0.5.30': {}
+  '@openviking/dsh-memory-plugin@0.5.31': {}
 
   '@pinojs/redact@0.4.0': {}
 
@@ -3040,18 +3040,18 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.77.0(@deepseek-ai/schemastery@3.18.5):
+  dsh-context@0.78.0(@deepseek-ai/schemastery@3.18.5):
     dependencies:
       '@deepseek-ai/schemastery': 3.18.5
       zod: 4.6.7
 
-  dsh-free-search@0.9.17:
+  dsh-free-search@0.9.19:
     dependencies:
       '@deepseek-ai/schemastery': 3.18.5
 
   dsh-llm-retry-settings@https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b: {}
 
-  dsh-mcp-panel@https://codeload.github.com/Yiklek/dsh-mcp-panel/tar.gz/bcef154800d43b488cf814a2c6a8e0fe6ed5d479(@deepseek-ai/schemastery@3.18.5):
+  dsh-mcp-panel@https://codeload.github.com/Yiklek/dsh-mcp-panel/tar.gz/7d02b3b622f0205978f3fda6d596886b965b3658(@deepseek-ai/schemastery@3.18.5):
     dependencies:
       yaml: 2.9.1
     optionalDependencies:
@@ -3172,7 +3172,7 @@ snapshots:
     optionalDependencies:
       '@deepseek-ai/schemastery': 3.18.5
 
-  dsh-slots-manager@https://codeload.github.com/Yiklek/dsh-slots-manager/tar.gz/e2cbfca1c1c18d74560f820d39cc0bbc5be95bc6(@deepseek-ai/schemastery@3.18.5):
+  dsh-slots-manager@https://codeload.github.com/Yiklek/dsh-slots-manager/tar.gz/82826d377736b507e3162524d9720deb020f4e21(@deepseek-ai/schemastery@3.18.5):
     optionalDependencies:
       '@deepseek-ai/schemastery': 3.18.5
 
