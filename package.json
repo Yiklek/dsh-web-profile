@@ -26,7 +26,7 @@
     "dsh-rewind-plugin": "0.19.1",
     "dsh-slots-manager": "github:Yiklek/dsh-slots-manager#pkg",
     "dsh-univer-office": "^0.3.7",
-    "dshmarket": "^1.73.1",
+    "dshmarket": "^1.73.3",
     "yaml": "^2.9.1"
   },
   "dsh": {

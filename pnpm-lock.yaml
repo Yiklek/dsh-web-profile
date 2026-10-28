@@ -60,8 +60,8 @@ importers:
         specifier: ^0.3.7
         version: 0.3.7(@deepseek-ai/schemastery@3.18.5)
       dshmarket:
-        specifier: ^1.73.1
-        version: 1.73.1(@deepseek-ai/schemastery@3.18.5)
+        specifier: ^1.73.3
+        version: 1.73.3(@deepseek-ai/schemastery@3.18.5)
       yaml:
         specifier: ^2.9.1
         version: 2.9.1
@@ -1398,8 +1398,8 @@ packages:
       '@deepseek-ai/dsh-tools': ^0.1.5-rc.3 || ^0.1.7-rc.1 || ^0.2.0-rc.1
       '@deepseek-ai/schemastery': ^3.18.1
 
-  dshmarket@1.73.1:
-    resolution: {integrity: sha512-mnDEDq743YH2xuLU2qgmssnSiuet5VxS8Bsbggnyez2OfzSnOtIhmnufpe+fA/m+UQr7qI6PkHGCnzW/550tfQ==}
+  dshmarket@1.73.3:
+    resolution: {integrity: sha512-fUkE+QoumMh4OLqT97iq1Vc75PT+EQgXYVLl0IXcw7tTpihRut1qRufEx5EAbGF+4+mqNEDehBnL+xwLQSstVw==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
       '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2 || ^0.1.2-alpha.2 || ^0.2.0-rc.1 || ^0.2.1-alpha.3 || ^0.2.1-rc.1
@@ -3191,7 +3191,7 @@ snapshots:
       - utf-8-validate
       - yauzl
 
-  dshmarket@1.73.1(@deepseek-ai/schemastery@3.18.5):
+  dshmarket@1.73.3(@deepseek-ai/schemastery@3.18.5):
     dependencies:
       js-yaml: 4.3.2
       undici: 7.30.1
