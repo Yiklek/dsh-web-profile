@@ -97,12 +97,13 @@ test("web profile loads and settings show plugin sections", async ({
     await page.keyboard.press("Escape").catch(() => {});
     await page.waitForTimeout(200);
 
-    // A sidebar plugin may fold Settings into an overflow ("更多" / "More")
-    // menu; open it when it is there. Without this the entry is simply absent
-    // from the DOM and the click below can never succeed.
-    const more = page.getByText(/^(更多|More)$/, { exact: false }).first();
-    if ((await more.count()) > 0 && (await more.isVisible().catch(() => false))) {
-      await more.click({ timeout: 2_000 }).catch(() => {});
+    // Settings lives in the ACCOUNT menu, not in the sidebar nav. The sidebar
+    // also renders a control whose text is "更多" (its own overflow), so matching
+    // on that text picked the wrong menu and the entry was never in it. The
+    // account button carries a stable aria-label, which is what to target.
+    const account = page.getByRole("button", { name: /账号菜单|Account menu/ }).first();
+    if ((await account.count()) > 0 && (await account.isVisible().catch(() => false))) {
+      await account.click({ timeout: 2_000 }).catch(() => {});
       await page.waitForTimeout(300);
     }
 
