@@ -225,7 +225,7 @@ jobs:
       # assertion, and the reason lives in a browser on a CI runner.
       - name: Upload Playwright artefacts on failure
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: playwright-results
           path: tests/e2e/test-results
