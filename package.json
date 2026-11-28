@@ -15,8 +15,8 @@
     "@xmanrui/dsh-im": "^5.10.0",
     "dsh-better-sidebar": "0.33.0",
     "dsh-complete-notify": "^0.6.2",
-    "dsh-context": "^0.87.2",
-    "dsh-free-search": "^0.9.88",
+    "dsh-context": "^0.88.0",
+    "dsh-free-search": "^0.9.90",
     "dsh-llm-retry-settings": "github:Yiklek/dsh-llm-retry-settings",
     "dsh-mcp-panel": "github:Yiklek/dsh-mcp-panel#pkg",
     "dsh-mermaid": "^0.5.2",
@@ -26,7 +26,7 @@
     "dsh-rewind-plugin": "0.24.1",
     "dsh-slots-manager": "github:Yiklek/dsh-slots-manager#pkg",
     "dsh-univer-office": "^0.6.2",
-    "dshmarket": "^1.84.2",
+    "dshmarket": "^1.85.0",
     "yaml": "^2.9.1"
   },
   "dsh": {
