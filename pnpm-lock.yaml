@@ -27,11 +27,11 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2
       dsh-context:
-        specifier: ^0.87.2
-        version: 0.87.2(@deepseek-ai/schemastery@3.19.0)
+        specifier: ^0.88.0
+        version: 0.88.0(@deepseek-ai/schemastery@3.19.0)
       dsh-free-search:
-        specifier: ^0.9.88
-        version: 0.9.88(@deepseek-ai/schemastery@3.19.0)
+        specifier: ^0.9.90
+        version: 0.9.90(@deepseek-ai/schemastery@3.19.0)
       dsh-llm-retry-settings:
         specifier: github:Yiklek/dsh-llm-retry-settings
         version: https://codeload.github.com/Yiklek/dsh-llm-retry-settings/tar.gz/d035a3cae47d362e2961e739e1fa6c857e5a4b1b
@@ -60,8 +60,8 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2(@deepseek-ai/schemastery@3.19.0)
       dshmarket:
-        specifier: ^1.84.2
-        version: 1.84.2(@deepseek-ai/schemastery@3.19.0)
+        specifier: ^1.85.0
+        version: 1.85.0(@deepseek-ai/schemastery@3.19.0)
       yaml:
         specifier: ^2.9.1
         version: 2.9.1
@@ -614,8 +614,8 @@ packages:
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
 
-  dsh-context@0.87.2:
-    resolution: {integrity: sha512-GsSNrdiDpbF20DTZItXhnihz6DBXRSNAMbHs6SohshqdgTcGsAW0l2WZHdXwGvaIGLdfGIL/qZ7qsDFFtHLGIw==}
+  dsh-context@0.88.0:
+    resolution: {integrity: sha512-A+4AS8/JA9szt/QH74Ah9yN9GF0T0Pgvb+4DlqFK4T0zJl7ojotSa60Gq36fgibNpX41tRTNbHdAk9T4gcn3ZQ==}
     engines: {dsh: '>=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1', node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.4 || >=4.0.6-alpha.2 <5.0.0
@@ -632,8 +632,8 @@ packages:
       react-dom:
         optional: true
 
-  dsh-free-search@0.9.88:
-    resolution: {integrity: sha512-SamzJc2tB2styM9yDfbDLZql8GAydp9QB4sGNXH4luFwi19M+VnqcBvODL45ppiTV0oQMaXl5Hw59vdmjkBv3g==}
+  dsh-free-search@0.9.90:
+    resolution: {integrity: sha512-FixhrVQJHELUeclmtDfjKz6NsHC6bpN6sCi9Xn2UNj6kbbIjdUNOcpjS/jN1AHgQRcwxdvGgBfTv4uUcPRnMsg==}
     engines: {dsh: '>=0.2.1-rc.2 <0.4.0-0', node: '>=20'}
     hasBin: true
     peerDependencies:
@@ -939,11 +939,11 @@ packages:
       '@deepseek-ai/dsh-tools': ^0.2.0-rc.1 || ^0.2.1-rc.3 || ^0.2.2-rc.1
       '@deepseek-ai/schemastery': ^3.18.4
 
-  dshmarket@1.84.2:
-    resolution: {integrity: sha512-3EKXhI11oZNDoqynfT0T+fyvJ4j9z9Hb6rWYx+eNUB0pG6o2c8Q+HXk+5KWHVxKS881yzXLglZ+Bin1HjDfyng==}
+  dshmarket@1.85.0:
+    resolution: {integrity: sha512-IfpDA1fJvN+Iuqy5sdTCbidgV/SmdZtNxgaMStDsEz5aDoXjVI1xk1q+LKAzfU5sykdmBjJsmnzEaqBH1zlkDA==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
-      '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2 || ^0.1.2-alpha.2 || ^0.2.0-rc.1 || ^0.2.1-alpha.3 || ^0.2.1-rc.1
+      '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2 || ^0.1.2-alpha.2 || ^0.2.0-rc.1 || ^0.2.1-alpha.3 || ^0.2.1-rc.1 || ^0.2.2-rc.1
       '@deepseek-ai/schemastery': ^3.18.1
     peerDependenciesMeta:
       '@deepseek-ai/dsh-settings':
@@ -1074,8 +1074,8 @@ packages:
     resolution: {integrity: sha512-GnccN3rytpmsbEriYi3R1gLqWnXH2Dp4iAWYcY3sAUNRZ2zpBz8qSB0YSDTa58NSeTA6VGlAPMfbauQo0gnUGA==}
     engines: {node: '>=20.0.0'}
 
-  ip-address@10.7.6:
-    resolution: {integrity: sha512-00LYkM6byILa9eQIx6qoaXCM40xTLd56AZ4vyaPW3YTyb49VZYPo5xsiAq4tuQ54GH4R7gVdYScJ1B7B77PuTg==}
+  ip-address@10.7.7:
+    resolution: {integrity: sha512-He15rAs4jip5AEAz7XM9L+S6Y8LBMIDj6YewbYuJfmDnOCKWb+3TLOGnHFBTAIW7wpm5ohtZ+Xyo5PEaG+O2vQ==}
     engines: {node: '>= 12'}
 
   is-fullwidth-code-point@3.0.0:
@@ -1127,8 +1127,8 @@ packages:
   mitt@3.0.1:
     resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
 
-  modern-tar@0.8.6:
-    resolution: {integrity: sha512-LYSks0tNVqbtez/9OB0YFP6qLRSqkdAxJWOQpVaR67lNTbj2zNLyYpowkRMia5lXLCZKzxwoxkxH2MbbBR2aEg==}
+  modern-tar@0.8.7:
+    resolution: {integrity: sha512-q17gyzLiCw2wf/Rcl5c3EA5ynB2hOHb5+qMpbaILOQBaTiBx9bumfXC5sMk0wQrVoLtlBhW77dJTnLArlczsGg==}
     engines: {node: '>=18.0.0'}
 
   ms@2.1.3:
@@ -1320,8 +1320,8 @@ packages:
     resolution: {integrity: sha512-42AtmgqjV+X1VpdOfyTGOYRi0/zsoLqtXQckTmqTeybT+BDIbM/Guxo7x3pE2vtpr1ok6xRqM9OpBe+Jyoqyww==}
     engines: {node: '>=18'}
 
-  ws@8.23.0:
-    resolution: {integrity: sha512-wCkmX8QMOrKjgO8HW2WyDbTSGeqkocxgDzS9iR79rEAexty6/2qzilx3Ag8Tqf9ykop3irLKle0MtVn5qjVnoQ==}
+  ws@8.23.1:
+    resolution: {integrity: sha512-1rzWDSN0NOi3tpwgHsQExjWRoKUGtjCkJ2gZRaaRtzhYLboMytOI9pj9PU7yCgY37auqdd4OyLofZDbkeuZmPA==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -1519,7 +1519,7 @@ snapshots:
 
   '@puppeteer/browsers@3.3.0':
     dependencies:
-      modern-tar: 0.8.6
+      modern-tar: 0.8.7
       yargs: 18.2.0
 
   '@selderee/plugin-htmlparser2@0.12.0(selderee@0.12.0)':
@@ -1536,7 +1536,7 @@ snapshots:
 
   '@tencent-connect/qqbot-nodejs@1.0.4':
     dependencies:
-      ws: 8.23.0
+      ws: 8.23.1
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -1639,7 +1639,7 @@ snapshots:
     dependencies:
       axios: 1.21.1(debug@4.4.3)
       eventemitter3: 5.0.4
-      ws: 8.23.0
+      ws: 8.23.1
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -1764,7 +1764,7 @@ snapshots:
     dependencies:
       axios: 1.21.1(debug@4.4.3)
       debug: 4.4.3
-      ws: 8.23.0
+      ws: 8.23.1
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -1791,7 +1791,7 @@ snapshots:
   dsh-better-sidebar@0.33.0(@deepseek-ai/schemastery@3.19.0):
     dependencies:
       '@deepseek-ai/schemastery': 3.19.0
-      ws: 8.23.0
+      ws: 8.23.1
       yaml: 2.9.1
     transitivePeerDependencies:
       - bufferutil
@@ -1799,12 +1799,12 @@ snapshots:
 
   dsh-complete-notify@0.6.2: {}
 
-  dsh-context@0.87.2(@deepseek-ai/schemastery@3.19.0):
+  dsh-context@0.88.0(@deepseek-ai/schemastery@3.19.0):
     dependencies:
       '@deepseek-ai/schemastery': 3.19.0
       zod: 4.6.7
 
-  dsh-free-search@0.9.88(@deepseek-ai/schemastery@3.19.0):
+  dsh-free-search@0.9.90(@deepseek-ai/schemastery@3.19.0):
     optionalDependencies:
       '@deepseek-ai/schemastery': 3.19.0
 
@@ -1947,7 +1947,7 @@ snapshots:
       - utf-8-validate
       - yauzl
 
-  dshmarket@1.84.2(@deepseek-ai/schemastery@3.19.0):
+  dshmarket@1.85.0(@deepseek-ai/schemastery@3.19.0):
     dependencies:
       js-yaml: 4.3.2
       undici: 7.30.2
@@ -2083,7 +2083,7 @@ snapshots:
       pino: 10.3.1
       socks: 2.8.11
 
-  ip-address@10.7.6: {}
+  ip-address@10.7.7: {}
 
   is-fullwidth-code-point@3.0.0: {}
 
@@ -2133,7 +2133,7 @@ snapshots:
 
   mitt@3.0.1: {}
 
-  modern-tar@0.8.6: {}
+  modern-tar@0.8.7: {}
 
   ms@2.1.3: {}
 
@@ -2195,7 +2195,7 @@ snapshots:
       devtools-protocol: 0.0.1724436
       typed-query-selector: 2.12.4
       webdriver-bidi-protocol: 1.0.2
-      ws: 8.23.0
+      ws: 8.23.1
     transitivePeerDependencies:
       - bufferutil
       - proxy-agent
@@ -2270,7 +2270,7 @@ snapshots:
 
   socks@2.8.11:
     dependencies:
-      ip-address: 10.7.6
+      ip-address: 10.7.7
       smart-buffer: 4.2.0
 
   sonic-boom@4.2.1:
@@ -2337,7 +2337,7 @@ snapshots:
       string-width: 7.2.0
       strip-ansi: 7.2.0
 
-  ws@8.23.0: {}
+  ws@8.23.1: {}
 
   y18n@4.0.3: {}
 
